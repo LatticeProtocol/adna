@@ -1,12 +1,16 @@
 {
   "command_timeout": 5,
-  "templates_folder": "ops/templates",
+  "templates_folder": "how/templates",
   "templates_pairs": [
-    ["obs/context", "ops/templates/template_context.md"],
-    ["obs/decisions", "ops/templates/template_adr.md"],
-    ["ops/sessions/active", "ops/templates/template_session.md"],
-    ["ops/plans", "ops/templates/template_plan.md"],
-    ["org/coordination", "ops/templates/template_coordination.md"]
+    ["what/context", "how/templates/template_context.md"],
+    ["what/decisions", "how/templates/template_adr.md"],
+    ["how/sessions/active", "how/templates/template_session.md"],
+    ["how/missions", "how/templates/template_mission.md"],
+    ["who/coordination", "how/templates/template_coordination.md"],
+    ["how/backlog", "how/templates/template_backlog.md"],
+    ["how/campaigns", "how/templates/template_campaign.md"],
+    ["how/pipelines/prd_rfc/02_requirements", "how/templates/template_prd.md"],
+    ["how/pipelines/prd_rfc/03_design", "how/templates/template_rfc.md"]
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": false,

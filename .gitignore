@@ -1,10 +1,32 @@
-# Obsidian volatile files (rewritten on every close)
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian per-device (don't sync across clones)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/graph.json
 
-# macOS
-.DS_Store
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
 
-# Obsidian trash
-.trash/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local

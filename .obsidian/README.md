@@ -1,111 +1,57 @@
-# .obsidian -- aDNA Starter Configuration
+# .obsidian/ — Obsidian Configuration
 
-Generic Obsidian vault configuration for aDNA (Agentic DNA) projects. Production-ready setup that works with the `obs/ops/org` triad structure.
+This directory contains Obsidian vault configuration. Most files are checked into git to ensure a consistent experience across clones.
+
+## Plugins (11 community plugins)
+
+Install these from **Settings → Community plugins → Browse**:
+
+| Plugin | ID | Purpose |
+|--------|----|---------|
+| Dataview | `dataview` | Query and display structured data from frontmatter |
+| Templater | `templater-obsidian` | Template engine with folder-based auto-triggers |
+| Meta Bind | `obsidian-meta-bind-plugin` | Inline metadata editing |
+| Homepage | `homepage` | Set a start page on vault open |
+| Tasks | `obsidian-tasks-plugin` | Task tracking with queries |
+| Style Settings | `obsidian-style-settings` | Customize CSS snippet options via GUI |
+| Table Editor | `table-editor-obsidian` | Better markdown table editing |
+| Omnisearch | `omnisearch` | Vault-wide fuzzy search |
+| Terminal | `terminal` | Terminal access from Obsidian |
+| Buttons | `buttons` | Clickable action buttons in notes |
+| Folder Notes | `folder-notes` | Index files for folder navigation |
 
 ## Theme
 
-- **Tokyo Night** (dark) with Rebecca Purple (#663399) accent
-- **Space Grotesk** interface/text font, **Space Mono** monospace
-- Install theme from Obsidian Settings > Appearance > Themes
-- Install fonts from Google Fonts (Space Grotesk, Space Mono)
+**Tokyo Night** — install from Settings → Appearance → Themes.
 
-## Community Plugins (18)
+**Font**: Space Grotesk — install on your system from [Google Fonts](https://fonts.google.com/specimen/Space+Grotesk).
 
-All plugins must be installed from Obsidian Settings > Community Plugins.
+**Accent**: Rebecca Purple (`#663399`) — configured in `appearance.json`.
 
-| Plugin | ID | Purpose | Config Included |
-|--------|----|---------|-----------------|
-| Dataview | `dataview` | Query engine for frontmatter | No (defaults work) |
-| Templater | `templater-obsidian` | Auto-apply templates on file creation | Yes |
-| Meta Bind | `obsidian-meta-bind-plugin` | Live property editing | No |
-| Homepage | `homepage` | Auto-open dashboard on startup | Yes |
-| Tasks | `obsidian-tasks-plugin` | Task management | No |
-| Style Settings | `obsidian-style-settings` | Theme customization | No |
-| Iconize | `obsidian-icon-folder` | Directory and file icons | No (set via UI) |
-| Table Editor | `table-editor-obsidian` | Markdown table editing | No |
-| Omnisearch | `omnisearch` | Full-text search | No |
-| Advanced Slides | `obsidian-advanced-slides` | Presentation mode | No |
-| Advanced Canvas | `advanced-canvas` | Enhanced canvas features | No |
-| Terminal | `terminal` | Integrated terminal + Claude Code | No (auto-detects) |
-| Oz Image | `oz-image-plugin` | Image rendering | No |
-| Kanban | `obsidian-kanban` | Board views | No |
-| Charts | `obsidian-charts` | Data visualization | No |
-| BRAT | `obsidian42-brat` | Beta plugin management | No |
-| Pexels Banner | `pexels-banner` | Banner images from keywords | No (needs API key) |
-| Notebook Navigator | `notebook-navigator` | Dual-pane file explorer | Yes |
+## CSS Snippets (9)
 
-## CSS Snippets (5)
+All snippets are pre-configured and enabled in `appearance.json`. They integrate with Style Settings for GUI customization.
 
 | Snippet | Purpose |
 |---------|---------|
-| `tokyo-night-purple.css` | Rebecca Purple accent override for Tokyo Night theme |
-| `table_stripes.css` | Zebra striping + hover for Dataview and markdown tables |
-| `popover_size.css` | Larger hover preview popovers (500-700px wide) |
-| `mermaid_override.css` | Clean Mermaid diagram styling for dashboard/homepage pages |
-| `notebook_navigator.css` | aDNA triad colors (org=purple, obs=blue, ops=green) + status pills |
+| `tokyo_night_purple.css` | Rebecca Purple accent override for Tokyo Night theme |
+| `table_stripes.css` | Zebra stripes and hover highlight for tables |
+| `mermaid_override.css` | Purple-tinted Mermaid diagrams on dashboard pages |
+| `popover_size.css` | Larger link preview popovers |
+| `code_blocks.css` | Accent-bordered code blocks, tinted inline code |
+| `headings_styled.css` | Centered H1, bordered H2, colored H3+ |
+| `links_enhanced.css` | External link arrows, dashed unresolved links |
+| `scrollbar_custom.css` | Slim purple-tinted scrollbars |
+| `modals_translucent.css` | Frosted glass effect on modals |
 
-## Plugin Configs Included
+## Per-Device Files
 
-### `plugins/homepage/data.json`
-Points to `ops/Home` as the startup dashboard. Change the `value` field to your dashboard file path.
+These files are excluded from git (see `.gitignore`) because they contain machine-specific state:
 
-### `plugins/templater-obsidian/data.json`
-- Template folder: `ops/templates`
-- Folder-to-template mappings (5 generic aDNA mappings):
-  - `obs/context/` -> `template_context.md`
-  - `obs/decisions/` -> `template_adr.md`
-  - `ops/sessions/active/` -> `template_session.md`
-  - `ops/plans/` -> `template_plan.md`
-  - `org/coordination/` -> `template_coordination.md`
-- Add your own domain-specific mappings to `templates_pairs`
+- `workspace.json` — window layout, open tabs
+- `workspace-mobile.json` — mobile layout
+- `graph.json` — graph view settings
 
-### `plugins/notebook-navigator/data.json`
-- 3 vault profiles: Default, Observations (obs/ only), Operations (ops/ only)
-- Triad folder icons and colors (org=purple, obs=blue, ops=green)
-- Status color pills (active, completed, draft, pending, in_progress, etc.)
-- Generic filename icon map (agents, readme, template_, session_, plan_, context_, standard_)
-- Folder notes enabled (README.md pattern, hidden in file list)
-- vi-style keyboard navigation (h/j/k/l)
-- Set `customVaultName` to your project name
+## Templater Folder Mappings
 
-## What to Customize After Cloning
-
-1. **Homepage** -- Update `plugins/homepage/data.json` `value` to your dashboard path
-2. **Notebook Navigator** -- Set `customVaultName`, add project-specific folder icons/colors
-3. **Templater** -- Add domain-specific folder-to-template mappings
-4. **Pexels Banner** -- Add your API key in Obsidian plugin settings
-5. **Fonts** -- Install Space Grotesk and Space Mono (Google Fonts)
-6. **Theme** -- Install Tokyo Night from Obsidian Appearance settings
-
-## What is NOT Included
-
-- `workspace.json` -- Auto-generated by Obsidian, volatile
-- `graph.json` -- Auto-generated by Obsidian, volatile
-- `icons/` -- Icon pack ZIPs, install via Iconize settings
-- `themes/` -- Install Tokyo Night via Obsidian Appearance settings
-- Plugin source files (`main.js`, `manifest.json`, `styles.css`) -- Install plugins via Community Plugins
-- API keys -- Add your own for Pexels Banner, etc.
-- Style Settings `data.json` -- Notebook Navigator CSS snippet uses `@settings` annotations, which Style Settings reads automatically; no separate config needed
-
-## File Inventory
-
-```
-.obsidian/
-  README.md                             # This file
-  app.json                              # Editor settings (generic)
-  appearance.json                       # Theme, fonts, enabled snippets
-  community-plugins.json                # 18 universal plugins
-  core-plugins.json                     # Core plugin toggles
-  hotkeys.json                          # Cmd+B sidebar toggles
-  types.json                            # Property type definitions
-  snippets/
-    tokyo-night-purple.css              # Rebecca Purple accent
-    table_stripes.css                   # Table zebra striping
-    popover_size.css                    # Hover popover sizing
-    mermaid_override.css                # Dashboard Mermaid styling
-    notebook_navigator.css              # aDNA triad colors + status pills
-  plugins/
-    homepage/data.json                  # Startup dashboard path
-    templater-obsidian/data.json        # Template folder + folder mappings
-    notebook-navigator/data.json        # Profiles, icons, colors, keyboard
-```
+Templater is configured to auto-apply templates when creating new files in specific directories. See `plugins/templater-obsidian/data.json` for the 9 folder→template mappings.

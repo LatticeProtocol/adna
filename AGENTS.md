@@ -1,59 +1,59 @@
 ---
 type: directory_index
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-last_edited_by: agent_{username}
+created: 2026-02-17
+updated: 2026-02-17
+last_edited_by: agent_init
 tags: [directory_index, root]
 ---
 
-# {PROJECT_NAME} — Agent Guide
+# lattice-adna — Agent Guide
 
-## Project Purpose
+## Purpose
 
-{ONE_LINE_DESCRIPTION}
+This is the root agent reference for the lattice-adna project. It provides structured navigation for AI agents operating in this vault.
 
-## Directory Overview
+## Quick Orientation
 
-| Directory | Layer | Contents |
-|-----------|-------|----------|
-| `obs/` | WHAT — Knowledge | Context library, decisions, domain entities |
-| `ops/` | HOW — Operations | Plans, sessions, templates |
-| `org/` | WHO — Organization | People, teams, coordination, governance |
+| Document | What You'll Find |
+|----------|-----------------|
+| **CLAUDE.md** | Agent operating context — safety rules, startup checklist, protocols |
+| **MANIFEST.md** | Project overview — architecture, entry points, active builds |
+| **STATE.md** | Current operational state — phase, blockers, next steps |
+| **README.md** | Human-readable getting-started guide |
 
-## Key Files
+## Project Structure
 
-| File | Purpose |
-|------|---------|
-| `CLAUDE.md` | Agent master context — persona, project map, safety rules, protocols |
-| `MANIFEST.md` | Project overview — identity, architecture, entry points |
-| `STATE.md` | Dynamic state — current phase, blockers, next steps |
-| `AGENTS.md` | This file — root agent guide |
-| `README.md` | Human navigation guide |
-
-## Naming
-
-All content files use `type_descriptive_name.md` (underscores only, never hyphens).
-
-Governance files use ALLCAPS: `CLAUDE.md`, `MANIFEST.md`, `STATE.md`, `AGENTS.md`, `README.md`.
-
-## Frontmatter
-
-Every content file requires YAML frontmatter with base fields:
-
-```yaml
----
-type: {entity_type}
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-last_edited_by: agent_{username}
-tags: []
----
+```
+lattice-adna/
+├── what/    # WHAT — Knowledge objects, context library, decisions
+├── how/     # HOW — Plans, sessions, templates
+└── who/     # WHO — People, teams, coordination, governance
 ```
 
 ## Agent Startup
 
-1. Read `CLAUDE.md` → structure, rules, persona
-2. Read `STATE.md` → current phase, blockers, next steps
-3. Check `ops/sessions/active/` → conflicting sessions
-4. Check `org/coordination/` → urgent cross-agent notes
-5. Create session file in `ops/sessions/active/` → begin work
+1. **CLAUDE.md** — auto-loaded; confirms project structure and rules
+2. **STATE.md** — operational snapshot: current phase, blockers, next steps
+3. **`how/sessions/active/`** — check for conflicting sessions
+4. **`who/coordination/`** — read any urgent cross-agent notes
+5. **Create session file** in `how/sessions/active/` and begin work
+
+## Layer References
+
+- [what/AGENTS](what/AGENTS.md) — Knowledge objects (WHAT)
+- [how/AGENTS](how/AGENTS.md) — Operations (HOW)
+- [who/AGENTS](who/AGENTS.md) — Organization (WHO)
+
+## Safety Rules
+
+- **Read before write** — always read current content before modifying
+- **Check `updated` field** — if updated today by someone else, confirm before overwriting
+- **Set `last_edited_by` and `updated`** — on every modification
+- **New files are safe** — creating new files has no collision risk
+
+## Priority Hierarchy
+
+1. **Data integrity** — never corrupt or lose existing data
+2. **User-requested tasks** — explicit instructions from current user
+3. **Operational maintenance** — session tracking, plan updates
+4. **Exploration** — research, audits, improvements

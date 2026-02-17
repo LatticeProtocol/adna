@@ -1,19 +1,18 @@
 {
-  "cssTheme": "Tokyo Night",
-  "monospaceFontFamily": "Space Mono,JetBrains Mono,SF Mono,Menlo,monospace",
-  "showRibbon": true,
-  "enabledCssSnippets": [
-    "tokyo-night-purple",
-    "table_stripes",
-    "popover_size",
-    "mermaid_override",
-    "notebook_navigator"
-  ],
+  "accentColor": "#663399",
   "theme": "obsidian",
+  "cssTheme": "Tokyo Night",
   "interfaceFontFamily": "Space Grotesk",
   "textFontFamily": "Space Grotesk",
-  "baseFontSize": 16,
-  "baseFontSizeAction": false,
-  "accentColor": "#663399",
-  "translucency": true
+  "enabledCssSnippets": [
+    "tokyo_night_purple",
+    "table_stripes",
+    "mermaid_override",
+    "popover_size",
+    "code_blocks",
+    "headings_styled",
+    "links_enhanced",
+    "scrollbar_custom",
+    "modals_translucent"
+  ]
 }

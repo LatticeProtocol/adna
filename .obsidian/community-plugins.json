@@ -5,16 +5,9 @@
   "homepage",
   "obsidian-tasks-plugin",
   "obsidian-style-settings",
-  "obsidian-icon-folder",
   "table-editor-obsidian",
   "omnisearch",
-  "obsidian-advanced-slides",
-  "advanced-canvas",
   "terminal",
-  "oz-image-plugin",
-  "obsidian-kanban",
-  "obsidian-charts",
-  "obsidian42-brat",
-  "pexels-banner",
-  "notebook-navigator"
+  "buttons",
+  "folder-notes"
 ]

@@ -27,6 +27,14 @@ env/
 *.swo
 *~
 
+# Obsidian plugin binaries (downloaded by setup.sh, not tracked)
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
+
+# Obsidian theme files (downloaded by setup.sh, not tracked)
+.obsidian/themes/
+
 # Environment
 .env
 .env.local

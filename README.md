@@ -205,7 +205,7 @@ lattice-adna/
 | **10 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, 11 CSS snippets, 3 pre-configured plugins |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, 9 CSS snippets, 12 pre-configured plugins (run `setup.sh`) |
 
 ---
 
@@ -218,34 +218,19 @@ git clone https://github.com/lat-labs/lattice-adna.git
 cd lattice-adna
 ```
 
-### 2. Open in Obsidian
+### 2. Install plugins and theme
 
-Open the `lattice-adna/` directory as a vault in [Obsidian](https://obsidian.md).
+```bash
+./setup.sh
+```
 
-### 3. Install community plugins
+Downloads and installs 12 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
 
-Go to **Settings → Community plugins → Browse** and install:
+Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
-| Plugin | Purpose |
-|--------|---------|
-| Dataview | Query and display structured data |
-| Templater | Template engine with folder-based auto-triggers |
-| Meta Bind | Inline metadata editing |
-| Homepage | Set a start page |
-| Tasks | Task tracking |
-| Style Settings | Customize CSS snippet toggles |
-| Table Editor | Better table editing |
-| Omnisearch | Vault-wide search |
-| Terminal | Terminal access from Obsidian |
-| Buttons | Clickable action buttons |
-| Folder Notes | Index files for folders |
+### 3. Open in Obsidian
 
-### 4. Install theme and font
-
-- **Theme**: Install "Tokyo Night" from **Settings → Appearance → Themes**
-- **Font**: Download [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) and install on your system
-
-The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
+Open `lattice-adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted. The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
 
 ---
 

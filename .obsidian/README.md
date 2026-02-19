@@ -2,9 +2,9 @@
 
 This directory contains Obsidian vault configuration. Most files are checked into git to ensure a consistent experience across clones.
 
-## Plugins (11 community plugins)
+> **Quick setup**: Run `./setup.sh` from the repo root to download all plugins and the theme automatically.
 
-Install these from **Settings → Community plugins → Browse**:
+## Plugins (12 community plugins)
 
 | Plugin | ID | Purpose |
 |--------|----|---------|
@@ -19,10 +19,11 @@ Install these from **Settings → Community plugins → Browse**:
 | Terminal | `terminal` | Terminal access from Obsidian |
 | Buttons | `buttons` | Clickable action buttons in notes |
 | Folder Notes | `folder-notes` | Index files for folder navigation |
+| Notebook Navigator | `notebook-navigator` | Folder-based notebook navigation with icons |
 
 ## Theme
 
-**Tokyo Night** — install from Settings → Appearance → Themes.
+**Tokyo Night** — installed by `setup.sh`, or manually from Settings → Appearance → Themes.
 
 **Font**: Space Grotesk — install on your system from [Google Fonts](https://fonts.google.com/specimen/Space+Grotesk).
 

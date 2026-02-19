@@ -42,8 +42,8 @@ None.
 
 ## Next Steps
 
-1. **Install Obsidian plugins** — see `.obsidian/community-plugins.json` for the list of 11 required plugins
-2. **Install Tokyo Night theme** and Space Grotesk font
+1. **Run `./setup.sh`** — installs 12 community plugins and Tokyo Night theme
+2. **Install Space Grotesk font** (optional) — download from [Google Fonts](https://fonts.google.com/specimen/Space+Grotesk)
 3. **Create your first lattice** — copy an example from `what/lattices/examples/` and customize
 4. **Validate your lattice** — use `lattice_validate.py` to check against schema
 5. **Start a session** — create a session file in `how/sessions/active/` and begin work

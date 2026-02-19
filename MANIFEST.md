@@ -28,7 +28,7 @@ lattice-adna/
 | Layer | Question | Contains |
 |-------|----------|----------|
 | **what/** | WHAT does this project know? | Context library, decisions, aDNA docs, lattice YAML tools + schema + examples |
-| **how/** | HOW does this project work? | Plans, sessions, 9 templates, backlog, campaigns, PRD/RFC pipeline, deliverables |
+| **how/** | HOW does this project work? | Missions, sessions, 10 templates, backlog, campaigns, skills, PRD/RFC pipeline |
 | **who/** | WHO is involved? | People, teams, coordination, governance |
 
 ## Entry Points

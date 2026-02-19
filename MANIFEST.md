@@ -59,7 +59,7 @@ how/pipelines/prd_rfc/
 └── 04_review/        → Final approval (human gate)
 ```
 
-### Templates (9)
+### Templates (10)
 
 | Template | Auto-triggers in |
 |----------|-----------------|
@@ -72,6 +72,7 @@ how/pipelines/prd_rfc/
 | `template_campaign.md` | `how/campaigns/` |
 | `template_prd.md` | `how/pipelines/prd_rfc/02_requirements/` |
 | `template_rfc.md` | `how/pipelines/prd_rfc/03_design/` |
+| `template_skill.md` | `how/skills/` |
 
 ## Active Builds
 

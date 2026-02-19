@@ -232,6 +232,28 @@ Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grote
 
 Open `lattice-adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted. The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
 
+### 4. Start an agent session (recommended)
+
+Open a terminal in the vault directory and start Claude Code:
+
+```bash
+claude
+```
+
+**Berthier** — the vault's built-in agent personality — will detect this is a fresh vault and walk you through interactive onboarding:
+
+- Explains the aDNA architecture and triad structure
+- Asks about your project, domain, and goals
+- Suggests domain-specific ontology extensions
+- Customizes governance files with your project identity
+- Offers personality customization for your agent
+
+This is the fastest way to go from clone to productive vault. Everything Berthier does is inspectable — see `how/skills/skill_onboarding.md`.
+
+> **Prefer reading?** Skip this step and customize the vault manually.
+> The governance files (`CLAUDE.md`, `MANIFEST.md`, `STATE.md`) are
+> well-documented and ready to edit.
+
 ---
 
 ## Your First Lattice
@@ -332,6 +354,8 @@ print('Lattice updated from canvas')
 aDNA is designed for **human-agent collaboration**. The architecture serves both audiences simultaneously.
 
 ### Agent Orientation
+
+When an agent first opens a fresh lattice-adna vault, it runs an interactive onboarding flow to help customize the vault for your project.
 
 When an AI agent (Claude Code, Cursor, etc.) opens an aDNA vault, it reads `CLAUDE.md` and immediately understands:
 

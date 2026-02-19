@@ -24,6 +24,13 @@ last_edited_by: agent_stanley
 >
 > [[STATE|Operational State]] | [[MANIFEST|Project Overview]] | [[CLAUDE|Agent Context]]
 
+> [!tip] First Time Here?
+> Open a terminal in this vault and run `claude` to start an agent session.
+> **Berthier** will guide you through setting up your project interactively.
+>
+> Prefer doing it yourself? Edit [[CLAUDE]], [[MANIFEST]], and [[STATE]]
+> with your project details, then start building.
+
 ---
 
 ## Recent Sessions
@@ -68,10 +75,9 @@ SORT created DESC
 ## Quick Start
 
 > [!abstract] Getting Started
-> 1. **Customize governance** — Edit `CLAUDE.md`, `MANIFEST.md`, and `STATE.md` with your project details
-> 2. **Create your first campaign** — Use the campaign template in `how/campaigns/`
-> 3. **Start a session** — Create a session file in `how/sessions/active/`
-> 4. **Build context** — Add knowledge topics to `what/context/`
+> 1. **Run `claude`** in a terminal — Berthier will guide you through interactive onboarding
+> 2. **Or customize manually** — edit `CLAUDE.md`, `MANIFEST.md`, `STATE.md` with your project details
+> 3. **Start building** — create a campaign, start a session, add context to `what/context/`
 
 ### Templates
 
@@ -106,6 +112,6 @@ SORT created DESC
 
 <div class="homepage-footer">
 
-lattice-adna — powered by the [aDNA paradigm](https://github.com/lat-labs/adna-obsidian)
+lattice-adna — powered by the [aDNA paradigm](https://github.com/lat-labs/lattice-adna)
 
 </div>

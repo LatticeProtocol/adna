@@ -33,10 +33,11 @@ lattice-adna/
 ## Agent Startup
 
 1. **CLAUDE.md** — auto-loaded; confirms project structure and rules
-2. **STATE.md** — operational snapshot: current phase, blockers, next steps
-3. **`how/sessions/active/`** — check for conflicting sessions
-4. **`who/coordination/`** — read any urgent cross-agent notes
-5. **Create session file** in `how/sessions/active/` and begin work
+2. **First-run check** — if uncustomized vault, invoke onboarding skill (`how/skills/skill_onboarding.md`)
+3. **STATE.md** — operational snapshot: current phase, blockers, next steps
+4. **`how/sessions/active/`** — check for conflicting sessions
+5. **`who/coordination/`** — read any urgent cross-agent notes
+6. **Create session file** in `how/sessions/active/` and begin work
 
 ## Layer References
 

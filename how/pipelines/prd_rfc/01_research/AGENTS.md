@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline, research]
 ---
 
@@ -60,3 +60,17 @@ A file with only a problem statement and no research fails the gate.
 - **Existing research**: If `what/context/` already contains extensive coverage of this problem domain, summarize and reference it rather than duplicating. Focus research on gaps.
 - **Cross-cutting concerns**: If research reveals the problem spans multiple domains, document all dimensions but recommend a primary owner domain.
 - **Backlog graduation**: When a backlog idea enters this pipeline, update the backlog idea's status to `in_pipeline` and add `pipeline_ref: prd_rfc/<project_slug>`.
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Processing a file that has been placed in `01_research/` for problem space exploration
+- Starting a new R&D→PRD→RFC pipeline run — this is the entry stage
+- Checking whether a backlog idea is ready to graduate into the pipeline
+
+**Skip when**:
+- No files are present in `01_research/` (empty stage)
+- Working on files already in later pipeline stages (02, 03, 04)
+- Performing non-pipeline operational work
+
+**Token cost**: ~550 tokens (this AGENTS.md)

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-18
-updated: 2026-02-18
+updated: 2026-02-19
 last_edited_by: agent_stanley
 tags: [directory_index, skill]
 ---
@@ -84,3 +84,18 @@ last_edited_by: agent_<username>
 tags: []
 ---
 ```
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Invoking an existing skill by name (read the specific skill file, not all skills)
+- Creating a new skill — check naming conventions, categories, and template reference
+- Modifying or extending an existing skill's procedure
+- Onboarding — learning what automated capabilities and documented procedures exist
+
+**Skip when**:
+- Performing routine session work that doesn't involve skill invocation or creation
+- Working on missions, campaigns, or pipelines that don't reference skills
+- Already know the skill file path and can load it directly
+
+**Token cost**: ~700 tokens (this AGENTS.md). Individual skill files vary widely (50-400 lines).

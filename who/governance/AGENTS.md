@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, governance]
 ---
 
@@ -29,8 +29,22 @@ Create governance files as the project matures. Start with roles and policies, a
 - **Updates**: Changes to governance files should be coordinated — read before write, confirm with user if `updated` is recent
 - **Scope**: Governance files define rules that all agents and users must follow. Treat as authoritative.
 
+## Load/Skip Decision
+
+**Load this directory when**:
+- Reviewing or modifying governance policies (roles, decision authority, operational rules)
+- Onboarding a new team member and need to understand team roles and decision-making
+- Proposing changes to governance structure (use a Tier 2 session)
+
+**Skip when**:
+- Performing routine operational work that doesn't touch governance policies
+- Working on domain content (context, lattices, CRM) without governance implications
+- Already familiar with current governance structure and not modifying it
+
+**Token cost**: ~300 tokens (this AGENTS.md). Individual governance files are ~100-200 lines each.
+
 ## Cross-References
 
-- [CLAUDE.md](CLAUDE.md) — Master agent context (references governance rules)
-- [who/coordination/AGENTS](who/coordination/AGENTS.md) — Cross-agent ephemeral notes
-- [how/sessions/AGENTS](how/sessions/AGENTS.md) — Session protocol
+- [CLAUDE.md](../../CLAUDE.md) — Master agent context (references governance rules)
+- [who/coordination/AGENTS](../coordination/AGENTS.md) — Cross-agent ephemeral notes
+- [how/sessions/AGENTS](../../how/sessions/AGENTS.md) — Session protocol

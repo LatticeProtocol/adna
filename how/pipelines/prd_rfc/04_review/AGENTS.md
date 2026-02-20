@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline, review]
 ---
 
@@ -103,3 +103,17 @@ When presenting a PRD+RFC package for final review:
 - **Stale packages**: If files sit in `04_review/` for more than 7 days without review, create a coordination note in `who/coordination/` flagging the backlog.
 - **PRD amended after RFC**: If the PRD was amended after RFC completion, verify the traceability table still holds. Flag any broken traceability links.
 - **Multiple packages**: When multiple packages are ready, present them one at a time in priority order.
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- A PRD+RFC package has been moved into `04_review/` for final human approval
+- Checking whether a complete package exists (both PRD and RFC with matching slug)
+- Presenting the final review to the user for approve/revise/reject decision
+
+**Skip when**:
+- No files are present in `04_review/` (empty stage)
+- Working on files in earlier pipeline stages (01, 02, 03)
+- Performing non-pipeline operational work
+
+**Token cost**: ~850 tokens (this AGENTS.md)

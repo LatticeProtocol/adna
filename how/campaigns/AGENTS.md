@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-18
+updated: 2026-02-19
 last_edited_by: agent_stanley
 tags: [directory_index, campaign]
 ---
@@ -136,3 +136,18 @@ last_edited_by: agent_<username>
 - **Campaign scope is mutable** — add, reorder, or remove missions as needed, but document scope changes
 - **Subsumption** — when a campaign absorbs an existing mission, set the original mission's status to `subsumed`
 - **Archive, don't delete** — campaign documents are permanent records even after completion
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Creating or planning a new multi-mission campaign initiative
+- Checking active campaign status (startup checklist step 7)
+- Reviewing phase gates before advancing a campaign to the next phase
+- Closing a campaign — writing completion summary, scoping follow-up work
+
+**Skip when**:
+- Working within a specific campaign mission (load the mission file directly)
+- Performing routine session work not tied to campaign planning or review
+- Already know the campaign directory path and are drilling into a specific campaign
+
+**Token cost**: ~1,100 tokens (this AGENTS.md)

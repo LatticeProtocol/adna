@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline, requirements]
 ---
 
@@ -98,3 +98,17 @@ On rejection:
 - **Scope creep during authoring**: If PRD authoring reveals the project is larger than initially scoped, note this in Open Questions and flag to the user during the human gate.
 - **Multiple stakeholders**: List all in Users & Stakeholders. If stakeholders have conflicting needs, document the conflict in Open Questions.
 - **Dependency on uncommitted work**: If a requirement depends on another in-flight plan or pipeline item, document the dependency and flag risk.
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- A research file has been moved into `02_requirements/` and needs PRD authoring
+- Verifying whether a file's research is complete enough to advance from Stage 1
+- Reviewing an existing PRD before the human approval gate
+
+**Skip when**:
+- No files are present in `02_requirements/` (empty stage)
+- Working on files in other pipeline stages (01, 03, 04)
+- Performing non-pipeline operational work
+
+**Token cost**: ~800 tokens (this AGENTS.md)

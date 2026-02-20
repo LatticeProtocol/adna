@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, context]
 ---
 
@@ -60,8 +60,21 @@ context_version: "1.0"
 token_estimate: ~NNNN
 last_edited_by: agent_{username}
 tags: [context, {topic}]
+# Quality evaluation (optional — added during Phase 3 review or quality audit)
+# quality_score: 4.2          # composite average of 5 numeric axes
+# signal_density: 4            # 1-5
+# actionability: 5             # 1-5
+# coverage_uniformity: 4       # 1-5
+# source_diversity: 4          # 1-5
+# cross_topic_coherence: 4     # 1-5
+# freshness_category: stable   # volatile | stable | durable | mixed
+# last_evaluated: YYYY-MM-DD
 ---
 ```
+
+### Quality Evaluation
+
+Context files may include quality scores from the 6-axis evaluation rubric (see `what/docs/context_quality_rubric.md`). Quality scoring is mandatory for `standard`+ effort deep research output and optional for other context files. The composite `quality_score` is the simple average of 5 numeric axes; `freshness_category` is categorical. **Floor rule**: any axis ≤ 2 flags the file for revision.
 
 ### Body Structure
 
@@ -118,6 +131,22 @@ Every context file should meet these standards:
 
 ## Available Topics
 
-| Topic | Subtopics | Total Tokens | Status |
-|-------|-----------|-------------|--------|
-| *(none yet — add topics as the project grows)* | | | |
+| Topic | Subtopics | Total Tokens | Avg Quality | Status |
+|-------|-----------|-------------|-------------|--------|
+| prompt_engineering | 7 | ~21,200 | — | active |
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Starting domain-specific work and need to check whether relevant context exists
+- Creating a new context topic or subtopic (follow the format and quality standards above)
+- Evaluating context quality using the 6-axis rubric (see `what/docs/context_quality_rubric.md`)
+
+**Skip when**:
+- Performing routine operational work that doesn't require domain expertise
+- Already loaded the specific topic's AGENTS.md and subtopics you need
+- Working on missions, campaigns, or backlog without domain research needs
+
+**Token budget awareness**: This AGENTS.md is ~1,100 tokens. Each topic has its own AGENTS.md (~300-400 tokens) with a subtopic index. Load the topic index first, then only the subtopics you need — never load an entire topic directory blindly.
+
+**Token cost**: ~1,100 tokens (this AGENTS.md)

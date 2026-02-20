@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, backlog]
 ---
 
@@ -136,3 +136,17 @@ When an idea accumulates enough context and gets user buy-in:
 | Idea | Category | Status | Priority | Effort |
 |------|----------|--------|----------|--------|
 | *(none yet)* | | | | |
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Session startup scan — quickly check for `proposed` or `discussed` ideas relevant to your current task (startup checklist step 6)
+- Creating a new idea file when an improvement surfaces during work
+- Graduating a mature idea into a mission (set `status: planned`, link `plan_id`)
+
+**Skip when**:
+- Startup scan shows no relevant ideas and you're not creating new ones
+- Deep in mission execution where backlog scanning would be a distraction
+- Already reviewed backlog this session and found nothing relevant
+
+**Token cost**: ~1,100 tokens (this AGENTS.md)

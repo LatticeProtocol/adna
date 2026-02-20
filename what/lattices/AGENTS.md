@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, lattice]
 ---
 
@@ -63,7 +63,23 @@ for error in result.errors:
 | `context_graph` | Knowledge structure | varies |
 | `workflow` | Operational process | `workflow` |
 
+## Load/Skip Decision
+
+**Load this directory when**:
+- Working with `.lattice.yaml` files — authoring, validating, or converting
+- Understanding the lattice type system (pipeline, agent, context_graph, workflow)
+- Creating a new lattice and need schema reference or examples
+
+**Skip when**:
+- Performing operational work (sessions, missions, campaigns) not involving lattice definitions
+- Working on context library, governance, or CRM content
+- Already inside a specific subdirectory (tools/ or examples/) — load that AGENTS.md directly
+
+**Token cost**: ~550 tokens (this AGENTS.md). Subdirectories: tools/ AGENTS.md (~400 tokens), examples/ AGENTS.md (~250 tokens).
+
 ## Cross-References
 
-- [what/AGENTS](what/AGENTS.md) — Knowledge layer index
-- [canvas_yaml_interop](what/lattices/canvas_yaml_interop.md) — Interop specification
+- [what/AGENTS](../AGENTS.md) — Knowledge layer index
+- [what/lattices/tools/AGENTS](tools/AGENTS.md) — Python validation and conversion tools
+- [what/lattices/examples/AGENTS](examples/AGENTS.md) — Reference lattice implementations
+- [canvas_yaml_interop](canvas_yaml_interop.md) — Interop specification

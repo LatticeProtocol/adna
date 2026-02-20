@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, coordination]
 ---
 
@@ -51,3 +51,17 @@ Brief description of what other agents need to know.
 - `blocking` urgency means agents should pause and consult the user
 - `warning` means proceed with caution
 - `info` is advisory only
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Session startup — checking for urgent cross-agent notes (startup checklist step 5)
+- Posting a coordination note after discovering something cross-cutting (sync issue, config conflict, shared work overlap)
+- Cleaning up expired coordination notes
+
+**Skip when**:
+- Already checked coordination during startup and found no urgent notes
+- Working in a single-agent environment with no concurrent sessions
+- Mid-session and not posting a new coordination note
+
+**Token cost**: ~400 tokens (this AGENTS.md)

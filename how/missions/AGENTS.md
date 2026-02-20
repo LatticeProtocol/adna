@@ -1,9 +1,9 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
-tags: [directory_index, plans]
+updated: 2026-02-19
+last_edited_by: agent_stanley
+tags: [directory_index, missions]
 ---
 
 # Missions — Agent Protocol
@@ -71,3 +71,18 @@ Template: `how/templates/template_mission.md`
 - **Dependencies are hard** — do not start a task until all its `depends on` tasks are `completed`
 - **Plans are living documents** — add tasks, reorder, or skip tasks as needed during execution
 - **Keep tasks session-sized** — each task should be completable in roughly one agent session
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Creating a new mission for a task too large for a single session
+- Claiming the next objective in an active mission (startup checklist step 8)
+- Checking mission status to understand what work is in progress or completed
+- Closing a mission — updating status, writing completion summary
+
+**Skip when**:
+- Working within a campaign mission (those live in `how/campaigns/campaign_<name>/missions/`)
+- Performing routine session work not tied to a mission
+- Already know the mission file path and can load it directly
+
+**Token cost**: ~600 tokens (this AGENTS.md)

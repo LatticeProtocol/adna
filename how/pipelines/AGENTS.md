@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline]
 ---
 
@@ -69,8 +69,22 @@ To add a new pipeline:
 - **Quality gates are mandatory** — files must meet stage exit criteria before advancing
 - **Human gates are human gates** — stages marked as mandatory human review must never be auto-approved
 
+## Load/Skip Decision
+
+**Load this directory when**:
+- Starting or continuing a content-as-code workflow (e.g., R&D→PRD→RFC planning)
+- Creating a new pipeline type for a repeatable folder-based workflow
+- Understanding the "file location = state" paradigm before building pipeline stages
+
+**Skip when**:
+- No active pipeline runs and not creating a new pipeline
+- Working on missions, sessions, or backlog outside of pipeline context
+- Already inside a specific pipeline — load that pipeline's AGENTS.md directly
+
+**Token cost**: ~600 tokens (this AGENTS.md)
+
 ## Cross-References
 
-- [how/pipelines/prd_rfc/AGENTS](how/pipelines/prd_rfc/AGENTS.md) — Product planning pipeline
-- [how/missions/AGENTS](how/missions/AGENTS.md) — Mission protocol (pipelines feed into missions)
-- [how/templates/](how/templates/) — Templates used within pipeline stages
+- [how/pipelines/prd_rfc/AGENTS](prd_rfc/AGENTS.md) — Product planning pipeline
+- [how/missions/AGENTS](../missions/AGENTS.md) — Mission protocol (pipelines feed into missions)
+- [how/templates/AGENTS](../templates/AGENTS.md) — Templates used within pipeline stages

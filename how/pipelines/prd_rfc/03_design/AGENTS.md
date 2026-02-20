@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline, design]
 ---
 
@@ -62,3 +62,17 @@ A design document without requirement traceability fails the gate — design mus
 - **Multiple valid designs**: If two designs are genuinely equivalent, present both in Alternatives Considered and recommend one with rationale. Flag for user decision in review.
 - **Dependencies on external systems**: Document external dependencies in the design with version requirements, fallback behavior, and risk assessment.
 - **PRD amendment needed**: If design work reveals the PRD needs changes, create a coordination note and pause. Do not proceed with a design that contradicts approved requirements.
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- An approved PRD has been moved into `03_design/` and needs RFC authoring
+- Loading relevant context from `what/context/` to inform a technical design
+- Reviewing RFC quality gates before advancing to Stage 4
+
+**Skip when**:
+- No files are present in `03_design/` (empty stage)
+- Working on files in other pipeline stages (01, 02, 04)
+- Performing non-pipeline operational work
+
+**Token cost**: ~550 tokens (this AGENTS.md)

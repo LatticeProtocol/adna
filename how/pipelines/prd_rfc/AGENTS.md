@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, pipeline, prd_rfc]
 ---
 
@@ -69,11 +69,25 @@ Campaigns (multi-mission initiatives) may use the R&D→PRD→RFC lifecycle for 
 
 A campaign with 5+ missions benefits from formal R&D→PRD→RFC planning. Smaller campaigns (2-4 missions) may skip the R&D artifact and go straight to PRD→RFC.
 
+## Load/Skip Decision
+
+**Load this directory when**:
+- Entering the R&D→PRD→RFC product planning pipeline for a new initiative
+- Checking pipeline stage overview before drilling into a specific stage's AGENTS.md
+- Planning a campaign that will use formal R&D→PRD→RFC artifacts
+
+**Skip when**:
+- No active pipeline runs (all stage directories empty)
+- Working on missions, sessions, or backlog that don't involve product planning
+- Already inside a specific stage — load that stage's AGENTS.md instead
+
+**Token cost**: ~650 tokens (this AGENTS.md). Stage-level AGENTS.md files add 550-850 tokens each — load only the active stage.
+
 ## References
 
 - Stage instructions: `01_research/AGENTS.md`, `02_requirements/AGENTS.md`, `03_design/AGENTS.md`, `04_review/AGENTS.md`
-- Pipeline paradigm: [[how/pipelines/AGENTS|how/pipelines/AGENTS.md]]
-- Templates: [[template_prd|PRD]], [[template_rfc|RFC]]
+- Pipeline paradigm: [how/pipelines/AGENTS](../AGENTS.md)
+- Templates: `../../templates/template_prd.md`, `../../templates/template_rfc.md`
 - Output destination: `how/deliverables/`
-- Mission protocol: [[how/missions/AGENTS|how/missions/AGENTS.md]]
-- Campaign protocol: [[how/campaigns/AGENTS|how/campaigns/AGENTS.md]]
+- Mission protocol: [how/missions/AGENTS](../../missions/AGENTS.md)
+- Campaign protocol: [how/campaigns/AGENTS](../../campaigns/AGENTS.md)

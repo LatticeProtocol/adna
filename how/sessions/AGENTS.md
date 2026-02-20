@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-17
-last_edited_by: agent_init
+updated: 2026-02-19
+last_edited_by: agent_stanley
 tags: [directory_index, sessions]
 ---
 
@@ -139,3 +139,18 @@ Include: what was accomplished, what remains, key context, recommended approach.
 The next-session prompt ensures continuity. A fresh agent reading this prompt and STATE.md should be able to continue the work without reading the full session history.
 
 Template: `how/templates/template_session.md`
+
+## Load/Skip Decision
+
+**Load this directory when**:
+- Creating a new session file at the start of agent work (startup checklist step 9)
+- Checking `how/sessions/active/` for conflicting sessions (startup checklist step 4)
+- Debugging session protocol issues — stale sessions, missing SITREPs, broken handoffs
+- Closing a session — writing SITREP and moving file to history
+
+**Skip when**:
+- Mid-session and not creating, checking, or closing sessions
+- Reading session history for analytics (scan `history/` directly)
+- Already created the session file and remember the Tier 1/Tier 2 rules
+
+**Token cost**: ~1,100 tokens (this AGENTS.md)

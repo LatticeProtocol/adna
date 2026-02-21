@@ -27,13 +27,8 @@ env/
 *.swo
 *~
 
-# Obsidian plugin binaries (downloaded by setup.sh, not tracked)
-.obsidian/plugins/*/main.js
-.obsidian/plugins/*/manifest.json
-.obsidian/plugins/*/styles.css
-
-# Obsidian theme files (downloaded by setup.sh, not tracked)
-.obsidian/themes/
+# Note: plugin binaries and themes ARE tracked so the vault works on clone.
+# Run ./setup.sh --force to update all plugins to latest versions.
 
 # Environment
 .env

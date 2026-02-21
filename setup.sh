@@ -29,7 +29,6 @@ PLUGIN_IDS=(
     table-editor-obsidian
     omnisearch
     terminal
-    buttons
     folder-notes
     notebook-navigator
 )
@@ -43,7 +42,6 @@ PLUGIN_REPOS=(
     tgrosinger/advanced-tables-obsidian
     scambier/obsidian-omnisearch
     polyipseity/obsidian-terminal
-    shabegom/buttons
     LostPaul/obsidian-folder-notes
     johansan/notebook-navigator
 )

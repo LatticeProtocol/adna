@@ -11,7 +11,7 @@ last_edited_by: agent_stanley
 
 # lattice-adna
 
-*Design, validate, and iterate on Lattice YAML definitions with AI agents.*
+*A standalone knowledge architecture for building personal lattices and knowledge graphs with AI agents.*
 
 > An AI-native knowledge vault built on the **aDNA paradigm** — where humans browse in Obsidian and agents operate via Claude Code.
 
@@ -112,6 +112,6 @@ SORT created DESC
 
 <div class="homepage-footer">
 
-lattice-adna — powered by the [aDNA paradigm](https://github.com/lat-labs/lattice-adna)
+lattice-adna — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/lat-labs/lattice-adna) | foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL)
 
 </div>

@@ -13,7 +13,7 @@ tags: [manifest, governance]
 <!-- CUSTOMIZE THIS: Replace the description below with your project's name and purpose. -->
 <!-- Example: "**my-project** — AI-powered market research platform for B2B SaaS companies." -->
 
-**lattice-adna** — A quick-start Obsidian vault for building and managing knowledge architectures with AI agents.
+**lattice-adna** — A standalone knowledge architecture for building personal lattices and knowledge graphs. Designed for both humans (via Obsidian) and AI agents (via Claude Code). aDNA is the foundational building block of the Lattice federated computing protocol.
 
 This repo is a self-contained aDNA deployment that anyone can clone and immediately start using. It includes templates, tools, example lattices, and the operational infrastructure (sessions, missions, campaigns) needed to run an AI-native project from day one.
 

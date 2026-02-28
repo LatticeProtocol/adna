@@ -8,7 +8,7 @@ Every project accumulates knowledge — decisions, contacts, research, processes
 
 Clone this repo to get a ready-to-use aDNA vault with templates, tools, and examples. Customize it for your domain in minutes.
 
-> *aDNA originated from the [Lattice Protocol](https://github.com/lat-labs/lattice-protocol) for federated AI compute, but the architecture is domain-neutral — any project that uses AI agents (or just wants structured knowledge) benefits.*
+> *aDNA is a standalone knowledge architecture standard. It is the foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL) for federated AI compute — but the architecture is domain-neutral. Any project that uses AI agents (or just wants structured knowledge) benefits.*
 
 ---
 
@@ -380,8 +380,8 @@ Add a template in `how/templates/` so new entities are consistent:
 ```markdown
 ---
 type: customer
-created: <% tp.date.now("YYYY-MM-DD") %>
-updated: <% tp.date.now("YYYY-MM-DD") %>
+created: 2026-02-28
+updated: 2026-02-28
 status: prospect
 last_edited_by:
 tags: [customer]

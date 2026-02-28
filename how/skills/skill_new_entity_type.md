@@ -140,8 +140,8 @@ Create `how/templates/template_{entity_name}.md`:
 ```markdown
 ---
 type: {entity_name}
-created: <% tp.date.now("YYYY-MM-DD") %>
-updated: <% tp.date.now("YYYY-MM-DD") %>
+created: 2026-02-28
+updated: 2026-02-28
 status: active
 last_edited_by:
 tags: [{entity_name}]

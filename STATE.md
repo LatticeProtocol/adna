@@ -1,10 +1,10 @@
 ---
 type: state
 created: 2026-02-17
-updated: 2026-02-20
+updated: 2026-03-02
 status: active
 last_edited_by: agent_stanley
-last_session: session_stanley_20260220_adna_universality_p1
+last_session: ""
 tags: [state, governance]
 ---
 
@@ -14,53 +14,45 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 ## Current Phase
 
-<!-- IF YOU JUST CLONED THIS: Replace everything below with your project's current state. -->
-<!-- This file is YOUR operational dashboard — update it every session with what's happening, -->
-<!-- what's blocked, and what's next. Delete these HTML comments when you customize. -->
+**Production-validated.** aDNA v2.1 with hardened object standards, Canvas Standard v1.0.0, and 13 example lattices across business, research, creative, personal, and biotech domains.
 
-**Ready — Complete Template.** The lattice-adna repo ships as a fully functional aDNA quick-start with validated tools, context library, Mermaid-enhanced spec docs, and agent-driven onboarding. Clone and start building.
+## What's Working
+
+- aDNA triad deployed (what/how/who, 5 governance files, 14 base entity types)
+- Object standards hardened: module, dataset, lattice (targets as dataset subtype)
+- Canvas Standard v1.0.0 with Round-Trip Protocol v1.0 (YAML authoritative, canvas as view layer)
+- Type vocabulary: 19 canonical I/O types (Decision 10)
+- FAIR metadata: flat↔nested envelope interconversion (Decision 11)
+- `.dataset.yaml` schema: multi-cloud storage, 7 providers, FUSE support (Decision 12)
+- Lattice YAML validation tool (`lattice_validate.py`) + JSON Schema
+- Canvas-YAML bidirectional conversion (`lattice2canvas.py`, `canvas2lattice.py`)
+- 13 example lattice files + 3 canvas templates + 1 demonstration canvas
+- Prompt engineering context library (1 topic, 7 subtopics, ~21K tokens)
+- R&D→PRD→RFC planning pipeline (4 stages)
+- Agent-driven onboarding (`how/skills/skill_onboarding.md`)
+- 10 templates, session tracking, mission/campaign/backlog systems
+- 10 CSS snippets for Obsidian visual polish
 
 ## Recent Decisions
 
 | Date | Decision | Source |
 |------|----------|--------|
-| 2026-02-19 | AGENTS.md enrichment — 5 new files, 20 enriched with load/skip guidance, 25 total | campaign_adna_review M6 |
-| 2026-02-19 | CLAUDE.md v4.0 — signal-to-token optimization, convergence model, ontology table | campaign_adna_review M5 |
-| 2026-02-19 | 19 Mermaid diagrams added to 3 spec docs | campaign_adna_review M4 |
-| 2026-02-19 | 6-axis context quality rubric deployed | campaign_adna_review M2 |
-| 2026-02-19 | Prompt engineering context library (7 subtopics) created | campaign_adna_review M1 |
-| 2026-02-17 | Initial repo created with aDNA bare triad + lattice tools | campaign_lattice_integration M8 |
+| 2026-03-02 | Decision 9: YAML authoritative, canvas is view layer | campaign_adna_lattice M08 |
+| 2026-03-02 | Decision 10: 19-type I/O vocabulary | campaign_adna_lattice M16 |
+| 2026-03-02 | Decision 11: Nested FAIR canonical, flat FAIR transport | campaign_adna_lattice M16 |
+| 2026-03-02 | Decision 12: Multi-cloud `.dataset.yaml` with FUSE | campaign_adna_lattice M16 |
 
 ## Active Blockers
 
 None.
 
-## What's Working
-
-- 25 AGENTS.md files with convergence-aware load/skip guidance across all content directories
-- aDNA skeleton deployed (what/how/who triad, governance files, 10 templates)
-- Prompt engineering context library (1 topic, 7 subtopics, ~21K tokens)
-- Mermaid-enhanced spec docs (19 diagrams across 3 documents)
-- Context quality evaluation framework (6-axis rubric with scoring template)
-- Lattice YAML validation tool (`lattice_validate.py`)
-- Canvas-YAML bidirectional conversion (`lattice2canvas.py`, `canvas2lattice.py`)
-- JSON Schema for `.lattice.yaml` format
-- 13 example lattice files across business, creative, research, personal, and biotech domains
-- R&D→PRD→RFC planning pipeline with 4 stages
-- Session tracking ready (`how/sessions/active/`)
-- Mission, campaign, backlog, and skills systems ready
-- 10 CSS snippets for Obsidian visual polish
-- Agent-driven onboarding (`how/skills/skill_onboarding.md`)
-
 ## Next Steps
-
-<!-- CUSTOMIZE THIS: Replace these steps with your project's actual next actions. -->
 
 1. **Start an agent session** — run `claude` in the vault directory; Berthier guides interactive onboarding (~15-30 min)
 2. **Or customize manually** — edit MANIFEST.md, STATE.md, and CLAUDE.md § Identity with your project identity (~30-45 min)
-3. **Extend the ontology** — add domain-specific directories under who/what/how for your project (see README § Extending the Ontology)
-4. **Create your first content** — pick the triad leg that fits and create a file using templates from `how/templates/`
-5. **Explore the context library** — read `what/context/prompt_engineering/AGENTS.md` for context engineering best practices
+3. **Extend the ontology** — add domain-specific directories under who/what/how (see README § Extending the Ontology)
+4. **Explore the context library** — read `what/context/prompt_engineering/AGENTS.md` for context engineering best practices
+5. **Build a lattice** — copy an example from `what/lattices/examples/` and customize it
 
 ## Partial-Resume Detection
 

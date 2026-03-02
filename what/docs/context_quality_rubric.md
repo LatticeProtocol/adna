@@ -180,7 +180,7 @@ These fields are optional in the context file schema — they are added during P
 
 Baseline calibration against 3 existing context files, establishing scoring reference points.
 
-### Calibration File 1: `context_prompt_engineering_signal_to_token.md` (lattice-adna)
+### Calibration File 1: `context_prompt_engineering_signal_to_token.md` (adna)
 
 **Profile**: M1 research output. High-quality, decision-relevant tables, multiple source types.
 
@@ -195,7 +195,7 @@ Baseline calibration against 3 existing context files, establishing scoring refe
 
 **Composite**: (5 + 5 + 4 + 4 + 5) / 5 = **4.6** — Excellent
 
-### Calibration File 2: `context_prompt_engineering_convergence_model.md` (lattice-adna)
+### Calibration File 2: `context_prompt_engineering_convergence_model.md` (adna)
 
 **Profile**: M1 original articulation. Novel framework with operational backing but fewer external sources.
 

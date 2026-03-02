@@ -57,7 +57,7 @@ The federation block is defined in `lattice_yaml_schema.json` under `lattice.fed
 | Property | Type | Default | Semantic Meaning |
 |----------|------|---------|-----------------|
 | `shareable` | boolean | `false` | Lattice is federation-ready and may be exported/shared. Setting to `true` is a declaration of intent, not automatic publication. |
-| `source_instance` | string | — | Identifier of the originating aDNA instance. Establishes provenance. Format: lowercase, hyphenated (e.g., `lattice-adna`, `bio-research-vault`). |
+| `source_instance` | string | — | Identifier of the originating aDNA instance. Establishes provenance. Format: lowercase, hyphenated (e.g., `adna`, `bio-research-vault`). |
 | `parent_lattice` | string | — | Name of the lattice this was extracted from. Creates a traceability link from sub-lattice to parent. |
 | `version_policy` | enum | `minor` | How this lattice tracks upstream changes: `locked` (pinned), `patch` (auto-update patches), `minor` (auto-update minor), `latest` (always latest). |
 | `extracted_nodes` | array[string] | — | Node IDs extracted from `parent_lattice`. Cross-references must resolve to this lattice's nodes array. |
@@ -110,15 +110,15 @@ lattice://<instance_id>/<lattice_name>[/<node_id>]
 
 | Component | Required | Pattern | Example |
 |-----------|----------|---------|---------|
-| `instance_id` | Yes | `[a-z][a-z0-9-]*` | `lattice-adna` |
+| `instance_id` | Yes | `[a-z][a-z0-9-]*` | `adna` |
 | `lattice_name` | Yes | `[a-z][a-z0-9_]*` | `docking_assessment` |
 | `node_id` | No | `[a-z][a-z0-9_]*` | `structure_prediction` |
 
 Examples:
 
 ```
-lattice://lattice-adna/docking_assessment
-lattice://lattice-adna/docking_assessment/structure_prediction
+lattice://adna/docking_assessment
+lattice://adna/docking_assessment/structure_prediction
 lattice://bio-research-vault/protein_binder_design
 lattice://bio-research-vault/protein_binder_design/backbone_design
 ```
@@ -432,7 +432,7 @@ Node IDs are scoped by their containing lattice:
 |-------------|--------|---------|---------------------|
 | **Local** | `node_id` | `structure_prediction` | Unique within one lattice |
 | **Qualified** | `lattice_name.node_id` | `docking_assessment.structure_prediction` | Unique across all lattices in an instance |
-| **Global** | `lattice://instance_id/lattice_name/node_id` | `lattice://lattice-adna/docking_assessment/structure_prediction` | Unique across all instances |
+| **Global** | `lattice://instance_id/lattice_name/node_id` | `lattice://adna/docking_assessment/structure_prediction` | Unique across all instances |
 
 ### 5.2 Collision Detection
 
@@ -508,7 +508,7 @@ graph TB
     end
 
     subgraph External["External Reference"]
-        P3[parent_node_a] --> DA["docking_assessment\n(opaque node)\nref: lattice://lattice-adna/docking_assessment"]
+        P3[parent_node_a] --> DA["docking_assessment\n(opaque node)\nref: lattice://adna/docking_assessment"]
         DA --> P4[parent_node_b]
     end
 
@@ -625,7 +625,7 @@ After placing the lattice in the target instance:
 
 ### 8.1 Convergent Narrowing Preserved
 
-Federation does not break the convergent series property. When a federated lattice is composed into a parent, the total token scope at each level of the execution hierarchy still decreases monotonically:
+Federation does not break the convergent narrowing pattern. When a federated lattice is composed into a parent, the total token scope at each level of the execution hierarchy still decreases monotonically:
 
 | Level | Token Scope | Behavior |
 |-------|------------|----------|
@@ -662,7 +662,7 @@ External reference is the default recommendation for federation because it minim
 
 ### 9.1 Scenario
 
-A bio-research vault (`bio-research-vault`) wants to use the `docking_assessment` pipeline from `lattice-adna`. The full round-trip:
+A bio-research vault (`bio-research-vault`) wants to use the `docking_assessment` pipeline from `adna`. The full round-trip:
 
 1. **Validate** `docking_assessment` for federation readiness
 2. **Export** it as a portable package
@@ -678,7 +678,7 @@ Check the existing `docking_assessment.lattice.yaml`:
 # Already present in the lattice:
 federation:
   shareable: true              # ✓ Opt-in
-  source_instance: lattice-adna # ✓ Provenance
+  source_instance: adna # ✓ Provenance
   parent_lattice: protein_binder_design  # ✓ Traceability
   version_policy: locked       # ✓ Policy set
   extracted_nodes:             # ✓ Cross-references
@@ -716,10 +716,10 @@ nodes:
 nodes:
   - id: structure_prediction
     type: module
-    ref: "lattice://lattice-adna/docking_assessment/structure_prediction"
+    ref: "lattice://adna/docking_assessment/structure_prediction"
   - id: interface_analysis
     type: module
-    ref: "lattice://lattice-adna/docking_assessment/interface_analysis"
+    ref: "lattice://adna/docking_assessment/interface_analysis"
 ```
 
 Export manifest generated:
@@ -727,13 +727,13 @@ Export manifest generated:
 ```yaml
 lattice_name: docking_assessment
 version: "1.0.0"
-source_instance: lattice-adna
+source_instance: adna
 export_date: 2026-02-19
 node_count: 3
 edge_count: 3
 external_refs:
-  - "lattice://lattice-adna/docking_assessment/structure_prediction"
-  - "lattice://lattice-adna/docking_assessment/interface_analysis"
+  - "lattice://adna/docking_assessment/structure_prediction"
+  - "lattice://adna/docking_assessment/interface_analysis"
 ```
 
 ### 9.4 Step 3: Share (Git)
@@ -748,7 +748,7 @@ git push origin main
 ### 9.5 Step 4: Import into bio-research-vault
 
 1. **Schema validation**: PASS
-2. **Ontology check**: `bio-research-vault` uses base ontology v3.0 — compatible with `lattice-adna` v3.0. No extension conflicts (bio-research-vault has `bio_` extensions, no overlap with lattice-adna extensions).
+2. **Ontology check**: `bio-research-vault` uses base ontology v3.0 — compatible with `adna` v3.0. No extension conflicts (bio-research-vault has `bio_` extensions, no overlap with adna extensions).
 3. **Node ID collision**: bio-research-vault has no existing `structure_prediction` or `interface_analysis` node IDs — no collision.
 4. **Placement**: `bio-research-vault/what/lattices/docking_assessment.lattice.yaml`
 
@@ -763,7 +763,7 @@ lattice:
   lattice_type: pipeline
   description: >
     Therapeutics discovery pipeline composing local target selection
-    with imported docking assessment from lattice-adna.
+    with imported docking assessment from adna.
   execution:
     mode: workflow
     runtime: ray
@@ -778,7 +778,7 @@ lattice:
       description: "Generate binder candidates for selected targets"
     - id: docking_assessment
       type: module
-      ref: "lattice://lattice-adna/docking_assessment"
+      ref: "lattice://adna/docking_assessment"
       description: "Validate candidates via structure prediction and interface analysis"
     - id: clinical_ranking
       type: process
@@ -812,7 +812,7 @@ lattice:
       - composition
     provenance: >
       Composed pipeline — local target selection and clinical ranking
-      with imported docking_assessment from lattice-adna instance.
+      with imported docking_assessment from adna instance.
   federation:
     shareable: true
     source_instance: bio-research-vault

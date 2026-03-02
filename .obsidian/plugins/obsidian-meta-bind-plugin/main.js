@@ -200,5 +200,3 @@ decimal.js/decimal.mjs:
    *  MIT Licence
    *)
 */
-
-/* nosourcemap */

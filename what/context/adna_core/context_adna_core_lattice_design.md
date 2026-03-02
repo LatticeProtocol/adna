@@ -163,7 +163,7 @@ edges:
 ```yaml
 federation:
   shareable: true
-  source_instance: lattice-adna
+  source_instance: adna
   parent_lattice: protein_binder_design
   version_policy: locked
   extracted_nodes: [structure_prediction, interface_analysis, ranking]

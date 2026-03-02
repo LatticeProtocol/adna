@@ -1,13 +1,13 @@
 ---
 type: governance
-version: "4.0"
-token_estimate: ~500
-updated: 2026-02-19
+version: "4.1"
+token_estimate: ~600
+updated: 2026-03-02
 last_edited_by: agent_stanley
 ---
 
-# CLAUDE.md — lattice-adna
-<!-- v4.0 | 2026-02-19 -->
+# CLAUDE.md — adna
+<!-- v4.1 | 2026-03-02 -->
 
 ## Identity & Personality
 
@@ -44,7 +44,7 @@ If only ONE indicates first-run (partial onboarding), read the skill file and re
 ## Project Map
 
 ```
-lattice-adna/
+adna/
 ├── CLAUDE.md                    # Agent master context (this file)
 ├── AGENTS.md                    # Root agent guide
 ├── MANIFEST.md                  # Project overview, architecture, entry points
@@ -199,6 +199,20 @@ Extend by adding domain-specific entities under the appropriate triad leg. The b
 | `reasoning` | LLM-driven — model decides next steps |
 | `hybrid` | Mixed — workflow structure with reasoning at decision points |
 
+### Object Standards
+
+Three core object types have type-standard docs, YAML schemas, and FAIR metadata requirements. Targets are a dataset subtype (`dataset_class: target`).
+
+| Object | Standard | Schema |
+|--------|----------|--------|
+| Module | `what/modules/standard_module.md` | — |
+| Dataset | `what/datasets/standard_dataset.md` | `dataset_yaml_schema.json` |
+| Lattice | `what/lattices/standard_lattice.md` | `lattice_yaml_schema.json` |
+
+**Canvas authority model (Decision 9)**: `.lattice.yaml` is authoritative; `.canvas` is the view/interaction layer. Round-Trip Protocol v1.0 governs bidirectional conversion.
+
+**Type vocabulary (Decision 10)**: 19 canonical I/O types across 4 tiers (primitives → structured → molecular → media) for module `inputs:`/`outputs:` annotations. Snake_case, file types end in `_file`.
+
 ### Compute Tiers
 
 | Tier | Scope | Example |
@@ -220,12 +234,14 @@ Every `.lattice.yaml` includes a `fair` block with:
 
 The execution hierarchy (Campaign → Mission → Objective) is a convergent decomposition: each level narrows context, reducing token count while increasing signal density.
 
-| Level | Analogy | Effect |
-|-------|---------|--------|
-| **Vault** | Function space | Total knowledge — unbounded token count |
-| **Campaign** | Coarse projection | Strategic initiative — hundreds of files → tens |
-| **Mission** | Finer projection | Decomposed task — tens of files → handful |
-| **Objective** | Point evaluation | Session work — the exact files needed |
+| Level | Structural Parallel (informal) | Effect |
+|-------|-------------------------------|--------|
+| **Vault** | Finite collection | Total knowledge — full token count |
+| **Campaign** | Subset selection | Strategic initiative — hundreds of files → tens |
+| **Mission** | Narrower subset selection | Decomposed task — tens of files → handful |
+| **Objective** | Exact file selection | Session work — the exact files needed |
+
+> These are structural analogies, not formal mathematical equivalences.
 
 Context serving implements this as graph traversal: load only the subgraph reachable from the current objective. Each `AGENTS.md` helps agents decide whether to load its directory. See `what/context/prompt_engineering/context_prompt_engineering_convergence_model.md` for the full articulation.
 
@@ -256,4 +272,4 @@ tags: []
 Use bidirectional wikilinks when adding relationships between entities.
 
 ---
-<!-- v4.0 | 2026-02-19 -->
+<!-- v4.1 | 2026-03-02 -->

@@ -2,8 +2,6 @@
   "accentColor": "#663399",
   "theme": "obsidian",
   "cssTheme": "Tokyo Night",
-  "interfaceFontFamily": "Space Grotesk",
-  "textFontFamily": "Space Grotesk",
   "enabledCssSnippets": [
     "tokyo_night_purple",
     "table_stripes",

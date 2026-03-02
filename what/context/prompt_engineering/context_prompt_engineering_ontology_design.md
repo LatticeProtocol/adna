@@ -74,7 +74,7 @@ Root governance (CLAUDE.md)
       → Specific file(s) needed for current task
 ```
 
-Each node in this traversal answers: "Should the agent go deeper?" This is a projection — at every level, irrelevant branches are pruned and the token budget decreases monotonically.
+Each node in this traversal answers: "Should the agent go deeper?" This is selective loading (analogous to projection) — at every level, irrelevant branches are pruned and the token budget decreases monotonically.
 
 Implementation patterns:
 - **AGENTS.md as routing nodes** — each tells the agent what it contains, estimated token cost, and when to load

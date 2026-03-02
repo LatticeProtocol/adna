@@ -105,5 +105,5 @@ lattice:
     provenance: "End-to-end computational protein binder design pipeline — backbone generation through structure prediction, interface analysis, and candidate ranking"
   federation:
     shareable: true
-    source_instance: lattice-adna
+    source_instance: adna
     version_policy: minor

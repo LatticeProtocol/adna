@@ -1,4 +1,4 @@
-# lattice-adna
+# adna
 
 **Give your project a knowledge architecture that both humans and AI agents can navigate.**
 
@@ -67,7 +67,7 @@ This is the **triad** — three directories, three questions, complete coverage.
 | An architecture decision record | What did we decide? | `what/decisions/` |
 | A campaign plan for Q2 launch | How do we execute Q2? | `how/campaigns/` |
 
-Why three? Two legs create sorting ambiguity — people get conflated into either knowledge or process. Four or more legs proved unnecessary in practice; candidates like TOOLS, WHERE, and WHEN all decompose cleanly into the existing three. Three is the minimum that separates knowledge, process, and people without overlap.
+Why three? Two legs create sorting ambiguity — people get conflated into either knowledge or process. Four or more legs were found unnecessary in practice; candidates like TOOLS, WHERE, and WHEN all decompose cleanly into the existing three. Three is the minimum that separates knowledge, process, and people without overlap.
 
 ### Two Deployment Forms
 
@@ -155,7 +155,7 @@ This keeps the directory structure flat while preserving semantic precision. The
 ## What's Inside
 
 ```
-lattice-adna/
+adna/
 ├── CLAUDE.md                           # Agent master context
 ├── MANIFEST.md                         # Project identity (customize this)
 ├── STATE.md                            # Operational state (customize this)
@@ -193,7 +193,7 @@ lattice-adna/
 | **10 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 12 pre-configured plugins (run `setup.sh`) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 11 pre-configured plugins (run `setup.sh`) |
 
 ---
 
@@ -201,11 +201,16 @@ lattice-adna/
 
 **Clone and open: ~5 minutes.** Agent-guided customization: 15-30 minutes. Manual customization: 30-45 minutes.
 
+### Prerequisites
+
+- [Obsidian](https://obsidian.md) 1.0+ (free, all platforms)
+- Python 3.6+ (optional — only needed for lattice YAML validation/conversion tools)
+
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/lat-labs/lattice-adna.git
-cd lattice-adna
+git clone https://github.com/lat-labs/adna.git
+cd adna
 ```
 
 ### 2. Install plugins and theme
@@ -214,13 +219,15 @@ cd lattice-adna
 ./setup.sh
 ```
 
-Downloads and installs 12 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
+Downloads and installs 11 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
 ### 3. Open in Obsidian
 
-Open `lattice-adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted. The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
+Open `adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted. The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
+
+> **Visual learner?** Open `what/lattices/examples/hello_world.canvas` in Obsidian to see a lattice as an interactive node graph — no YAML knowledge needed. Drag nodes, follow edges, and explore how datasets, modules, and processes connect.
 
 ### 4. Choose your setup path
 
@@ -273,7 +280,7 @@ Use the templates in `how/templates/` as starting points — each one has the re
 
 - **Session tracking** — designed for multi-agent coordination. For solo human use, it's optional.
 - **Collision prevention** — the `updated` / `last_edited_by` fields prevent multi-agent conflicts. Solo users can still use them as an audit trail, but they're not critical.
-- **AGENTS.md files** — these are instructions for AI agents. As a human, browse directories directly in Obsidian.
+- **AGENTS.md files** — these are per-directory guides for AI agents. As a human, browse directories directly in Obsidian — the AGENTS.md files won't get in the way.
 - **Lattices** — YAML workflow definitions for executable pipelines. Useful for computational work, but the triad handles knowledge management without them.
 
 ---
@@ -479,7 +486,7 @@ lattice:
       type: reasoning
       description: "What this node decides"
       prompt: "Instructions for the LLM"
-      model_override: "claude-opus-4-6"
+      model_override: "claude-opus-4-6"  # or any LLM model ID
   edges:
     - from: input_data
       to: analyze
@@ -495,6 +502,7 @@ lattice:
 ### 3. Validate
 
 ```bash
+# From the repo root
 cd what/lattices
 pip install -r tools/requirements.txt
 python -c "

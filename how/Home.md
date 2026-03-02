@@ -9,7 +9,7 @@ updated: 2026-02-19
 last_edited_by: agent_stanley
 ---
 
-# lattice-adna
+# adna
 
 *A standalone knowledge architecture for building personal lattices and knowledge graphs with AI agents.*
 
@@ -46,6 +46,9 @@ SORT created DESC
 LIMIT 5
 ```
 
+> [!note] No sessions yet?
+> Start your first agent session by running `claude` in a terminal, or create a session manually in `how/sessions/active/`.
+
 ---
 
 ## Active Campaigns
@@ -59,6 +62,9 @@ FROM "how/campaigns"
 WHERE type = "campaign" AND status != "completed"
 SORT created DESC
 ```
+
+> [!note] No campaigns yet?
+> Campaigns coordinate multi-mission initiatives. Create one in `how/campaigns/` when you have a strategic goal that requires multiple work streams.
 
 ---
 
@@ -112,6 +118,6 @@ SORT created DESC
 
 <div class="homepage-footer">
 
-lattice-adna — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/lat-labs/lattice-adna) | foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL)
+adna — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/lat-labs/adna) | foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL)
 
 </div>

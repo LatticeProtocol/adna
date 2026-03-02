@@ -74,7 +74,7 @@ lattice:
   fair: { license: MIT, keywords: [...] }
   federation:  # optional — for cross-instance sharing
     shareable: true
-    source_instance: lattice-adna
+    source_instance: adna
     version_policy: minor
 ```
 
@@ -326,3 +326,4 @@ The optional `federation` block enables cross-instance sharing and sub-lattice c
 
 - [[what/lattices/lattice_yaml_schema.json|Lattice YAML Schema]] — JSON Schema that YAML files validate against
 - [[what/lattices/AGENTS|Lattices AGENTS.md]] — Directory index
+- Round-Trip Protocol v1.0 — Advisory workflow for canvas→YAML conversion, conflict resolution via sync hash, upgrade path v1.0→v2.0→v3.0

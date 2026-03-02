@@ -28,6 +28,6 @@
   "slash-command": false,
   "zk-prefixer": false,
   "random-note": false,
-  "file-recovery": false,
+  "file-recovery": true,
   "publish": false
 }

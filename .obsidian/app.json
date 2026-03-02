@@ -1,6 +1,7 @@
 {
-  "promptDelete": false,
+  "promptDelete": true,
   "showLineNumber": true,
+  "monospaceFontFamily": "JetBrains Mono, Fira Code, monospace",
   "vimMode": false,
   "alwaysUpdateLinks": true,
   "defaultViewMode": "preview",

@@ -235,7 +235,7 @@ A parent lattice's opaque node MAY record the child version it was composed agai
 nodes:
   - id: docking_assessment
     type: module
-    ref: "lattice://lattice-adna/docking_assessment"
+    ref: "lattice://adna/docking_assessment"
     description: "Validate candidates via docking assessment"
     config:
       ref_version: "1.0.0"          # child version at composition time
@@ -295,7 +295,7 @@ Step 6: REMEDIATE (if halted) — Author updates parent seam edges,
 drift_report:
   parent_lattice: composed_therapeutics
   child_lattice: docking_assessment
-  child_uri: "lattice://lattice-adna/docking_assessment"
+  child_uri: "lattice://adna/docking_assessment"
   detection_time: "2026-02-20T14:30:00Z"
   ref_version: "1.0.0"
   current_version: "2.0.0"
@@ -404,7 +404,7 @@ The parent also records the version it was composed against:
 nodes:
   - id: docking_assessment
     type: module
-    ref: "lattice://lattice-adna/docking_assessment"
+    ref: "lattice://adna/docking_assessment"
     config:
       ref_version: "1.0.0"
       ref_interface_version: "1.0.0"
@@ -416,7 +416,7 @@ When `composed_therapeutics` executes and reaches the `docking_assessment` node:
 
 | Step | Action | Result |
 |------|--------|--------|
-| 1. RESOLVE | Resolve `lattice://lattice-adna/docking_assessment` | Locate `docking_assessment.lattice.yaml` |
+| 1. RESOLVE | Resolve `lattice://adna/docking_assessment` | Locate `docking_assessment.lattice.yaml` |
 | 2. LOAD | Parse the child YAML | 3 operational nodes + 1 interface node |
 | 3. VALIDATE | Schema check | PASS |
 | 4. CHECK ONTOLOGY | Child uses `module` + `process` types (base) | No merge needed — base types only |

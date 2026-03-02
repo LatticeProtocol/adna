@@ -61,7 +61,7 @@ lattice://<instance_id>/<lattice_name>[/<node_id>]
 
 | Component | Pattern | Example |
 |-----------|---------|---------|
-| `instance_id` | `[a-z][a-z0-9-]*` (hyphens, DNS-safe) | `lattice-adna` |
+| `instance_id` | `[a-z][a-z0-9-]*` (hyphens, DNS-safe) | `adna` |
 | `lattice_name` | `[a-z][a-z0-9_]*` (underscores, schema-match) | `docking_assessment` |
 | `node_id` | `[a-z][a-z0-9_]*` (optional) | `structure_prediction` |
 

@@ -33,3 +33,7 @@ env/
 # Environment
 .env
 .env.local
+
+# Claude Code / MCP (local credentials — never commit)
+.mcp.json
+.claude/

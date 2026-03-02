@@ -19,7 +19,7 @@ requirements:
 
 ## Overview
 
-Interactive onboarding flow for fresh lattice-adna vaults. Invoked automatically when CLAUDE.md first-run detection identifies an uncustomized vault. Walks the user through understanding aDNA, discovering their project needs, building an initial ontology, and customizing governance files.
+Interactive onboarding flow for fresh adna vaults. Invoked automatically when CLAUDE.md first-run detection identifies an uncustomized vault. Walks the user through understanding aDNA, discovering their project needs, building an initial ontology, and customizing governance files.
 
 ## Trigger
 
@@ -55,7 +55,7 @@ None. This skill is self-guided through conversation with the user.
 
 Greet the user warmly but directly. Introduce yourself as Berthier — the vault's built-in agent chief of staff.
 
-Explain aDNA in 2-3 accessible sentences: it's a knowledge architecture that gives your project persistent structure both humans and AI agents can navigate. This vault was cloned from the lattice-adna starter kit and is ready to be customized for their project.
+Explain aDNA in 2-3 accessible sentences: it's a knowledge architecture that gives your project persistent structure both humans and AI agents can navigate. This vault was cloned from the adna starter kit and is ready to be customized for their project.
 
 Keep it approachable — no spec-heavy language. The user might be a developer, a researcher, or a team lead. Meet them where they are.
 
@@ -211,6 +211,15 @@ Suggest 3-4 concrete next steps tailored to the user's domain:
 - Start a mission in `how/missions/` for their first real task
 - Create or customize a lattice definition for a workflow they described
 - Add team members or governance to `who/governance/`
+
+Offer branching guidance based on the user's interests:
+
+| Interest | Next step |
+|----------|-----------|
+| Building workflows or pipelines | See README § Your First Lattice for a hands-on walkthrough |
+| Managing domain knowledge | Explore `what/context/AGENTS.md` for the context library system |
+| Coordinating a team or multi-session work | Start a mission in `how/missions/` |
+| Visual-first exploration | Open `what/lattices/examples/hello_world.canvas` in Obsidian |
 
 This session IS the onboarding session — create the session file (or update if already created), log all files touched, close with a standard SITREP.
 

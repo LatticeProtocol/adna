@@ -3,7 +3,7 @@ type: context_core
 topic: adna_core
 subtopic: convergence_model
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-01
 sources: ["aDNA Standard v2.1 (§8.7, §10)", "aDNA Design Document (§3, §6)", "campaign_adna_review operational data (126+ sessions)"]
 context_version: "1.0"
 token_estimate: ~2500
@@ -21,13 +21,13 @@ last_evaluated: 2026-02-20
 
 # aDNA Core: Convergence Model — Operational Quick-Reference
 
-> **Scope note**: This file is the operational quick-reference for applying the convergence model in daily work. For the full theoretical articulation (functional-analytic framing, Hilbert space analogy, mathematical proofs), see `prompt_engineering/convergence_model`.
+> **Scope note**: This file is the operational quick-reference for applying the convergence model in daily work. For the full articulation (convergent narrowing model, structural parallel table, mathematical note), see `prompt_engineering/convergence_model`.
 
 ## Key Principles
 
-1. **Each execution level narrows context.** Campaign → Mission → Objective is a monotone-decreasing sequence of working sets. At each level, irrelevant knowledge is pruned.
+1. **Each execution level narrows context.** Campaign → Mission → Objective is a monotone-decreasing chain of working sets. At each level, irrelevant knowledge is pruned.
 
-2. **AGENTS.md is the routing mechanism.** Each directory's AGENTS.md tells agents what this dimension contains and whether to load or skip. The Load/Skip Decision section is the projection operator — it selects the relevant subspace.
+2. **AGENTS.md is the routing mechanism.** Each directory's AGENTS.md tells agents what this directory contains and whether to load or skip. The Load/Skip Decision section implements selective loading — it selects the relevant subset.
 
 3. **Token budget decreases at each level.** The total tokens an agent needs decreases monotonically as specificity increases:
 

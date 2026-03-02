@@ -9140,5 +9140,3 @@ var FolderNotesPlugin = class extends import_obsidian52.Plugin {
     }
   }
 };
-
-/* nosourcemap */

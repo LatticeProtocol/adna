@@ -112,7 +112,7 @@ Decision points are user gates — the campaign pauses until the user approves.
 
 | Property | Value |
 |----------|-------|
-| Goal | Make lattice-adna world-class for cold-start users |
+| Goal | Make adna world-class for cold-start users |
 | Missions | 18 (M0-M17) |
 | Phases | 7 (Kickoff → Research → Core Standard → Schema → Federation → Context → Integration) |
 | Sessions (actual) | 15+ |

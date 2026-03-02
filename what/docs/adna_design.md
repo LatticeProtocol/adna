@@ -58,15 +58,15 @@ The core architectural decision in aDNA is the **what/how/who triad**: every pie
 
 ### Why three legs?
 
-The triad emerges from a simple generative principle: **the question test**. Any piece of project content can be classified by asking which question it answers — WHAT, HOW, or WHO. Three questions, three categories, one clear home for every file.
+The triad emerges from a simple generative principle: **the question test**. Any piece of project content can be classified by asking which question it answers — WHAT, HOW, or WHO. Three questions, three categories, one clear home for every file. (Edge cases exist — some content could plausibly live in two legs. The question test resolves these by asking which question is PRIMARY, not whether other questions also apply.)
 
 We considered and rejected other cardinalities:
 
 **Two legs** (knowledge vs. operations, or content vs. process) creates sorting ambiguity. Where does a team roster go — is it "content" or "process"? Where do governance policies live — in "knowledge" or "operations"? Two-way splits force uncomfortable compromises because they conflate the people dimension into one of the other two.
 
-**Four or more legs** proved unnecessary. We tested candidate fourth legs — TOOLS (what we build with), WHERE (locations, deployments), WHEN (timelines, schedules) — and found that each decomposes cleanly into the existing three. Tools are knowledge about capabilities (what/). Deployment locations are either infrastructure knowledge (what/) or operational processes (how/). Timelines are operational planning (how/) or organizational milestones (who/). Adding legs past three created sorting ambiguity rather than resolving it.
+**Four or more legs** were found unnecessary in design exploration. We tested candidate fourth legs — TOOLS (what we build with), WHERE (locations, deployments), WHEN (timelines, schedules) — and found that each decomposes cleanly into the existing three. Tools are knowledge about capabilities (what/). Deployment locations are either infrastructure knowledge (what/) or operational processes (how/). Timelines are operational planning (how/) or organizational milestones (who/). Adding legs past three created sorting ambiguity rather than resolving it.
 
-Three is the minimum number that cleanly separates knowledge, process, and people. The "exactly one home" principle — every file belongs in exactly one leg — is what makes the system navigable. When an agent or human encounters a new piece of content, the question test produces one answer, not a debate.
+We found three to be the minimum number that cleanly separates knowledge, process, and people. The "exactly one home" principle — every file belongs in exactly one leg — is what makes the system navigable. When an agent or human encounters a new piece of content, the question test produces one answer, not a debate.
 
 ### Worked example: classifying real content
 
@@ -82,7 +82,7 @@ Consider a project that manages machine learning models. Here is how different c
 | "Meeting notes from the model review with the partner team" | Who met and what was communicated? | WHO | `who/communications/` |
 | "Agent context: how ancient DNA extraction works" | What does the agent need to know about the domain? | WHAT | `what/context/` |
 
-In every case, the question test yields one answer. The triad is not a filing system imposed on content — it is a recognition of the three dimensions that every project inherently has (see spec S3.1).
+In every case, the question test yields one answer. The triad is not a filing system imposed on content — it is a design choice reflecting common dimensions of project knowledge (see spec S3.1).
 
 ---
 

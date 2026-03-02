@@ -65,5 +65,5 @@ lattice:
     provenance: "Reference implementation of a context_graph lattice with reasoning-mode execution for knowledge retrieval"
   federation:
     shareable: true
-    source_instance: lattice-adna
+    source_instance: adna
     version_policy: minor

@@ -6,11 +6,11 @@ last_edited_by: agent_stanley
 tags: [directory_index, root]
 ---
 
-# lattice-adna — Agent Guide
+# adna — Agent Guide
 
 ## Purpose
 
-This is the root agent reference for the lattice-adna project. It routes agents to the appropriate triad leg (what/how/who) based on their current task. This file is always loaded — it does not have a Load/Skip section because agents need it for orientation on every session.
+This is the root agent reference for the adna project. It routes agents to the appropriate triad leg (what/how/who) based on their current task. This file is always loaded — it does not have a Load/Skip section because agents need it for orientation on every session.
 
 ## Quick Orientation
 
@@ -24,7 +24,7 @@ This is the root agent reference for the lattice-adna project. It routes agents 
 ## Project Structure
 
 ```
-lattice-adna/
+adna/
 ├── what/    # WHAT — Knowledge objects, context library, decisions, docs, lattices
 ├── how/     # HOW — Campaigns, missions, sessions, templates, pipelines, skills, backlog
 └── who/     # WHO — Coordination, governance (extend with team/, customers/, etc.)

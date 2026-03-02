@@ -719,7 +719,7 @@ The merge result shows how the convergence model applies:
 | **Mission: Role Architecture (M5)** | formation_role, formation_member, formation_team, sessions, decisions | 22 → 5 (77% reduction) |
 | **Objective: Draft role charters** | formation_role, formation_member | 5 → 2 (60% reduction) |
 
-At each level of the execution hierarchy, irrelevant entity types are pruned — demonstrating the convergent series property where token count decreases monotonically as specificity increases.
+At each level of the execution hierarchy, irrelevant entity types are pruned — demonstrating the convergent narrowing property where token count decreases monotonically as specificity increases.
 
 ---
 

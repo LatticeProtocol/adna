@@ -62,7 +62,7 @@ lattice:
     provenance: "Extracted from protein_binder_design lattice — structure prediction and interface analysis stages"
   federation:
     shareable: true
-    source_instance: lattice-adna
+    source_instance: adna
     parent_lattice: protein_binder_design
     version_policy: locked
     extracted_nodes:

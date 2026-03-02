@@ -1,7 +1,7 @@
 ---
 type: ontology
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-01
 status: active
 last_edited_by: agent_stanley
 tags:
@@ -161,7 +161,7 @@ flowchart TD
 
 ### Convergence Model
 
-At each execution level, irrelevant knowledge is pruned — the working set decreases monotonically as specificity increases. This is the **convergent series** property of aDNA.
+At each execution level, irrelevant knowledge is pruned — the working set decreases monotonically as specificity increases. This is the **convergent narrowing** property of aDNA.
 
 **Token narrowing**:
 

@@ -4,7 +4,7 @@ This directory contains Obsidian vault configuration. Most files are checked int
 
 > **Quick setup**: Run `./setup.sh` from the repo root to download all plugins and the theme automatically.
 
-## Plugins (12 community plugins)
+## Plugins (11 community plugins)
 
 | Plugin | ID | Purpose |
 |--------|----|---------|
@@ -17,7 +17,6 @@ This directory contains Obsidian vault configuration. Most files are checked int
 | Table Editor | `table-editor-obsidian` | Better markdown table editing |
 | Omnisearch | `omnisearch` | Vault-wide fuzzy search |
 | Terminal | `terminal` | Terminal access from Obsidian |
-| Buttons | `buttons` | Clickable action buttons in notes |
 | Folder Notes | `folder-notes` | Index files for folder navigation |
 | Notebook Navigator | `notebook-navigator` | Folder-based notebook navigation with icons |
 
@@ -25,11 +24,11 @@ This directory contains Obsidian vault configuration. Most files are checked int
 
 **Tokyo Night** — installed by `setup.sh`, or manually from Settings → Appearance → Themes.
 
-**Font**: Space Grotesk — install on your system from [Google Fonts](https://fonts.google.com/specimen/Space+Grotesk).
+**Font (optional)**: Install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) for a polished look. The vault uses system default fonts out of the box — Space Grotesk can be set in Settings → Appearance → Font after installation.
 
 **Accent**: Rebecca Purple (`#663399`) — configured in `appearance.json`.
 
-## CSS Snippets (9)
+## CSS Snippets (10)
 
 All snippets are pre-configured and enabled in `appearance.json`. They integrate with Style Settings for GUI customization.
 
@@ -44,6 +43,7 @@ All snippets are pre-configured and enabled in `appearance.json`. They integrate
 | `links_enhanced.css` | External link arrows, dashed unresolved links |
 | `scrollbar_custom.css` | Slim purple-tinted scrollbars |
 | `modals_translucent.css` | Frosted glass effect on modals |
+| `notebook_navigator.css` | Folder icon and notebook navigation styling |
 
 ## Per-Device Files
 
@@ -55,4 +55,4 @@ These files are excluded from git (see `.gitignore`) because they contain machin
 
 ## Templater Folder Mappings
 
-Templater is configured to auto-apply templates when creating new files in specific directories. See `plugins/templater-obsidian/data.json` for the 9 folder→template mappings.
+Templater is configured to auto-apply templates when creating new files in specific directories. See `plugins/templater-obsidian/data.json` for the 10 folder→template mappings.

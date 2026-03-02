@@ -3,7 +3,7 @@ type: context_research
 topic: prompt_engineering
 subtopic: federation_composability
 created: 2026-02-19
-updated: 2026-02-19
+updated: 2026-03-01
 sources: ["aDNA Bridge Patterns v1.0", "W3C — SPARQL 1.1 Federation Extensions", "Keet (2021) — Conflict Resolution Framework for Ontologies", "MOMo — Modular Ontology Modeling", "SHACL — W3C Shapes Constraint Language", "FAIR Guiding Principles"]
 context_version: "1.0"
 token_estimate: ~3000
@@ -17,7 +17,7 @@ tags: [context, prompt_engineering]
 
 1. **Federation is query-layer routing, not data duplication.** Separate knowledge graphs can interoperate by routing queries across boundaries — each graph remains authoritative over its own data. In file-based systems, this means agents traverse into child directories and follow cross-references rather than copying content between instances.
 
-2. **Governance does not leak across instance boundaries.** Each aDNA instance is governed by its own CLAUDE.md. A child instance nested inside a parent does NOT inherit the parent's safety rules, naming conventions, session tracking, or persona. Governance isolation is the foundational principle of multi-instance composition.
+2. **Governance is designed not to cross instance boundaries.** Each aDNA instance is governed by its own CLAUDE.md. A child instance nested inside a parent does NOT inherit the parent's safety rules, naming conventions, session tracking, or persona. Governance isolation is a convention enforced by agent compliance with CLAUDE.md — the foundational design principle of multi-instance composition.
 
 3. **Five federation capabilities form a complete lifecycle.** Any shareable knowledge unit needs: validate (against schema), export (as standalone artifact), share (via transfer mechanism), import (with compatibility check), compose (as sub-graph within a larger structure). Missing any capability creates a gap in the federation story.
 
@@ -158,7 +158,7 @@ SHACL (W3C Shapes Constraint Language) provides formal shape definitions for RDF
 
 ## Sources
 
-- [aDNA Bridge Patterns](https://github.com/lat-labs/lattice-adna) — Companion to aDNA Standard v2.0. Composition patterns (nesting, sibling, monorepo), discovery protocol, scope boundaries, cross-referencing conventions.
+- [aDNA Bridge Patterns](https://github.com/lat-labs/adna) — Companion to aDNA Standard v2.0. Composition patterns (nesting, sibling, monorepo), discovery protocol, scope boundaries, cross-referencing conventions.
 - [SPARQL 1.1 Federation Extensions](https://www.w3.org/TR/sparql11-federated-query/) — W3C (2013). SERVICE keyword for cross-endpoint queries.
 - [Toward a Systematic Conflict Resolution Framework for Ontologies](https://pmc.ncbi.nlm.nih.gov/articles/PMC8352153/) — Keet (2021). 10 conflict types in 4 groups with fixed resolution strategies.
 - [Modular Ontology Modeling (MOMo)](https://journals.sagepub.com/doi/10.3233/SW-222886) — Shimizu et al. Pattern-based modules, OPLa annotations, shared border concepts.

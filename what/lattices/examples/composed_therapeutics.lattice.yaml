@@ -27,7 +27,7 @@ lattice:
         hotspot_weight: 3.0
     - id: docking_assessment
       type: module
-      ref: "lattice://lattice-adna/docking_assessment"
+      ref: "lattice://adna/docking_assessment"
       description: "Validate candidates via structure prediction and interface analysis (federated sub-lattice)"
     - id: clinical_ranking
       type: process
@@ -62,8 +62,8 @@ lattice:
     provenance: >
       Composed pipeline demonstrating federation — local target selection and
       clinical ranking stages with imported docking_assessment sub-lattice
-      from lattice-adna instance via external reference composition pattern.
+      from adna instance via external reference composition pattern.
   federation:
     shareable: true
-    source_instance: lattice-adna
+    source_instance: adna
     version_policy: minor

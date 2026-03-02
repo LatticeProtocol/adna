@@ -268,7 +268,7 @@ Sibling detection cannot rely on filesystem structure because siblings are not p
 
 ## 5. Scope Boundaries
 
-The most important principle in multi-instance environments is **governance isolation**: each aDNA instance is governed by its own governance files, and governance does not leak across instance boundaries.
+The most important principle in multi-instance environments is **governance isolation**: each aDNA instance is governed by its own governance files, and governance is designed not to cross instance boundaries.
 
 ```mermaid
 flowchart LR
@@ -622,7 +622,7 @@ The [Lattice Federation & Sharing Protocol](lattice_federation.md) defines the o
 
 The protocol uses the `lattice://` URI scheme (`lattice://<instance_id>/<lattice_name>[/<node_id>]`) for cross-instance references, with resolution rules covering same-machine, git-based, and registry-based discovery. Node ID collisions during composition are resolved via namespace prefixing, consistent with the ontology unification namespace specification.
 
-Federation preserves the convergent narrowing property — token scope decreases monotonically through the execution hierarchy even when federated lattices expand the total node count. External reference composition (child as opaque node) is the recommended default because it minimizes token cost while preserving composability.
+In practice, federation has preserved the convergent narrowing property — token scope has decreased monotonically through the execution hierarchy even when federated lattices expand the total node count. External reference composition (child as opaque node) is the recommended default because it minimizes token cost while preserving composability.
 
 ### 11.4 Governance inheritance
 

@@ -1,19 +1,19 @@
 ---
 type: manifest
 created: 2026-02-17
-updated: 2026-02-20
-last_edited_by: agent_stanley
+updated: 2026-03-02
+last_edited_by: agent_init
 tags: [manifest, governance]
 ---
 
-# lattice-adna — Project Manifest
+# adna — Project Manifest
 
 ## Project Identity
 
 <!-- CUSTOMIZE THIS: Replace the description below with your project's name and purpose. -->
 <!-- Example: "**my-project** — AI-powered market research platform for B2B SaaS companies." -->
 
-**lattice-adna** — A standalone knowledge architecture for building personal lattices and knowledge graphs. Designed for both humans (via Obsidian) and AI agents (via Claude Code). aDNA is the foundational building block of the Lattice federated computing protocol.
+**adna** — A standalone knowledge architecture for building personal lattices and knowledge graphs. Designed for both humans (via Obsidian) and AI agents (via Claude Code). aDNA is the foundational building block of the Lattice federated computing protocol.
 
 This repo is a self-contained aDNA deployment that anyone can clone and immediately start using. It includes templates, tools, example lattices, and the operational infrastructure (sessions, missions, campaigns) needed to run an AI-native project from day one.
 
@@ -22,7 +22,7 @@ This repo is a self-contained aDNA deployment that anyone can clone and immediat
 This project uses the **aDNA (Agentic DNA)** knowledge architecture — a bare triad deployment.
 
 ```
-lattice-adna/
+adna/
 ├── what/    # WHAT — Knowledge objects, context library, lattice tools
 ├── how/     # HOW — Plans, sessions, templates, pipelines
 └── who/     # WHO — People, teams, coordination, governance
@@ -47,9 +47,11 @@ lattice-adna/
 
 | Topic | Subtopics | Tokens | Location |
 |-------|-----------|--------|----------|
-| Prompt Engineering | 7 (signal-to-token, CLAUDE.md best practices, agentic scaffolding, Mermaid, ontology design, federation, convergence model) | ~21K | `what/context/prompt_engineering/` |
+| Prompt Engineering | 7 | ~21K | `what/context/prompt_engineering/` |
 
 Load via `what/context/AGENTS.md` → topic `AGENTS.md` → individual subtopics as needed.
+
+> **Note**: The parent vault (LATTICE-PROTOCOL) maintains a 16-topic context library with ~195K+ tokens. The aDNA repo ships with 1 topic as a reference implementation.
 
 ### Lattice YAML Tools
 
@@ -89,9 +91,11 @@ how/pipelines/prd_rfc/
 
 | Component | Status | Description |
 |-----------|--------|-------------|
+| aDNA Standard v2.1 | Shipped | Core specification — triad, ontology (14 base + 8 extension), sessions, missions, campaigns |
 | Context library | Shipped | 1 topic (prompt engineering), 7 subtopics, ~21K tokens |
-| Lattice YAML tools | Shipped | Validate, convert (YAML↔canvas), JSON Schema |
+| Lattice YAML tools | Shipped | Validate, convert (YAML↔canvas), JSON Schema, 6 example lattices |
 | Mermaid-enhanced spec docs | Shipped | 19 diagrams across 3 aDNA specification documents |
-| Quality evaluation framework | Shipped | 6-axis rubric for context file quality scoring |
+| PRD/RFC pipeline | Shipped | 4-stage planning pipeline (research → requirements → design → review) |
+| 10 templates | Shipped | Session, mission, campaign, context, ADR, backlog, coordination, PRD, RFC, skill |
 
 See `how/missions/` for mission details and `STATE.md` for current operational state.

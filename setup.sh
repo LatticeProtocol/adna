@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# setup.sh — Bootstrap Obsidian plugins and theme for lattice-adna
-# Downloads 12 community plugins + Tokyo Night theme.
+# setup.sh — Bootstrap Obsidian plugins and theme for adna
+# Downloads 11 community plugins + Tokyo Night theme.
 # Requires: curl (ships with macOS/Linux)
 # Usage: ./setup.sh [--force]
 
@@ -89,7 +89,7 @@ download_file() {
 # ---------- Main ----------
 
 echo ""
-echo "lattice-adna setup"
+echo "adna setup"
 echo "=================="
 echo "Vault: $VAULT_DIR"
 echo ""
@@ -206,4 +206,4 @@ echo ""
 echo "Optional: install Space Grotesk font from"
 echo "  https://fonts.google.com/specimen/Space+Grotesk"
 echo ""
-echo "Open lattice-adna/ in Obsidian and enable community plugins when prompted."
+echo "Open adna/ in Obsidian and enable community plugins when prompted."

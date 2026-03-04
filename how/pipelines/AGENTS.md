@@ -50,7 +50,7 @@ how/pipelines/prd_rfc/
     └── (PRD+RFC package)
 ```
 
-**Output**: Approved PRD + RFC documents committed to `how/deliverables/`
+**Output**: Approved PRD + RFC documents committed to campaign `planning/` dirs or `04_review/` committed
 
 ## Creating New Pipelines
 

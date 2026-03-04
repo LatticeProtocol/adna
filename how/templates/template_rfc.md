@@ -2,7 +2,7 @@
 type: rfc
 project_slug: <project_slug>
 project_title: "<Human-readable title>"
-prd_ref: "how/deliverables/prd_<project_slug>.md"
+prd_ref: "prd_<project_slug>.md"
 version: "1.0"
 owner: <owner>
 approved_by:
@@ -145,6 +145,6 @@ flowchart TB
 
 ## Related
 
-- **PRD**: [[how/deliverables/prd_<project_slug>]]
+- **PRD**: [[prd_<project_slug>]]
 - **Research**: [[how/pipelines/prd_rfc/01_research/]]
 - **Plan**: [[how/missions/]]

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-03
 last_edited_by: agent_stanley
 tags: [directory_index, pipeline, review]
 ---
@@ -10,7 +10,7 @@ tags: [directory_index, pipeline, review]
 
 ## Instructions
 
-Present the completed PRD+RFC package for final human review. On approval, commit both documents to `how/deliverables/` with pipeline metadata stripped. Optionally create a mission stub.
+Present the completed PRD+RFC package for final human review. On approval, commit both documents to their destination with pipeline metadata stripped. Optionally create a mission stub.
 
 This is a **mandatory human gate** — no files leave this stage without explicit user approval.
 
@@ -36,9 +36,10 @@ This is a **mandatory human gate** — no files leave this stage without explici
 6. For each approved package:
    a. **Strip pipeline frontmatter** — remove `pipeline`, `stage`, `source_type`, `source_ref`, `initiated` fields
    b. **Retain document frontmatter** — keep `type`, `project_slug`, `project_title`, `version`, `owner`, `approved_by`, `approved_date`, `created`, `updated`, `last_edited_by`, `tags`
-   c. **Commit PRD** to `how/deliverables/prd_<project_slug>.md`
-   d. **Commit RFC** to `how/deliverables/rfc_<project_slug>.md`
-   e. **Remove** both files from `04_review/`
+   c. **Determine destination**:
+      - **Campaign-linked**: Move PRD and RFC to `how/campaigns/campaign_<name>/planning/`
+      - **Standalone**: Files remain in `04_review/` as committed artifacts (set `stage: committed` in frontmatter)
+   d. **Remove** pipeline tracking frontmatter from both files
    f. **Log** committed files in the session activity log
 
 7. **Optional: Create mission stub**

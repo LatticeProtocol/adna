@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-03
 last_edited_by: agent_stanley
 tags: [directory_index, pipeline, prd_rfc]
 ---
@@ -13,7 +13,7 @@ A 4-stage content-as-code pipeline for product planning. Files flow through rese
 ## Pipeline Flow
 
 ```
-01_research/ → 02_requirements/ → 03_design/ → 04_review/ → how/deliverables/
+01_research/ → 02_requirements/ → 03_design/ → 04_review/ → destination
 (problem)      (PRD)              (RFC)         (approval)   (committed)
 ```
 
@@ -55,8 +55,8 @@ initiated: YYYY-MM-DD
 
 When a PRD+RFC package passes final review:
 1. Pipeline frontmatter is stripped
-2. PRD commits to `how/deliverables/prd_<project_slug>.md`
-3. RFC commits to `how/deliverables/rfc_<project_slug>.md`
+2. **Campaign-linked**: PRD and RFC move to `how/campaigns/campaign_<name>/planning/`
+3. **Standalone**: PRD and RFC remain in `04_review/` as committed artifacts (set `stage: committed`)
 4. Optionally, a mission is created in `how/missions/`
 
 ## Campaign Planning Mode
@@ -88,6 +88,6 @@ A campaign with 5+ missions benefits from formal R&D→PRD→RFC planning. Small
 - Stage instructions: `01_research/AGENTS.md`, `02_requirements/AGENTS.md`, `03_design/AGENTS.md`, `04_review/AGENTS.md`
 - Pipeline paradigm: [how/pipelines/AGENTS](../AGENTS.md)
 - Templates: `../../templates/template_prd.md`, `../../templates/template_rfc.md`
-- Output destination: `how/deliverables/`
+- Output destinations: Campaign `planning/` directories or `04_review/` committed
 - Mission protocol: [how/missions/AGENTS](../../missions/AGENTS.md)
 - Campaign protocol: [how/campaigns/AGENTS](../../campaigns/AGENTS.md)

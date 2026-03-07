@@ -16,7 +16,7 @@ cssclasses: [folder-note]
 > [!abstract] Definition
 > Agentic DNA — a standalone **knowledge architecture template** (MIT) for AI-native vaults. Obsidian + Claude Code, zero proprietary dependencies. Version 2.1, triad structure (who/what/how), 19 canonical I/O types, FAIR metadata, Canvas Standard v1.0.0.
 >
-> **GitHub**: [lat-labs/adna](https://github.com/lat-labs/adna) · **License**: MIT · **Stack**: Obsidian / Claude Code / Python 3.10+
+> **GitHub**: [LatticeProtocol/adna](https://github.com/LatticeProtocol/adna) · **License**: MIT · **Stack**: Obsidian / Claude Code / Python 3.10+
 
 ## Triad Structure
 

@@ -118,6 +118,6 @@ SORT created DESC
 
 <div class="homepage-footer">
 
-adna — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/lat-labs/adna) | foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL)
+adna — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/LatticeProtocol/adna) | foundational building block of the [Lattice Protocol](https://github.com/LatticeProtocol/lattice-protocol)
 
 </div>

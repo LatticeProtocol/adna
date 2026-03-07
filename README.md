@@ -8,7 +8,7 @@ Every project accumulates knowledge — decisions, contacts, research, processes
 
 Clone this repo to get a ready-to-use aDNA vault with templates, tools, and examples. Customize it for your domain in minutes.
 
-> *aDNA is a standalone knowledge architecture standard. It is the foundational building block of the [Lattice Protocol](https://github.com/lat-labs/LATTICE-PROTOCOL) for federated AI compute — but the architecture is domain-neutral. Any project that uses AI agents (or just wants structured knowledge) benefits.*
+> *aDNA is a standalone knowledge architecture standard. It is the foundational building block of the [Lattice Protocol](https://github.com/LatticeProtocol/lattice-protocol) for federated AI compute — but the architecture is domain-neutral. Any project that uses AI agents (or just wants structured knowledge) benefits.*
 
 ---
 
@@ -209,7 +209,7 @@ adna/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/lat-labs/adna.git
+git clone https://github.com/LatticeProtocol/adna.git
 cd adna
 ```
 

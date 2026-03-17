@@ -3,7 +3,7 @@ type: context_guide
 topic: adna_core
 subtopic: ontology_design
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-17
 sources: ["aDNA Standard v2.1 (§5, §7)", "Ontology Unification Protocol v1.0", "aDNA Design Document (§3, §9)"]
 context_version: "1.0"
 token_estimate: ~3200
@@ -128,6 +128,10 @@ When two instances integrate, the Ontology Unification Protocol governs:
 | Extension name collision, different schema | Namespace the source (e.g., `formation_team` vs base `team`) |
 
 Full merge algorithm: see `adna_core/ontology_unification`.
+
+## Multi-Entity Design
+
+For designing a coherent multi-entity domain from scratch (3+ entity types, relationship mapping, namespace design), see `context_adna_core_ontology_workshop.md`. This file covers single-entity extension; the workshop covers domain-level design.
 
 ## Anti-Patterns
 

@@ -31,6 +31,7 @@ Templates for all content types in the vault. Each template defines the frontmat
 | `template_folder_note.md` | Folder index note | — | `folder_note` |
 | `template_registry.md` | Registry publication metadata | — | `template` |
 | `template_aar.md` | After-Action Review | `how/missions/artifacts/` | `artifact` |
+| `template_strategic_compass.md` | Strategic compass | `who/governance/` | `governance` |
 
 ## Filled Examples
 

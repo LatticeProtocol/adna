@@ -95,11 +95,21 @@ adna/
 4. **One shared config at a time.** Edit one config, verify the write, then move to the next.
 5. **New files are safe.** Creating a new file has no collision risk.
 
-### Escalation
+### Escalation Cascade
 
+Anomalies and blockers propagate upward through the execution hierarchy:
+
+| Discovery Level | Escalation Path |
+|----------------|-----------------|
+| Session | Flag in SITREP → mission file |
+| Mission | Flag in mission file → campaign doc |
+| Campaign | Flag in campaign doc → STATE.md with `#needs-human` |
+
+**Rules**:
 - Stop if uncertain about destructive or irreversible actions
 - Flag blockers with `#needs-human`
 - Do not proceed with ambiguous scope — ask the user
+- A session discovery that affects the campaign must propagate upward — never bury findings
 
 ### Priority Hierarchy
 

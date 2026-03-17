@@ -25,10 +25,11 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 | 7 | Ontology Unification | `context_adna_core_ontology_unification.md` | ~3,000 | context_guide | 4-step merge algorithm, 10-type conflict taxonomy, namespace spec, worked example |
 | 8 | Campaign Dispatch | `context_adna_core_campaign_dispatch.md` | ~2,800 | context_guide | Campaign→Mission→Objective hierarchy, phase design, mission execution protocol |
 | 9 | OODA Cascade | `context_adna_core_ooda_cascade.md` | ~2,500 | context_guide | 3-level OODA loops, cascade dynamics, triggers, upward/downward flow |
+| 10 | Ontology Workshop | `context_adna_core_ontology_workshop.md` | ~3,000 | context_guide | Multi-entity domain design, entity discovery, relationship mapping, validation |
 
 ## Total Token Budget
 
-~26,500 tokens to load all subtopics. Typical session loads 2-4 subtopics (~5K-12K tokens).
+~29,500 tokens to load all subtopics. Typical session loads 2-4 subtopics (~5K-12K tokens).
 
 ## Usage by Task
 
@@ -36,6 +37,7 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 |------|---------------------|
 | Bootstrapping into aDNA (cold start) | paradigm_overview |
 | Designing a new ontology or extending existing | ontology_design, convergence_model |
+| Building a multi-entity domain from scratch | ontology_workshop, ontology_design |
 | Creating a lattice YAML file | lattice_design |
 | Writing context library files | context_engineering |
 | Loading multi-topic context assemblies | context_engineering (Composition System section) + `context_recipes.md` |
@@ -59,6 +61,7 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 - **ontology_unification** depends on ontology_design (base/extension partitioning)
 - **campaign_dispatch** builds on convergence_model (execution hierarchy)
 - **ooda_cascade** builds on campaign_dispatch (evaluation loops for the execution hierarchy)
+- **ontology_workshop** depends on ontology_design (base/extension partitioning, question test)
 
 ## Relationship to prompt_engineering Topic
 

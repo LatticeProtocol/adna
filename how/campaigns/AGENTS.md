@@ -59,6 +59,8 @@ Standalone missions (not part of any campaign) live in `how/missions/`.
 
 See `how/templates/template_campaign.md` for the full template.
 
+Optional: A **strategic compass** (`who/governance/` or project root) can define 3-7 immutable principles that all campaigns must align to. Template: `template_strategic_compass.md`. When a compass exists, verify campaign alignment before activation.
+
 Key frontmatter fields:
 
 ```yaml
@@ -74,6 +76,7 @@ estimated_sessions: "<range>"
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 last_edited_by: agent_<username>
+strategic_compass: <optional — link to strategic compass document>
 ---
 ```
 

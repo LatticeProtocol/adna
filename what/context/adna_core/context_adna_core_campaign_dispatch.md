@@ -175,6 +175,18 @@ Each level of the execution hierarchy can run an OODA (Observe-Orient-Decide-Act
 
 Anomalies discovered at lower levels propagate upward. Strategic restructuring flows downward. Full specification: `context_adna_core_ooda_cascade.md`.
 
+## Strategic Compass (Optional)
+
+For projects running multiple campaigns, a **strategic compass** defines 3-7 immutable principles that ensure coherence across parallel work streams. Template: `template_strategic_compass.md`.
+
+| Property | Rule |
+|----------|------|
+| **Alignment** | Every campaign must serve at least one compass principle |
+| **Retirement test** | If a campaign serves no principle, retire or restructure it |
+| **Immutability** | Principles don't change mid-phase — revise only at phase gates |
+
+The compass is optional. Simple projects with 1-2 campaigns don't need one. Add it when you have 3+ active campaigns that need coordination.
+
 ## Anti-Patterns
 
 1. **Unbounded campaigns.** A campaign without phases and exit gates never converges. Always define phases.

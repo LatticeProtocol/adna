@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-19
-updated: 2026-03-08
+updated: 2026-03-17
 last_edited_by: agent_stanley
 tags: [directory_index, templates]
 ---
@@ -30,6 +30,7 @@ Templates for all content types in the vault. Each template defines the frontmat
 | `template_governance.md` | Governance document | — | `governance` |
 | `template_folder_note.md` | Folder index note | — | `folder_note` |
 | `template_registry.md` | Registry publication metadata | — | `template` |
+| `template_aar.md` | After-Action Review | `how/missions/artifacts/` | `artifact` |
 
 ## Filled Examples
 

@@ -152,6 +152,8 @@ Every session ends with a structured status report:
 
 Every session MUST include a **Next Session Prompt** — a self-contained paragraph enabling a fresh agent to continue the work.
 
+**Mission completion**: When the final objective of a mission is completed in a session, run the 5-step AAR protocol (see `how/campaigns/AGENTS.md` §4). Produce an AAR artifact at `how/missions/artifacts/` using `template_aar.md`.
+
 ### Execution Hierarchy
 
 ```
@@ -163,6 +165,8 @@ Campaign → Mission → Objective
 **Missions** (`how/missions/` for standalone, `how/campaigns/*/missions/` for campaign-linked) decompose tasks too large for one session into objectives. Agents claim objectives by session, track progress, and hand off. Protocol: `how/missions/AGENTS.md`
 
 **Objectives** are the atomic work units tracked within mission documents.
+
+**OODA Cascade** (opt-in): Each level runs an Observe-Orient-Decide-Act loop. Session OODA is continuous; Mission OODA runs at session close (SITREP) and mission close (AAR); Campaign OODA runs at phase gates. Anomalies propagate upward; restructuring flows downward. Context: `context_adna_core_ooda_cascade.md`
 
 ### Context Recipes
 

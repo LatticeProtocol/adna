@@ -4,6 +4,7 @@ type: plan
 title: "{Human-readable plan title}"
 owner: {username}
 status: active
+mission_class: reconnaissance | implementation | verification | integration | closeout
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 last_edited_by: agent_{username}

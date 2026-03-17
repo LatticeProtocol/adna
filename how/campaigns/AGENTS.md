@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-17
 last_edited_by: agent_stanley
 tags: [directory_index, campaign]
 ---
@@ -102,15 +102,26 @@ last_edited_by: agent_<username>
 4. Checkpoint reviews at phase boundaries
 5. Risk register updates as issues surface
 
-### 4. Completion
+### 4. Mission AAR (After-Action Review)
+
+On mission completion, execute this 5-step protocol:
+
+1. **Verify deliverables** — check outputs against acceptance criteria. Count validated/total.
+2. **Update tracking** — set mission `status: completed`, update campaign phase counter.
+3. **Gap analysis** — log issues and debt to `how/missions/artifacts/{campaign}_{mission}_aar.md` using `template_aar.md`. Include scorecard table.
+4. **Readiness assessment** — GO / NO-GO for next mission with rationale. If NO-GO: create remediation mission, insert into campaign sequence, flag with `#needs-human`.
+5. **Report AAR summary** — render scorecard, gaps, debt, and recommendation to user.
+
+### 5. Completion
 
 1. Final validation mission (cross-system coherence)
-2. Fill completion summary in campaign master document
-3. Set `status: completed`
-4. Scope follow-up campaigns if applicable
-5. Update `how/STATE.md`
+2. Run context graduation skill (`skill_context_graduation`) — promote reusable campaign knowledge to context library
+3. Fill completion summary in campaign master document
+4. Set `status: completed`
+5. Scope follow-up campaigns if applicable
+6. Update `how/STATE.md`
 
-### 5. Abandonment
+### 6. Abandonment
 
 1. Set `status: abandoned` with rationale
 2. Note which missions completed, which were dropped

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-17
 last_edited_by: agent_stanley
 tags: [directory_index, missions]
 ---
@@ -27,6 +27,20 @@ how/missions/{plan_slug}/
 ├── deliverable_a.md
 └── deliverable_b.md
 ```
+
+## Mission Classes
+
+Missions can be classified by their primary activity. The `mission_class` frontmatter field is optional but helps agents understand the mission's nature before reading the full document.
+
+| Class | Purpose | Typical Output |
+|-------|---------|----------------|
+| `reconnaissance` | Gather information, assess state, identify gaps | Findings report, gap register, recommendations |
+| `implementation` | Build, create, modify artifacts | New files, code changes, configurations |
+| `verification` | Test, validate, audit existing work | Test results, audit reports, GO/NO-GO assessments |
+| `integration` | Connect systems, merge outputs, cross-validate | Integration reports, cross-system coherence checks |
+| `closeout` | Final validation, AARs, knowledge graduation | AARs, completion summaries, context files |
+
+**Selection guidance**: Most missions are `implementation`. Use `reconnaissance` for Phase 0/research missions. Use `verification` for pre-release or gate missions. Use `closeout` for final campaign missions.
 
 ## Plan File Format
 

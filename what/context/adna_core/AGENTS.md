@@ -24,10 +24,11 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 | 6 | Federation | `context_adna_core_federation.md` | ~3,200 | context_guide | 5-capability lifecycle, URI scheme, composition patterns, seam edges, interop |
 | 7 | Ontology Unification | `context_adna_core_ontology_unification.md` | ~3,000 | context_guide | 4-step merge algorithm, 10-type conflict taxonomy, namespace spec, worked example |
 | 8 | Campaign Dispatch | `context_adna_core_campaign_dispatch.md` | ~2,800 | context_guide | Campaign→Mission→Objective hierarchy, phase design, mission execution protocol |
+| 9 | OODA Cascade | `context_adna_core_ooda_cascade.md` | ~2,500 | context_guide | 3-level OODA loops, cascade dynamics, triggers, upward/downward flow |
 
 ## Total Token Budget
 
-~24,000 tokens to load all subtopics. Typical session loads 2-4 subtopics (~5K-12K tokens).
+~26,500 tokens to load all subtopics. Typical session loads 2-4 subtopics (~5K-12K tokens).
 
 ## Usage by Task
 
@@ -43,6 +44,8 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 | Merging ontologies from two instances | ontology_unification, ontology_design |
 | Designing a campaign | campaign_dispatch, convergence_model |
 | Reviewing structure for token efficiency | convergence_model, context_engineering |
+| Understanding evaluation loops and cascade | ooda_cascade, campaign_dispatch |
+| Running mission AARs | ooda_cascade (triggers section), campaign_dispatch |
 | Understanding the full aDNA paradigm | paradigm_overview + convergence_model + ontology_design |
 
 ## Dependency Notes
@@ -55,6 +58,7 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 - **federation** depends on lattice_design (YAML schema) and references ontology_unification
 - **ontology_unification** depends on ontology_design (base/extension partitioning)
 - **campaign_dispatch** builds on convergence_model (execution hierarchy)
+- **ooda_cascade** builds on campaign_dispatch (evaluation loops for the execution hierarchy)
 
 ## Relationship to prompt_engineering Topic
 

@@ -3,7 +3,7 @@ type: context_guide
 topic: adna_core
 subtopic: campaign_dispatch
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-17
 sources: ["aDNA Standard v2.1 (§9 Mission System)", "Campaign AGENTS.md protocol", "campaign_adna_review — worked example (18 missions, 7 phases)"]
 context_version: "1.0"
 token_estimate: ~2800
@@ -88,7 +88,19 @@ how/campaigns/campaign_{name}/
 | Dependencies flow forward (no backward deps) | Clean execution order |
 | Research before implementation | Phase 1 = research/foundation |
 
-### Step 3: Decompose Phases into Missions
+### Step 3: Classify and Decompose Missions
+
+Assign a `mission_class` to each mission to clarify its nature:
+
+| Class | When to Use | Phase Pattern |
+|-------|-------------|---------------|
+| `reconnaissance` | Phase 0/1 — research, gap analysis, scope validation | Usually first phase |
+| `implementation` | Core build phases — creating deliverables | Middle phases |
+| `verification` | Testing, auditing, pre-release validation | Before phase gates |
+| `integration` | Cross-system wiring, merge, coherence | Late phases |
+| `closeout` | Final validation, AARs, knowledge graduation | Final phase |
+
+### Decompose into Mission Objectives
 
 | Mission Design Rule | Rationale |
 |--------------------|-----------|
@@ -150,6 +162,18 @@ campaign_adna_review M12, Phase 5. Previous session completed objectives 1-3
 campaign dispatch. Source materials are loaded. Quality rubric threshold is 3.5+
 composite, no floor violations.
 ```
+
+## Evaluation Loops
+
+Each level of the execution hierarchy can run an OODA (Observe-Orient-Decide-Act) evaluation loop. This is an opt-in enhancement that improves quality without changing the basic hierarchy:
+
+| Level | OODA Frequency | Key Output |
+|-------|---------------|------------|
+| Session | Continuous | SITREP at session close |
+| Mission | Session boundaries | AAR at mission close (5-step protocol) |
+| Campaign | Phase gates | Phase review, GO/NO-GO assessment |
+
+Anomalies discovered at lower levels propagate upward. Strategic restructuring flows downward. Full specification: `context_adna_core_ooda_cascade.md`.
 
 ## Anti-Patterns
 

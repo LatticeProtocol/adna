@@ -9,6 +9,14 @@ context_version: "1.0"
 token_estimate: ~3000
 last_edited_by: agent_stanley
 tags: [context, prompt_engineering]
+quality_score: 4.4
+signal_density: 4
+actionability: 5
+coverage_uniformity: 5
+source_diversity: 5
+cross_topic_coherence: 5
+freshness_category: durable
+last_evaluated: 2026-03-17
 ---
 
 # Prompt Engineering: Federation & Composability Patterns

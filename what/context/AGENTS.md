@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-03-05
+updated: 2026-03-17
 last_edited_by: agent_stanley
 tags: [directory_index, context]
 ---
@@ -129,14 +129,18 @@ Every context file should meet these standards:
 - **Token-efficient** — 150-300 lines per file (~2000-4000 tokens)
 - **Source-attributed** — every claim traceable to a source
 
+## Cross-Topic Recipes
+
+Pre-defined context assemblies for multi-disciplinary tasks. See `context_recipes.md` for the full index, 3-tier budget system, and task classification heuristic. Recipes encode known-good subtopic combinations — agents can always load subtopics manually.
+
 ## Available Topics
 
 | Topic | Subtopics | Total Tokens | Avg Quality | Status |
 |-------|-----------|-------------|-------------|--------|
-| prompt_engineering | 7 | ~21,200 | — | active |
+| prompt_engineering | 7 | ~21,200 | 4.2 | active |
 | adna_core | 8 | ~24,000 | 4.2 | active |
-| lattice_basics | 2 | ~4,500 | — | active |
-| object_standards | 1 | ~3,000 | — | active |
+| lattice_basics | 2 | ~4,500 | 3.0 | active |
+| object_standards | 1 | ~3,000 | 3.4 | active |
 
 ## Load/Skip Decision
 

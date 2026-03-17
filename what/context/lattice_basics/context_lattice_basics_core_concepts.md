@@ -9,6 +9,14 @@ context_version: "1.0"
 token_estimate: ~2500
 last_edited_by: agent_stanley
 tags: [context, lattice_basics]
+quality_score: 3.0
+signal_density: 3
+actionability: 2
+coverage_uniformity: 3
+source_diversity: 1
+cross_topic_coherence: 4
+freshness_category: stable
+last_evaluated: 2026-03-17
 ---
 
 # Lattice Basics: Core Concepts

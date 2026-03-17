@@ -9,6 +9,14 @@ context_version: "1.0"
 token_estimate: ~2800
 last_edited_by: agent_stanley
 tags: [context, prompt_engineering]
+quality_score: 3.6
+signal_density: 4
+actionability: 4
+coverage_uniformity: 3
+source_diversity: 3
+cross_topic_coherence: 4
+freshness_category: mixed
+last_evaluated: 2026-03-17
 ---
 
 # Prompt Engineering: Mermaid Diagram Best Practices

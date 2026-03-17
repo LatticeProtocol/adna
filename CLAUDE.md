@@ -164,6 +164,10 @@ Campaign → Mission → Objective
 
 **Objectives** are the atomic work units tracked within mission documents.
 
+### Context Recipes
+
+Cross-topic context assemblies for multi-disciplinary tasks. Recipe index: `what/context/context_recipes.md`. Three budget tiers (Minimal/Standard/Full). Agents should check recipe index before loading multiple subtopics manually.
+
 ### Skills
 
 Reusable agent recipes and documented procedures in `how/skills/`. Skills have two types: `agent` (automated recipes) and `process` (human/hybrid procedures). Protocol: `how/skills/AGENTS.md`

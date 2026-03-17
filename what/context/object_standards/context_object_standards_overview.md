@@ -9,6 +9,14 @@ context_version: "1.0"
 token_estimate: ~3000
 last_edited_by: agent_stanley
 tags: [context, object_standards]
+quality_score: 3.4
+signal_density: 4
+actionability: 3
+coverage_uniformity: 3
+source_diversity: 1
+cross_topic_coherence: 3
+freshness_category: stable
+last_evaluated: 2026-03-17
 ---
 
 # Object Standards: Overview

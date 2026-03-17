@@ -3,7 +3,7 @@ type: context_guide
 topic: adna_core
 subtopic: context_engineering
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-17
 sources: ["aDNA Standard v2.1 (§10)", "Context Quality Rubric v1.0", "Context library AGENTS.md", "prompt_engineering/signal_to_token operational patterns"]
 context_version: "1.0"
 token_estimate: ~2800
@@ -123,6 +123,19 @@ what/context/
 | Examples | Code blocks with annotations | Directly executable |
 | Principles | Numbered list | Priority-ordered, memorable |
 | Taxonomies | Hierarchical tables | Classification at a glance |
+
+## Context Composition System
+
+Beyond individual files, the context library supports **cross-topic assembly recipes** — named, pre-defined combinations of subtopics for multi-disciplinary tasks.
+
+| Concept | Description |
+|---------|-------------|
+| **Recipe** | A named list of subtopics to load together, with a token budget |
+| **Three tiers** | Minimal (<5K), Standard (<12K), Full (all subtopics) |
+| **Task classification** | Keyword matching to suggest the right recipe |
+| **Recipe creation** | Identify pattern → list subtopics → calculate budget → add to index |
+
+Recipe index: `what/context/context_recipes.md`. Load it when starting a task that spans multiple context topics.
 
 ## Anti-Patterns
 

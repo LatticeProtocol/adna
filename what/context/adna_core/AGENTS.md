@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-17
 last_edited_by: agent_stanley
 tags: [directory_index, context, adna_core]
 ---
@@ -37,6 +37,8 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 | Designing a new ontology or extending existing | ontology_design, convergence_model |
 | Creating a lattice YAML file | lattice_design |
 | Writing context library files | context_engineering |
+| Loading multi-topic context assemblies | context_engineering (Composition System section) + `context_recipes.md` |
+| Auditing context quality | context_engineering (Quality Rubric section) + `skill_context_quality_audit` |
 | Federating lattices across instances | federation, lattice_design |
 | Merging ontologies from two instances | ontology_unification, ontology_design |
 | Designing a campaign | campaign_dispatch, convergence_model |

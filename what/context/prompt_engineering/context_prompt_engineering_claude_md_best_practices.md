@@ -9,6 +9,14 @@ context_version: "1.0"
 token_estimate: ~3000
 last_edited_by: agent_stanley
 tags: [context, prompt_engineering]
+quality_score: 4.4
+signal_density: 5
+actionability: 5
+coverage_uniformity: 4
+source_diversity: 4
+cross_topic_coherence: 4
+freshness_category: mixed
+last_evaluated: 2026-03-17
 ---
 
 # Prompt Engineering: CLAUDE.md Best Practices

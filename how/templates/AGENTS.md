@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-19
-updated: 2026-03-17
+updated: 2026-03-18
 last_edited_by: agent_stanley
 tags: [directory_index, templates]
 ---
@@ -14,25 +14,36 @@ Templates for all content types in the vault. Each template defines the frontmat
 
 ## Template Index
 
-| Template | Target Type | Auto-Trigger Directory | Frontmatter `type` |
-|----------|------------|----------------------|-------------------|
+### Auto-Triggered Templates (10)
+
+These templates are applied by Templater when creating a new file in the mapped directory:
+
+| Template | Target Type | Trigger Directory | Frontmatter `type` |
+|----------|------------|-------------------|-------------------|
 | `template_adr.md` | Architecture Decision Record | `what/decisions/` | `decision` |
 | `template_backlog.md` | Backlog idea | `how/backlog/` | `backlog` |
 | `template_campaign.md` | Campaign master document | `how/campaigns/` | `campaign` |
 | `template_context.md` | Context library file | `what/context/` | `context_research` / `context_guide` / `context_core` |
 | `template_coordination.md` | Coordination note | `who/coordination/` | `coordination` |
 | `template_mission.md` | Mission / plan | `how/missions/` | `mission` |
-| `template_prd.md` | Product Requirements Document | `how/pipelines/prd_rfc/` | `prd` |
-| `template_rfc.md` | Request for Comments | `how/pipelines/prd_rfc/` | `rfc` |
-| `template_session.md` | Session tracking file | `how/sessions/` | `session` |
+| `template_prd.md` | Product Requirements Document | `how/pipelines/prd_rfc/02_requirements` | `prd` |
+| `template_rfc.md` | Request for Comments | `how/pipelines/prd_rfc/03_design` | `rfc` |
+| `template_session.md` | Session tracking file | `how/sessions/active/` | `session` |
 | `template_skill.md` | Skill recipe or procedure | `how/skills/` | `skill` |
-| `template_data_record.md` | Generic data record | — | varies |
-| `template_governance.md` | Governance document | — | `governance` |
-| `template_folder_note.md` | Folder index note | — | `folder_note` |
-| `template_registry.md` | Registry publication metadata | — | `template` |
-| `template_aar.md` | After-Action Review | `how/missions/artifacts/` | `artifact` |
-| `template_strategic_compass.md` | Strategic compass | `who/governance/` | `governance` |
-| `template_campaign_claude.md` | Per-campaign CLAUDE.md | `how/campaigns/campaign_*/` | `governance` |
+
+### Manual-Apply Templates (7)
+
+These templates have no Templater auto-trigger. Copy their structure manually or use `Templater: Insert template` command:
+
+| Template | Target Type | Typical Location | Frontmatter `type` | Why No Trigger |
+|----------|------------|-----------------|-------------------|----------------|
+| `template_aar.md` | After-Action Review | `how/missions/artifacts/` | `artifact` | Artifacts dir contains mixed types |
+| `template_campaign_claude.md` | Per-campaign CLAUDE.md | `how/campaigns/campaign_*/` | `governance` | Glob patterns not supported by Templater |
+| `template_data_record.md` | Generic data record | varies | varies | Generic — no single target directory |
+| `template_folder_note.md` | Folder index note | any directory | `folder_note` | Used everywhere, can't map to one folder |
+| `template_governance.md` | Governance document | `who/governance/` | `governance` | Governance dir has AGENTS.md + mixed policy docs |
+| `template_registry.md` | Registry publication metadata | varies | `template` | Used for publishing, not regular file creation |
+| `template_strategic_compass.md` | Strategic compass | `who/governance/` | `governance` | Rare — governance dir already mapped for other use |
 
 ## Filled Examples
 

@@ -67,6 +67,7 @@ Examples:
 - `skill_lattice_publish.md` (agent)
 - `skill_context_quality_audit.md` (agent)
 - `skill_context_graduation.md` (agent)
+- `skill_vault_review.md` (process)
 
 ## Template
 

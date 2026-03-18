@@ -1,10 +1,10 @@
 ---
 type: state
 created: 2026-02-17
-updated: 2026-03-17
+updated: 2026-03-18
 status: active
 last_edited_by: agent_stanley
-last_session: ""
+last_session: session_stanley_20260318_adna_review_phase2
 tags: [state, governance]
 ---
 
@@ -14,7 +14,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 ## Current Phase
 
-**Production-validated.** aDNA v5.0 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), and 14 example lattices across business, research, creative, personal, and biotech domains.
+**Production-validated.** aDNA v5.1 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), and 14 example lattices across business, research, creative, personal, and biotech domains. aDNA Standard v2.2 (maintenance pass complete).
 
 ## What's Working
 
@@ -27,16 +27,16 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 - Lattice YAML validation tool (`lattice_validate.py`) + JSON Schema
 - Canvas-YAML bidirectional conversion (`lattice2canvas.py`, `canvas2lattice.py`)
 - 13 example lattice files + 3 canvas templates + 1 demonstration canvas
-- Context library: 4 topics, 20 subtopics, ~58K tokens (prompt_engineering, adna_core, lattice_basics, object_standards)
+- Context library: 4 topics, 23 subtopics, ~58K tokens (prompt_engineering, adna_core, lattice_basics, object_standards)
 - Sync protocol: vault↔repo `adna_core/` sync documented in vault skill (`how/skills/skill_adna_repo_sync.md`)
 - Cross-topic recipe system: 6 domain-neutral recipes with 3-tier budgets
 - Execution hierarchy v2: OODA cascade (3-level), AAR protocol (5-step), mission classes (5 types)
 - Quality framework: 6-axis rubric, quality audit skill, context graduation pipeline
 - Strategic compass template + escalation cascade (session→mission→campaign→STATE.md)
-- 14 templates including AAR, strategic compass, campaign CLAUDE.md, registry
+- 17 templates including AAR, strategic compass, campaign CLAUDE.md, registry, data record, folder note, PRD, RFC
 - R&D→PRD→RFC planning pipeline (4 stages)
 - Agent-driven onboarding (`how/skills/skill_onboarding.md`)
-- 5 skills (onboarding, lattice publish, context quality audit, context graduation, machine setup)
+- 6 skills (onboarding, lattice publish, new entity type, context quality audit, context graduation, vault review)
 - Session tracking, mission/campaign/backlog systems
 - 10 CSS snippets for Obsidian visual polish
 
@@ -53,6 +53,11 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 | Date | Upgrade | Source |
 |------|---------|--------|
+| 2026-03-18 | CLAUDE.md v5.1 — lattice types table (7 values), template count (17), standard file path fixes | campaign_adna_comprehensive_review M08 |
+| 2026-03-18 | aDNA Standard v2.2 — federation stub, vault extensions, campaign system, factual fixes | campaign_adna_comprehensive_review M07 |
+| 2026-03-18 | Repo sync complete: 13 adna_core subtopics (was 10), 3 new files from vault sync | campaign_adna_comprehensive_review M01 |
+| 2026-03-18 | README quickstart refined, FAQ section, plugin tiers documented | campaign_adna_comprehensive_review M03 |
+| 2026-03-18 | Quality floor remediation: lattice_basics 3.0→4.0, object_standards 3.4→4.0 | campaign_adna_comprehensive_review M04 |
 | 2026-03-17 | CLAUDE.md v5.0 — OODA cascade, AAR protocol, escalation cascade, context recipes | Framework port from lattice-labs |
 | 2026-03-17 | 10 adna_core subtopics (was 8) — added ooda_cascade, ontology_workshop | Framework port |
 | 2026-03-17 | Quality scoring on all 18 context files — 3 floor violations identified | Quality audit |

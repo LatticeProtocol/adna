@@ -1,13 +1,13 @@
 ---
 type: governance
-version: "5.0"
+version: "5.1"
 token_estimate: ~650
-updated: 2026-03-17
+updated: 2026-03-18
 last_edited_by: agent_stanley
 ---
 
 # CLAUDE.md — adna
-<!-- v5.0 | 2026-03-17 -->
+<!-- v5.1 | 2026-03-18 -->
 
 ## Identity & Personality
 
@@ -58,7 +58,7 @@ adna/
 │       ├── tools/               # Python validation and conversion tools
 │       └── examples/            # Example .lattice.yaml files
 ├── how/                         # HOW — Operations, sessions, templates
-│   ├── templates/               # 10 reusable templates
+│   ├── templates/               # 17 reusable templates
 │   ├── sessions/                # Session tracking (active/ + history/)
 │   ├── missions/                # Multi-session plans (standalone)
 │   ├── backlog/                 # Ideation and improvement tracking
@@ -208,6 +208,9 @@ Extend by adding domain-specific entities under the appropriate triad leg. The b
 | `agent` | LLM-driven reasoning | `reasoning` |
 | `context_graph` | Knowledge structure | varies |
 | `workflow` | Operational process | `workflow` |
+| `infrastructure` | Physical/network topology (nodes, edges, services) | varies |
+| `context_set` | Disease/domain-specific overlay inheriting from a base lattice | varies |
+| `skill` | Claude Skill promoted to lattice registry | varies |
 
 ### Execution Modes
 
@@ -221,11 +224,13 @@ Extend by adding domain-specific entities under the appropriate triad leg. The b
 
 Three core object types have type-standard docs, YAML schemas, and FAIR metadata requirements. Targets are a dataset subtype (`dataset_class: target`).
 
-| Object | Standard | Schema |
-|--------|----------|--------|
-| Module | `what/modules/standard_module.md` | — |
-| Dataset | `what/datasets/standard_dataset.md` | `dataset_yaml_schema.json` |
-| Lattice | `what/lattices/standard_lattice.md` | `lattice_yaml_schema.json` |
+| Object | Context Reference | Schema |
+|--------|------------------|--------|
+| Module | `what/context/object_standards/` | — |
+| Dataset | `what/context/object_standards/` | — |
+| Lattice | `what/context/object_standards/` | `what/lattices/lattice_yaml_schema.json` |
+
+> Note: Full object standard docs (`standard_module.md`, `standard_dataset.md`, `standard_lattice.md`) are vault-specific files. This repo carries the context library summaries and schemas.
 
 **Canvas authority model (Decision 9)**: `.lattice.yaml` is authoritative; `.canvas` is the view/interaction layer. Round-Trip Protocol v1.0 governs bidirectional conversion.
 
@@ -301,4 +306,4 @@ tags: []
 Use bidirectional wikilinks when adding relationships between entities.
 
 ---
-<!-- v5.0 | 2026-03-17 -->
+<!-- v5.1 | 2026-03-18 -->

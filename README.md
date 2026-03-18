@@ -190,16 +190,18 @@ adna/
 | **Lattice tools** | `what/lattices/tools/` | Validate `.lattice.yaml` files, convert to/from Obsidian canvas |
 | **JSON Schema** | `what/lattices/lattice_yaml_schema.json` | Formal schema for lattice definitions |
 | **13 example lattices** | `what/lattices/examples/` | Business, research, creative, personal, and biotech examples |
-| **10 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC |
+| **17 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC, AAR, governance, data record, folder note, registry, strategic compass, campaign CLAUDE.md |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 11 pre-configured plugins (run `setup.sh`) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 13 pre-configured plugins (run `setup.sh`) |
 
 ---
 
 ## Quick Start
 
 **Clone and open: ~5 minutes.** Agent-guided customization: 15-30 minutes. Manual customization: 30-45 minutes.
+
+> **What you'll have after 5 minutes**: A fully configured knowledge vault with the triad structure (`who/`/`what/`/`how/`), 17 templates, 13 Obsidian plugins, example lattices, and governance files — ready for customization to your domain.
 
 ### Prerequisites
 
@@ -219,7 +221,7 @@ cd adna
 ./setup.sh
 ```
 
-Downloads and installs 11 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
+Downloads and installs 13 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
@@ -344,6 +346,48 @@ Campaign  (strategic initiative — weeks to months)
 ### Cross-Agent Coordination
 
 When multiple agents work on the same project, they coordinate through `who/coordination/` — structured notes that flag dependencies, handoffs, and blockers. Each agent checks coordination on startup, before starting work.
+
+---
+
+## Frequently Asked Questions
+
+### Do I need Obsidian to use aDNA?
+
+No. aDNA is a directory convention — `who/`/`what/`/`how/` with Markdown files and YAML frontmatter. Any text editor or Markdown tool works. Obsidian adds visual browsing (graph view, wikilink navigation, canvas), but the structure is plain files on disk. AI agents like Claude Code work with the files directly regardless of editor.
+
+### What if I don't use AI agents?
+
+aDNA works perfectly as a human-only knowledge management system. The triad structure, templates, and Obsidian plugins provide value without any AI. Skip `CLAUDE.md` and `AGENTS.md` files — they're inert governance files that don't affect human workflows. See [Using Without AI Agents](#using-without-ai-agents) for the manual setup path.
+
+### Which plugins are essential vs. optional?
+
+Plugins fall into three tiers (see `.obsidian/OBSIDIAN_CLAUDE.md` for full details):
+
+- **Essential** (vault integrity): Templater (auto-applies templates), Dataview (frontmatter queries), Folder Notes/Notebook Navigator (triad browsing)
+- **Recommended** (major UX): Meta Bind, Style Settings, Icon Folder, Homepage, Advanced Canvas
+- **Optional** (nice-to-have): Tasks, Table Editor, Terminal, Pretty Properties, Fold Properties
+
+The vault functions without optional plugins. Essential plugins are needed for the template auto-trigger and query systems.
+
+### How do I sync the vault across machines?
+
+Use **git**. The vault is a standard git repository — commit, push, pull. For Obsidian-native sync, install the [Obsidian Git](https://github.com/denolehov/obsidian-git) community plugin, which auto-commits on a timer and auto-pulls on vault open. Per-device files (`workspace.json`, `graph.json`) are excluded via `.gitignore` so they don't conflict.
+
+### Can I add my own entity types?
+
+Yes — that's the extension model. Add a subdirectory under the appropriate triad leg, create an `AGENTS.md`, and optionally add a template with a Templater folder mapping. See [Extending the Ontology](#extending-the-ontology) for the 3-step process. Example extensions: `who/customers/`, `what/datasets/`, `how/runbooks/`.
+
+### Can I run multiple vaults or connect them?
+
+aDNA supports multi-vault composition through **bridge patterns** — nesting (child vault inside parent), sibling (peer vaults with cross-references), and monorepo (shared root). See [`what/docs/adna_bridge_patterns.md`](what/docs/adna_bridge_patterns.md) for the full spec. Federation across separate instances (different teams, different organizations) is an active development area.
+
+### How do I customize CLAUDE.md for my project?
+
+Edit three sections in `CLAUDE.md`: (1) **Identity & Mission** — replace the project name, agent persona, and mission description; (2) **Domain Knowledge** — add your domain-specific terminology, conventions, and architecture; (3) **Agent Protocol** — adjust the startup sequence and priority rules for your workflow. The rest (safety rules, sync protocol, standing orders) is framework-level and rarely needs changes.
+
+### How do templates work?
+
+Templates live in `how/templates/` and auto-apply via the Templater plugin when you create files in mapped directories. For example, creating a file in `what/decisions/` auto-populates the ADR template. 10 of the 17 templates have auto-triggers; the other 7 are applied manually via `Templater: Insert template`. See `how/templates/AGENTS.md` for the full trigger table.
 
 ---
 

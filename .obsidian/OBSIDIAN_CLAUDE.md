@@ -46,23 +46,33 @@ These files are excluded from git (`.gitignore`) because they contain machine-sp
 4. **ALWAYS** validate JSON syntax before saving
 5. **NEVER** modify `workspace.json` while Obsidian is running
 
-## Plugins (15 community plugins)
+## Plugins (13 community plugins)
+
+### Essential (vault functionality depends on these)
 
 | Plugin | ID | Purpose | Config Notes |
 |--------|----|---------|-------------|
 | Dataview | `dataview` | Query frontmatter with TABLE/LIST/TASK | Use WHERE + LIMIT for performance |
 | Templater | `templater-obsidian` | Template engine with folder auto-triggers | 10 folder→template mappings |
+| Notebook Navigator | `notebook-navigator` | Folder-based notebook nav with icons + folder notes | Triad colors configured |
+
+### Recommended (significant UX improvement)
+
+| Plugin | ID | Purpose | Config Notes |
+|--------|----|---------|-------------|
 | Meta Bind | `obsidian-meta-bind-plugin` | Inline metadata editing | Buttons, inputs, embeds |
 | Homepage | `homepage` | Set start page on vault open | Configured in plugin data.json |
-| Tasks | `obsidian-tasks-plugin` | Task tracking with queries | Global task search |
 | Style Settings | `obsidian-style-settings` | GUI controls for CSS snippet options | Required for @settings blocks |
-| Table Editor | `table-editor-obsidian` | Better markdown table editing | Tab-based navigation |
-| Omnisearch | `omnisearch` | Vault-wide fuzzy search | Indexes all content |
-| Terminal | `terminal` | Terminal access from Obsidian | Opens system shell |
-| Folder Notes | `folder-notes` | Index files for folder navigation | folder_name.md convention |
-| Notebook Navigator | `notebook-navigator` | Folder-based notebook nav with icons | Triad colors configured |
 | Icon Folder | `obsidian-icon-folder` | Custom folder/file icons | Triad folder icons |
 | Advanced Canvas | `advanced-canvas` | Extended canvas features | Groups, portals, styles |
+
+### Optional (nice-to-have)
+
+| Plugin | ID | Purpose | Config Notes |
+|--------|----|---------|-------------|
+| Tasks | `obsidian-tasks-plugin` | Task tracking with queries | Global task search |
+| Table Editor | `table-editor-obsidian` | Better markdown table editing | Tab-based navigation |
+| Terminal | `terminal` | Terminal access from Obsidian | Opens system shell |
 | Pretty Properties | `pretty-properties` | Polished property display | Renders frontmatter |
 | Fold Properties | `fold-properties-by-default` | Auto-fold frontmatter | Cleaner reading view |
 

@@ -28,7 +28,7 @@ PLUGIN_IDS=(
     obsidian-style-settings
     table-editor-obsidian
     omnisearch
-    terminal
+    obsidian42-brat
     folder-notes
     notebook-navigator
     obsidian-icon-folder
@@ -45,7 +45,7 @@ PLUGIN_REPOS=(
     mgmeyers/obsidian-style-settings
     tgrosinger/advanced-tables-obsidian
     scambier/obsidian-omnisearch
-    polyipseity/obsidian-terminal
+    TfTHacker/obsidian42-brat
     LostPaul/obsidian-folder-notes
     johansan/notebook-navigator
     FlorianWowormo/obsidian-icon-folder

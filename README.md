@@ -241,7 +241,7 @@ adna/
 | **17 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC, AAR, governance, data record, folder note, registry, strategic compass, campaign CLAUDE.md |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 13 pre-configured plugins (run `setup.sh`) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (run `setup.sh`) |
 
 ---
 
@@ -249,7 +249,7 @@ adna/
 
 **Clone and open: ~5 minutes.** Agent-guided customization: 15-30 minutes. Manual customization: 30-45 minutes.
 
-> **What you'll have after 5 minutes**: A fully configured knowledge vault with the triad structure (`who/`/`what/`/`how/`), 17 templates, 14 example lattices, 13 Obsidian plugins, and governance files — ready for customization to your domain.
+> **What you'll have after 5 minutes**: A fully configured knowledge vault with the triad structure (`who/`/`what/`/`how/`), 17 templates, 14 example lattices, 14 Obsidian plugins, and governance files — ready for customization to your domain.
 
 > **Why this matters for AI agents**: aDNA's directory structure acts as a routing system. Each level narrows what an AI agent needs to read — from your entire project down to a single task. Agents work faster, use fewer tokens, and produce more focused results.
 
@@ -271,7 +271,7 @@ cd adna
 ./setup.sh
 ```
 
-Downloads and installs 13 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
+Downloads and installs 15 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
@@ -446,8 +446,8 @@ aDNA works perfectly as a human-only knowledge management system. The triad stru
 Plugins fall into three tiers (see `.obsidian/OBSIDIAN_CLAUDE.md` for full details):
 
 - **Essential** (vault integrity): Templater (auto-applies templates), Dataview (frontmatter queries), Folder Notes/Notebook Navigator (triad browsing)
-- **Recommended** (major UX): Meta Bind, Style Settings, Icon Folder, Homepage, Advanced Canvas
-- **Optional** (nice-to-have): Tasks, Table Editor, Terminal, Pretty Properties, Fold Properties
+- **Recommended** (major UX): Meta Bind, Style Settings, Icon Folder, Homepage, Advanced Canvas, BRAT
+- **Optional** (nice-to-have): Tasks, Table Editor, Termy, Pretty Properties, Fold Properties
 
 The vault functions without optional plugins. Essential plugins are needed for the template auto-trigger and query systems.
 

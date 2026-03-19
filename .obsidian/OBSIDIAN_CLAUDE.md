@@ -46,7 +46,7 @@ These files are excluded from git (`.gitignore`) because they contain machine-sp
 4. **ALWAYS** validate JSON syntax before saving
 5. **NEVER** modify `workspace.json` while Obsidian is running
 
-## Plugins (13 community plugins)
+## Plugins (14 community plugins)
 
 ### Essential (vault functionality depends on these)
 
@@ -65,6 +65,7 @@ These files are excluded from git (`.gitignore`) because they contain machine-sp
 | Style Settings | `obsidian-style-settings` | GUI controls for CSS snippet options | Required for @settings blocks |
 | Icon Folder | `obsidian-icon-folder` | Custom folder/file icons | Triad folder icons |
 | Advanced Canvas | `advanced-canvas` | Extended canvas features | Groups, portals, styles |
+| BRAT | `obsidian42-brat` | Beta plugin manager | Auto-installs/updates Termy |
 
 ### Optional (nice-to-have)
 
@@ -72,7 +73,7 @@ These files are excluded from git (`.gitignore`) because they contain machine-sp
 |--------|----|---------|-------------|
 | Tasks | `obsidian-tasks-plugin` | Task tracking with queries | Global task search |
 | Table Editor | `table-editor-obsidian` | Better markdown table editing | Tab-based navigation |
-| Terminal | `terminal` | Terminal access from Obsidian | Opens system shell |
+| Termy | `termy` | Terminal with preset scripts | 3 agent CLI presets (Claude Code, Codex, Gemini) |
 | Pretty Properties | `pretty-properties` | Polished property display | Renders frontmatter |
 | Fold Properties | `fold-properties-by-default` | Auto-fold frontmatter | Cleaner reading view |
 

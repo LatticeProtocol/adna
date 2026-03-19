@@ -19,6 +19,7 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 | `adna_standard.md` | ~8,000 | Normative aDNA specification v2.1 — triad structure, entity types, governance, pipelines, FAIR metadata. 9 Mermaid diagrams. |
 | `adna_design.md` | ~5,000 | Design rationale and deployment patterns — standalone, nested, federated forms. 5 Mermaid diagrams. |
 | `adna_bridge_patterns.md` | ~4,000 | Composition patterns for multi-vault architectures — nesting, federation, discovery. 5 Mermaid diagrams. |
+| `migration_guide.md` | ~3,500 | Adding aDNA to existing projects — decision tree (bare vs. embedded), step-by-step walkthroughs, starter templates, common pitfalls. |
 | `context_quality_rubric.md` | ~2,000 | 6-axis quality evaluation framework for context files — scoring methodology, calibration examples. |
 | `ontology_unification.md` | ~8,000 | Ontology unification protocol — merge algorithm (4-step with Mermaid flowchart + pseudo-code), 10-type conflict taxonomy, namespace specification, worked example (org_formation + vault). |
 | `lattice_federation.md` | ~8,000 | Federation & sharing protocol — 5 capabilities (validate, export, share, import, compose), `lattice://` URI scheme, inline vs. external reference composition, import algorithm with M9 integration, worked round-trip example. |
@@ -26,13 +27,14 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 
 ## Total Token Budget
 
-~40,500 tokens to load all 7 documents. These are heavy reference documents — load specific files based on need.
+~44,000 tokens to load all 8 documents. These are heavy reference documents — load specific files based on need.
 
 ## Load/Skip Decision
 
 **Load this directory when**:
 - Understanding or extending the aDNA standard itself (read `adna_standard.md`)
 - Designing a new aDNA instance or evaluating deployment form (read `adna_design.md`)
+- Adding aDNA to an existing project or codebase (read `migration_guide.md`)
 - Planning multi-vault composition or federation (read `adna_bridge_patterns.md`)
 - Evaluating context file quality or setting up review processes (read `context_quality_rubric.md`)
 - Merging ontologies from different aDNA instances or integrating sub-lattices (read `ontology_unification.md`)

@@ -307,6 +307,36 @@ See [Using Without AI Agents](#using-without-ai-agents) below.
 
 ---
 
+## Adding aDNA to an Existing Project
+
+Already have a project? Don't clone — add aDNA structure to it. This takes 10-15 minutes and works with any codebase.
+
+**Choose your form:**
+
+| Form | Structure | Use when |
+|------|-----------|----------|
+| **Embedded** | `.agentic/who/` · `.agentic/what/` · `.agentic/how/` | Adding to a code repo — aDNA lives alongside source code |
+| **Bare** | `who/` · `what/` · `how/` at root | aDNA IS the project — knowledge bases, documentation vaults |
+
+**Minimum viable aDNA** — 5 files + 3 directories:
+
+1. `CLAUDE.md` at project root — agent master context (always at root, never inside `.agentic/`)
+2. `MANIFEST.md` at project root — project identity
+3. `STATE.md` at project root — operational state
+4. Three `AGENTS.md` files — one per triad directory
+5. Three triad directories — `who/`, `what/`, `how/` (bare) or `.agentic/who|what|how/` (embedded)
+
+```bash
+# Embedded form — one command to create the structure:
+mkdir -p .agentic/who .agentic/what .agentic/how
+```
+
+Then write your governance files using the starter templates in the full guide. Everything else — templates, sessions, campaigns, context library — is enhancement you add when you need it.
+
+**Full walkthrough**: [`what/docs/migration_guide.md`](what/docs/migration_guide.md) — step-by-step instructions, starter templates, common pitfalls, and progressive enhancement path.
+
+---
+
 ## Using Without AI Agents
 
 aDNA works perfectly well as a human-only knowledge management system. The triad structure, templates, and Obsidian integration don't require AI agents at all.
@@ -736,6 +766,7 @@ Three rules keep multi-agent work safe:
 | [`what/docs/adna_standard.md`](what/docs/adna_standard.md) | Full normative specification (v2.1) — RFC 2119 keywords, all MUST/SHOULD/MAY rules |
 | [`what/docs/adna_design.md`](what/docs/adna_design.md) | Architecture rationale — why three legs, why these governance files, design tradeoffs |
 | [`what/docs/adna_bridge_patterns.md`](what/docs/adna_bridge_patterns.md) | Multi-instance composition — nesting, sibling, monorepo patterns |
+| [`what/docs/migration_guide.md`](what/docs/migration_guide.md) | Adding aDNA to an existing project — decision tree, walkthroughs, starter templates |
 | [`what/lattices/canvas_yaml_interop.md`](what/lattices/canvas_yaml_interop.md) | Canvas ↔ YAML bidirectional mapping specification |
 | [`what/lattices/lattice_yaml_schema.json`](what/lattices/lattice_yaml_schema.json) | JSON Schema for `.lattice.yaml` validation |
 

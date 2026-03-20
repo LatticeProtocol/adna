@@ -24,8 +24,11 @@ adna-projects/                    # Workspace root (users copy this)
 │   ├── CLAUDE.md.template        # Governance template with {{variables}}
 │   ├── MANIFEST.md.template
 │   ├── STATE.md.template
-│   ├── AGENTS.md.template
-│   └── README.md.template
+│   ├── AGENTS.md.template        # Root agent guide
+│   ├── README.md.template
+│   ├── who_AGENTS.md.template    # Triad-level agent guides
+│   ├── what_AGENTS.md.template
+│   └── how_AGENTS.md.template
 ├── my-research-vault/            # Project A (scaffolded)
 │   ├── CLAUDE.md
 │   ├── MANIFEST.md
@@ -65,7 +68,7 @@ Every scaffolded project is a complete aDNA vault: own CLAUDE.md, own git (optio
 | `{{project_name}}` | Directory name | CLAUDE.md, MANIFEST.md, README.md |
 | `{{project_description}}` | Q1 answer | MANIFEST.md, CLAUDE.md, README.md |
 | `{{domain}}` | Q2 answer | CLAUDE.md domain section |
-| `{{skeleton_tier}}` | Q3 → tier mapping | Directory structure |
+| `{{skeleton_tier}}` | Q3 → tier mapping | Directory structure (controls which subdirs are created, not template text) |
 | `{{tooling}}` | Q4 answer | .obsidian/ inclusion |
 | `{{persona_name}}` | Q5 answer | CLAUDE.md personality |
 | `{{persona_style}}` | Q5 answer | CLAUDE.md operating style |

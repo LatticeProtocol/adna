@@ -1,10 +1,10 @@
 ---
 type: state
 created: 2026-02-17
-updated: 2026-03-18
+updated: 2026-03-19
 status: active
 last_edited_by: agent_stanley
-last_session: session_stanley_20260318_adna_review_phase2
+last_session: session_stanley_20260319_adna_evo_m12
 tags: [state, governance]
 ---
 
@@ -14,7 +14,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 ## Current Phase
 
-**Production-validated.** aDNA v5.1 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), and 14 example lattices across business, research, creative, personal, and biotech domains. aDNA Standard v2.2 (maintenance pass complete).
+**Production-validated.** aDNA v5.2 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), and 14 example lattices across business, research, creative, personal, and biotech domains. aDNA Standard v2.2 (maintenance pass complete).
 
 ## What's Working
 
@@ -39,6 +39,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 - 6 skills (onboarding, lattice publish, new entity type, context quality audit, context graduation, vault review)
 - Session tracking, mission/campaign/backlog systems
 - 10 CSS snippets for Obsidian visual polish
+- CHANGELOG.md with version policy and migration cross-links
 
 ## Recent Decisions
 
@@ -53,6 +54,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 | Date | Upgrade | Source |
 |------|---------|--------|
+| 2026-03-19 | CLAUDE.md v5.2 — CHANGELOG.md, version policy, migration cross-links | campaign_adna_ecosystem_evolution M12 |
 | 2026-03-18 | CLAUDE.md v5.1 — lattice types table (7 values), template count (17), standard file path fixes | campaign_adna_comprehensive_review M08 |
 | 2026-03-18 | aDNA Standard v2.2 — federation stub, vault extensions, campaign system, factual fixes | campaign_adna_comprehensive_review M07 |
 | 2026-03-18 | Repo sync complete: 13 adna_core subtopics (was 10), 3 new files from vault sync | campaign_adna_comprehensive_review M01 |

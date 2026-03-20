@@ -804,6 +804,14 @@ Three rules keep multi-agent work safe:
 
 ---
 
+## Versioning & Changelog
+
+aDNA tracks two independent version numbers: **governance** (CLAUDE.md, vault structure and agent protocol) and **standard** (adna_standard.md, the normative specification). Both use Major.Minor versioning.
+
+See [`CHANGELOG.md`](CHANGELOG.md) for the full version history, version policy, and links to migration prompts for upgrading between versions.
+
+---
+
 ## License
 
 [MIT](LICENSE)

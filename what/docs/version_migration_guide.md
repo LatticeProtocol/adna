@@ -142,6 +142,17 @@ When writing a migration that modifies the same file as a previous migration:
 
 ---
 
+## CHANGELOG Cross-Linking Convention
+
+Every changelog entry for a versioned release includes a **Migration** line linking to the corresponding migration prompt. This creates a bidirectional discovery path:
+
+- **CHANGELOG → migration**: Users reading the changelog find the upgrade instructions inline
+- **Migration → CHANGELOG**: Each migration's Related section links back to the CHANGELOG
+
+When creating a new migration prompt, also add the corresponding changelog entry. When adding a changelog entry for a version with a migration, include the migration link.
+
+---
+
 ## Future: Detection in CLAUDE.md
 
 The current design requires users to discover the migration system via this guide, the README, or the `skill_version_migration` skill. A future enhancement could add version-check logic directly to CLAUDE.md:
@@ -161,6 +172,7 @@ This is **documented here but not implemented** — adding it to CLAUDE.md would
 
 ## Related
 
+- [`CHANGELOG.md`](../../CHANGELOG.md) — Version history with migration cross-links
 - [`how/migrations/AGENTS.md`](../../how/migrations/AGENTS.md) — Migration registry and sequential rules
 - [`how/templates/template_migration.md`](../../how/templates/template_migration.md) — Migration prompt template
 - [`how/migrations/migrate_v5.0_to_v5.1.md`](../../how/migrations/migrate_v5.0_to_v5.1.md) — Canonical example

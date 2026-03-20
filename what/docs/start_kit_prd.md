@@ -5,8 +5,8 @@ project_title: "Lattice Start Kit"
 version: "1.0"
 owner: Stanley
 reviewers: []
-approved_by:
-approved_date:
+approved_by: FA
+approved_date: 2026-03-19
 created: 2026-03-19
 updated: 2026-03-19
 last_edited_by: agent_stanley
@@ -408,13 +408,15 @@ $ cd my-existing-repo && adna init
 | Phase 2: `latlab scaffold` integration | 2-3 sessions | MVP CLI + latlab codebase |
 | Phase 3: Web configurator | 5-8 sessions | MVP CLI + hosting infrastructure |
 
-## Open Questions
+## Resolved Questions (DG1 — 2026-03-19)
 
-- [ ] **Where does the CLI live?** Options: (a) standalone `adna` shell script in the aDNA repo root, (b) `latlab scaffold vault` subcommand requiring latlab install, (c) both — shell script MVP that latlab wraps later. Recommendation: (c). — *FA decision at DG1*
-- [ ] **Generated CLAUDE.md size**: Minimal (~50 lines, functional only) or full (~150 lines, includes personality + safety + domain)? Recommendation: ~80-100 lines — functional core + personality + domain section, omit advanced features (campaigns, pipelines, skills) that users discover organically. — *FA decision at DG1*
-- [ ] **Template inclusion**: Starter set only (session, mission, context, backlog — 4 templates) or full 17-template set? Recommendation: Starter set for solo/small-team, full set for organization tier. — *FA decision at DG1*
-- [ ] **Distribution method**: (a) `curl -sL latticeprotocol.com/start | sh`, (b) npm/brew package, (c) repo-bundled only. Recommendation: (a) for frictionless install, (c) as fallback. — *FA decision at build campaign*
-- [ ] **Windows support**: WSL-only or native PowerShell port? Recommendation: WSL-only for MVP. PowerShell port if user demand signal emerges. — *FA decision at build campaign*
+- [x] **Where does the CLI live?** — **Both** (option c). Standalone `adna` shell script as MVP, `latlab scaffold` wraps it later. *FA approved 2026-03-19.*
+- [x] **Generated CLAUDE.md size** — **~100 lines**. Functional core + personality + domain section. Omit advanced features (campaigns, pipelines, skills) that users discover organically. *FA approved 2026-03-19.*
+- [x] **Template inclusion** — **Tier-dependent**. 4 templates for solo, 7 for small-team, 17 for organization. *FA approved 2026-03-19.*
+- [x] **Distribution method** — **Repo-bundled + curl**. `curl` install for frictionless onboarding, repo-bundled as fallback. *FA approved 2026-03-19.*
+- [x] **Windows support** — **WSL-only** for MVP. PowerShell port if user demand signal emerges. *FA approved 2026-03-19.*
+
+> **Note**: PRD approved as reference artifact. Building deferred to separate campaign (`campaign_lattice_start_kit`) when aDNA standard stabilizes.
 
 ## Related
 

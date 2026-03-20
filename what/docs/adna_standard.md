@@ -2,7 +2,7 @@
 type: context
 title: "aDNA Universal Standard v2.1"
 created: 2026-02-11
-updated: 2026-02-19
+updated: 2026-03-19
 status: approved
 last_edited_by: agent_stanley
 tags: [adna, standard, spec, normative]
@@ -17,6 +17,8 @@ tags: [adna, standard, spec, normative]
 ---
 
 ## 1. Introduction & Scope
+
+> **Scan**: What aDNA is, who it's for, and RFC 2119 normative keywords.
 
 ### 1.1 What Is aDNA
 
@@ -53,6 +55,8 @@ This document uses RFC 2119 keywords:
 
 ## 2. Terminology
 
+> **Scan**: 12 key terms — triad, governance file, bare/embedded deployment, session, SITREP, content-as-code.
+
 | Term | Definition |
 |------|-----------|
 | **aDNA** | Agentic DNA — the knowledge architecture standard defined by this document |
@@ -73,6 +77,8 @@ This document uses RFC 2119 keywords:
 ---
 
 ## 3. Triad Architecture
+
+> **Scan**: The `who/what/how` ontology, bare vs. embedded deployment forms, classification question test.
 
 *Decisions: C1, C8*
 
@@ -171,6 +177,8 @@ An aDNA instance MUST use exactly one deployment form. A project MUST NOT mix ba
 ---
 
 ## 4. Governance Files
+
+> **Scan**: Five ALLCAPS files (CLAUDE, MANIFEST, STATE, AGENTS, README) — purpose, required contents, quickstart sequences, progressive enrichment.
 
 *Decisions: C2, C3, D1, D2, D6, D19, D25*
 
@@ -294,6 +302,8 @@ Every aDNA instance MUST have a root README.md. Subdirectory README.md files are
 ---
 
 ## 5. Directory Structure
+
+> **Scan**: Required/recommended/optional subdirectories for each triad leg, registry pattern, ontology artifact, starter/standard/full skeletons.
 
 *Decisions: C5, C6, C7, C11, C12, C14, C15*
 
@@ -463,6 +473,8 @@ For embedded triad deployments, the same skeletons apply inside `.agentic/`, wit
 
 ## 6. Naming Conventions
 
+> **Scan**: Underscores not hyphens, `type_descriptive_name.md` pattern, ALLCAPS governance list, directory naming, `type_` prefix convention.
+
 *Decisions: C3*
 
 ### 6.1 File Naming
@@ -517,6 +529,8 @@ The `type_` prefix pattern is RECOMMENDED for aDNA content files. It enables sor
 
 ## 7. Frontmatter System
 
+> **Scan**: Required base fields (`type`, `created`, `updated`, `last_edited_by`, `tags`), tag conventions, priority field, type-specific extensions.
+
 *Decisions: C4, D18, D20*
 
 ### 7.1 Scope
@@ -570,6 +584,8 @@ Frontmatter is the integration layer between human tools (Dataview queries, IDE 
 ---
 
 ## 8. Session Model
+
+> **Scan**: Bounded units of agent work — lifecycle (create → execute → close → archive), session tiers, SITREP close-out, next-session prompt, the 75% rule.
 
 *Decisions: D3, D4, D5*
 
@@ -665,6 +681,8 @@ No other session sizing prescriptions are universal. Time, task count, and line-
 
 ## 9. Mission System
 
+> **Scan**: Multi-session work decomposition — objectives, acceptance criteria, stages, claiming protocol, handoff between agents.
+
 *Decisions: D12, D16, D17*
 
 ### 9.1 Mission Structure
@@ -714,6 +732,8 @@ Agents claim mission objectives by session. A session file's `plan_id` and `task
 
 ## 10. Context Library
 
+> **Scan**: `what/context/` organization — topic structure, context subtypes (research, guide, core), token budget awareness and the 75% rule.
+
 *Decisions: D8*
 
 ### 10.1 Location and Structure
@@ -760,6 +780,8 @@ Agents MUST read the topic index first and load only the subtopics needed for th
 
 ## 11. Coordination Protocol
 
+> **Scan**: `who/coordination/` for cross-agent communication — urgency levels (urgent/info/fyi), ephemeral notes, required contents.
+
 *Decisions: D9*
 
 ### 11.1 Cross-Agent Coordination
@@ -789,6 +811,8 @@ Agents MUST check `who/coordination/` during every session startup.
 ---
 
 ## 12. Template System
+
+> **Scan**: Graduated template sets (starter/standard/full), `template_{type}.md` naming, template index recommendation.
 
 *Decisions: D11*
 
@@ -827,6 +851,8 @@ A template index (e.g., `template_library.md` in `how/templates/`) is RECOMMENDE
 ---
 
 ## 13. Collision Prevention
+
+> **Scan**: Three tiers — universal (frontmatter attribution, read-before-write), sync (file safety tiers, archive-don't-rename), multi-agent (coordination notes, scope declarations).
 
 *Decisions: D7*
 
@@ -888,6 +914,8 @@ Projects with multiple agents operating simultaneously SHOULD additionally imple
 
 ## 14. Content-as-Code Pipelines
 
+> **Scan**: Folder-based workflows where a file's directory location IS its processing state — pipeline structure, stage AGENTS.md, pipeline index.
+
 *Decisions: D14*
 
 ### 14.1 Paradigm
@@ -940,6 +968,8 @@ The `how/pipelines/` directory SHOULD have an AGENTS.md documenting all pipeline
 
 ## 15. Archive & Versioning
 
+> **Scan**: Archive patterns for sync vs. git environments, retention policy, CLAUDE.md version tracking convention.
+
 *Decisions: C9, C10*
 
 ### 15.1 Archive Pattern
@@ -970,6 +1000,8 @@ Major version increments indicate structural changes. Minor version increments i
 ---
 
 ## 16. Tool Integration Tiers
+
+> **Scan**: Three tiers — core standard (Tier 1, universal), frontmatter querying (Tier 2, any YAML reader), environment-specific (Tier 3, IDE/plugin). Aggregation points.
 
 *Decisions: C13, D22*
 
@@ -1029,6 +1061,8 @@ Implementation examples: Dataview queries, shell scripts that parse frontmatter,
 
 ## 17. Error & Recovery Protocol
 
+> **Scan**: Three-tier response — data integrity threat (STOP + escalate), state inconsistency (fix + log), process issue (workaround + backlog).
+
 *Decisions: D24*
 
 ### 17.1 Tiered Response
@@ -1064,6 +1098,8 @@ Agents MUST NOT proceed with destructive or irreversible actions when uncertain.
 ---
 
 ## 18. Success Criteria
+
+> **Scan**: Three levels — minimum viable (cold start, handoff, integrity), recommended (fork, scale, consistency), aspirational (network, collision safety, dual-audience).
 
 *Decisions: D21*
 
@@ -1116,6 +1152,8 @@ flowchart TB
 ---
 
 ## 19. Optional Extensions
+
+> **Scan**: Six opt-in subsystems — machine registry, backlog, skill files, testing/CI awareness, reference code, ADRs. Adopt based on need.
 
 The following patterns are available but not required. Projects adopt them based on need.
 
@@ -1198,6 +1236,8 @@ ADRs are knowledge artifacts — decisions outlive the process that produced the
 ---
 
 ## 20. Appendices
+
+> **Scan**: Persona framework (App A), aggregation points (App B), deferred topics (App C), decision traceability matrix (App D — 40 decisions mapped to spec sections).
 
 ### Appendix A: Persona Framework
 

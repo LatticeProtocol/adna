@@ -469,6 +469,10 @@ aDNA supports multi-vault composition through **bridge patterns** — nesting (c
 
 Edit three sections in `CLAUDE.md`: (1) **Identity & Mission** — replace the project name, agent persona, and mission description; (2) **Domain Knowledge** — add your domain-specific terminology, conventions, and architecture; (3) **Agent Protocol** — adjust the startup sequence and priority rules for your workflow. The rest (safety rules, sync protocol, standing orders) is framework-level and rarely needs changes.
 
+### What's the difference between a skill and a lattice?
+
+**Skills** (`how/skills/skill_<name>.md`) are documented agent recipes — step-by-step procedures in Markdown. **Lattices** (`what/lattices/<name>.lattice.yaml`) are executable directed graphs in YAML. A lattice with `lattice_type: skill` is the composable, publishable form of a skill. **Rule of thumb**: start with a skill file; promote to a lattice when you need registry publishing, runtime execution, or composition with other lattices. See [`what/docs/standard_reading_guide.md` §4](what/docs/standard_reading_guide.md#4-skill-vs-lattice-when-to-use-which) for the full comparison.
+
 ### How do templates work?
 
 Templates live in `how/templates/` and auto-apply via the Templater plugin when you create files in mapped directories. For example, creating a file in `what/decisions/` auto-populates the ADR template. 10 of the 17 templates have auto-triggers; the other 7 are applied manually via `Templater: Insert template`. See `how/templates/AGENTS.md` for the full trigger table.
@@ -766,6 +770,7 @@ Three rules keep multi-agent work safe:
 | Document | What it covers |
 |----------|---------------|
 | [`what/docs/adna_standard.md`](what/docs/adna_standard.md) | Full normative specification (v2.1) — RFC 2119 keywords, all MUST/SHOULD/MAY rules |
+| [`what/docs/standard_reading_guide.md`](what/docs/standard_reading_guide.md) | Reading guide — three persona-based paths through the standard, section map, skill/lattice disambiguation |
 | [`what/docs/adna_design.md`](what/docs/adna_design.md) | Architecture rationale — why three legs, why these governance files, design tradeoffs |
 | [`what/docs/adna_bridge_patterns.md`](what/docs/adna_bridge_patterns.md) | Multi-instance composition — nesting, sibling, monorepo patterns |
 | [`what/docs/migration_guide.md`](what/docs/migration_guide.md) | Adding aDNA to an existing project — decision tree, walkthroughs, starter templates |

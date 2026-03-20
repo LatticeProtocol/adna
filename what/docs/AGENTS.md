@@ -21,6 +21,7 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 | `adna_bridge_patterns.md` | ~4,000 | Composition patterns for multi-vault architectures — nesting, federation, discovery. 5 Mermaid diagrams. |
 | `migration_guide.md` | ~3,500 | Adding aDNA to existing projects — decision tree (bare vs. embedded), step-by-step walkthroughs, starter templates, common pitfalls. |
 | `agent_first_guide.md` | ~3,500 | Terminal-first aDNA setup — using aDNA with Claude Code without Obsidian, feature parity audit (22/6/12 split), session workflow, Claude Code configuration. |
+| `standard_reading_guide.md` | ~3,000 | Reading guide for the standard — three persona-based paths (new adopter, extension builder, contributor), section map with line ranges, skill/lattice disambiguation, quick reference decision tree. |
 | `context_quality_rubric.md` | ~2,000 | 6-axis quality evaluation framework for context files — scoring methodology, calibration examples. |
 | `ontology_unification.md` | ~8,000 | Ontology unification protocol — merge algorithm (4-step with Mermaid flowchart + pseudo-code), 10-type conflict taxonomy, namespace specification, worked example (org_formation + vault). |
 | `lattice_federation.md` | ~8,000 | Federation & sharing protocol — 5 capabilities (validate, export, share, import, compose), `lattice://` URI scheme, inline vs. external reference composition, import algorithm with M9 integration, worked round-trip example. |
@@ -28,7 +29,7 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 
 ## Total Token Budget
 
-~47,500 tokens to load all 9 documents. These are heavy reference documents — load specific files based on need.
+~50,500 tokens to load all 10 documents. These are heavy reference documents — load specific files based on need.
 
 ## Load/Skip Decision
 
@@ -37,6 +38,7 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 - Designing a new aDNA instance or evaluating deployment form (read `adna_design.md`)
 - Adding aDNA to an existing project or codebase (read `migration_guide.md`)
 - Setting up aDNA without Obsidian, terminal-first workflow (read `agent_first_guide.md`)
+- Navigating the standard by persona or section, or clarifying skill vs. lattice (read `standard_reading_guide.md`)
 - Planning multi-vault composition or federation (read `adna_bridge_patterns.md`)
 - Evaluating context file quality or setting up review processes (read `context_quality_rubric.md`)
 - Merging ontologies from different aDNA instances or integrating sub-lattices (read `ontology_unification.md`)

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-18
-updated: 2026-03-17
+updated: 2026-03-19
 last_edited_by: agent_stanley
 tags: [directory_index, skill]
 ---
@@ -28,6 +28,10 @@ A skill is a documented, reusable capability that can be executed by an AI agent
 | `process` | Documented human or hybrid procedure for recurring operations | Single-file or directory-based: `skill_[name].md` or `[name]/AGENTS.md` |
 
 **Discriminator**: `skill_type` frontmatter field (`agent` or `process`)
+
+## Skills vs. Lattices
+
+Skills (`how/skills/`) are Markdown procedures — step-by-step instructions an agent reads and follows. Lattices with `lattice_type: skill` (`what/lattices/`) are executable YAML directed graphs. **Start with a skill file.** Promote to a lattice when you need registry publishing, runtime execution, or composition with other lattices. Promotion workflow: `skill_lattice_publish.md`. Full comparison: [`what/docs/standard_reading_guide.md` §4](../../what/docs/standard_reading_guide.md#4-skill-vs-lattice-when-to-use-which).
 
 ## Skill Categories
 

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-19
-updated: 2026-03-18
+updated: 2026-03-19
 last_edited_by: agent_stanley
 tags: [directory_index, templates]
 ---
@@ -31,7 +31,7 @@ These templates are applied by Templater when creating a new file in the mapped 
 | `template_session.md` | Session tracking file | `how/sessions/active/` | `session` |
 | `template_skill.md` | Skill recipe or procedure | `how/skills/` | `skill` |
 
-### Manual-Apply Templates (7)
+### Manual-Apply Templates (8)
 
 These templates have no Templater auto-trigger. Copy their structure manually or use `Templater: Insert template` command:
 
@@ -42,6 +42,7 @@ These templates have no Templater auto-trigger. Copy their structure manually or
 | `template_data_record.md` | Generic data record | varies | varies | Generic — no single target directory |
 | `template_folder_note.md` | Folder index note | any directory | `folder_note` | Used everywhere, can't map to one folder |
 | `template_governance.md` | Governance document | `who/governance/` | `governance` | Governance dir has AGENTS.md + mixed policy docs |
+| `template_migration.md` | Version migration prompt | `how/migrations/` | `migration` | Migrations are created per-version, not on new-file trigger |
 | `template_registry.md` | Registry publication metadata | varies | `template` | Used for publishing, not regular file creation |
 | `template_strategic_compass.md` | Strategic compass | `who/governance/` | `governance` | Rare — governance dir already mapped for other use |
 

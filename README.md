@@ -798,6 +798,7 @@ Three rules keep multi-agent work safe:
 | [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) | Terminal-first aDNA setup — using aDNA with Claude Code without Obsidian |
 | [`what/docs/projects_folder_pattern.md`](what/docs/projects_folder_pattern.md) | Multi-project workspace pattern — agent-guided scaffolding, shared templates, domain presets |
 | [`what/docs/start_kit_prd.md`](what/docs/start_kit_prd.md) | Lattice Start Kit PRD — 1-click onboarding design (CLI interview, scaffolding, 4 personas) |
+| [`what/docs/version_migration_guide.md`](what/docs/version_migration_guide.md) | Version migration system — upgrading vaults between CLAUDE.md versions with structured prompts |
 | [`what/lattices/canvas_yaml_interop.md`](what/lattices/canvas_yaml_interop.md) | Canvas ↔ YAML bidirectional mapping specification |
 | [`what/lattices/lattice_yaml_schema.json`](what/lattices/lattice_yaml_schema.json) | JSON Schema for `.lattice.yaml` validation |
 

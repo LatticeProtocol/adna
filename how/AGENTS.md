@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-19
 last_edited_by: agent_stanley
 tags: [directory_index, ops]
 ---
@@ -22,6 +22,7 @@ tags: [directory_index, ops]
 | `backlog/` | Durable ideation and improvement tracking | Active |
 | `campaigns/` | Multi-mission strategic initiatives | Active |
 | `pipelines/` | Content-as-code folder workflows | Active |
+| `migrations/` | Version migration prompts for upgrading CLAUDE.md versions | Active |
 | `skills/` | Reusable agent recipes and documented procedures | Active |
 
 ## Key Distinctions
@@ -63,6 +64,7 @@ All files follow `type_descriptive_name.md` (underscores only, never hyphens).
 - [how/sessions/AGENTS](sessions/AGENTS.md) — Session lifecycle and tracking
 - [how/backlog/AGENTS](backlog/AGENTS.md) — Backlog and ideation protocol
 - [how/campaigns/AGENTS](campaigns/AGENTS.md) — Campaign protocol
+- [how/migrations/AGENTS](migrations/AGENTS.md) — Version migration registry
 - [how/pipelines/AGENTS](pipelines/AGENTS.md) — Pipeline paradigm and index
 - [how/skills/AGENTS](skills/AGENTS.md) — Skills protocol
 - [how/templates/AGENTS](templates/AGENTS.md) — Reusable templates

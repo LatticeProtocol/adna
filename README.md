@@ -339,6 +339,27 @@ Then write your governance files using the starter templates in the full guide. 
 
 ---
 
+## Multi-Project Workspaces
+
+Managing multiple aDNA projects? The **Projects Folder Pattern** gives you a workspace with a shared template and an agent-guided interview for scaffolding new projects.
+
+```
+adna-projects/
+├── CLAUDE.md              # Meta-governance — interview + scaffold instructions
+├── .base/                 # Template files with {{variable}} placeholders
+├── my-research-vault/     # Project A (scaffolded from .base/)
+├── client-pipeline/       # Project B (scaffolded from .base/)
+└── shared/                # Optional cross-project context
+```
+
+Open Claude Code in the workspace root, say "create a new project," and the agent runs a 5-question interview to scaffold a fully configured vault — domain-specific directories, personalized CLAUDE.md, populated MANIFEST.md and STATE.md.
+
+**Working example**: [`what/docs/examples/adna-projects/`](what/docs/examples/adna-projects/) — two pre-scaffolded projects (biotech lab, enterprise pipeline) showing distinct interview outputs.
+
+**Full pattern doc**: [`what/docs/projects_folder_pattern.md`](what/docs/projects_folder_pattern.md)
+
+---
+
 ## Using Without AI Agents
 
 aDNA works perfectly well as a human-only knowledge management system. The triad structure, templates, and Obsidian integration don't require AI agents at all.
@@ -775,6 +796,7 @@ Three rules keep multi-agent work safe:
 | [`what/docs/adna_bridge_patterns.md`](what/docs/adna_bridge_patterns.md) | Multi-instance composition — nesting, sibling, monorepo patterns |
 | [`what/docs/migration_guide.md`](what/docs/migration_guide.md) | Adding aDNA to an existing project — decision tree, walkthroughs, starter templates |
 | [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) | Terminal-first aDNA setup — using aDNA with Claude Code without Obsidian |
+| [`what/docs/projects_folder_pattern.md`](what/docs/projects_folder_pattern.md) | Multi-project workspace pattern — agent-guided scaffolding, shared templates, domain presets |
 | [`what/docs/start_kit_prd.md`](what/docs/start_kit_prd.md) | Lattice Start Kit PRD — 1-click onboarding design (CLI interview, scaffolding, 4 personas) |
 | [`what/lattices/canvas_yaml_interop.md`](what/lattices/canvas_yaml_interop.md) | Canvas ↔ YAML bidirectional mapping specification |
 | [`what/lattices/lattice_yaml_schema.json`](what/lattices/lattice_yaml_schema.json) | JSON Schema for `.lattice.yaml` validation |

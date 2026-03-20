@@ -147,6 +147,7 @@ The promotion path is documented in `how/skills/skill_lattice_publish.md`. Most 
 | Evaluate aDNA for my project | [`adna_design.md`](adna_design.md) — the "why" document |
 | Add aDNA to an existing codebase | [`migration_guide.md`](migration_guide.md) |
 | Use aDNA without Obsidian | [`agent_first_guide.md`](agent_first_guide.md) |
+| Manage multiple aDNA projects | [`projects_folder_pattern.md`](projects_folder_pattern.md) — workspace pattern with agent-guided scaffolding |
 
 ---
 
@@ -156,4 +157,5 @@ The promotion path is documented in `how/skills/skill_lattice_publish.md`. Most 
 - [aDNA Design Document](adna_design.md) — architecture rationale and trade-off analysis
 - [Migration Guide](migration_guide.md) — adding aDNA to existing projects
 - [Agent-First Guide](agent_first_guide.md) — terminal-first aDNA setup
+- [Projects Folder Pattern](projects_folder_pattern.md) — multi-project workspace with shared templates
 - [Skills Protocol](../../how/skills/AGENTS.md) — skill file conventions and categories

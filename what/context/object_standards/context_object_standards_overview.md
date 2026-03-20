@@ -6,7 +6,7 @@ created: 2026-03-05
 updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (what/docs/adna_standard.md)", "lattice_yaml_schema.json", "dataset_yaml_schema.json", "what/lattices/examples/ (13 examples)", "adna_core type_vocabulary context", "adna_core fair_mapping context"]
 context_version: "2.0"
-token_estimate: ~3200
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, object_standards]
 quality_score: 3.8

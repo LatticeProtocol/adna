@@ -301,6 +301,8 @@ claude
 
 This is the fastest way to go from clone to productive vault. Everything Berthier does is inspectable — see `how/skills/skill_onboarding.md`.
 
+> **No Obsidian?** This path works entirely from the terminal — no Obsidian installation required. See [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) for the full agent-first walkthrough, including feature parity details and Claude Code configuration.
+
 **Option B: Manual setup (~30-45 min)**
 
 See [Using Without AI Agents](#using-without-ai-agents) below.
@@ -435,7 +437,7 @@ When multiple agents work on the same project, they coordinate through `who/coor
 
 ### Do I need Obsidian to use aDNA?
 
-No. aDNA is a directory convention — `who/`/`what/`/`how/` with Markdown files and YAML frontmatter. Any text editor or Markdown tool works. Obsidian adds visual browsing (graph view, wikilink navigation, canvas), but the structure is plain files on disk. AI agents like Claude Code work with the files directly regardless of editor.
+No. aDNA is a directory convention — `who/`/`what/`/`how/` with Markdown files and YAML frontmatter. Any text editor or Markdown tool works. Obsidian adds visual browsing (graph view, wikilink navigation, canvas), but the structure is plain files on disk. AI agents like Claude Code work with the files directly regardless of editor. For a complete terminal-first walkthrough, see [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md).
 
 ### What if I don't use AI agents?
 

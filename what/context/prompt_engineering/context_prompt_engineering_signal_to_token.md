@@ -3,10 +3,10 @@ type: context_research
 topic: prompt_engineering
 subtopic: signal_to_token
 created: 2026-02-19
-updated: 2026-02-19
+updated: 2026-03-18
 sources: ["Anthropic — Effective Context Engineering for AI Agents", "Anthropic — Claude 4 Best Practices", "Anthropic — Use XML Tags to Structure Prompts", "Anthropic — Prompting Long Context", "Preprints.org — Prompt Engineering for Structured Data (2025)"]
 context_version: "1.0"
-token_estimate: ~3200
+token_estimate: ~1500
 last_edited_by: agent_stanley
 tags: [context, prompt_engineering]
 quality_score: 4.6

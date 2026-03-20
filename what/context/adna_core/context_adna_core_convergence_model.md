@@ -3,10 +3,10 @@ type: context_core
 topic: adna_core
 subtopic: convergence_model
 created: 2026-02-20
-updated: 2026-03-01
+updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (§8.7, §10)", "aDNA Design Document (§3, §6)", "campaign_adna_review operational data (126+ sessions)"]
 context_version: "1.0"
-token_estimate: ~2500
+token_estimate: ~500
 last_edited_by: agent_stanley
 tags: [context, adna_core, convergence, token_budget, narrowing]
 quality_score: 4.0

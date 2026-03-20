@@ -6,7 +6,7 @@ created: 2026-03-17
 updated: 2026-03-18
 sources: ["Context library AGENTS.md", "Context engineering guide", "Campaign dispatch guide"]
 context_version: "2.0"
-token_estimate: ~2500
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, recipes, assembly, cross-topic]
 ---

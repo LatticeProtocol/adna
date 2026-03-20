@@ -3,10 +3,10 @@ type: context_research
 topic: prompt_engineering
 subtopic: mermaid_best_practices
 created: 2026-02-19
-updated: 2026-02-19
+updated: 2026-03-18
 sources: ["Mermaid.js — Architecture Diagrams Docs", "hanyouqing.com — Mermaid Diagram Guide (2025)", "Obsidian Forum — Mermaid rendering discussions", "Anthropic — Context Engineering"]
 context_version: "1.0"
-token_estimate: ~2800
+token_estimate: ~1500
 last_edited_by: agent_stanley
 tags: [context, prompt_engineering]
 quality_score: 3.6

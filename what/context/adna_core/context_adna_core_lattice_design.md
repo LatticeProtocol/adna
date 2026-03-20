@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: lattice_design
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-18
 sources: ["lattice_yaml_schema.json (draft-2020-12)", "aDNA Standard v2.1 (§5.1)", "Example lattices (6): deep_research, protein_binder_design, org_formation, hello_world, knowledge_base, docking_assessment"]
 context_version: "1.0"
-token_estimate: ~3500
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, adna_core, lattice, yaml, schema, federation]
 quality_score: 4.4

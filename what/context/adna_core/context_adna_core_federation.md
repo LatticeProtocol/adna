@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: federation
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-18
 sources: ["Lattice Federation & Sharing Protocol v1.0 (lattice_federation.md)", "Lattice YAML Schema (federation block)", "Lattice Interop Standard v1.0 (lattice_interop.md)"]
 context_version: "1.0"
-token_estimate: ~3200
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, adna_core, federation, sharing, composition, uri]
 quality_score: 4.2

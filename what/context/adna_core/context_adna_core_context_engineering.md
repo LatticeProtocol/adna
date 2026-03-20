@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: context_engineering
 created: 2026-02-20
-updated: 2026-03-17
+updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (§10)", "Context Quality Rubric v1.0", "Context library AGENTS.md", "prompt_engineering/signal_to_token operational patterns"]
 context_version: "1.0"
-token_estimate: ~2800
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, adna_core, context_engineering, quality, token_budget]
 quality_score: 4.4

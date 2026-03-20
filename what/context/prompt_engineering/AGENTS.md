@@ -2,7 +2,8 @@
 type: directory_index
 topic: prompt_engineering
 created: 2026-02-19
-updated: 2026-02-19
+updated: 2026-03-18
+token_estimate: 12500
 last_edited_by: agent_stanley
 tags: [directory_index, context, prompt_engineering]
 ---
@@ -17,17 +18,17 @@ Research-backed context on prompt engineering, context engineering, and agentic 
 
 | Subtopic | File | Token Estimate | Version | Sources |
 |----------|------|---------------|---------|---------|
-| Signal-to-Token Optimization | `context_prompt_engineering_signal_to_token.md` | ~3200 | 1.0 | 5 sources |
-| CLAUDE.md Best Practices | `context_prompt_engineering_claude_md_best_practices.md` | ~3000 | 1.0 | 5 sources |
-| Agentic Project Scaffolding | `context_prompt_engineering_agentic_scaffolding.md` | ~3200 | 1.0 | 5 sources |
-| Ontology Design for LLM Agents | `context_prompt_engineering_ontology_design.md` | ~3000 | 1.0 | 6 sources |
-| Federation & Composability | `context_prompt_engineering_federation_composability.md` | ~3000 | 1.0 | 6 sources |
-| Mermaid Diagram Best Practices | `context_prompt_engineering_mermaid_best_practices.md` | ~2800 | 1.0 | 5 sources |
-| Convergence Model | `context_prompt_engineering_convergence_model.md` | ~3000 | 1.0 | 3 sources |
+| Signal-to-Token Optimization | `context_prompt_engineering_signal_to_token.md` | ~1,500 | 1.0 | 5 sources |
+| CLAUDE.md Best Practices | `context_prompt_engineering_claude_md_best_practices.md` | ~1,500 | 1.0 | 5 sources |
+| Agentic Project Scaffolding | `context_prompt_engineering_agentic_scaffolding.md` | ~1,500 | 1.0 | 5 sources |
+| Ontology Design for LLM Agents | `context_prompt_engineering_ontology_design.md` | ~2,000 | 1.0 | 6 sources |
+| Federation & Composability | `context_prompt_engineering_federation_composability.md` | ~2,000 | 1.0 | 6 sources |
+| Mermaid Diagram Best Practices | `context_prompt_engineering_mermaid_best_practices.md` | ~1,500 | 1.0 | 5 sources |
+| Convergence Model | `context_prompt_engineering_convergence_model.md` | ~2,500 | 1.0 | 3 sources |
 
 ## Total Token Budget
 
-~21,200 tokens to load all 7 subtopics.
+~12,500 tokens to load all 7 subtopics.
 
 ## Usage by Task
 
@@ -62,4 +63,4 @@ Research-backed context on prompt engineering, context engineering, and agentic 
 - Working on domain-specific content that doesn't involve governance or architecture
 - Already loaded the relevant subtopics earlier in this session
 
-**Token cost**: ~400 tokens (this AGENTS.md). Full topic: ~21,200 tokens. Use the "Usage by Task" table to load selectively.
+**Token cost**: ~400 tokens (this AGENTS.md). Full topic: ~12,500 tokens. Use the "Usage by Task" table to load selectively.

@@ -1,7 +1,7 @@
 ---
 type: governance
 version: "5.1"
-token_estimate: ~650
+token_estimate: ~2500
 updated: 2026-03-18
 last_edited_by: agent_stanley
 ---

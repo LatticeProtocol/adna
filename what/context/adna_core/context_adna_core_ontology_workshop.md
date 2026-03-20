@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: ontology_workshop
 created: 2026-03-17
-updated: 2026-03-17
+updated: 2026-03-18
 sources: ["aDNA ontology_design guide", "prompt_engineering/ontology_design (entity-relationship patterns)", "MODL — Modular Ontology Design Library", "Operational experience from Lattice Protocol vault (14 base + 12 extension types)"]
 context_version: "1.0"
-token_estimate: ~3000
+token_estimate: ~1500
 last_edited_by: agent_stanley
 tags: [context, adna_core, ontology, workshop, multi_entity, domain_design]
 quality_score: 4.2

@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: type_vocabulary
 created: 2026-03-02
-updated: 2026-03-17
+updated: 2026-03-18
 sources: ["campaign_adna_lattice/artifacts/m16_type_vocabulary.md"]
 context_version: "1.0"
-token_estimate: ~2000
+token_estimate: ~500
 last_edited_by: agent_stanley
 tags: [context, adna_core, type_vocabulary, module, io]
 quality_score: 4.0

@@ -3,10 +3,10 @@ type: context_core
 topic: adna_core
 subtopic: paradigm_overview
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-18
 sources: ["aDNA Standard v2.1", "aDNA Design Document", "CLAUDE.md reference implementation"]
 context_version: "1.0"
-token_estimate: ~3000
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, adna_core, paradigm, triad, governance]
 quality_score: 4.2

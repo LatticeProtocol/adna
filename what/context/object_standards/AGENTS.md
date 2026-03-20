@@ -8,11 +8,11 @@ Standards, templates, and FAIR metadata requirements for the three core aDNA obj
 
 | # | Subtopic | File | ~Tokens | Quality | Sources |
 |---|----------|------|---------|---------|---------|
-| 1 | Standards Overview | `context_object_standards_overview.md` | ~3,200 | 3.8 | 6 sources (Standard v2.1, lattice schema, dataset schema, 13 examples, type_vocabulary, fair_mapping) |
+| 1 | Standards Overview | `context_object_standards_overview.md` | ~1,000 | 3.8 | 6 sources (Standard v2.1, lattice schema, dataset schema, 13 examples, type_vocabulary, fair_mapping) |
 
 ## Total Token Budget
 
-~3,200 tokens to load all subtopics
+~1,000 tokens to load all subtopics
 
 ## Usage Notes
 

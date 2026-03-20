@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: fair_mapping
 created: 2026-03-02
-updated: 2026-03-17
+updated: 2026-03-18
 sources: ["campaign_adna_lattice/artifacts/m16_fair_canonical_mapping.md"]
 context_version: "1.0"
-token_estimate: ~1500
+token_estimate: ~500
 last_edited_by: agent_stanley
 tags: [context, adna_core, fair, mapping, federation]
 quality_score: 4.0

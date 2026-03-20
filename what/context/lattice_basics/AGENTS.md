@@ -8,12 +8,12 @@ Orienting new users and agents to the aDNA framework: vault structure, `.lattice
 
 | # | Subtopic | File | ~Tokens | Quality | Sources |
 |---|----------|------|---------|---------|---------|
-| 1 | Core Concepts | `context_lattice_basics_core_concepts.md` | ~3,200 | 4.0 | 5 sources (Standard v2.1, Design Doc, lattice_design context, hello_world example, type_vocabulary) |
-| 2 | Vault Architecture | `context_lattice_basics_vault_architecture.md` | ~2,800 | 4.0 | 5 sources (Standard v2.1, Design Doc, CLAUDE.md, MANIFEST.md, template library) |
+| 1 | Core Concepts | `context_lattice_basics_core_concepts.md` | ~1,000 | 4.0 | 5 sources (Standard v2.1, Design Doc, lattice_design context, hello_world example, type_vocabulary) |
+| 2 | Vault Architecture | `context_lattice_basics_vault_architecture.md` | ~1,000 | 4.0 | 5 sources (Standard v2.1, Design Doc, CLAUDE.md, MANIFEST.md, template library) |
 
 ## Total Token Budget
 
-~6,000 tokens to load all subtopics
+~2,000 tokens to load all subtopics
 
 ## Usage Notes
 

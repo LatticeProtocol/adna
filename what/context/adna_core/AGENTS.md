@@ -1,7 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-20
-updated: 2026-03-17
+updated: 2026-03-18
+token_estimate: 13100
 last_edited_by: agent_stanley
 tags: [directory_index, context, adna_core]
 ---
@@ -16,23 +17,23 @@ Foundational knowledge for the aDNA paradigm — enough base context for an agen
 
 | # | Subtopic | File | ~Tokens | Subtype | Key Content |
 |---|----------|------|---------|---------|-------------|
-| 1 | Paradigm Overview | `context_adna_core_paradigm_overview.md` | ~3,000 | context_core | Triad, governance files, deployment forms, cold-start, collision prevention |
-| 2 | Convergence Model | `context_adna_core_convergence_model.md` | ~2,500 | context_core | Operational quick-ref for token narrowing, design decisions, anti-patterns |
-| 3 | Ontology Design | `context_adna_core_ontology_design.md` | ~3,200 | context_guide | Base/extension partitioning, namespace spec, frontmatter system, merge compatibility |
-| 4 | Lattice Design | `context_adna_core_lattice_design.md` | ~3,500 | context_guide | YAML schema, node/edge types, execution modes, federation readiness, validation |
-| 5 | Context Engineering | `context_adna_core_context_engineering.md` | ~2,800 | context_guide | Writing context files, quality rubric, format selection, topic organization |
-| 6 | Federation | `context_adna_core_federation.md` | ~3,200 | context_guide | 5-capability lifecycle, URI scheme, composition patterns, seam edges, interop |
-| 7 | Ontology Unification | `context_adna_core_ontology_unification.md` | ~3,000 | context_guide | 4-step merge algorithm, 10-type conflict taxonomy, namespace spec, worked example |
-| 8 | Campaign Dispatch | `context_adna_core_campaign_dispatch.md` | ~2,800 | context_guide | Campaign→Mission→Objective hierarchy, phase design, mission execution protocol |
-| 9 | OODA Cascade | `context_adna_core_ooda_cascade.md` | ~2,500 | context_guide | 3-level OODA loops, cascade dynamics, triggers, upward/downward flow |
-| 10 | Ontology Workshop | `context_adna_core_ontology_workshop.md` | ~3,000 | context_guide | Multi-entity domain design, entity discovery, relationship mapping, validation |
-| 11 | Type Vocabulary | `context_adna_core_type_vocabulary.md` | ~2,000 | context_guide | 19 canonical I/O types (4 tiers: primitives, structured, molecular, media) |
-| 12 | FAIR Mapping | `context_adna_core_fair_mapping.md` | ~1,500 | context_guide | Flat↔nested FAIR envelope interconversion, field correspondence |
+| 1 | Paradigm Overview | `context_adna_core_paradigm_overview.md` | ~1,000 | context_core | Triad, governance files, deployment forms, cold-start, collision prevention |
+| 2 | Convergence Model | `context_adna_core_convergence_model.md` | ~500 | context_core | Operational quick-ref for token narrowing, design decisions, anti-patterns |
+| 3 | Ontology Design | `context_adna_core_ontology_design.md` | ~1,000 | context_guide | Base/extension partitioning, namespace spec, frontmatter system, merge compatibility |
+| 4 | Lattice Design | `context_adna_core_lattice_design.md` | ~1,000 | context_guide | YAML schema, node/edge types, execution modes, federation readiness, validation |
+| 5 | Context Engineering | `context_adna_core_context_engineering.md` | ~1,000 | context_guide | Writing context files, quality rubric, format selection, topic organization |
+| 6 | Federation | `context_adna_core_federation.md` | ~1,000 | context_guide | 5-capability lifecycle, URI scheme, composition patterns, seam edges, interop |
+| 7 | Ontology Unification | `context_adna_core_ontology_unification.md` | ~1,000 | context_guide | 4-step merge algorithm, 10-type conflict taxonomy, namespace spec, worked example |
+| 8 | Campaign Dispatch | `context_adna_core_campaign_dispatch.md` | ~1,500 | context_guide | Campaign→Mission→Objective hierarchy, phase design, mission execution protocol |
+| 9 | OODA Cascade | `context_adna_core_ooda_cascade.md` | ~1,000 | context_guide | 3-level OODA loops, cascade dynamics, triggers, upward/downward flow |
+| 10 | Ontology Workshop | `context_adna_core_ontology_workshop.md` | ~1,500 | context_guide | Multi-entity domain design, entity discovery, relationship mapping, validation |
+| 11 | Type Vocabulary | `context_adna_core_type_vocabulary.md` | ~500 | context_guide | 19 canonical I/O types (4 tiers: primitives, structured, molecular, media) |
+| 12 | FAIR Mapping | `context_adna_core_fair_mapping.md` | ~500 | context_guide | Flat↔nested FAIR envelope interconversion, field correspondence |
 | 13 | Entity Definitions | `context_adna_core_entity_definitions.md` | ~1,600 | context_core | 14 base entity types (WHO 3, WHAT 4, HOW 7), triad classification, extension guidance |
 
 ## Total Token Budget
 
-~34,600 tokens to load all subtopics. Typical session loads 2-4 subtopics (~5K-12K tokens).
+~13,100 tokens to load all subtopics. Typical session loads 2-4 subtopics (~1K-3K tokens).
 
 ## Usage by Task
 

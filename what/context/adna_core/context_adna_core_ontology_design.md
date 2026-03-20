@@ -3,10 +3,10 @@ type: context_guide
 topic: adna_core
 subtopic: ontology_design
 created: 2026-02-20
-updated: 2026-03-17
+updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (§5, §7)", "Ontology Unification Protocol v1.0", "aDNA Design Document (§3, §9)"]
 context_version: "1.0"
-token_estimate: ~3200
+token_estimate: ~1000
 last_edited_by: agent_stanley
 tags: [context, adna_core, ontology, entity_types, base_extension]
 quality_score: 4.4
@@ -68,7 +68,7 @@ last_evaluated: 2026-02-20
 ---
 type: crm_customer            # namespaced type
 created: 2026-02-20
-updated: 2026-02-20
+updated: 2026-03-18
 status: prospect               # discriminator value
 segment: bio                   # type-specific field
 deal_stage: pitching           # type-specific field

@@ -26,13 +26,14 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 | `start_kit_prd.md` | ~4,000 | Lattice Start Kit PRD — 1-click onboarding design: 4 personas, packaging evaluation, 5-question interview, `adna new` + `adna init` flow mockups, MoSCoW requirements, success metrics. Design only — build deferred to `campaign_lattice_start_kit`. |
 | `context_quality_rubric.md` | ~2,000 | 6-axis quality evaluation framework for context files — scoring methodology, calibration examples. |
 | `version_migration_guide.md` | ~1,200 | Maintainer guide for the version migration system — when to create prompts, how to write and test them, sequential composition design. |
+| `migration_safety_framework.md` | ~800 | Migration safety guarantees, known limitations, backup best practices, error recovery ladder (L1-L5), worktree-based testing procedure. |
 | `ontology_unification.md` | ~8,000 | Ontology unification protocol — merge algorithm (4-step with Mermaid flowchart + pseudo-code), 10-type conflict taxonomy, namespace specification, worked example (org_formation + vault). |
 | `lattice_federation.md` | ~8,000 | Federation & sharing protocol — 5 capabilities (validate, export, share, import, compose), `lattice://` URI scheme, inline vs. external reference composition, import algorithm with M9 integration, worked round-trip example. |
 | `lattice_interop.md` | ~5,500 | Lattice interop standard — design-time interface descriptors (`lattice_interface` node convention), 8-step runtime execution sequence for `lattice://` references, version drift detection and resolution (severity classification, policy strategies, drift recovery workflow). 2 Mermaid diagrams. |
 
 ## Total Token Budget
 
-~55,700 tokens to load all 12 documents. These are heavy reference documents — load specific files based on need.
+~56,500 tokens to load all 13 documents. These are heavy reference documents — load specific files based on need.
 
 ## Load/Skip Decision
 
@@ -49,6 +50,7 @@ Core specification documents that define the aDNA (Agentic DNA) knowledge archit
 - Designing interface contracts, runtime execution, or version management for cross-instance lattice references (read `lattice_interop.md`)
 - Building or extending the Lattice Start Kit CLI, onboarding flow, or scaffolding system (read `start_kit_prd.md`)
 - Understanding or creating version migration prompts (read `version_migration_guide.md`)
+- Evaluating migration safety, rollback procedures, or testing protocols (read `migration_safety_framework.md`)
 
 **Skip when**:
 - Performing operational work within an established aDNA vault (sessions, missions, CRM)

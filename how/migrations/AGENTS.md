@@ -18,6 +18,10 @@ Version migration prompts that guide agents through upgrading an aDNA vault from
 |-----------|--------|--------|-------|------|--------|
 | `migrate_v5.0_to_v5.1.md` | 5.0 | 5.1 | governance + state | low | active |
 
+## Safety Protocol
+
+Every migration creates a `pre-migration-vX.Y` tag before changes and a `migration-vX.Y-to-vX.Z` tag after commit. Tag-based rollback is the primary recovery method. Full safety guarantees, limitations, and recovery procedures: [`what/docs/migration_safety_framework.md`](../../what/docs/migration_safety_framework.md).
+
 ## Sequential Application Rules
 
 Migrations MUST be applied in strict version order. These five rules are inviolable:

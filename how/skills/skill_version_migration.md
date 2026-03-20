@@ -85,10 +85,16 @@ If the user declines, stop. Do not re-prompt.
 For each migration in the upgrade chain, in order:
 
 1. **Load the migration prompt** — read the full migration file (e.g., `how/migrations/migrate_v5.0_to_v5.1.md`)
-2. **Run pre-flight checks** — execute every check in the Pre-Flight Checks section. If any check fails, STOP and report the failure.
-3. **Apply migration steps** — follow each numbered step in the Migration Steps section. Verify after each step.
-4. **Run post-flight validation** — execute every check in the Post-Flight Validation section. If any check fails, STOP and report the failure.
-5. **Commit** — stage and commit with the message format from the migration file.
+2. **Create safety snapshot** — run `git tag pre-migration-v{current}` (using the source version). If the tag already exists, STOP — a prior migration attempt may have failed. Ask the user to delete the stale tag or investigate before proceeding.
+3. **Run pre-flight checks** — execute every check in the Pre-Flight Checks section. If any check fails, STOP and report the failure.
+4. **Apply migration steps** — follow each numbered step in the Migration Steps section. Verify after each step.
+5. **Run post-flight validation** — execute every check in the Post-Flight Validation section. If any check fails, STOP and report the failure.
+6. **Structural sweep** — after migration-specific validation, run these additional checks:
+   - Validate YAML frontmatter syntax on all files listed in `affected_files` (parseable `---` blocks, no errors)
+   - Check that any wikilinks added or modified by the migration resolve to existing files
+   - Verify `CLAUDE.md` frontmatter `version` matches `target_version`
+   - *Optional*: For a broader structural check, run `skill_vault_review.md` Steps 1-3
+7. **Commit and tag** — stage and commit with the message format from the migration file, then run `git tag migration-v{source}-to-v{target}`
 
 **STOP on any failure.** Do not continue to the next migration if the current one has unresolved issues. Report the exact failure and offer rollback.
 
@@ -99,9 +105,9 @@ After all migrations are applied:
 ```
 Migration complete.
 
-| Migrated | Files Changed | Commit |
-|----------|--------------|--------|
-| v5.0 → v5.1 | CLAUDE.md, STATE.md | abc1234 |
+| Migrated | Files Changed | Commit | Tags Created |
+|----------|--------------|--------|-------------|
+| v5.0 → v5.1 | CLAUDE.md, STATE.md | abc1234 | pre-migration-v5.0, migration-v5.0-to-v5.1 |
 
 Vault is now at v5.1.
 ```
@@ -123,10 +129,13 @@ Vault is now at v5.1.
 | Mid-migration failure | A step fails to apply | STOP. Follow the Rollback section of the current migration prompt. Report what succeeded and what failed. |
 | No migrations directory | `how/migrations/` doesn't exist | The vault predates the migration system. Direct user to `what/docs/version_migration_guide.md` for manual upgrade options. |
 | Chain gap | No migration exists from current version to next | STOP. Report the gap. The user may need to wait for a migration to be published or upgrade manually. |
+| Tag already exists | `pre-migration-v{X}` tag present from prior attempt | STOP. Ask the user to delete the stale tag (`git tag -d pre-migration-v{X}`) or investigate the prior attempt before retrying. |
+| Post-migration structural failure | YAML frontmatter invalid or broken wikilinks after migration | Rollback via `git reset --hard pre-migration-v{X}`. Delete the migration tag if it was created. Report which structural check failed. |
 
 ## Related
 
 - **Migration Registry**: `how/migrations/AGENTS.md`
 - **Migration Template**: `how/templates/template_migration.md`
 - **Maintainer Guide**: `what/docs/version_migration_guide.md`
+- **Migration Safety Framework**: `what/docs/migration_safety_framework.md`
 - **Skills Protocol**: `how/skills/AGENTS.md`

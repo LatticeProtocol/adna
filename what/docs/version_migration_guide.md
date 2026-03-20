@@ -165,3 +165,4 @@ This is **documented here but not implemented** — adding it to CLAUDE.md would
 - [`how/templates/template_migration.md`](../../how/templates/template_migration.md) — Migration prompt template
 - [`how/migrations/migrate_v5.0_to_v5.1.md`](../../how/migrations/migrate_v5.0_to_v5.1.md) — Canonical example
 - [`how/skills/skill_version_migration.md`](../../how/skills/skill_version_migration.md) — Agent skill for guided upgrades
+- [`what/docs/migration_safety_framework.md`](migration_safety_framework.md) — Safety guarantees, limitations, recovery ladder

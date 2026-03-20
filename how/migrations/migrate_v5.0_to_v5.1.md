@@ -29,6 +29,7 @@ tags: [migration]
 1. **Version verification**: Read `CLAUDE.md` frontmatter. Confirm `version: "5.0"`. If the version is already `"5.1"` or higher, STOP — this migration does not apply.
 2. **Clean working state**: Run `git status`. If there are uncommitted changes, ask the user to commit or stash first.
 3. **Read affected files**: Read `CLAUDE.md` and `STATE.md`. Confirm the patterns described below exist.
+4. **Create safety snapshot**: Run `git tag pre-migration-v5.0`. If the tag already exists, STOP — a prior migration attempt may have failed. Investigate or delete the stale tag before proceeding.
 
 ## Changes
 
@@ -94,23 +95,37 @@ tags: [migration]
 - [ ] `CLAUDE.md` project map: `17 reusable templates`
 - [ ] `STATE.md`: `aDNA v5.1` in status paragraph
 
+**Structural checks**:
+- [ ] `CLAUDE.md` has valid YAML frontmatter (parseable, no syntax errors)
+- [ ] `STATE.md` has valid YAML frontmatter (parseable, no syntax errors)
+- [ ] No broken wikilinks introduced by the migration
+
 All checks passing = migration complete. Commit the changes:
 ```
 git add CLAUDE.md STATE.md && git commit -m "chore: migrate aDNA vault from v5.0 to v5.1"
+git tag migration-v5.0-to-v5.1
 ```
 
 ## Rollback
 
-**CLAUDE.md**: Reverse each replacement — `"5.1"` → `"5.0"`, `~2500` → `~650`, `v5.1` → `v5.0`, `17` → `10`, restore original standard file paths.
+**Option 1 — Tag-based full rollback** (recommended if pre-migration tag exists):
+```
+git reset --hard pre-migration-v5.0
+git tag -d migration-v5.0-to-v5.1
+```
+> **Warning**: This discards ALL changes since the tag, not just migration changes. Only use if the migration commit is the only change since the tag.
 
-**STATE.md**: Reverse — `v5.1` → `v5.0`, `23` → `20`, `17` → `14`.
+**Option 2 — Per-file rollback** (surgical, preserves other changes):
 
-**Git shortcut** (if committed):
+- **CLAUDE.md**: Reverse each replacement — `"5.1"` → `"5.0"`, `~2500` → `~650`, `v5.1` → `v5.0`, `17` → `10`, restore original standard file paths.
+- **STATE.md**: Reverse — `v5.1` → `v5.0`, `23` → `20`, `17` → `14`.
+
+**Option 3 — Commit revert** (if committed):
 ```
 git revert HEAD
 ```
 
-**Git shortcut** (if uncommitted):
+**Option 4 — Unstaged discard** (if uncommitted):
 ```
 git checkout -- CLAUDE.md STATE.md
 ```
@@ -119,3 +134,4 @@ git checkout -- CLAUDE.md STATE.md
 
 - [Migration Registry](AGENTS.md) — All available migrations
 - [Version Migration Skill](../skills/skill_version_migration.md) — Guided upgrade workflow
+- [Migration Safety Framework](../../what/docs/migration_safety_framework.md) — Guarantees, limitations, recovery ladder

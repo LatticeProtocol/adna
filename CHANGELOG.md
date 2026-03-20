@@ -28,6 +28,25 @@ Changelog entries are organized by **governance version** (primary heading). Sta
 
 ---
 
+## [v5.3] — 2026-03-20
+
+### Added
+- `how/skills/skill_upstream_contribution.md` — agentic upstream contribution protocol
+- Upstream Contribution Awareness section in `CLAUDE.md`
+- Upstream Contribution Awareness section in root `AGENTS.md`
+- Contributing section in `README.md`
+
+### Changed
+- `CONTRIBUTING.md` revised — Agent Contribution Mode replaces static PR-Context pattern; organic discovery over structured proposals
+- `CLAUDE.md` version bump: `5.2` → `5.3`
+- Code of Conduct reference updated to forward-looking note (pending `CODE_OF_CONDUCT.md`)
+
+### Removed
+- Empty `community/proposals/` directory (superseded by agentic backlog pattern)
+- Empty `.github/ISSUE_TEMPLATE/` directory (standard GitHub issues sufficient for now)
+
+---
+
 ## [v5.2] — 2026-03-19
 
 ### Added

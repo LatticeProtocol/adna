@@ -1,13 +1,13 @@
 ---
 type: governance
-version: "5.2"
-token_estimate: ~2500
-updated: 2026-03-19
+version: "5.3"
+token_estimate: ~2600
+updated: 2026-03-20
 last_edited_by: agent_stanley
 ---
 
 # CLAUDE.md — adna
-<!-- v5.2 | 2026-03-19 -->
+<!-- v5.3 | 2026-03-20 -->
 
 ## Identity & Personality
 
@@ -305,5 +305,13 @@ tags: []
 
 Use bidirectional wikilinks when adding relationships between entities.
 
+### Upstream Contribution Awareness
+
+While working in any aDNA vault, stay alert for **framework-level** improvement opportunities — missing template fields, undocumented patterns, naming inconsistencies, or gaps you had to work around. These are improvements that would help *all* aDNA users, not just the current project.
+
+When you notice one, mention it to the user at a **natural pause point** (end of task, SITREP). If approved, create a backlog idea file with the `idea_upstream_` prefix. Full protocol: `how/skills/skill_upstream_contribution.md`.
+
+**Do not** interrupt active work, file without user approval, or suggest project-specific tweaks as upstream improvements.
+
 ---
-<!-- v5.2 | 2026-03-19 -->
+<!-- v5.3 | 2026-03-20 -->

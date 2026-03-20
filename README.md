@@ -786,6 +786,16 @@ Three rules keep multi-agent work safe:
 
 ---
 
+## Contributing
+
+We welcome contributions — bug reports, template improvements, documentation fixes, and design pattern proposals. aDNA is a knowledge architecture, so contributions are primarily Markdown, YAML, and shell scripts rather than application code.
+
+AI agents working in aDNA vaults can also contribute: the [Agent Contribution Mode](CONTRIBUTING.md#agent-contribution-mode) describes how agents surface framework-level improvements organically during normal work.
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guide.
+
+---
+
 ## Further Reading
 
 | Document | What it covers |

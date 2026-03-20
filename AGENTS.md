@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
+updated: 2026-03-20
 last_edited_by: agent_stanley
 tags: [directory_index, root]
 ---
@@ -49,6 +49,10 @@ adna/
 - [what/AGENTS](what/AGENTS.md) — Knowledge objects (WHAT)
 - [how/AGENTS](how/AGENTS.md) — Operations (HOW)
 - [who/AGENTS](who/AGENTS.md) — Organization (WHO)
+
+## Upstream Contribution Awareness
+
+When you discover framework-level improvements during normal work (missing template fields, undocumented patterns, naming inconsistencies), note them for potential upstream contribution to the aDNA repo. See `how/skills/skill_upstream_contribution.md` for the full protocol.
 
 ## Safety Rules
 

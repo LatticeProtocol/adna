@@ -1,8 +1,8 @@
 ---
 type: context
-title: "aDNA Universal Standard v2.1"
+title: "aDNA Universal Standard v2.2"
 created: 2026-02-11
-updated: 2026-03-19
+updated: 2026-03-20
 status: approved
 last_edited_by: agent_stanley
 tags: [adna, standard, spec, normative]
@@ -10,7 +10,7 @@ tags: [adna, standard, spec, normative]
 
 # aDNA Universal Standard
 
-<!-- v2.0 | 2026-02-17 -->
+<!-- v2.2 | 2026-03-20 -->
 
 **Agentic DNA (aDNA)** — A knowledge architecture standard for AI-native projects.
 
@@ -73,6 +73,8 @@ This document uses RFC 2119 keywords:
 | **Content-as-code** | A pipeline paradigm where a file's directory location represents its processing state |
 | **AGENTS.md** | Per-directory agent-facing guide — purpose, key files, patterns, conventions |
 | **README.md** | Per-directory human-facing guide — navigation, context, useful links |
+| **Conformance level** | A graduated tier (Starter, Standard, Full) defining the minimum requirements an aDNA instance MUST meet to claim conformance at that level |
+| **Conformant instance** | A directory tree that satisfies all MUST requirements for at least the Starter conformance level defined in §5.5 |
 
 ---
 
@@ -469,6 +471,53 @@ Extends the Standard Skeleton with project-specific subdirectories in each triad
 
 For embedded triad deployments, the same skeletons apply inside `.agentic/`, with governance files remaining at the repository root.
 
+### 5.5 Conformance Levels
+
+The skeletons defined in §5.4 establish three normative **conformance levels**. A project claiming aDNA conformance MUST satisfy all MUST requirements at its declared level.
+
+#### Level 1: Starter Conformance
+
+An aDNA instance at Starter conformance MUST have:
+
+1. **Governance files**: `CLAUDE.md`, `MANIFEST.md`, `README.md` at the root (bare) or repository root (embedded)
+2. **Triad directories**: `what/`, `how/`, `who/` (bare) or `.agentic/what/`, `.agentic/how/`, `.agentic/who/` (embedded)
+3. **Required subdirectories**: `what/context/`, `how/missions/`, `how/sessions/`, `how/templates/`, `who/coordination/`, `who/governance/`
+4. **Frontmatter**: All content files inside the triad MUST include the base fields defined in §7.2 (`type`, `created`, `updated`, `last_edited_by`, `tags`)
+
+Starter conformance represents the minimum viable aDNA instance — sufficient for a single-agent project with basic session tracking.
+
+#### Level 2: Standard Conformance
+
+An aDNA instance at Standard conformance MUST satisfy all Starter requirements AND:
+
+5. **Additional governance files**: `STATE.md` and a root `AGENTS.md`
+6. **Per-directory AGENTS.md**: Every triad leg (`what/`, `how/`, `who/`) MUST have an `AGENTS.md` file
+7. **Recommended directories**: `what/decisions/`, `how/backlog/`, `how/sessions/active/`, `how/sessions/history/`
+8. **Session lifecycle**: Sessions MUST follow the lifecycle defined in §8 (creation → execution → close-out with SITREP)
+
+Standard conformance represents an active multi-agent project with operational discipline.
+
+#### Level 3: Full Conformance
+
+An aDNA instance at Full conformance MUST satisfy all Standard requirements AND:
+
+9. **Context library**: `what/context/` MUST contain at least one topic directory with its own `AGENTS.md` and at least one context file with `token_estimate` in frontmatter
+10. **FAIR metadata**: Deployable objects (modules, datasets, lattices) MUST include a `fair:` frontmatter block with at minimum `keywords` and `license`
+11. **Ontology artifact**: `what/ontology.md` MUST exist with a Mermaid ER diagram (per §5.1)
+12. **Template compliance**: All content types used in the project MUST have corresponding templates in `how/templates/`
+
+Full conformance represents a mature, federatable aDNA instance ready for cross-instance interoperation.
+
+#### Conformance Declaration
+
+Projects MAY declare their conformance level in `MANIFEST.md` using the `adna_conformance` frontmatter field:
+
+```yaml
+adna_conformance: starter  # or: standard, full
+```
+
+An instance that does not declare a conformance level is assumed to be unverified. The `adna_validate.py` tool (see `what/lattices/tools/`) can determine conformance level programmatically.
+
 ---
 
 ## 6. Naming Conventions
@@ -580,6 +629,16 @@ Rule/guardrail conflict resolution is a separate concern. Projects that need rul
 Templates (§12) define additional frontmatter fields per content type. For example, a session template adds `session_id`, `plan_id` (legacy field name), `tier`; a customer template adds `segment`, `deal_stage`, `contacts`.
 
 Frontmatter is the integration layer between human tools (Dataview queries, IDE search) and agent queries. Consistent frontmatter enables consistent querying across any tool.
+
+### 7.6 Frontmatter Extension Policy
+
+Instance-specific frontmatter fields MAY be added to any entity type. The following rules govern extensions:
+
+1. **Custom fields** MAY be added freely to any content file's frontmatter
+2. Custom fields SHOULD use a project-specific prefix (e.g., `bio_target_class`, `crm_deal_stage`) when the field name could conflict with future standard fields
+3. Standard fields (those defined in §7.2 and per-type templates) MUST NOT be repurposed to carry different semantics
+4. Migration tools MUST preserve custom fields — standard version upgrades MUST NOT strip unrecognized frontmatter fields
+5. Projects SHOULD document their custom fields in the relevant `AGENTS.md` or template files
 
 ---
 
@@ -996,6 +1055,19 @@ Session history SHOULD NOT be auto-deleted. Manual cleanup after 6 months is acc
 aDNA instances track their own version via a comment in CLAUDE.md: `<!-- vX.Y | YYYY-MM-DD -->`.
 
 Major version increments indicate structural changes. Minor version increments indicate significant content updates. Session history serves as the detailed changelog — no formal CHANGELOG.md is required.
+
+### 15.4 Standard Versioning & Backwards Compatibility
+
+The aDNA standard uses two versioning tracks:
+
+- **Standard version** (this document, `adna_standard.md`): Governs the normative specification — triad architecture, required files, conformance levels, naming conventions. Follows semantic versioning: `vMajor.Minor`.
+- **Governance version** (`CLAUDE.md` `version` field, `CHANGELOG.md`): Governs the operational implementation — protocols, templates, skills, tooling. Follows `Major.Minor` versioning.
+
+**Backwards compatibility promise**:
+
+- Standard **minor** versions (e.g., v2.0 → v2.1) MUST NOT invalidate conformant instances. An instance conformant to aDNA v2.0 MUST remain conformant to aDNA v2.1.
+- Standard **major** versions (e.g., v2.x → v3.0) MAY introduce breaking changes. When they do, migration guidance MUST be provided.
+- Governance version changes are operational and do not affect standard conformance.
 
 ---
 

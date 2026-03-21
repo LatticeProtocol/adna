@@ -245,7 +245,7 @@ adna/
 | **20 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC, AAR, governance, data record, folder note, registry, strategic compass, campaign CLAUDE.md, migration, side quest, quest result |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (all ship pre-installed) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 community plugins + curated core set, Notebook Navigator as default file browser |
 
 ---
 
@@ -273,18 +273,30 @@ git clone https://github.com/LatticeProtocol/adna.git
 cd adna
 ```
 
-### 2. Open in Obsidian
+### 2. Run setup (recommended)
+
+For the best first experience, run setup before opening in Obsidian:
+
+```bash
+./setup.sh
+```
+
+This downloads all 14 community plugins, the Tokyo Night theme, and ships a curated workspace layout with a clean sidebar (Notebook Navigator as the default file browser, minimal ribbon icons).
+
+> **Windows users**: Run `setup.sh` in Git Bash or WSL. Or install plugins manually via Settings → Community plugins → Browse.
+
+### 3. Open in Obsidian
 
 Open `adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted.
-14 plugins and the Tokyo Night theme ship pre-installed.
-The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
+14 community plugins and the Tokyo Night theme ship pre-installed. The core plugin set is curated — Notebook Navigator replaces the default file explorer, and Templater replaces the built-in templates plugin. Both originals are disabled but can be re-enabled in Settings → Core plugins.
+
+The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically. Triad colors (purple/blue/green) appear as Lucide icons in tabs, links, and the sidebar.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
-> **Optional**: Run `./setup.sh` to update all plugins to latest versions.
-> Run with `--force` to re-download everything.
+> **Optional**: Run `./setup.sh --force` to re-download all plugins to latest versions.
 
-### 3. Choose your setup path
+### 4. Choose your setup path
 
 > **Visual learner?** Open `what/lattices/examples/hello_world.canvas` in Obsidian to see a lattice as an interactive node graph — no YAML knowledge needed. Drag nodes, follow edges, and explore how datasets, modules, and processes connect.
 
@@ -473,11 +485,11 @@ aDNA works perfectly as a human-only knowledge management system. The triad stru
 
 Plugins fall into three tiers (see `.obsidian/OBSIDIAN_CLAUDE.md` for full details):
 
-- **Essential** (vault integrity): Templater (auto-applies templates), Dataview (frontmatter queries), Folder Notes/Notebook Navigator (triad browsing)
-- **Recommended** (major UX): Meta Bind, Style Settings, Icon Folder, Homepage, Advanced Canvas, BRAT
-- **Optional** (nice-to-have): Tasks, Table Editor, Termy, Pretty Properties, Fold Properties
+- **Essential** (vault integrity): Templater (auto-applies templates, replaces core templates plugin), Dataview (frontmatter queries), Notebook Navigator (default file browser, replaces core file explorer)
+- **Recommended** (major UX): Meta Bind, Style Settings, Icon Folder (triad colors in tabs/links/notes), Homepage, Advanced Canvas, BRAT
+- **Optional** (nice-to-have): Tasks, Table Editor, Termy (terminal + Claude Code launcher), Pretty Properties, Fold Properties
 
-The vault functions without optional plugins. Essential plugins are needed for the template auto-trigger and query systems.
+The vault functions without optional plugins. Essential plugins are needed for the template auto-trigger and query systems. Two core plugins are disabled by default (file-explorer and templates) because their community replacements are strictly superior — re-enable them in Settings → Core plugins if you prefer the originals.
 
 ### How do I sync the vault across machines?
 

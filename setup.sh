@@ -168,6 +168,19 @@ else
     fi
 fi
 
+# --- Ship curated workspace layout (clean ribbon, NN as primary sidebar) ---
+
+if [ ! -f "$OBSIDIAN_DIR/workspace.json" ]; then
+    if [ -f "$OBSIDIAN_DIR/workspace.default.json" ]; then
+        cp "$OBSIDIAN_DIR/workspace.default.json" "$OBSIDIAN_DIR/workspace.json"
+        ok "Workspace layout (clean sidebar)"
+    else
+        skip "Workspace layout (workspace.default.json missing)"
+    fi
+else
+    skip "Workspace layout (already exists)"
+fi
+
 # ---------- Verification ----------
 
 echo ""

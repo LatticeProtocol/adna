@@ -13,11 +13,11 @@
       "bottom": 0,
       "left": 0
     },
-    "iconInTabsEnabled": false,
-    "iconInLinksEnabled": false,
+    "iconInTabsEnabled": true,
+    "iconInLinksEnabled": true,
     "iconInFrontmatterEnabled": false,
     "iconsBackgroundCheckEnabled": false,
-    "iconsInNotesEnabled": false,
+    "iconsInNotesEnabled": true,
     "iconsInLinksEnabled": false,
     "emojiStyle": "native"
   },

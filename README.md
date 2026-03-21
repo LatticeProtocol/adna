@@ -245,7 +245,7 @@ adna/
 | **20 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC, AAR, governance, data record, folder note, registry, strategic compass, campaign CLAUDE.md, migration, side quest, quest result |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (run `setup.sh`) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (13 shipped + 1 BRAT-managed) |
 
 ---
 
@@ -262,30 +262,32 @@ adna/
 - [Obsidian](https://obsidian.md) 1.0+ (free, all platforms)
 - Python 3.6+ (optional — only needed for lattice YAML validation/conversion tools)
 
-### 1. Clone the repo
+### 1. Get the vault
 
+**Option A — Use as template (recommended)**
+Click **[Use this template](https://github.com/LatticeProtocol/adna/generate)** on GitHub to create your own copy with clean history.
+
+**Option B — Clone directly**
 ```bash
 git clone https://github.com/LatticeProtocol/adna.git
 cd adna
 ```
 
-### 2. Install plugins and theme
+### 2. Open in Obsidian
 
-```bash
-./setup.sh
-```
-
-Downloads and installs 15 community plugins and the Tokyo Night theme. Run with `--force` to re-download everything.
+Open `adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted.
+13 plugins and the Tokyo Night theme ship pre-installed. The **Termy** terminal
+plugin installs automatically via BRAT on first launch (requires internet).
+The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.
 
-### 3. Open in Obsidian
+> **Optional**: Run `./setup.sh` to update all plugins to latest versions.
+> Run with `--force` to re-download everything.
 
-Open `adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted. The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
+### 3. Choose your setup path
 
 > **Visual learner?** Open `what/lattices/examples/hello_world.canvas` in Obsidian to see a lattice as an interactive node graph — no YAML knowledge needed. Drag nodes, follow edges, and explore how datasets, modules, and processes connect.
-
-### 4. Choose your setup path
 
 **Option A: Agent-guided setup (recommended, ~15-30 min)**
 

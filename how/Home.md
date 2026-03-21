@@ -25,11 +25,20 @@ last_edited_by: agent_stanley
 > [[STATE|Operational State]] | [[MANIFEST|Project Overview]] | [[CLAUDE|Agent Context]]
 
 > [!tip] First Time Here?
-> Open a terminal in this vault and run `claude` to start an agent session.
-> **Berthier** will guide you through setting up your project interactively.
+> Click the button below to start an agent session — **Berthier** will guide you through setting up your project interactively.
 >
-> Prefer doing it yourself? Edit [[CLAUDE]], [[MANIFEST]], and [[STATE]]
-> with your project details, then start building.
+> ```meta-bind-button
+> label: Launch Claude Code
+> icon: terminal
+> id: launch-claude
+> style: primary
+> action:
+>   type: command
+>   command: termy:claude-code
+> ```
+>
+> Don't see a terminal? Termy downloads a small binary on first launch (requires internet).
+> Prefer doing it yourself? Edit [[CLAUDE]], [[MANIFEST]], and [[STATE]] with your project details.
 
 ---
 
@@ -47,7 +56,7 @@ LIMIT 5
 ```
 
 > [!note] No sessions yet?
-> Start your first agent session by running `claude` in a terminal, or create a session manually in `how/sessions/active/`.
+> Use the **Launch Claude Code** button above to start your first agent session, or create a session manually in `how/sessions/active/`.
 
 ---
 
@@ -81,7 +90,7 @@ SORT created DESC
 ## Quick Start
 
 > [!abstract] Getting Started
-> 1. **Run `claude`** in a terminal — Berthier will guide you through interactive onboarding
+> 1. **Click "Launch Claude Code"** above — Berthier will guide you through interactive onboarding
 > 2. **Or customize manually** — edit `CLAUDE.md`, `MANIFEST.md`, `STATE.md` with your project details
 > 3. **Start building** — create a campaign, start a session, add context to `what/context/`
 

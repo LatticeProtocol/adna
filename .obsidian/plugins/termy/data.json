@@ -38,26 +38,6 @@
       "showInStatusBar": true,
       "autoOpenTerminal": true,
       "runInNewTerminal": false
-    },
-    {
-      "id": "codex",
-      "name": "Codex",
-      "icon": "terminal",
-      "command": "codex",
-      "terminalTitle": "Codex",
-      "showInStatusBar": true,
-      "autoOpenTerminal": true,
-      "runInNewTerminal": false
-    },
-    {
-      "id": "gemini-cli",
-      "name": "Gemini CLI",
-      "icon": "terminal",
-      "command": "gemini",
-      "terminalTitle": "Gemini CLI",
-      "showInStatusBar": true,
-      "autoOpenTerminal": true,
-      "runInNewTerminal": false
     }
   ],
   "enableDebugLog": false

@@ -245,7 +245,7 @@ adna/
 | **20 templates** | `how/templates/` | Session, mission, campaign, ADR, context, coordination, backlog, skill, PRD, RFC, AAR, governance, data record, folder note, registry, strategic compass, campaign CLAUDE.md, migration, side quest, quest result |
 | **PRD/RFC pipeline** | `how/pipelines/prd_rfc/` | 4-stage content-as-code planning workflow |
 | **aDNA spec docs** | `what/docs/` | Normative standard, design rationale, bridge patterns |
-| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (13 shipped + 1 BRAT-managed) |
+| **Obsidian config** | `.obsidian/` | Tokyo Night theme, CSS snippets, 14 pre-configured plugins (all ship pre-installed) |
 
 ---
 
@@ -276,8 +276,7 @@ cd adna
 ### 2. Open in Obsidian
 
 Open `adna/` as a vault in [Obsidian](https://obsidian.md). Enable community plugins when prompted.
-13 plugins and the Tokyo Night theme ship pre-installed. The **Termy** terminal
-plugin installs automatically via BRAT on first launch (requires internet).
+14 plugins and the Tokyo Night theme ship pre-installed.
 The accent color (Rebecca Purple `#663399`) and CSS snippets activate automatically.
 
 Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) font — the vault falls back to system fonts without it.

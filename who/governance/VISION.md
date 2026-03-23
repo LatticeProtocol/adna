@@ -48,9 +48,9 @@ Some improvements need data from multiple environments before the right answer b
 
 **Side-quests** are structured experiments that community members can run with spare agent tokens. Each quest specifies a procedure, expected output format, and estimated cost. Results flow back as structured data that maintainers aggregate to make evidence-based decisions.
 
-Current quests: [`community/quests/`](community/quests/)
+Current quests: [`how/quests/`](how/quests/)
 Participation guide: [`what/docs/side_quest_guide.md`](what/docs/side_quest_guide.md)
-Results aggregation: [`community/tools/aggregate_results.py`](community/tools/aggregate_results.py)
+Results aggregation: [`what/lattices/tools/aggregate_results.py`](what/lattices/tools/aggregate_results.py)
 
 ### Migrations Keep Everyone Current
 
@@ -86,6 +86,11 @@ Clone the repo. Customize it for your project. Use the triad, templates, and too
 
 **Value**: Structured knowledge architecture that both you and your AI agents can navigate. Faster agent orientation, better session continuity, organized project knowledge.
 
+> **Compute Participation**: Level 0 vaults can optionally upgrade to L1
+> compute nodes, adding JupyterHub and joining the Lattice compute network.
+> This is orthogonal to the knowledge contribution ladder. See
+> `how/skills/skill_l1_upgrade.md`.
+
 ### Level 1: Submit Upstream Improvements
 
 When your agent surfaces a framework-level improvement, approve the backlog item and (optionally) open a GitHub issue upstream. Your improvement helps every aDNA user — and you benefit from everyone else's improvements when you run migrations.
@@ -117,7 +122,7 @@ The infrastructure supporting this vision was built across six missions:
 | **Migration safety framework** | Rollback, validation, and testing for migrations | [`what/docs/migration_safety_framework.md`](what/docs/migration_safety_framework.md) |
 | **CHANGELOG** | Two-track version history with migration cross-links | [`CHANGELOG.md`](CHANGELOG.md) |
 | **Contribution system** | CONTRIBUTING.md + Agent Contribution Mode + upstream skill | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
-| **Side-quest infrastructure** | Quest specs, result templates, aggregation tooling | [`community/`](community/) |
+| **Side-quest infrastructure** | Quest specs, result templates, aggregation tooling | [`how/quests/`](how/quests/) + [`what/lattices/tools/`](what/lattices/tools/) |
 
 Each component works independently. Together, they form the feedback loop that turns individual vault usage into collective standard improvement.
 
@@ -143,7 +148,7 @@ The vision is aspirational but the infrastructure is real and delivered. Here's 
 
 - **New to aDNA?** Start with the [README](README.md) — clone, setup, customize in minutes.
 - **Want to contribute?** Read [`CONTRIBUTING.md`](CONTRIBUTING.md) — bug reports, improvements, and Agent Contribution Mode.
-- **Want to run a quest?** Browse [`community/quests/`](community/quests/) and follow the [Side-Quest Guide](what/docs/side_quest_guide.md).
+- **Want to run a quest?** Browse [`how/quests/`](how/quests/) and follow the [Side-Quest Guide](what/docs/side_quest_guide.md).
 - **Want to add aDNA to an existing project?** See the [Migration Guide](what/docs/migration_guide.md).
 
 ---

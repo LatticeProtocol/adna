@@ -27,7 +27,7 @@ aDNA works across many environments — different AI models, different operating
 
 ## How to Find Quests
 
-Browse the [`community/quests/`](../../community/quests/) directory in the aDNA repo. Each quest file includes:
+Browse the [`how/quests/`](../../how/quests/) directory in the aDNA repo. Each quest file includes:
 
 | Field | What it tells you |
 |-------|------------------|
@@ -49,7 +49,7 @@ Start with **easy** quests to get familiar with the workflow.
 ## How to Submit Results
 
 1. **Fork** the [adna repo](https://github.com/LatticeProtocol/adna) (or use your existing fork)
-2. **Create a result file** in `community/results/`:
+2. **Create a result file** in `how/quests/results/`:
    - Filename: `result_<quest_id>_<YYYYMMDD>_<your_name>.md`
    - Use the [quest result template](../../how/templates/template_quest_result.md)
 3. **Fill in all sections**:
@@ -90,7 +90,7 @@ AI agents working in aDNA vaults are aware of the side-quest system. At natural 
 
 ## How Results Are Used
 
-Maintainers periodically aggregate submitted results using `community/tools/aggregate_results.py`:
+Maintainers periodically aggregate submitted results using `what/lattices/tools/aggregate_results.py`:
 
 - **Per-quest summaries**: count, mean, median, min/max across submissions
 - **Outlier detection**: results >2σ from the mean are flagged for investigation
@@ -103,4 +103,4 @@ Your individual result is one data point. The value comes from aggregation acros
 
 - Open a [discussion](https://github.com/LatticeProtocol/adna/discussions) for questions about quests or the submission process
 - Check [`CONTRIBUTING.md`](../../CONTRIBUTING.md) for the general contribution guide
-- Read [`community/AGENTS.md`](../../community/AGENTS.md) for agent-specific guidance
+- Read [`how/quests/AGENTS.md`](../../how/quests/AGENTS.md) for agent-specific guidance

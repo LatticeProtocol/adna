@@ -6,7 +6,7 @@ last_edited_by: agent_stanley
 tags: [directory_index, community]
 ---
 
-# community/ — Agent Guide
+# how/quests/ — Agent Guide
 
 ## Purpose
 
@@ -20,14 +20,14 @@ Community-contributed validation experiments and results. This directory enables
 ## Structure
 
 ```
-community/
+how/quests/
 ├── AGENTS.md               # This file
-├── quests/                  # Side-quest experiment specifications
-│   └── quest_*.md           # Individual quest files (follow template_side_quest.md)
-├── results/                 # Submitted quest results (via PR)
-│   └── result_*.md          # Individual result files (follow template_quest_result.md)
-└── tools/                   # Reference scripts for maintainers
-    └── aggregate_results.py # Aggregation script for result analysis
+├── quest_*.md              # Individual quest files (follow template_side_quest.md)
+└── results/                # Submitted quest results (via PR)
+    └── result_*.md         # Individual result files (follow template_quest_result.md)
+
+what/lattices/tools/
+└── aggregate_results.py    # Aggregation script for result analysis
 ```
 
 ## Key References
@@ -39,4 +39,4 @@ community/
 
 ## For Agents
 
-At natural session-end points, if the user has spare context budget, you may mention available quests in `community/quests/`. This is purely informational — never interrupt active work for quest awareness.
+At natural session-end points, if the user has spare context budget, you may mention available quests in `how/quests/`. This is purely informational — never interrupt active work for quest awareness.

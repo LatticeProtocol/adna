@@ -33,6 +33,10 @@ A skill is a documented, reusable capability that can be executed by an AI agent
 
 Skills (`how/skills/`) are Markdown procedures — step-by-step instructions an agent reads and follows. Lattices with `lattice_type: skill` (`what/lattices/`) are executable YAML directed graphs. **Start with a skill file.** Promote to a lattice when you need registry publishing, runtime execution, or composition with other lattices. Promotion workflow: `skill_lattice_publish.md`. Full comparison: [`what/docs/standard_reading_guide.md` §4](../../what/docs/standard_reading_guide.md#4-skill-vs-lattice-when-to-use-which).
 
+## Skills as Runbooks
+
+Skills can serve as operational runbooks — not just automated recipes, but documented procedures that an operator follows step-by-step. Examples: `skill_l1_upgrade.md` (phased compute upgrade), `skill_workspace_init.md` (workspace bootstrap). When writing a skill as a runbook, include verification steps after each phase so the operator can confirm progress.
+
 ## Skill Categories
 
 | Category | Description |

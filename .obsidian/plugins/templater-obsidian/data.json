@@ -11,7 +11,8 @@
     ["how/campaigns", "how/templates/template_campaign.md"],
     ["how/skills", "how/templates/template_skill.md"],
     ["how/pipelines/prd_rfc/02_requirements", "how/templates/template_prd.md"],
-    ["how/pipelines/prd_rfc/03_design", "how/templates/template_rfc.md"]
+    ["how/pipelines/prd_rfc/03_design", "how/templates/template_rfc.md"],
+    ["how/quests", "how/templates/template_side_quest.md"]
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": false,

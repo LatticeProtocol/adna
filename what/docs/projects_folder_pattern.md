@@ -2,64 +2,103 @@
 type: context
 title: "aDNA Projects Folder Pattern"
 created: 2026-03-19
-updated: 2026-03-19
+updated: 2026-03-22
 status: active
 last_edited_by: agent_stanley
 tags: [adna, projects, scaffolding, workspace, pattern]
-token_estimate: 1500
+token_estimate: 2500
 ---
 
 # aDNA Projects Folder Pattern
 
-A workspace-level pattern for managing multiple aDNA-structured projects. Instead of isolated vaults, projects share a common template and are scaffolded through an agent-guided interview.
+A workspace-level pattern for managing multiple aDNA-structured projects. Two approaches: the **Simplified Pattern** (recommended — uses the aDNA repo itself as the template) and the **Advanced Pattern** (uses a `.base/` directory with variable templates).
 
 ---
 
-## The Pattern
+## Simplified Pattern (Recommended)
+
+The aDNA repo **is** the template. Clone it once, then fork it for each new project. A workspace-level CLAUDE.md manages project creation and discovery.
 
 ```
-adna-projects/                    # Workspace root (users copy this)
+~/Projects/                       # Workspace root (any folder works)
+├── CLAUDE.md                     # Workspace architect (auto-created by skill_workspace_init.md)
+├── adna/                         # Base template (git clone, never modified for projects)
+│   ├── CLAUDE.md                 # Detects missing workspace CLAUDE.md, offers to create it
+│   ├── prepare_for_onboarding.sh # Pre-flight checks for L1 upgrade
+│   ├── setup.sh                  # Obsidian plugin bootstrap
+│   └── how/skills/
+│       ├── skill_workspace_init.md  # Creates the workspace CLAUDE.md
+│       ├── skill_onboarding.md      # 5-question interview for new projects
+│       └── skill_l1_upgrade.md      # L0→L1 phased compute upgrade
+├── my_research_lab/              # Project A (forked from adna, customized)
+│   ├── CLAUDE.md                 # Project-specific governance
+│   └── ...
+├── client_acme/                  # Project B (forked from adna)
+│   └── ...
+├── latlab/                       # (appears after L1 upgrade — not initially present)
+└── lattice-protocol/             # (appears after L1 upgrade — not initially present)
+```
+
+### How it works
+
+1. **Clone aDNA** into any folder: `git clone https://github.com/LatticeProtocol/adna.git`
+2. **Run Claude Code** from inside `adna/` — the CLAUDE.md detects no workspace CLAUDE.md at the parent level and offers to create one via `skill_workspace_init.md`
+3. **Create projects** — from the workspace level, ask the agent to create a new project. It copies `adna/`, strips `.git/` and `.obsidian/`, runs `git init`, then triggers the 5-question onboarding interview inside the new project
+4. **Work inside projects** — each project is self-contained. Open it directly in Claude Code or Obsidian.
+5. **Upgrade to L1** — follow `adna/how/skills/skill_l1_upgrade.md` to add JupyterHub compute
+
+### Why this pattern
+
+- **No `.base/` directory needed** — the full aDNA repo serves as the template
+- **Every project gets the complete toolkit** — templates, skills, context library, lattice tools
+- **Upstream updates** — `git pull` inside `adna/` to get latest aDNA improvements
+- **Zero config** — the workspace CLAUDE.md is auto-generated on first run
+
+### Design principles
+
+1. **The agent is the scaffolding engine** — the workspace CLAUDE.md instructs Claude how to fork, customize, and seed new projects
+2. **Each project is self-contained** — own CLAUDE.md, own git, own triad structure. Can be moved out of the workspace and still works.
+3. **Never modify the template** — `adna/` stays as a clean reference. Only fork from it.
+4. **Workspace CLAUDE.md governs workspace operations only** — project creation, discovery, L1 upgrade. Inside a project, that project's CLAUDE.md is authoritative.
+
+### Related files
+
+- [Workspace Init Skill](../../how/skills/skill_workspace_init.md) — creates the workspace CLAUDE.md
+- [Workspace CLAUDE.md Template](templates/workspace_claude_md.template) — the template used by the skill
+- [L1 Upgrade Skill](../../how/skills/skill_l1_upgrade.md) — phased compute upgrade
+
+---
+
+## Advanced Pattern (Custom Templates)
+
+For organizations that want fine-grained control over project scaffolding, the `.base/` template pattern provides per-field customization.
+
+```
+adna-projects/                    # Workspace root
 ├── CLAUDE.md                     # Meta-governance — interview + scaffold instructions
 ├── .base/                        # Base template (fork source, not a project)
 │   ├── CLAUDE.md.template        # Governance template with {{variables}}
 │   ├── MANIFEST.md.template
 │   ├── STATE.md.template
-│   ├── AGENTS.md.template        # Root agent guide
+│   ├── AGENTS.md.template
 │   ├── README.md.template
-│   ├── who_AGENTS.md.template    # Triad-level agent guides
+│   ├── who_AGENTS.md.template
 │   ├── what_AGENTS.md.template
 │   └── how_AGENTS.md.template
 ├── my-research-vault/            # Project A (scaffolded)
-│   ├── CLAUDE.md
-│   ├── MANIFEST.md
-│   ├── ...
-├── client-data-pipeline/         # Project B (scaffolded)
 │   └── ...
 └── shared/                       # Optional cross-project context
-    └── context/                  # Reusable context files
+    └── context/
 ```
 
-A working example lives at `examples/adna-projects/` with two pre-scaffolded projects (biotech lab, enterprise pipeline).
+### When to use the advanced pattern
 
----
+- You need custom template fields beyond what the onboarding interview provides
+- Your organization has specific governance requirements that every project must include
+- You want a `shared/` directory for cross-project context reuse
+- You're building a domain-specific scaffolding system (e.g., all projects in your org must have `what/compliance/`)
 
-## Design Principles
-
-### 1. The CLAUDE.md is the scaffolding engine
-
-The root `CLAUDE.md` is NOT a project CLAUDE.md. It contains meta-instructions that tell the agent how to:
-1. Run the 5-question pre-flight interview
-2. Select a skeleton tier based on team size
-3. Apply domain extensions based on the user's domain
-4. Copy and resolve `.base/` templates into a new project directory
-
-When the Start Kit CLI eventually ships, it automates what this pattern does manually. Until then, the agent IS the scaffolding tool.
-
-### 2. Each project is self-contained
-
-Every scaffolded project is a complete aDNA vault: own CLAUDE.md, own git (optional), own triad structure. Projects don't depend on the workspace root to function. You can move a project out of the workspace and it still works.
-
-### 3. Templates use variable syntax
+### Template variable syntax
 
 `.base/` templates use `{{variable}}` placeholders that map to interview answers:
 
@@ -153,8 +192,10 @@ Create `shared/context/` and add domain knowledge files. Reference them from ind
 
 ## Related
 
+- [Workspace Init Skill](../../how/skills/skill_workspace_init.md) — Creates workspace CLAUDE.md (simplified pattern)
+- [Workspace CLAUDE.md Template](templates/workspace_claude_md.template) — Template for workspace-level governance
 - [Start Kit PRD](start_kit_prd.md) — CLI tool design (interview, scaffolding, packaging)
 - [Onboarding Skill](../../how/skills/skill_onboarding.md) — 10-step interactive flow (expanded version)
+- [L1 Upgrade Skill](../../how/skills/skill_l1_upgrade.md) — Phased L0→L1 compute upgrade
 - [aDNA Standard §5.4](adna_standard.md) — Skeleton tier definitions
 - [Migration Guide](migration_guide.md) — Adding aDNA to existing projects
-- [Examples](examples/adna-projects/) — Working example with two pre-scaffolded projects

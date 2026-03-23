@@ -45,7 +45,7 @@ cssclasses: [folder-note]
 | File | Purpose |
 |------|---------|
 | [[adna/README\|README.md]] | Public documentation — quick-start guide |
-| [[adna/CLAUDE\|CLAUDE.md]] | Agent governance (v4.1) — rules, safety, protocol |
+| [[adna/CLAUDE\|CLAUDE.md]] | Agent governance (v5.6) — rules, safety, protocol |
 | [[adna/MANIFEST\|MANIFEST.md]] | Project identity, architecture, entry points |
 | [[adna/STATE\|STATE.md]] | Build state and operational snapshot |
 | `setup.sh` | First-run bootstrap script |

@@ -28,7 +28,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 - Canvas-YAML bidirectional conversion (`lattice2canvas.py`, `canvas2lattice.py`)
 - 13 example lattice files + 3 canvas templates + 1 demonstration canvas
 - Context library: 4 topics, 23 subtopics, ~58K tokens (prompt_engineering, adna_core, lattice_basics, object_standards)
-- Sync protocol: vault↔repo `adna_core/` sync documented in vault skill (`how/skills/skill_adna_repo_sync.md`)
+- Sync protocol: vault↔repo `adna_core/` sync (backlog: formal sync skill not yet created)
 - Cross-topic recipe system: 6 domain-neutral recipes with 3-tier budgets
 - Execution hierarchy v2: OODA cascade (3-level), AAR protocol (5-step), mission classes (5 types)
 - Quality framework: 6-axis rubric, quality audit skill, context graduation pipeline
@@ -42,8 +42,8 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 - CHANGELOG.md with version policy and migration cross-links
 - CONTRIBUTING.md with Agent Contribution Mode (organic upstream contribution)
 - Upstream contribution skill (`how/skills/skill_upstream_contribution.md`)
-- Side-quest infrastructure: quest specs, result templates, aggregation tool (`community/`)
-- VISION.md — decentralized frontier lab model with participation ladder
+- Side-quest infrastructure: quest specs, result templates, aggregation tool (`how/quests/`, `what/lattices/tools/`)
+- `who/governance/VISION.md` — decentralized frontier lab model with participation ladder
 
 ## Recent Decisions
 

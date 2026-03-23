@@ -230,11 +230,10 @@ adna/
 ├── who/                                # Organization
 │   ├── coordination/                   #   Cross-agent notes
 │   └── governance/                     #   Project governance
-├── community/                          # Community infrastructure
-│   ├── quests/                         #   Side-quest experiment specs
-│   ├── results/                        #   Structured result submissions
-│   └── tools/                          #   Aggregation & analysis scripts
 └── .obsidian/                          # Visual config (theme, snippets, plugins)
+# Community infrastructure lives inside the triad:
+#   how/quests/          — Side-quest specs + results
+#   what/lattices/tools/ — Aggregation & analysis scripts
 ```
 
 | Component | Location | What it does |
@@ -821,7 +820,7 @@ We welcome contributions — bug reports, template improvements, documentation f
 
 AI agents working in aDNA vaults can also contribute: the [Agent Contribution Mode](CONTRIBUTING.md#agent-contribution-mode) describes how agents surface framework-level improvements organically during normal work.
 
-**Side-quests**: Want to contribute without deep project knowledge? Browse [`community/quests/`](community/quests/) for structured validation experiments you can run with spare agent tokens. Each quest takes 10-30 minutes and produces data that helps improve aDNA. See the [Side-Quest Guide](what/docs/side_quest_guide.md) for details.
+**Side-quests**: Want to contribute without deep project knowledge? Browse [`how/quests/`](how/quests/) for structured validation experiments you can run with spare agent tokens. Each quest takes 10-30 minutes and produces data that helps improve aDNA. See the [Side-Quest Guide](what/docs/side_quest_guide.md) for details.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guide.
 
@@ -831,7 +830,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guide.
 
 aDNA is more than a file convention — it's a knowledge architecture standard designed to improve through community usage. Agents working in aDNA vaults organically surface framework-level improvements, side-quests collect structured validation data, and version migrations deliver improvements to every vault.
 
-Read [`VISION.md`](VISION.md) for the full picture: the decentralized frontier lab model, the opt-in participation ladder (use standalone → contribute improvements → run side-quests → shape the standard), and how the infrastructure built into this repo makes it work.
+Read [`VISION.md`](who/governance/VISION.md) for the full picture: the decentralized frontier lab model, the opt-in participation ladder (use standalone → contribute improvements → run side-quests → shape the standard), and how the infrastructure built into this repo makes it work.
 
 ---
 
@@ -848,7 +847,7 @@ Read [`VISION.md`](VISION.md) for the full picture: the decentralized frontier l
 | [`what/docs/projects_folder_pattern.md`](what/docs/projects_folder_pattern.md) | Multi-project workspace pattern — agent-guided scaffolding, shared templates, domain presets |
 | [`what/docs/start_kit_prd.md`](what/docs/start_kit_prd.md) | Lattice Start Kit PRD — 1-click onboarding design (CLI interview, scaffolding, 4 personas) |
 | [`what/docs/version_migration_guide.md`](what/docs/version_migration_guide.md) | Version migration system — upgrading vaults between CLAUDE.md versions with structured prompts |
-| [`VISION.md`](VISION.md) | Ecosystem vision — decentralized frontier lab model, participation ladder, community infrastructure |
+| [`VISION.md`](who/governance/VISION.md) | Ecosystem vision — decentralized frontier lab model, participation ladder, community infrastructure |
 | [`what/lattices/canvas_yaml_interop.md`](what/lattices/canvas_yaml_interop.md) | Canvas ↔ YAML bidirectional mapping specification |
 | [`what/lattices/lattice_yaml_schema.json`](what/lattices/lattice_yaml_schema.json) | JSON Schema for `.lattice.yaml` validation |
 

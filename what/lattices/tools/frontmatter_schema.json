@@ -4,7 +4,7 @@
   "title": "aDNA Frontmatter Schema",
   "description": "JSON Schema for validating aDNA content file frontmatter per §7 of the aDNA Universal Standard v2.2",
   "type": "object",
-  "required": ["type", "created", "updated", "last_edited_by", "tags"],
+  "required": ["type", "created", "updated", "status", "last_edited_by", "tags"],
   "properties": {
     "type": {
       "type": "string",

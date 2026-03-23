@@ -26,7 +26,9 @@ adna/
 ├── what/        # WHAT — Knowledge objects, context library, lattice tools
 ├── how/         # HOW — Plans, sessions, templates, pipelines
 ├── who/         # WHO — People, teams, coordination, governance
-└── community/   # Community infrastructure — quests, results, tools
+│                # Community infrastructure lives inside the triad:
+│                #   how/quests/          — quest specs + results
+│                #   what/lattices/tools/ — aggregation scripts
 ```
 
 | Layer | Question | Contains |
@@ -34,6 +36,16 @@ adna/
 | **what/** | WHAT does this project know? | Context library, decisions, aDNA docs, lattice YAML tools + schema + examples |
 | **how/** | HOW does this project work? | Missions, sessions, 20 templates, backlog, campaigns, skills, PRD/RFC pipeline |
 | **who/** | WHO is involved? | People, teams, coordination, governance |
+
+### Base Ontology (14 Entity Types)
+
+| Triad | Entities | Purpose |
+|-------|----------|---------|
+| **WHO** (3) | `governance`, `team`, `coordination` | Who decides, who works, how they sync |
+| **WHAT** (4) | `context`, `decisions`, `modules`, `lattices` | What you know, what you've decided, what you build, how you compose |
+| **HOW** (7) | `campaigns`, `missions`, `sessions`, `templates`, `skills`, `pipelines`, `backlog` | Plan → decompose → execute → track → automate → ideate |
+
+Extend by adding domain-specific entities under the appropriate triad leg (e.g., `what/experiments/`, `who/customers/`).
 
 ## Entry Points
 
@@ -98,8 +110,8 @@ how/pipelines/prd_rfc/
 | `template_folder_note.md` | — |
 | `template_governance.md` | — |
 | `template_migration.md` | `how/migrations/` |
-| `template_side_quest.md` | `community/quests/` |
-| `template_quest_result.md` | `community/results/` |
+| `template_side_quest.md` | `how/quests/` |
+| `template_quest_result.md` | `how/quests/results/` |
 
 ## Active Builds
 

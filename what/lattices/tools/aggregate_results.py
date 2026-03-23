@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Aggregate side-quest results from community/results/*.md files.
+"""Aggregate side-quest results from how/quests/results/*.md files.
 
 Reference implementation for maintainers. Reads YAML frontmatter from
 result files, computes per-quest statistics, and flags outliers.
 
 Usage:
-    python community/tools/aggregate_results.py
-    python community/tools/aggregate_results.py --quest quest_frontmatter_comparison
-    python community/tools/aggregate_results.py --help
+    python what/lattices/tools/aggregate_results.py
+    python what/lattices/tools/aggregate_results.py --quest quest_frontmatter_comparison
+    python what/lattices/tools/aggregate_results.py --help
 
 Dependencies: Python 3.8+ stdlib only (no pip packages).
 """
@@ -194,7 +194,7 @@ def print_summary(grouped: dict[str, list[dict]]) -> None:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Aggregate side-quest results from community/results/*.md"
+        description="Aggregate side-quest results from how/quests/results/*.md"
     )
     parser.add_argument(
         "--quest",
@@ -203,7 +203,7 @@ def main():
     )
     parser.add_argument(
         "--results-dir",
-        help="Path to results directory (default: community/results/)",
+        help="Path to results directory (default: how/quests/results/)",
         default=None,
     )
     args = parser.parse_args()
@@ -213,8 +213,8 @@ def main():
         results_dir = Path(args.results_dir)
     else:
         # Try relative to CWD first, then relative to script
-        cwd_path = Path.cwd() / "community" / "results"
-        script_path = Path(__file__).parent.parent / "results"
+        cwd_path = Path.cwd() / "how" / "quests" / "results"
+        script_path = Path(__file__).parent.parent.parent / "how" / "quests" / "results"
         results_dir = cwd_path if cwd_path.exists() else script_path
 
     files = find_result_files(results_dir)

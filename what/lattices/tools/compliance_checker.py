@@ -113,7 +113,7 @@ NA_MAP: dict[str, list[str]] = {
     "module": [],
     "dataset": ["d02", "d08"],
     "lattice": ["d02", "d08"],
-    "skill": ["d02", "d05", "d06", "d09", "d10"],
+    "skill": ["d05", "d06", "d09", "d10"],
     "context": ["d04", "d05", "d06", "d07", "d08", "d09", "d10"],
     "hardware": ["d02", "d04", "d05", "d08", "d09"],
     "manifest": ["d02", "d04", "d05", "d06", "d07", "d08", "d09", "d10"],
@@ -263,7 +263,24 @@ def identify_gaps(
     scores: dict[str, int],
     fm: dict[str, Any],
 ) -> list[str]:
-    """Map dimension deficiencies to gap IDs."""
+    """Map dimension deficiencies to gap IDs.
+
+    Gap ID Registry (G-001 to G-014):
+      G-001 — (retired, merged into D1 triad scoring)
+      G-002 — Lattice missing companion YAML
+      G-003 — Skill missing lattice_type field
+      G-004 — Dataset missing companion YAML
+      G-005 — (retired, covered by D3 frontmatter scoring)
+      G-006 — (retired, covered by D4 FAIR scoring)
+      G-007 — Skill missing skill_type field
+      G-008 — Campaign manifest missing required fields
+      G-009 — Module missing version field (D6=0)
+      G-010 — Module missing companion YAML
+      G-011 — Context missing status field
+      G-012 — Skill missing FAIR metadata (D4=0)
+      G-013 — Federation-critical object missing federation metadata (D7=0)
+      G-014 — (reserved for hardware migration gaps)
+    """
     gaps: list[str] = []
 
     if object_type == "lattice" and scores.get("d09", 3) < 3:
@@ -298,7 +315,13 @@ def build_result(
     fm: dict[str, Any],
 ) -> ComplianceResult:
     """Assemble a ComplianceResult from handler scores."""
-    na_dims = NA_MAP.get(object_type, [])
+    na_dims = list(NA_MAP.get(object_type, []))
+
+    # MCP server modules use framework-defined types, not canonical I/O types.
+    # Mark D5 (type_vocab) as N/A so they score 3/3 instead of 0-1.
+    if object_type == "module" and fm.get("module_type") == "mcp_server":
+        if "d05" not in na_dims:
+            na_dims.append("d05")
 
     full_scores: dict[str, int] = {}
     for dim in ALL_DIMS:
@@ -502,7 +525,14 @@ def _score_version(fm: dict[str, Any]) -> int:
 
 
 def _score_federation_md(fm: dict[str, Any]) -> int:
-    """D7 — federation readiness from frontmatter."""
+    """D7 — federation readiness from frontmatter.
+
+    Note: This scores D7 for MD-based objects (modules, datasets, skills, hardware)
+    using frontmatter federation fields (discoverable, source_instance). Lattice YAML
+    files use a separate path via check_federation_readiness() in handle_lattice_yaml(),
+    which checks the 6 federation readiness criteria from lattice_federation.md §4.1.
+    This dual-path is intentional — MD objects have simpler federation metadata.
+    """
     fed = fm.get("federation")
     if not fed or not isinstance(fed, dict):
         return 0
@@ -515,18 +545,44 @@ def _score_federation_md(fm: dict[str, Any]) -> int:
     return 1
 
 
+def _validate_companion_yaml(companion_path: Path, companion_type: str = "") -> bool:
+    """Check that a companion YAML file is parseable and has type-specific required fields."""
+    try:
+        with open(companion_path) as f:
+            data = yaml.safe_load(f)
+        if not isinstance(data, dict) or len(data) == 0:
+            return False
+        # Type-specific required field checks
+        if companion_type == "module":
+            return bool(data.get("name") or data.get("module"))
+        if companion_type == "dataset":
+            return bool(data.get("name") or data.get("dataset"))
+        return True
+    except (OSError, yaml.YAMLError):
+        return False
+
+
 def _score_companion(path: Path, object_type: str) -> int:
-    """D9 — companion file existence."""
+    """D9 — companion file existence and content validation."""
     stem = path.stem
     parent = path.parent
 
     if object_type == "module":
-        return 3 if (parent / f"{stem}.module.yaml").exists() else 0
+        cp = parent / f"{stem}.module.yaml"
+        if not cp.exists():
+            return 0
+        return 3 if _validate_companion_yaml(cp, "module") else 2
     if object_type == "dataset":
-        return 3 if (parent / f"{stem}.dataset.yaml").exists() else 0
+        cp = parent / f"{stem}.dataset.yaml"
+        if not cp.exists():
+            return 0
+        return 3 if _validate_companion_yaml(cp, "dataset") else 2
     if object_type == "lattice":
         if path.suffix == ".md":
-            return 3 if (parent / f"{stem}.lattice.yaml").exists() else 0
+            cp = parent / f"{stem}.lattice.yaml"
+            if not cp.exists():
+                return 0
+            return 3 if _validate_companion_yaml(cp, "lattice") else 2
         # YAML lattice — .md wrapper optional, score 2 if missing
         md_name = path.name.replace(".lattice.yaml", ".md")
         return 3 if (parent / md_name).exists() else 2
@@ -722,6 +778,7 @@ def handle_skill(
     lt = fm.get("lattice_type")
     return {
         "d01": 3 if fm.get("type") == "skill" else (2 if fm.get("type") else 0),
+        "d02": _check_agents_md(path),
         "d03": _score_frontmatter(fm),
         "d04": _score_fair(fm),
         "d07": _score_federation_md(fm),

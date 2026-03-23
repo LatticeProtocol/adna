@@ -40,7 +40,7 @@ STANDARD_RECOMMENDED_DIRS = [
     "how/sessions/history",
 ]
 
-REQUIRED_FRONTMATTER = ["type", "created", "updated", "last_edited_by", "tags"]
+REQUIRED_FRONTMATTER = ["type", "created", "updated", "status", "last_edited_by", "tags"]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # ---------------------------------------------------------------------------

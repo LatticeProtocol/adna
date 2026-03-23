@@ -23,7 +23,7 @@ from typing import Any
 import yaml
 
 # Schema constants aligned with lattice_yaml_schema.json
-VALID_LATTICE_TYPES = {"pipeline", "agent", "context_graph", "workflow", "skill"}
+VALID_LATTICE_TYPES = {"pipeline", "agent", "context_graph", "workflow", "skill", "infrastructure", "context_set"}
 VALID_EXECUTION_MODES = {"workflow", "reasoning", "hybrid"}
 VALID_RUNTIMES = {"ray", "local", "kubernetes"}
 VALID_TIERS = {"L1", "L2", "L3"}

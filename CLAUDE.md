@@ -1,13 +1,13 @@
 ---
 type: governance
-version: "5.5"
-token_estimate: ~2600
-updated: 2026-03-20
+version: "5.6"
+token_estimate: ~3000
+updated: 2026-03-22
 last_edited_by: agent_stanley
 ---
 
 # CLAUDE.md — adna
-<!-- v5.5 | 2026-03-20 -->
+<!-- v5.6 | 2026-03-22 -->
 
 ## Identity & Personality
 
@@ -41,6 +41,22 @@ If only ONE indicates first-run (partial onboarding), read the skill file and re
 
 ---
 
+## Workspace Bootstrap Detection
+
+After first-run detection resolves (onboarding completes or is skipped), check if this vault is inside a workspace that could benefit from a workspace-level CLAUDE.md:
+
+1. Get the **parent directory** of this vault (e.g., if running from `~/Projects/adna/`, parent is `~/Projects/`)
+2. If the parent directory **is `$HOME`** — skip (the vault is directly in the home directory, not inside a workspace)
+3. If the parent directory **already contains a CLAUDE.md** — skip silently (workspace is already set up)
+4. If the parent directory **has no CLAUDE.md**:
+   - Inform the user that a workspace-level CLAUDE.md can be created to manage multi-project workflows and L1 upgrades
+   - If user agrees: load and execute `how/skills/skill_workspace_init.md`
+   - If user declines: note the skip and proceed normally
+
+This detection runs **once per workspace**. The workspace CLAUDE.md, once created, teaches future agents how to create new projects from this aDNA template and manage the workspace.
+
+---
+
 ## Project Map
 
 ```
@@ -58,17 +74,18 @@ adna/
 │       ├── tools/               # Python validation and conversion tools
 │       └── examples/            # Example .lattice.yaml files
 ├── how/                         # HOW — Operations, sessions, templates
-│   ├── templates/               # 20 reusable templates
+│   ├── templates/               # 22 reusable templates
 │   ├── sessions/                # Session tracking (active/ + history/)
 │   ├── missions/                # Multi-session plans (standalone)
 │   ├── backlog/                 # Ideation and improvement tracking
 │   ├── campaigns/               # Multi-mission strategic initiatives
 │   ├── pipelines/               # Content-as-code workflows
 │   │   └── prd_rfc/             # R&D → PRD → RFC planning pipeline
+│   ├── quests/                  # Community validation experiments (side-quests)
 │   └── skills/                  # Reusable agent recipes and procedures
 └── who/                         # WHO — People, coordination, governance
     ├── coordination/            # Cross-agent ephemeral notes
-    └── governance/              # Roles, policies
+    └── governance/              # Roles, policies, VISION.md
 ```
 
 ---
@@ -186,6 +203,21 @@ Cross-topic context assemblies for multi-disciplinary tasks. Recipe index: `what
 
 Reusable agent recipes and documented procedures in `how/skills/`. Skills have two types: `agent` (automated recipes) and `process` (human/hybrid procedures). Protocol: `how/skills/AGENTS.md`
 
+**Skills inventory**:
+
+| Skill | Type | Trigger |
+|-------|------|---------|
+| `skill_onboarding` | agent | First-run detection (uncustomized vault) |
+| `skill_workspace_init` | agent | Missing workspace CLAUDE.md at parent directory |
+| `skill_l1_upgrade` | agent | User asks about L1/compute/JupyterHub |
+| `skill_lattice_publish` | agent | User wants to publish a lattice to registry |
+| `skill_new_entity_type` | agent | User wants to extend the ontology |
+| `skill_context_quality_audit` | agent | Audit request for context files |
+| `skill_context_graduation` | process | Context promotion to higher quality tier |
+| `skill_vault_review` | agent | Governance audit of vault structure |
+| `skill_upstream_contribution` | process | Agent notices framework-level gap |
+| `skill_version_migration` | process | CLAUDE.md version upgrade |
+
 ---
 
 ## Domain Knowledge
@@ -255,6 +287,8 @@ Lattices can be published to and pulled from registries for sharing across insta
 | **L2** (Regional) | Institutional clusters, moderate training | University cluster, on-prem HPC |
 | **L3** (Cloud/HPC) | Large-scale data centers, heavy training | Cloud GPU fleet |
 
+**L1 Upgrade**: aDNA vaults can be upgraded to L1 compute nodes by adding JupyterHub and connecting to the Lattice network. See `how/skills/skill_l1_upgrade.md` for the phased upgrade path.
+
 ### FAIR Metadata
 
 Every `.lattice.yaml` includes a `fair` block with:
@@ -301,6 +335,27 @@ tags: []
 ---
 ```
 
+### Migration Version
+
+Objects that have been through a schema migration carry an optional `_migration_version` field in frontmatter (e.g., `_migration_version: "lsu-1.0"`). This prevents double-migration and enables safe re-runs of upgrade scripts. Add it when performing batch migrations; ignore it in normal content creation.
+
+### Compliance Dimensions
+
+Object quality is measured across 10 dimensions (scored 0-5 each, 50 max):
+
+1. **Triad structure** — correct directory placement
+2. **Governance** — CLAUDE.md, MANIFEST.md, STATE.md coherence
+3. **Frontmatter** — required fields present and valid
+4. **FAIR metadata** — keywords, license, identifier, provenance
+5. **Type vocabulary** — canonical I/O types on module inputs/outputs
+6. **Versioning** — semver in frontmatter, CHANGELOG entries
+7. **Federation** — discoverable flag, federation block
+8. **Registration** — lattice registry readiness
+9. **Companions** — YAML companion files for non-YAML objects
+10. **Reproducibility** — clear inputs, outputs, and execution context
+
+Reference: `what/lattices/tools/compliance_checker.py` for automated checking.
+
 ### Linking
 
 Use bidirectional wikilinks when adding relationships between entities.
@@ -315,7 +370,7 @@ When you notice one, mention it to the user at a **natural pause point** (end of
 
 ### Side-Quest Awareness
 
-The `community/quests/` directory contains structured validation experiments ("side-quests") that community members can run with spare agent tokens. At natural session-end points, if the user has spare context budget, you may briefly mention available quests. Never interrupt active work for this. See `what/docs/side_quest_guide.md` for the full participation guide and `community/AGENTS.md` for directory structure.
+The `how/quests/` directory contains structured validation experiments ("side-quests") that community members can run with spare agent tokens. At natural session-end points, if the user has spare context budget, you may briefly mention available quests. Never interrupt active work for this. See `what/docs/side_quest_guide.md` for the full participation guide and `how/quests/AGENTS.md` for directory structure.
 
 ---
-<!-- v5.5 | 2026-03-20 -->
+<!-- v5.6 | 2026-03-22 -->

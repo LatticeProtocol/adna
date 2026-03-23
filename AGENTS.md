@@ -28,7 +28,7 @@ adna/
 ├── what/        # WHAT — Knowledge objects, context library, decisions, docs, lattices
 ├── how/         # HOW — Campaigns, missions, sessions, templates, pipelines, skills, backlog
 ├── who/         # WHO — Coordination, governance (extend with team/, customers/, etc.)
-└── community/   # Community-contributed validation experiments and results
+│   └── quests/  # Community-contributed validation experiments and results
 ```
 
 **Navigation**: Read this file → follow the Layer References below into the triad leg matching your task → drill into specific subdirectories as needed. Each AGENTS.md narrows context progressively.

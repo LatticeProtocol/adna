@@ -67,9 +67,9 @@ Cross-references `federation_design` from the Design section. For multi-node wor
 
 | Recipe | Topics Used | Subtopics (Standard Load) | ~Tokens | Use When |
 |--------|------------|---------------------------|---------|----------|
-| `system_setup` | system_configuration | agent_protocol, vault_architecture, config_cascade | ~5.2K | Setting up a new workspace, vault, or project from scratch |
-| `agent_onboarding` | system_configuration | agent_protocol, memory_integration, vault_architecture | ~6.1K | Onboarding a new agent to an existing vault |
-| `orchestration_setup` | system_configuration | orchestration_tiers, agentdb | ~4K | Designing multi-agent workflows, model routing, or tier-based execution |
+| `system_setup` | system_configuration + who/governance | vault_architecture, config_cascade, `governance_agent_protocol.md` | ~5.2K | Setting up a new workspace, vault, or project from scratch |
+| `agent_onboarding` | system_configuration + who/governance | `governance_agent_protocol.md`, memory_integration, vault_architecture | ~6.1K | Onboarding a new agent to an existing vault |
+| `orchestration_setup` | system_configuration + how/skills | `skill_orchestration_tiers.md`, agentdb | ~4K | Designing multi-agent workflows, model routing, or tier-based execution |
 | `operational_debugging` | system_configuration | config_cascade, hook_system, memory_integration | ~5.9K | Troubleshooting config inheritance, hook failures, or memory issues |
 
 Candidates: `standard_compliance_audit` (type_vocabulary + fair_mapping + object_standards_overview, ~6.5K) for verifying objects meet aDNA standards.

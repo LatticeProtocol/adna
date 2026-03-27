@@ -19,6 +19,7 @@ Team governance for this project. Defines roles, decision authority, and operati
 | `governance_roles.md` | Team members, responsibilities, and areas of ownership |
 | `governance_decision_authority.md` | Decision authority matrix — who approves what category of change |
 | `governance_policies.md` | Operational policies — collision prevention, naming, sessions, escalation |
+| `governance_agent_protocol.md` | Agent behavioral contract — partnership model, challenge phase, autonomy framework |
 
 Create governance files as the project matures. Start with roles and policies, add decision authority when the team grows.
 

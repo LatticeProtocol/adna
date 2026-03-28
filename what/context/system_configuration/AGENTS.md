@@ -2,8 +2,8 @@
 type: directory_index
 created: 2026-03-27
 updated: 2026-03-27
-token_estimate: 9700
-last_edited_by: agent_berthier
+token_estimate: 12500
+last_edited_by: agent_aria
 tags: [directory_index, context, system_configuration]
 ---
 
@@ -30,17 +30,17 @@ This topic is part of a **cross-triad domain** (see ADR-003). Governance and ope
 
 | # | Subtopic | File | ~Tokens | Subtype | Key Content |
 |---|----------|------|---------|---------|-------------|
-| 1 | Vault Architecture | `context_system_configuration_vault_architecture.md` | ~1,800 | context_guide | Multi-vault separation, _meta/ routing, .claude/ read-only, workspace convention |
-| 2 | Config Cascade | `context_system_configuration_config_cascade.md` | ~1,500 | context_core | CLAUDE.md inheritance, rules modularization, settings layering, token budgets |
-| 3 | Hook System | `context_system_configuration_hook_system.md` | ~2,000 | context_guide | 6 lifecycle events, guard pattern, auto-approve, pre-compaction, async vs blocking |
-| 4 | AgentDB | `context_system_configuration_agentdb.md` | ~1,900 | context_guide | SQLite memory, absolute paths, multi-level isolation, learnings, contracts, schema |
-| 5 | Memory Integration | `context_system_configuration_memory_integration.md` | ~2,400 | context_core | Four persistence layers, auto-memory vs CLAUDE.md, learnings vs AgentDB boundaries |
+| 1 | Vault Architecture | `context_system_configuration_vault_architecture.md` | ~2,500 | context_guide | Multi-vault separation, _meta/ routing, .claude/ read-only, workspace convention |
+| 2 | Config Cascade | `context_system_configuration_config_cascade.md` | ~2,000 | context_core | CLAUDE.md inheritance, rules modularization, settings layering, token budgets |
+| 3 | Hook System | `context_system_configuration_hook_system.md` | ~2,500 | context_guide | 6 lifecycle events, guard pattern, auto-approve, pre-compaction, async vs blocking |
+| 4 | AgentDB | `context_system_configuration_agentdb.md` | ~2,500 | context_guide | SQLite memory, absolute paths, multi-level isolation, learnings, contracts, schema |
+| 5 | Memory Integration | `context_system_configuration_memory_integration.md` | ~3,000 | context_core | Four persistence layers, auto-memory vs CLAUDE.md, learnings vs AgentDB boundaries |
 
 ## Total Token Budget
 
-~9,600 tokens to load all subtopics. Typical session loads 2-3 subtopics (~3K-5K tokens).
+~12,500 tokens to load all subtopics. Typical session loads 2-3 subtopics (~4K-5K tokens).
 
-For the full system picture (~13K tokens), also load:
+For the full system picture (~16K tokens), also load:
 - `who/governance/governance_agent_protocol.md` (~1,900 tokens)
 - `how/skills/skill_orchestration_tiers.md` (~2,100 tokens)
 

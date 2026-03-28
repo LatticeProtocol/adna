@@ -7,7 +7,7 @@ updated: 2026-03-27
 sources: ["aDNA Standard v2.2", "Obsidian vault patterns", "Claude Code project scoping"]
 context_version: "1.0"
 token_estimate: ~2500
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 tags: [context, system_configuration, vault_architecture, multi_vault, organization]
 ---
 

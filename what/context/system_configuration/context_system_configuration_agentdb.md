@@ -7,7 +7,7 @@ updated: 2026-03-27
 sources: ["AgentDB implementation patterns", "SQLite best practices", "aDNA operational protocols"]
 context_version: "1.0"
 token_estimate: ~2500
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 tags: [context, system_configuration, agentdb, sqlite, operational_memory, persistence]
 ---
 

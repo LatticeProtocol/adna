@@ -3,7 +3,7 @@ type: governance
 created: 2026-03-27
 updated: 2026-03-27
 status: active
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 tags: [governance, agent_protocol, partnership, autonomy]
 ---
 

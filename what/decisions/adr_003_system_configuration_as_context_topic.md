@@ -6,7 +6,7 @@ title: "System Configuration as Cross-Triad Domain Topic"
 status: proposed
 created: 2026-03-27
 updated: 2026-03-27
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 supersedes:
 superseded_by:
 tags: [adr, decision, system_configuration, context, triad]

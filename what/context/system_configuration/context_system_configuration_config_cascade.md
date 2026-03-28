@@ -7,7 +7,7 @@ updated: 2026-03-27
 sources: ["Claude Code documentation", "aDNA Standard v2.2", "Claude Code settings hierarchy"]
 context_version: "1.0"
 token_estimate: ~2000
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 tags: [context, system_configuration, config_cascade, claude_md, inheritance]
 ---
 

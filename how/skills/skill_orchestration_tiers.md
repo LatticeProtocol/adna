@@ -6,7 +6,7 @@ updated: 2026-03-27
 status: active
 category: operations
 trigger: "Multi-file tasks, tier classification, agent spawning, model routing decisions"
-last_edited_by: agent_berthier
+last_edited_by: agent_aria
 tags: [skill, orchestration, tiers, model_routing, parallel, agents]
 requirements:
   tools: ["Claude Code agent spawning", "AgentDB for contracts"]

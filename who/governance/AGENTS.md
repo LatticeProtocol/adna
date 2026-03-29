@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-02-19
-last_edited_by: agent_stanley
+updated: 2026-03-28
+last_edited_by: agent_aria
 tags: [directory_index, governance]
 ---
 

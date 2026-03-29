@@ -2,17 +2,17 @@
 type: decision
 adr_id: adr_003
 adr_number: 3
-title: "System Configuration as Cross-Triad Domain Topic"
+title: "Claude Code Runtime as Cross-Triad Context Topic"
 status: proposed
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 last_edited_by: agent_aria
 supersedes:
 superseded_by:
-tags: [adr, decision, system_configuration, context, triad]
+tags: [adr, decision, claude_code, context, triad, runtime]
 ---
 
-# ADR-003: System Configuration as Cross-Triad Domain Topic
+# ADR-003: Claude Code Runtime as Cross-Triad Context Topic
 
 ## Status
 
@@ -21,6 +21,8 @@ Proposed
 ## Context
 
 The aDNA context library documents the knowledge architecture itself (adna_core, prompt_engineering, lattice_basics, object_standards) but had no context about the operating environment agents run in — the Claude Code infrastructure that enables the knowledge architecture to function.
+
+**Runtime scope:** This ADR documents a decision about the Claude Code runtime specifically. The content in `what/context/claude_code/` is runtime-specific — it documents how Claude Code implements patterns that underpin aDNA. This topic establishes the precedent for runtime-specific context topics: each runtime an aDNA project uses may have its own context topic documenting its implementation details.
 
 This infrastructure includes: configuration inheritance (CLAUDE.md cascade), lifecycle hooks, persistent agent memory (AgentDB), multi-vault organization, auto-memory integration, orchestration tiers, and agent behavioral protocol.
 
@@ -38,8 +40,9 @@ Adopt option 3: distribute system configuration content across the triad accordi
 Placement:
 - **who/governance/governance_agent_protocol.md** — agent behavioral contract (WHO decides how agents behave?)
 - **how/skills/skill_orchestration_tiers.md** — tier-based execution routing (HOW does work get done?)
-- **what/context/system_configuration/** — 5 context files for technical knowledge (WHAT is the config system? the hook system? AgentDB? memory? vault architecture?)
-- **what/lattices/examples/system_configuration.lattice.yaml** — context_graph lattice connecting all 8 components with directed edges showing dependency flow
+- **how/skills/skill_sqlite_persistence.md** — SQLite persistence pattern (HOW does state persist?)
+- **what/context/claude_code/** — 5 context files for technical knowledge (WHAT is the config system? the hook system? AgentDB? memory? vault architecture?)
+- **what/lattices/examples/claude_code.lattice.yaml** — context_graph lattice connecting all 8 components with directed edges showing dependency flow
 
 The lattice provides the unified navigation layer: each node references its triad-correct file via `ref`, and edges show how config flows into hooks, hooks trigger AgentDB, AgentDB feeds memory, etc.
 
@@ -50,6 +53,7 @@ The lattice provides the unified navigation layer: each node references its tria
 - The context_graph lattice provides navigability despite distribution — agents can load the lattice to understand the full system topology
 - Demonstrates a reusable pattern: cross-triad domains can be modeled as lattices with nodes pointing to files across the triad
 - Complements existing adna_core context — the `adna_triad` node in the lattice explicitly connects to the paradigm overview
+- Establishes the precedent for runtime-specific context topics: other runtimes (custom orchestrators, local inference engines) can follow the same pattern
 
 ### Negative
 - Higher complexity than a single context topic — 3 different file types (governance doc, skill, context files) instead of one

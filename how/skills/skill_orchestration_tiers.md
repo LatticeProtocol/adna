@@ -2,16 +2,16 @@
 type: skill
 skill_type: process
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 status: active
 category: operations
 trigger: "Multi-file tasks, tier classification, agent spawning, model routing decisions"
 last_edited_by: agent_aria
 tags: [skill, orchestration, tiers, model_routing, parallel, agents]
 requirements:
-  tools: ["Claude Code agent spawning", "AgentDB for contracts"]
-  context: ["what/context/system_configuration/"]
-  permissions: ["Task tool", "Agent tool"]
+  tools: ["Agent spawning capability", "Shared coordination store (see skill_sqlite_persistence.md)"]
+  context: ["what/context/claude_code/"]
+  permissions: ["Ability to spawn sub-agents", "Read/write project state"]
 ---
 
 # Skill: Orchestration Tiers
@@ -87,7 +87,7 @@ Always load quality-related skills alongside implementation skills.
 No ceremony needed. One agent, one pass.
 
 **Tier 2 — Contract and delegate:**
-1. Write contract to AgentDB (goal, files, tier, success criteria, skills, branch)
+1. Write contract to shared coordination store (see `how/skills/skill_sqlite_persistence.md`) (goal, files, tier, success criteria, skills, branch)
 2. Spawn surgeon agent(s) — parallel when files are independent
 3. Review surgeon output
 4. Run quality gates (tests, lint, typecheck)
@@ -96,7 +96,7 @@ No ceremony needed. One agent, one pass.
 The orchestrator does NOT write code. It writes contracts and reviews output.
 
 **Tier 3 — Contract, delegate, and verify:**
-1. Write contract to AgentDB
+1. Write contract to shared coordination store (see `how/skills/skill_sqlite_persistence.md`)
 2. Spawn surgeon agent(s) — parallel when files are independent
 3. Spawn adversary agent to review surgeon output
 4. If adversary rejects: return to surgeons with feedback (max 3 iterations)
@@ -144,7 +144,7 @@ Only skip parallelization when the task is one step, steps are dependent (output
 | Output | Type | Description |
 |--------|------|-------------|
 | Tier classification | Decision | Which tier the task falls into |
-| Contract | AgentDB record | Goal, files, tier, success criteria for tier 2+ |
+| Contract | Coordination store record | Goal, files, tier, success criteria for tier 2+ |
 | Completed work | Files | Implemented changes passing quality gates |
 | Quality gate results | Evidence | Test output, lint output, typecheck output |
 
@@ -154,7 +154,7 @@ Only skip parallelization when the task is one step, steps are dependent (output
 |-------|-------|------------|
 | Adversary rejects (tier 3) | Quality gate failure | Return to surgeons with feedback, max 3 retries then escalate to human |
 | Tests fail after changes | Implementation bug | Diagnose, fix, re-execute. Compare against baseline to distinguish regressions from pre-existing failures |
-| Blocked on missing info | Unclear scope or dependency | Checkpoint to AgentDB and STOP. Ask human. Do not guess. |
+| Blocked on missing info | Unclear scope or dependency | Checkpoint to shared coordination store and STOP. Ask human. Do not guess. |
 | Scope creep detected | Agent touching files outside contract | Checkpoint and STOP. Orchestrator approves scope expansion or rejects |
 | Model routing unclear | Task doesn't fit a clean category | Default to most capable model. Downgrade after first pass if overkill |
 
@@ -167,7 +167,7 @@ Only skip parallelization when the task is one step, steps are dependent (output
 | No tier classification | Under-scoped work, missed edge cases | Count files, classify, then route |
 | Skipping skill loading | Improvised approaches miss proven patterns | Load relevant skills before acting |
 | One model for everything | Expensive model on lint = waste; cheap model on design = risk | Route by task type |
-| No contract for multi-agent work | Agents duplicate effort or conflict | Write contract to shared store |
+| No contract for multi-agent work | Agents duplicate effort or conflict | Write contract to shared coordination store |
 | No baseline test run | Cannot distinguish pre-existing failures from regressions | Run tests before and after changes |
 | Committing without quality gates | Broken code reaches the branch | Run gates before every commit |
 

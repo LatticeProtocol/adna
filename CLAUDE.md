@@ -237,6 +237,8 @@ Reusable agent recipes and documented procedures in `how/skills/`. Skills have t
 | `skill_vault_review` | agent | Governance audit of vault structure |
 | `skill_upstream_contribution` | process | Agent notices framework-level gap |
 | `skill_version_migration` | process | CLAUDE.md version upgrade |
+| `skill_sqlite_persistence` | process | Multiple agents, sessions hard to query, learnings accumulating without validation signal |
+| `skill_orchestration_tiers` | process | Multi-file tasks, tier classification, agent spawning, model routing decisions |
 
 ---
 

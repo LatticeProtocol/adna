@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-03-17
-last_edited_by: agent_stanley
+updated: 2026-03-28
+last_edited_by: agent_aria
 tags: [directory_index, context]
 ---
 
@@ -141,7 +141,7 @@ Pre-defined context assemblies for multi-disciplinary tasks. See `context_recipe
 | adna_core | 10 | ~29,500 | 4.2 | active |
 | lattice_basics | 2 | ~6,000 | 4.0 | active |
 | object_standards | 1 | ~3,200 | 3.8 | active |
-| system_configuration | 5 (+2 cross-triad) | ~12,500 | — | active |
+| claude_code (Claude Code runtime) | 4 | ~10,000 | — | active |
 
 ## Load/Skip Decision
 

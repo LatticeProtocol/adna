@@ -1,17 +1,20 @@
 ---
 type: context_guide
-topic: system_configuration
+topic: claude_code
 subtopic: vault_architecture
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 sources: ["aDNA Standard v2.2", "Obsidian vault patterns", "Claude Code project scoping"]
 context_version: "1.0"
 token_estimate: ~2500
 last_edited_by: agent_aria
-tags: [context, system_configuration, vault_architecture, multi_vault, organization]
+runtime: claude_code
+tags: [context, claude_code, vault_architecture, multi_vault, organization]
 ---
 
 # System Configuration: Vault Architecture
+
+> **Runtime scope:** This file documents the Claude Code implementation. The underlying pattern applies to any runtime; only the implementation details are Claude Code-specific.
 
 Multi-vault organization patterns for AI-native projects where humans browse in Obsidian and agents operate via Claude Code.
 

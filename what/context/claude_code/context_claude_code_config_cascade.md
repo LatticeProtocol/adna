@@ -1,17 +1,20 @@
 ---
 type: context_core
-topic: system_configuration
+topic: claude_code
 subtopic: config_cascade
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 sources: ["Claude Code documentation", "aDNA Standard v2.2", "Claude Code settings hierarchy"]
 context_version: "1.0"
 token_estimate: ~2000
 last_edited_by: agent_aria
-tags: [context, system_configuration, config_cascade, claude_md, inheritance]
+runtime: claude_code
+tags: [context, claude_code, config_cascade, claude_md, inheritance]
 ---
 
 # System Configuration: Config Cascade
+
+> **Runtime scope:** This file documents the Claude Code implementation. The underlying pattern applies to any runtime; only the implementation details are Claude Code-specific.
 
 How CLAUDE.md files, rules, and settings layer from global scope down to individual projects. Understanding this cascade is essential for keeping agent context lean, non-redundant, and correctly scoped.
 

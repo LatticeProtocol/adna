@@ -1,17 +1,20 @@
 ---
 type: context_guide
-topic: system_configuration
+topic: claude_code
 subtopic: hook_system
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 sources: ["Claude Code hooks documentation", "aDNA operational patterns", "Shell scripting best practices"]
 context_version: "1.0"
 token_estimate: ~2500
 last_edited_by: agent_aria
-tags: [context, system_configuration, hooks, lifecycle, automation, guard]
+runtime: claude_code
+tags: [context, claude_code, hooks, lifecycle, automation, guard]
 ---
 
 # System Configuration: Hook System
+
+> **Runtime scope:** This file documents the Claude Code implementation. The underlying pattern applies to any runtime; only the implementation details are Claude Code-specific.
 
 Claude Code fires shell scripts at six lifecycle events, enabling guardrails, automation, and state management without modifying the agent itself. Hooks are the primary mechanism for enforcing vault invariants at runtime.
 

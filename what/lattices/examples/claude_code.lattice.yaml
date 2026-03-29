@@ -1,13 +1,15 @@
 lattice:
-  name: system_configuration
+  name: claude_code
   version: "1.0.0"
   lattice_type: context_graph
+  runtime: claude_code
   description: >
-    Context graph modeling the Claude Code operating environment as a directed
-    graph. Maps how system components — config cascade, hook system, AgentDB,
-    memory layers, vault architecture, and orchestration tiers — relate to and
-    depend on each other. Complements the aDNA core paradigm by documenting the
-    infrastructure layer that enables the knowledge architecture.
+    Context graph for the Claude Code runtime implementation of aDNA. Nodes
+    reference Claude Code-specific documentation; the patterns they document
+    apply to any runtime. Maps how system components — config cascade, hook
+    system, memory layers, vault architecture, and orchestration tiers — relate
+    to and depend on each other.
+  updated: "2026-03-28"
   execution:
     mode: reasoning
     runtime: local
@@ -19,19 +21,19 @@ lattice:
       description: "Behavioral contract defining how agents operate — startup checklist, session tracking, execution hierarchy"
     - id: config_cascade
       type: dataset
-      ref: "what/context/system_configuration/context_system_configuration_config_cascade.md"
+      ref: "what/context/claude_code/context_claude_code_config_cascade.md"
       description: "CLAUDE.md inheritance chain and settings hierarchy — global, vault, project levels"
     - id: hook_system
       type: process
-      ref: "what/context/system_configuration/context_system_configuration_hook_system.md"
+      ref: "what/context/claude_code/context_claude_code_hook_system.md"
       description: "Six lifecycle hooks enforcing constraints at session boundaries and commit gates"
     - id: agentdb
       type: dataset
-      ref: "what/context/system_configuration/context_system_configuration_agentdb.md"
+      ref: "what/context/claude_code/context_claude_code_agentdb.md"
       description: "SQLite operational memory for cross-session state, contracts, and checkpoints"
     - id: memory_layers
       type: reasoning
-      ref: "what/context/system_configuration/context_system_configuration_memory_integration.md"
+      ref: "what/context/claude_code/context_claude_code_memory_integration.md"
       description: "Four persistence layers composing into unified memory — synthesizes across operational, session, project, and global state"
       prompt: >
         Given the four memory persistence layers (CLAUDE.md project memory,
@@ -40,7 +42,7 @@ lattice:
         authority for a given piece of state and flag any conflicts.
     - id: vault_architecture
       type: dataset
-      ref: "what/context/system_configuration/context_system_configuration_vault_architecture.md"
+      ref: "what/context/claude_code/context_claude_code_vault_architecture.md"
       description: "Multi-vault structure, _meta routing, output rules, and .claude read-only invariant"
     - id: orchestration_tiers
       type: process
@@ -86,7 +88,7 @@ lattice:
     creators:
       - "Lattice Labs"
     keywords:
-      - system configuration
+      - claude code
       - context graph
       - operating environment
       - claude code

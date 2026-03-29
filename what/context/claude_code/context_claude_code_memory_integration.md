@@ -1,17 +1,20 @@
 ---
 type: context_core
-topic: system_configuration
+topic: claude_code
 subtopic: memory_integration
 created: 2026-03-27
-updated: 2026-03-27
+updated: 2026-03-28
 sources: ["Claude Code auto-memory documentation", "aDNA operational protocols", "AgentDB implementation patterns"]
 context_version: "1.0"
 token_estimate: ~3000
 last_edited_by: agent_aria
-tags: [context, system_configuration, memory, persistence, auto_memory, agentdb, learnings]
+runtime: claude_code
+tags: [context, claude_code, memory, persistence, auto_memory, agentdb, learnings]
 ---
 
 # System Configuration: Memory Integration
+
+> **Runtime scope:** This file documents the Claude Code implementation. The underlying pattern applies to any runtime; only the implementation details are Claude Code-specific.
 
 AI-native projects need four distinct persistence layers, each serving a different purpose. No single system handles all needs. This file documents how Claude Code's native auto-memory composes with aDNA's custom persistence to form a complete memory architecture.
 

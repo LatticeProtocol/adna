@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-03-17
+updated: 2026-04-03
 last_edited_by: agent_stanley
 tags: [directory_index, campaign]
 ---
@@ -100,7 +100,7 @@ strategic_compass: <optional — link to strategic compass document>
 ### 3. Execution
 
 1. Execute missions in dependency order
-2. Phase gates: verify exit criteria before advancing to next phase
+2. **Phase gates**: verify exit criteria before advancing to next phase. Gates should have verifiable criteria — quantified where possible, not subjective assessments. Present completion evidence to the user before advancing.
 3. Update campaign master document with progress after each mission
 4. Checkpoint reviews at phase boundaries
 5. Risk register updates as issues surface
@@ -118,11 +118,19 @@ On mission completion, execute this 5-step protocol:
 ### 5. Completion
 
 1. Final validation mission (cross-system coherence)
-2. Run context graduation skill (`skill_context_graduation`) — promote reusable campaign knowledge to context library
-3. Fill completion summary in campaign master document
-4. Set `status: completed`
-5. Scope follow-up campaigns if applicable
-6. Update `how/STATE.md`
+2. Fill **Completion Summary** in campaign master document (Deliverables, Descoped, Key Findings, Scope Changes, Follow-Up)
+3. Append a **Campaign AAR** — same 5-line format as mission AARs (`how/templates/template_aar_lightweight.md`). Summarize at campaign level: what worked across all missions, what didn't, key finding, process change, follow-up.
+4. **Context graduation** (AFTER summary + AAR, BEFORE status:completed) — run `skill_context_graduation` to promote reusable campaign knowledge to context library
+5. Set `status: completed`
+6. Scope follow-up campaigns if applicable
+7. Update `how/STATE.md`
+
+### Git-Aware State Verification
+
+Before updating campaign status fields (`status`, `phase`):
+1. Run `git pull` to ensure you have the latest state
+2. If the file was modified since your last read, re-read it before writing
+3. After updating status, commit promptly — status changes are coordination signals
 
 ### 6. Abandonment
 

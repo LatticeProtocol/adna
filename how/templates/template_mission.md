@@ -52,3 +52,13 @@ Any cross-cutting observations, risks, or decisions made during execution.
 
 ### Scope Changes
 - {Tasks added or removed during execution, and why}
+
+## AAR
+
+*Mandatory before setting `status: completed`. See `how/templates/template_aar_lightweight.md`.*
+
+- **Worked**: [what went well — one line]
+- **Didn't**: [what didn't work or surprised us — one line]
+- **Finding**: [key insight or discovery — one line]
+- **Change**: [process change for next time — one line, or "none"]
+- **Follow-up**: [link to backlog/mission/issue, or "none"]

@@ -1,7 +1,7 @@
 ---
 type: directory_index
 created: 2026-02-17
-updated: 2026-03-17
+updated: 2026-04-03
 last_edited_by: agent_stanley
 tags: [directory_index, missions]
 ---
@@ -72,8 +72,17 @@ Template: `how/templates/template_mission.md`
 
 ### Completing a plan
 1. When all tasks are `completed` (or `skipped` with justification)
-2. Set plan `status: completed` and update `updated` date
-3. Plan file stays in `how/missions/` as a historical record
+2. **Append a lightweight AAR** — mandatory. Use the 5-line format from `how/templates/template_aar_lightweight.md`: Worked / Didn't / Finding / Change / Follow-up. No mission may transition to `status: completed` without this section.
+3. Fill out **Completion Summary** (Deliverables, Descoped, Key Findings, Scope Changes)
+4. Set plan `status: completed` and update `updated` date
+5. Plan file stays in `how/missions/` as a historical record
+
+### Git-Aware State Verification
+
+Before updating mission status fields (`status`, task `status`):
+1. Run `git pull` to ensure you have the latest state
+2. If the file was modified since your last read, re-read it before writing
+3. After updating status, commit promptly — status changes are coordination signals
 
 ### Abandoning a plan
 1. If a plan is no longer relevant, set `status: abandoned`

@@ -156,6 +156,29 @@ Anomalies and blockers propagate upward through the execution hierarchy:
 
 ---
 
+## Standing Orders
+
+These rules apply to every session, mission, and campaign.
+
+1. **Phase gates are human gates.** Never auto-advance between campaign phases without explicit user approval.
+2. **Destructive actions require confirmation.** Deleting files, overwriting shared configs, or abandoning missions — ask first.
+3. **Context budget is doctrine.** Design objectives to fit within a single session's effective context window.
+4. **Local context over global context.** Read the AGENTS.md in the directory you're working in before loading broader context. The local file is authoritative for that space.
+5. **Every mission gets an AAR.** Before setting any mission to `status: completed`, append a 5-line AAR (Worked/Didn't/Finding/Change/Follow-up). Template: `how/templates/template_aar_lightweight.md`. No exceptions.
+6. **Archive, never delete.** Campaign docs, mission files, session records — permanent audit trail. Set `status: abandoned` or `status: completed`, never remove.
+
+## Git Coordination
+
+Git is the coordination bus for multi-user and multi-agent projects.
+
+- **Pull at session start.** Run `git pull` before modifying any files. Check for merge conflicts.
+- **Commit after significant edits.** Do not rely on auto-commit timing. After modifying governance files, mission status, or campaign docs — commit immediately.
+- **Push after committing.** Run `git push` after each explicit commit. This closes the revert window.
+- **Check git log for context.** Before starting work, run `git log --oneline -10` to see recent activity from other agents or users.
+- **Truth hierarchy**: git HEAD > cached file read > memory > assumption. If your memory says a mission is "in_progress" but git shows it "completed", trust git.
+
+---
+
 ## Agent Protocol
 
 ### Startup Checklist

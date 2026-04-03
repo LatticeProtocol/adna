@@ -31,13 +31,15 @@ These templates are applied by Templater when creating a new file in the mapped 
 | `template_session.md` | Session tracking file | `how/sessions/active/` | `session` |
 | `template_skill.md` | Skill recipe or procedure | `how/skills/` | `skill` |
 
-### Manual-Apply Templates (8)
+### Manual-Apply Templates (10)
 
 These templates have no Templater auto-trigger. Copy their structure manually or use `Templater: Insert template` command:
 
 | Template | Target Type | Typical Location | Frontmatter `type` | Why No Trigger |
 |----------|------------|-----------------|-------------------|----------------|
-| `template_aar.md` | After-Action Review | `how/missions/artifacts/` | `artifact` | Artifacts dir contains mixed types |
+| `template_aar.md` | After-Action Review (full) | `how/missions/artifacts/` | `artifact` | Artifacts dir contains mixed types |
+| `template_aar_lightweight.md` | Lightweight 5-line AAR | any mission/campaign | `template` | Appended to existing files, not standalone |
+| `template_campaign_mission.md` | Campaign-linked mission | `how/campaigns/campaign_*/missions/` | `plan` | Campaign missions have campaign-specific fields |
 | `template_campaign_claude.md` | Per-campaign CLAUDE.md | `how/campaigns/campaign_*/` | `governance` | Glob patterns not supported by Templater |
 | `template_data_record.md` | Generic data record | varies | varies | Generic — no single target directory |
 | `template_folder_note.md` | Folder index note | any directory | `folder_note` | Used everywhere, can't map to one folder |

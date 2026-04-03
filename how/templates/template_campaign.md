@@ -7,6 +7,8 @@ status: planning
 phase_count: <N>
 mission_count: <N>
 estimated_sessions: "<min>-<max>"
+calibrated_sessions: "<min>-<max>"     # Post-compression estimate (see estimation guidance below)
+estimation_class: ""                   # infrastructure | governance-tight | governance-broad | content-novel
 priority: high | medium | low
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
@@ -132,3 +134,13 @@ tags: [campaign]
 
 ### Follow-Up Campaigns
 - [Scoped follow-up initiatives]
+
+## Campaign AAR
+
+*Mandatory before setting `status: completed`. See `how/templates/template_aar_lightweight.md`.*
+
+- **Worked**: [what went well across all missions — one line]
+- **Didn't**: [what didn't work or surprised us — one line]
+- **Finding**: [key insight or discovery — one line]
+- **Change**: [process change for next time — one line, or "none"]
+- **Follow-up**: [link to backlog/mission/issue, or "none"]

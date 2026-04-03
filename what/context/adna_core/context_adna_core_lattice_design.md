@@ -52,7 +52,7 @@ last_evaluated: 2026-02-20
 lattice:
   name: my_lattice                    # ^[a-z][a-z0-9_]*$ (required)
   version: "1.0.0"                    # semver (required)
-  lattice_type: pipeline              # enum: pipeline|agent|context_graph|workflow
+  lattice_type: pipeline              # enum: pipeline|agent|context_graph|workflow|skill|infrastructure|context_set
   description: "What this lattice does"
 
   execution:                          # Required

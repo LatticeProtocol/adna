@@ -2,11 +2,12 @@
 type: skill
 skill_type: agent
 created: 2026-03-22
-updated: 2026-03-23
-status: active
+updated: 2026-04-03
+status: deprecated
 category: onboarding
-trigger: "Template detection in CLAUDE.md identifies missing workspace-level CLAUDE.md at parent directory (typically ~/lattice/)"
+trigger: "DEPRECATED — root CLAUDE.md now ships pre-authored"
 last_edited_by: agent_stanley
+deprecation_note: "Replaced by the pre-authored root CLAUDE.md (2026-04-03 restructure). The root CLAUDE.md handles project creation and discovery directly — no workspace init step needed."
 tags: [skill, workspace, bootstrap, onboarding, multi-project, lattice]
 
 requirements:

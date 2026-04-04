@@ -1,0 +1,13 @@
+Agentic DNA (aDNA)
+Copyright (c) 2025-2026 Stanley Bishop
+Founding Architect: Stanley Bishop
+
+This repository contains the open standard type definitions for the Lattice
+Protocol: Module, Lattice, and Dataset. These types are licensed under MIT
+to enable interoperability and adoption across the federated AI ecosystem.
+
+The aDNA type system is intentionally open — network effects require open
+adoption. The protocol implementation that executes these types is separately
+licensed under BSL 1.1 in the lattice-protocol repository.
+
+For licensing inquiries: team@latlabs.io

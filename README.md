@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="Agentic-DNA — an open-source project template for humans and AI agents" width="100%">
+  <img src=".adna/what/assets/banner.jpg" alt="Agentic-DNA — an open-source project template for humans and AI agents" width="100%">
 </p>
 
 # Agentic-DNA

@@ -54,7 +54,7 @@ These files are excluded from git (`.gitignore`) because they contain machine-sp
 |--------|----|---------|-------------|
 | Dataview | `dataview` | Query frontmatter with TABLE/LIST/TASK | Use WHERE + LIMIT for performance |
 | Templater | `templater-obsidian` | Template engine with folder auto-triggers | 10 folder→template mappings |
-| Notebook Navigator | `notebook-navigator` | Folder-based notebook nav with icons + folder notes | Triad colors configured |
+| Notebook Navigator | `notebook-navigator` | Folder-based notebook nav with icons + folder notes | Triad colors configured. `folderNoteName: AGENTS` — folder notes are `AGENTS.md`, not `README.md` |
 
 ### Recommended (significant UX improvement)
 

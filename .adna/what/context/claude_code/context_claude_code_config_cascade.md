@@ -3,13 +3,21 @@ type: context_core
 topic: claude_code
 subtopic: config_cascade
 created: 2026-03-27
-updated: 2026-03-28
+updated: 2026-04-03
 sources: ["Claude Code documentation", "aDNA Standard v2.2", "Claude Code settings hierarchy"]
 context_version: "1.0"
 token_estimate: ~2000
-last_edited_by: agent_aria
+last_edited_by: agent_stanley
 runtime: claude_code
 tags: [context, claude_code, config_cascade, claude_md, inheritance]
+quality_score: 4.0
+signal_density: 4
+actionability: 5
+coverage_uniformity: 4
+source_diversity: 2
+cross_topic_coherence: 5
+freshness_category: stable
+last_evaluated: 2026-04-03
 ---
 
 # System Configuration: Config Cascade

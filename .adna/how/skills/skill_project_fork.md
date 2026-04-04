@@ -2,10 +2,10 @@
 type: skill
 skill_type: agent
 created: 2026-03-23
-updated: 2026-03-23
+updated: 2026-04-03
 status: active
 category: onboarding
-trigger: "Template detection in CLAUDE.md identifies role: template and user wants to create a new project"
+trigger: "Root CLAUDE.md project creation flow — user wants to create a new project"
 last_edited_by: agent_stanley
 tags: [skill, project, fork, onboarding, lattice]
 
@@ -19,38 +19,36 @@ requirements:
 
 ## Overview
 
-Creates a new aDNA project by forking the base template. The fork receives the full aDNA structure (triad, templates, skills, context library, lattice tools) without git history or Obsidian config from the base repo. The forked project's `MANIFEST.md` is prepared for first-run onboarding.
+Creates a new aDNA project by forking the `.adna/` base template. The fork receives the full aDNA structure (triad, templates, skills, context library, lattice tools) as a new project with its own git repository. The forked project's `MANIFEST.md` is prepared for first-run onboarding.
 
-This skill is called from two places:
-1. **Template detection flow** in the base `adna/` CLAUDE.md — when a user runs Claude Code in the template for the first time (or returns to create another project)
-2. **Workspace CLAUDE.md** — when a user asks to create a new project from the workspace level
+This skill is called from the **root CLAUDE.md** at `~/lattice/CLAUDE.md` when a user wants to create a new project.
 
 ## Trigger
 
-Invoked by the CLAUDE.md template detection flow or the workspace CLAUDE.md project creation procedure. Not triggered automatically — always called from another flow.
+Invoked by the root CLAUDE.md project creation flow. Not triggered automatically — always called from the root governance.
 
 ## Parameters
 
 | Parameter | Source | Required |
 |-----------|--------|----------|
-| `workspace_root` | Parent directory of adna/ (detected automatically) | Yes |
-| `adna_folder` | Basename of the aDNA template directory | Yes |
 | `carry_forward_answers` | Any project name/description already collected from the calling flow | No |
+
+The workspace root is always the directory containing this `.adna/` template (detected automatically). The template source is always `.adna/`.
 
 ## Requirements
 
 ### Tools/APIs
 - File copy (`cp -r`)
-- File deletion (`rm -rf .git/ .obsidian/`)
+- File deletion (`rm -rf .obsidian/plugins/ .obsidian/themes/`)
 - Git init (`git init`)
 - File read/write (MANIFEST.md frontmatter editing)
 
 ### Context Files
-- `MANIFEST.md` — to verify `role: template` in the source and strip it in the fork
+- `.adna/MANIFEST.md` — to verify `role: template` in the source and strip it in the fork
 
 ### Permissions
-- Write to the workspace root directory (parent of adna/)
-- Copy the full adna/ directory structure
+- Write to the workspace root directory (same level as `.adna/`)
+- Copy the `.adna/` directory structure
 
 ## Implementation
 
@@ -64,7 +62,7 @@ If `carry_forward_answers` are provided (from the calling flow), use them. Other
 Validate the project name:
 - Lowercase letters, digits, and underscores only
 - Must not collide with an existing directory in the workspace
-- Must not be `adna` (that's the template)
+- Must not be `.adna` (that's the base template)
 - Must not be `latlab` or `lattice-protocol` (infrastructure repos)
 
 ### Step 2: Confirm Target Location
@@ -72,7 +70,7 @@ Validate the project name:
 The target directory is `<workspace_root>/<project_name>.aDNA/` (the `.aDNA` suffix marks it as an aDNA project — see Standard §3.5).
 
 Report to the user:
-> "I'll create your project at `<workspace_root>/<project_name>.aDNA/`. This will fork the full aDNA structure — triad directories, templates, skills, context library, and lattice tools. The base template at `<adna_folder>/` stays untouched."
+> "I'll create your project at `<project_name>.aDNA/`. This will fork the full aDNA structure — triad directories, templates, skills, context library, and lattice tools. The base template at `.adna/` stays untouched."
 
 If the user explicitly requests no suffix, respect their preference.
 
@@ -81,9 +79,8 @@ Ask for confirmation before proceeding.
 ### Step 3: Fork the Template
 
 ```bash
-cp -r <adna_folder>/ <workspace_root>/<project_name>.aDNA/
-cd <workspace_root>/<project_name>.aDNA/
-rm -rf .git/
+cp -r .adna/ <project_name>.aDNA/
+cd <project_name>.aDNA/
 git init
 
 # Preserve portable Obsidian config (settings, appearance, snippets)
@@ -91,6 +88,8 @@ git init
 rm -rf .obsidian/plugins/ .obsidian/themes/
 rm -f .obsidian/workspace.json .obsidian/graph.json
 ```
+
+Note: `.adna/` has no `.git/` directory (it's inside the parent repo), so no git cleanup needed.
 
 This gives the new project:
 - The full `who/what/how/` triad structure
@@ -158,10 +157,9 @@ Confirm to the user:
 | Directory already exists | Name collision | Warn user, ask for different name |
 | Workspace not writable | Permissions issue | Suggest creating the directory manually or choosing a different location |
 | Copy fails | Disk space or permissions | Report the error with the specific path that failed |
-| adna/ doesn't have `role: template` | Not the canonical template | Warn the user — this may be an already-customized vault, not the base template |
+| .adna/ doesn't have `role: template` | Not the canonical template | Warn the user — the base template may be corrupted. Suggest `git pull` |
 
 ## Related
 
 - [[how/skills/skill_onboarding|skill_onboarding.md]] — Runs after fork to customize the new project
-- [[how/skills/skill_workspace_init|skill_workspace_init.md]] — Creates workspace CLAUDE.md (calls this skill for project creation)
 - [[what/docs/projects_folder_pattern|projects_folder_pattern.md]] — Workspace architecture documentation

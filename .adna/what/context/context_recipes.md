@@ -9,6 +9,14 @@ context_version: "2.0"
 token_estimate: ~1000
 last_edited_by: agent_aria
 tags: [context, recipes, assembly, cross-topic, claude_code]
+quality_score: 4.2
+signal_density: 4
+actionability: 5
+coverage_uniformity: 4
+source_diversity: 3
+cross_topic_coherence: 5
+freshness_category: stable
+last_evaluated: 2026-04-03
 ---
 
 # Context Library: Cross-Topic Assembly Recipes

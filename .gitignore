@@ -2,10 +2,13 @@
 .DS_Store
 Thumbs.db
 
+# User projects (each has its own git repo)
+*.aDNA/
+
 # Obsidian per-device (don't sync across clones)
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/graph.json
+.adna/.obsidian/workspace.json
+.adna/.obsidian/workspace-mobile.json
+.adna/.obsidian/graph.json
 
 # Python
 __pycache__/

@@ -3,13 +3,21 @@ type: context_guide
 topic: claude_code
 subtopic: hook_system
 created: 2026-03-27
-updated: 2026-03-28
+updated: 2026-04-03
 sources: ["Claude Code hooks documentation", "aDNA operational patterns", "Shell scripting best practices"]
 context_version: "1.0"
 token_estimate: ~2500
-last_edited_by: agent_aria
+last_edited_by: agent_stanley
 runtime: claude_code
 tags: [context, claude_code, hooks, lifecycle, automation, guard]
+quality_score: 4.2
+signal_density: 5
+actionability: 5
+coverage_uniformity: 4
+source_diversity: 2
+cross_topic_coherence: 5
+freshness_category: stable
+last_evaluated: 2026-04-03
 ---
 
 # System Configuration: Hook System

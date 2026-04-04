@@ -46,25 +46,25 @@ aDNA is a Markdown-based knowledge architecture — no build step, no dependenci
 
 ```bash
 # Clone the repo
-git clone https://github.com/LatticeProtocol/Agentic-DNA.git adna
-cd adna
+git clone https://github.com/LatticeProtocol/Agentic-DNA.git ~/lattice
+cd ~/lattice
 
-# Run setup (creates Obsidian config + validates structure)
-chmod +x setup.sh
-./setup.sh
+# Run setup (downloads Obsidian plugins for the template)
+chmod +x .adna/setup.sh
+./.adna/setup.sh
 
 # Option A: Browse in Obsidian
-# Open the adna/ folder as an Obsidian vault
+# Open the .adna/ folder as an Obsidian vault
 
 # Option B: Work with Claude Code
-# Open in terminal — CLAUDE.md auto-loads on session start
+# Run 'claude' — the root CLAUDE.md guides project creation
 ```
 
 ### Validation
 
 ```bash
 # Validate lattice YAML files
-python what/lattices/tools/lattice_validate.py what/lattices/examples/*.yaml
+python .adna/what/lattices/tools/lattice_validate.py .adna/what/lattices/examples/*.yaml
 ```
 
 ---

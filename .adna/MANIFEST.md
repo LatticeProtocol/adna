@@ -38,15 +38,9 @@ Agentic-DNA/
 | **how/** | HOW does this project work? | Missions, sessions, 22 templates, 13 skills, backlog, campaigns, PRD/RFC pipeline |
 | **who/** | WHO is involved? | People, teams, coordination, governance |
 
-### Base Ontology (14 Entity Types)
+### Base Ontology
 
-| Triad | Entities | Purpose |
-|-------|----------|---------|
-| **WHO** (3) | `governance`, `team`, `coordination` | Who decides, who works, how they sync |
-| **WHAT** (4) | `context`, `decisions`, `modules`, `lattices` | What you know, what you've decided, what you build, how you compose |
-| **HOW** (7) | `campaigns`, `missions`, `sessions`, `templates`, `skills`, `pipelines`, `backlog` | Plan → decompose → execute → track → automate → ideate |
-
-Extend by adding domain-specific entities under the appropriate triad leg (e.g., `what/experiments/`, `who/customers/`).
+14 entity types across 3 triad legs: WHO (3: governance, team, coordination), WHAT (4: context, decisions, modules, lattices), HOW (7: campaigns, missions, sessions, templates, skills, pipelines, backlog). Extend by adding domain-specific entities under the appropriate leg (e.g., `what/experiments/`). Full table: see CLAUDE.md § Domain Knowledge.
 
 ## Entry Points
 

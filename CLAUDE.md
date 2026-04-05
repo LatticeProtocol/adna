@@ -108,5 +108,5 @@ To upgrade from L0 to L1, read `.adna/how/skills/skill_l1_upgrade.md`.
 - **Context library**: `.adna/what/context/` (5 topics, 27 subtopics, ~75K tokens)
 - **Lattice examples**: `.adna/what/lattices/examples/` (15 example lattice definitions)
 - **All templates**: `.adna/how/templates/` (22 reusable templates)
-- **All skills**: `.adna/how/skills/` (13 agent recipes)
+- **All skills**: `.adna/how/skills/` (14 agent recipes)
 - **Detailed README**: `.adna/README.md`

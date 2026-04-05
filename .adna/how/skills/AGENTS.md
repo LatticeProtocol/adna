@@ -76,6 +76,7 @@ Examples:
 - `skill_context_quality_audit.md` (agent)
 - `skill_context_graduation.md` (agent)
 - `skill_version_migration.md` (agent)
+- `skill_workspace_upgrade.md` (agent)
 - `skill_vault_review.md` (process)
 
 ## Template

@@ -3,7 +3,7 @@ type: directory_index
 created: 2026-02-20
 updated: 2026-03-18
 token_estimate: 13100
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [directory_index, context, adna_core]
 ---
 

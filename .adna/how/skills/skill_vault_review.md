@@ -6,7 +6,7 @@ updated: 2026-03-18
 status: active
 category: review
 trigger: "Monthly or after significant vault changes (10+ files modified, new entity types, context topic additions)"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, review, quality, process]
 
 requirements:

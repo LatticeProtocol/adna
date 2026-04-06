@@ -4,7 +4,7 @@ title: "Version Migration Guide"
 created: 2026-03-19
 updated: 2026-03-19
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [migration, versioning, maintainer, guide]
 token_estimate: 1200
 ---

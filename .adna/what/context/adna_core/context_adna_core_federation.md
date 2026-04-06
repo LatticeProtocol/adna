@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["Lattice Federation & Sharing Protocol v1.0 (lattice_federation.md)", "Lattice YAML Schema (federation block)", "Lattice Interop Standard v1.0 (lattice_interop.md)"]
 context_version: "1.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, federation, sharing, composition, uri]
 quality_score: 4.2
 signal_density: 5

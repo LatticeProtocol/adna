@@ -1,6 +1,6 @@
 meta:
   generated: '2026-03-21T08:07:02.681393+00:00'
-  vault: lattice-labs
+  vault: <project_name>
   standard_version: '2.2'
   schema_version: '1.0'
   object_count: 414
@@ -4185,7 +4185,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_audiences.md
+- path: what/context/example_domain/context_example_domain_audiences.md
   type: context
   total: 29
   pct: 96.7
@@ -4202,7 +4202,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_brand_integration.md
+- path: what/context/example_domain/context_example_domain_brand_integration.md
   type: context
   total: 29
   pct: 96.7
@@ -4219,7 +4219,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_content_patterns.md
+- path: what/context/example_domain/context_example_domain_content_patterns.md
   type: context
   total: 29
   pct: 96.7
@@ -4236,7 +4236,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_content_pillars.md
+- path: what/context/example_domain/context_example_domain_content_pillars.md
   type: context
   total: 29
   pct: 96.7
@@ -4253,7 +4253,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_identity.md
+- path: what/context/example_domain/context_example_domain_identity.md
   type: context
   total: 29
   pct: 96.7
@@ -4270,7 +4270,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_lore.md
+- path: what/context/example_domain/context_example_domain_lore.md
   type: context
   total: 29
   pct: 96.7
@@ -4287,7 +4287,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley/context_science_stanley_narrative.md
+- path: what/context/example_domain/context_example_domain_narrative.md
   type: context
   total: 29
   pct: 96.7
@@ -4304,7 +4304,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_anti_patterns.md
+- path: what/context/example_domain_voice/context_example_domain_voice_anti_patterns.md
   type: context
   total: 29
   pct: 96.7
@@ -4321,7 +4321,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_dialogue_samples.md
+- path: what/context/example_domain_voice/context_example_domain_voice_dialogue_samples.md
   type: context
   total: 29
   pct: 96.7
@@ -4338,7 +4338,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_narrative_tropes.md
+- path: what/context/example_domain_voice/context_example_domain_voice_narrative_tropes.md
   type: context
   total: 29
   pct: 96.7
@@ -4355,7 +4355,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_source_index.md
+- path: what/context/example_domain_voice/context_example_domain_voice_source_index.md
   type: context
   total: 29
   pct: 96.7
@@ -4372,7 +4372,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_voice_foundations.md
+- path: what/context/example_domain_voice/context_example_domain_voice_voice_foundations.md
   type: context
   total: 29
   pct: 96.7
@@ -4389,7 +4389,7 @@ objects:
     d09: 3
     d10: 3
   gaps: []
-- path: what/context/science_stanley_voice/context_science_stanley_voice_voice_registers.md
+- path: what/context/example_domain_voice/context_example_domain_voice_voice_registers.md
   type: context
   total: 29
   pct: 96.7

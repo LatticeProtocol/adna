@@ -6,7 +6,7 @@ updated: 2026-04-03
 status: active
 category: onboarding
 trigger: "Root CLAUDE.md project creation flow — user wants to create a new project"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, project, fork, onboarding, lattice]
 
 requirements:

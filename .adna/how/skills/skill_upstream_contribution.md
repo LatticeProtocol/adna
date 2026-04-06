@@ -5,7 +5,7 @@ category: development
 created: 2026-03-20
 updated: 2026-03-20
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 token_estimate: ~800
 tags: [skill, agent, contributing, upstream, community]
 ---

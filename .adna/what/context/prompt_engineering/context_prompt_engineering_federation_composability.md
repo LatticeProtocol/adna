@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Bridge Patterns v1.0", "W3C — SPARQL 1.1 Federation Extensions", "Keet (2021) — Conflict Resolution Framework for Ontologies", "MOMo — Modular Ontology Modeling", "SHACL — W3C Shapes Constraint Language", "FAIR Guiding Principles"]
 context_version: "1.0"
 token_estimate: ~2000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, prompt_engineering]
 quality_score: 4.4
 signal_density: 4

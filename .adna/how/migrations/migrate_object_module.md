@@ -6,7 +6,7 @@ target_version: "lsu-1.0"
 object_type: module
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 status: active
 tags: [migration, upgrade-system, module]
 ---
@@ -219,5 +219,5 @@ Re-read the `.md` file and companion (if generated). Confirm YAML parses, all ta
 ## Related
 
 - [Migration Registry](AGENTS.md) — All available migrations
-- [Architecture Spec](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/upgrade_system_architecture.md) §4.4-§4.5 — Module prompt spec + companion generation
-- [Gap Register](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/gap_register_scored.md) — G-009, G-010, G-013
+- Architecture Spec §4.4-§4.5 — Module prompt spec + companion generation (see operational vault campaign artifacts)
+- Gap Register — G-009, G-010, G-013 (see operational vault campaign artifacts)

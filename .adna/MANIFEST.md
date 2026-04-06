@@ -3,7 +3,7 @@ type: manifest
 role: template
 created: 2026-02-17
 updated: 2026-04-03
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [manifest, governance]
 ---
 

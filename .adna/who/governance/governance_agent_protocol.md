@@ -4,7 +4,7 @@ runtime: claude_code
 created: 2026-03-27
 updated: 2026-04-03
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [governance, agent_protocol, partnership, autonomy]
 ---
 

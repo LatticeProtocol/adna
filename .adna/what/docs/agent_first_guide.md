@@ -4,7 +4,7 @@ title: "Agent-First Guide — Using aDNA Without Obsidian"
 created: 2026-03-19
 updated: 2026-03-19
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, agent-first, claude-code, terminal, guide]
 token_estimate: ~3500
 ---

@@ -4,7 +4,7 @@ title: "aDNA Standard Reading Guide"
 created: 2026-03-19
 updated: 2026-03-19
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, standard, reading-guide, navigation]
 token_estimate: 3000
 ---

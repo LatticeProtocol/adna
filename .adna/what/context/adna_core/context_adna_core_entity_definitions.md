@@ -7,7 +7,7 @@ updated: 2026-03-17
 sources: ["aDNA Standard v2.1 (§5, §7)", "Per-entity AGENTS.md protocol files"]
 context_version: "1.0"
 token_estimate: ~1600
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, ontology, entity_types, definitions]
 quality_score: 3.8
 signal_density: 4

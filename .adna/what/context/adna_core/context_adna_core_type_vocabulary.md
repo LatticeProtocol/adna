@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["campaign_adna_lattice/artifacts/m16_type_vocabulary.md"]
 context_version: "1.0"
 token_estimate: ~500
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, type_vocabulary, module, io]
 quality_score: 4.0
 signal_density: 4

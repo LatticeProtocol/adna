@@ -7,7 +7,7 @@ updated: 2026-04-03
 sources: ["Claude Code hooks documentation", "aDNA operational patterns", "Shell scripting best practices"]
 context_version: "1.0"
 token_estimate: ~2500
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 runtime: claude_code
 tags: [context, claude_code, hooks, lifecycle, automation, guard]
 quality_score: 4.2

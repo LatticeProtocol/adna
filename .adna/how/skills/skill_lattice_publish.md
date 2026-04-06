@@ -6,7 +6,7 @@ updated: 2026-03-08
 status: active
 category: development
 trigger: When a lattice needs to be published to a registry, pulled from a registry, or composed with another lattice
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, registry, federation, publish]
 
 requirements:

@@ -3,7 +3,7 @@ type: template
 created: 2026-03-08
 updated: 2026-03-08
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [template, registry, federation]
 ---
 

@@ -2,11 +2,11 @@
 plan_id: plan_q2_product_launch
 type: plan
 title: "Q2 Product Launch — Agent Onboarding Feature"
-owner: stanley
+owner: <username>
 status: completed
 created: 2026-01-20
 updated: 2026-03-15
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [plan, product, launch]
 ---
 
@@ -20,35 +20,35 @@ Ship the interactive agent onboarding experience that walks new users from clone
 
 ### 1. Design onboarding conversation flow
 - **Status**: completed
-- **Session**: session_stanley_20260120_onboarding_design
+- **Session**: session_example_20260120_onboarding_design
 - **Description**: Map the 10-step onboarding flow. Define decision points, fallback paths, and completion markers. Review against 4 target personas (startup, researcher, creative, PKM).
 - **Files**: `how/skills/skill_onboarding.md`, `how/pipelines/prd_rfc/02_requirements/prd_onboarding.md`
 - **Depends on**: none
 
 ### 2. Build domain detection logic
 - **Status**: completed
-- **Session**: session_stanley_20260125_domain_detection
+- **Session**: session_example_20260125_domain_detection
 - **Description**: Implement Step 5 (Discovery Conversation) with signal-based domain classification. Map domain signals to ontology extension suggestions. Cover 6 domain categories: biotech, software, research, business, creative, personal.
 - **Files**: `how/skills/skill_onboarding.md` (Steps 5-6)
 - **Depends on**: 1
 
 ### 3. Implement governance file customization
 - **Status**: completed
-- **Session**: session_stanley_20260128_governance_custom
+- **Session**: session_example_20260128_governance_custom
 - **Description**: Build Step 7 — automated customization of MANIFEST.md, STATE.md, and CLAUDE.md based on discovery conversation. Preserve structural integrity while updating project-specific content.
 - **Files**: `how/skills/skill_onboarding.md` (Step 7), `MANIFEST.md`, `STATE.md`, `CLAUDE.md`
 - **Depends on**: 2
 
 ### 4. Add personality customization
 - **Status**: completed
-- **Session**: session_stanley_20260130_personality
+- **Session**: session_example_20260130_personality
 - **Description**: Implement Step 8 — optional agent personality replacement. User provides name, archetype, operating principles; agent generates updated Identity & Personality section. Default (Berthier) preserved if declined.
 - **Files**: `how/skills/skill_onboarding.md` (Step 8)
 - **Depends on**: 3
 
 ### 5. End-to-end testing with 4 personas
 - **Status**: completed
-- **Session**: session_stanley_20260205_persona_testing
+- **Session**: session_example_20260205_persona_testing
 - **Description**: Run full onboarding simulation for each target persona. Verify domain suggestions are appropriate, governance customization is correct, and the experience completes in under 30 minutes. Fix any friction points.
 - **Files**: `how/missions/plan_q2_product_launch.md` (this file — completion summary)
 - **Depends on**: 4

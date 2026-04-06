@@ -6,7 +6,7 @@ updated: 2026-03-19
 status: active
 category: operations
 trigger: "User asks to upgrade, update, or check for vault updates"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, migration, versioning]
 
 requirements:

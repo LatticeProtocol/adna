@@ -4,7 +4,7 @@ title: "aDNA Projects Folder Pattern"
 created: 2026-03-19
 updated: 2026-04-03
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, projects, scaffolding, workspace, pattern, lattice]
 token_estimate: 2500
 ---

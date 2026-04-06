@@ -4,7 +4,7 @@ title: "aDNA Bridge Patterns — Cross-Instance Composition"
 created: 2026-02-13
 updated: 2026-02-19
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, bridge_patterns, cross_instance, composition, spec]
 ---
 

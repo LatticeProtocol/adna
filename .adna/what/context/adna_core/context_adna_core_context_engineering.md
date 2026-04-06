@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (§10)", "Context Quality Rubric v1.0", "Context library AGENTS.md", "prompt_engineering/signal_to_token operational patterns"]
 context_version: "1.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, context_engineering, quality, token_budget]
 quality_score: 4.4
 signal_density: 5

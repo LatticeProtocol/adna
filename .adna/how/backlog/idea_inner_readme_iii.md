@@ -3,7 +3,7 @@ type: backlog_idea
 status: planned
 priority: medium
 created: 2026-04-04
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [backlog, documentation, quality]
 ---
 

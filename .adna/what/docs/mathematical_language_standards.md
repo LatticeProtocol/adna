@@ -4,7 +4,7 @@ title: "Mathematical Language Standards for aDNA Documentation"
 created: 2026-03-01
 updated: 2026-03-01
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, standards, mathematical_language, documentation]
 ---
 

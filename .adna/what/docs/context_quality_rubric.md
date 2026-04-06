@@ -4,7 +4,7 @@ title: "Context Quality Evaluation Rubric"
 created: 2026-02-19
 updated: 2026-02-19
 context_version: "1.0"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [reference, quality, context-engineering, rubric]
 banner: "who/assets/banners/banner_mission.jpg"
 icon: clipboard-list

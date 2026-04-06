@@ -3,7 +3,7 @@ type: directory_index
 created: 2026-03-18
 updated: 2026-04-03
 token_estimate: 200
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [directory_index, context, lattice_basics]
 ---
 

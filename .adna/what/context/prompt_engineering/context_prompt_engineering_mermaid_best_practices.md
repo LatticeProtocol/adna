@@ -7,7 +7,7 @@ updated: 2026-04-03
 sources: ["Mermaid.js docs", "Obsidian Forum — Mermaid rendering", "Anthropic — Context Engineering"]
 context_version: "1.1"
 token_estimate: ~700
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, prompt_engineering]
 quality_score: 4.0
 signal_density: 5

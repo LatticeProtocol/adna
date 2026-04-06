@@ -5,7 +5,7 @@ version: "1.0.0"
 created: 2026-02-19
 updated: 2026-02-19
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 token_estimate: ~8000
 tags: [specification, ontology, unification, federation, merge-algorithm, namespace]
 banner: "who/assets/banners/banner_what.jpg"
@@ -815,5 +815,5 @@ How this protocol's 10 conflict types map to Keet's original taxonomy:
 ---
 
 *Protocol version: 1.0.0*
-*Author: agent_stanley (Berthier)*
+*Author: aDNA Template*
 *Campaign: campaign_adna_review, Mission M9*

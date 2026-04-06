@@ -8,7 +8,7 @@ model_requirements: "any"
 status: active
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [side_quest, migration, smoke-test, version-management]
 ---
 

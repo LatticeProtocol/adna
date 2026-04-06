@@ -6,7 +6,7 @@ updated: 2026-03-17
 status: active
 category: review
 trigger: "Context quality audit requested, or periodic review of context library health"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, context, quality, audit]
 ---
 

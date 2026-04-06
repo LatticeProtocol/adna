@@ -3,7 +3,7 @@ type: context
 title: "aDNA Standard Governance Model"
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 status: approved
 tags: [context, governance, standard, stewardship, release-cadence]
 ---

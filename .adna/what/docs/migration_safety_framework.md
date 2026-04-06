@@ -4,7 +4,7 @@ title: "Migration Safety Framework"
 created: 2026-03-19
 updated: 2026-03-19
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [migration, safety, versioning, reference]
 token_estimate: ~800
 ---

@@ -4,7 +4,7 @@ title: "Side-Quest Participation Guide"
 created: 2026-03-20
 updated: 2026-03-20
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [doc, community, side-quests, validation, participation]
 ---
 

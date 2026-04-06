@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Standard v2.1", "aDNA Design Document", "CLAUDE.md reference implementation"]
 context_version: "1.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, paradigm, triad, governance]
 quality_score: 4.2
 signal_density: 4

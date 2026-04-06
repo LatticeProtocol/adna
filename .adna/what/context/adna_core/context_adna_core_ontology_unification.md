@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["Ontology Unification Protocol v1.0 (ontology_unification.md)", "aDNA Standard v2.1 (§5.1 ontology artifact)", "Keet (2021) conflict resolution framework"]
 context_version: "1.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, ontology, unification, merge, conflict_resolution]
 quality_score: 4.4
 signal_density: 5

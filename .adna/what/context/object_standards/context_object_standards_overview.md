@@ -7,7 +7,7 @@ updated: 2026-04-03
 sources: ["aDNA Standard v2.1 (what/docs/adna_standard.md)", "lattice_yaml_schema.json", "dataset_yaml_schema.json"]
 context_version: "2.1"
 token_estimate: ~600
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, object_standards]
 quality_score: 4.1
 signal_density: 5

@@ -6,7 +6,7 @@ title: "YAML as Lattice Canonical Format"
 status: accepted
 created: 2026-03-18
 updated: 2026-03-18
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 supersedes:
 superseded_by:
 tags: [adr, decision, yaml, lattice, format]

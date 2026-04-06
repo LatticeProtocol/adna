@@ -3,7 +3,7 @@ type: context
 title: "Federation Walkthrough — Two aDNA Instances Exchanging a Lattice"
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 status: approved
 tags: [context, federation, walkthrough, interop]
 ---
@@ -92,7 +92,7 @@ version: "1.0"
 imported: 2026-03-20
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [lattice_ref, federation, import, protein-folding]
 ---
 

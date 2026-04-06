@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["Anthropic — Effective Context Engineering for AI Agents", "Anthropic — Knowledge Graph Memory MCP Server", "Microsoft — GraphRAG: From Local to Global", "ODKE+ — Ontology-Guided Open-Domain Knowledge Extraction (2025)", "MODL — Modular Ontology Design Library", "A-MEM — Agentic Memory for LLM Agents (NeurIPS 2025)"]
 context_version: "1.0"
 token_estimate: ~2000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, prompt_engineering]
 quality_score: 4.4
 signal_density: 5

@@ -8,7 +8,7 @@ model_requirements: "any (with shell access)"
 status: active
 created: 2026-03-22
 updated: 2026-03-22
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [side_quest, onboarding, l1, compute, deployment]
 ---
 

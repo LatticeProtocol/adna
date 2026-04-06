@@ -1,12 +1,12 @@
 ---
-session_id: session_stanley_20260219_adna_m5
+session_id: session_example_20260219_adna_m5
 type: session
 tier: 1
 created: 2026-02-19
 updated: 2026-02-19
 status: completed
-operator: stanley
-last_edited_by: agent_stanley
+operator: example_user
+last_edited_by: agent_init
 campaign_id: campaign_adna_review
 mission_id: mission_adna_review_m05
 tags: [session, campaign, governance, hardening]

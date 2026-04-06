@@ -6,7 +6,7 @@ target_version: "lsu-1.0"
 object_type: lattice
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 status: active
 tags: [migration, upgrade-system, lattice]
 ---
@@ -223,7 +223,7 @@ version: "<version>"
 created: <today>
 updated: <today>
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 execution:
   mode: <mode>
   tier: <tier>
@@ -311,6 +311,6 @@ Re-read all files (MD and YAML). Confirm:
 ## Related
 
 - [Migration Registry](AGENTS.md) — All available migrations
-- [Architecture Spec](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/upgrade_system_architecture.md) §4.4-§4.5 — Lattice prompt spec + companion generation
-- [Gap Register](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/gap_register_scored.md) — G-002, G-013
-- [YAML↔MD Relationship Map](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/gap_register_scored.md#yamlmd-relationship-map-lattices) — Pairing status for all 35 lattice objects
+- Architecture Spec §4.4-§4.5 — Lattice prompt spec + companion generation (see operational vault campaign artifacts)
+- Gap Register — G-002, G-013 (see operational vault campaign artifacts)
+- YAML-MD Relationship Map — Pairing status for all 35 lattice objects (see operational vault campaign artifacts)

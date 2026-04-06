@@ -6,7 +6,7 @@ updated: 2026-02-20
 status: active
 category: ontology
 trigger: "User requests a new entity type or onboarding Step 6 suggests extensions"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, ontology, scaffolding]
 
 requirements:

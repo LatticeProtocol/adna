@@ -79,7 +79,7 @@ lattice:
       extraction per lattice_federation.md protocol.
   federation:
     shareable: true
-    source_instance: lattice-labs-vault
+    source_instance: example-vault
     parent_lattice: protein_binder_design
     version_policy: locked
     extracted_nodes:

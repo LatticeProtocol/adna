@@ -5,7 +5,7 @@ role: "Research Scientist"
 status: active
 created: 2026-03-18
 updated: 2026-03-18
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 joined: 2026-03-01
 expertise: ["protein engineering", "computational biology", "Python"]
 access_level: contributor

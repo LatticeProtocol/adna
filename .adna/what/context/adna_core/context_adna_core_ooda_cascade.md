@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["OODA loop (Boyd, 1987)", "aDNA Campaign AGENTS.md protocol", "aDNA Session protocol", "Lattice Protocol war ontology (adapted)"]
 context_version: "1.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, ooda, execution_hierarchy, evaluation]
 quality_score: 4.2
 signal_density: 4

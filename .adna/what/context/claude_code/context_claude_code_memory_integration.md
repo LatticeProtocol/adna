@@ -7,7 +7,7 @@ updated: 2026-04-03
 sources: ["Claude Code auto-memory documentation", "aDNA operational protocols", "AgentDB implementation patterns"]
 context_version: "1.0"
 token_estimate: ~3000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 runtime: claude_code
 tags: [context, claude_code, memory, persistence, auto_memory, agentdb, learnings]
 quality_score: 4.4

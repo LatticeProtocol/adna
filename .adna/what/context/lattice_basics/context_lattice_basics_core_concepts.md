@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (what/docs/adna_standard.md)", "aDNA Design Document (what/docs/adna_design.md)", "adna_core lattice_design context", "hello_world.lattice.yaml example", "type_vocabulary context"]
 context_version: "2.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, lattice_basics]
 quality_score: 4.0
 signal_density: 4

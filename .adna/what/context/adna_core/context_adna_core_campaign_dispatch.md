@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (§9 Mission System)", "Campaign AGENTS.md protocol", "campaign_adna_review — worked example (18 missions, 7 phases)"]
 context_version: "1.0"
 token_estimate: ~1500
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, adna_core, campaign, mission, execution_hierarchy, dispatch]
 quality_score: 4.0
 signal_density: 4

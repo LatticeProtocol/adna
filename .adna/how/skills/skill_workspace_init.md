@@ -6,7 +6,7 @@ updated: 2026-04-03
 status: deprecated
 category: onboarding
 trigger: "DEPRECATED — root CLAUDE.md now ships pre-authored"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 deprecation_note: "Replaced by the pre-authored root CLAUDE.md (2026-04-03 restructure). The root CLAUDE.md handles project creation and discovery directly — no workspace init step needed."
 tags: [skill, workspace, bootstrap, onboarding, multi-project, lattice]
 

@@ -7,7 +7,7 @@ updated: 2026-02-10
 sources: ["Gartner 2025 Magic Quadrant", "CB Insights State of AI 2025", "internal customer interviews"]
 context_version: "1.2"
 token_estimate: ~800
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, market_intelligence, competitive_analysis]
 gaps: ["APAC market data incomplete", "pricing comparison needs Q1 2026 update"]
 ---

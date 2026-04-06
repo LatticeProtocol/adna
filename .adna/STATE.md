@@ -3,8 +3,8 @@ type: state
 created: 2026-02-17
 updated: 2026-04-03
 status: active
-last_edited_by: agent_stanley
-last_session: session_stanley_20260402_identity_rename
+last_edited_by: agent_init
+last_session: session_example_20260402_identity_rename
 tags: [state, governance]
 ---
 

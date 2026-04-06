@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["Anthropic — Using CLAUDE.MD Files (blog)", "Anthropic — Claude Code Best Practices", "Anthropic — Claude 4 Best Practices", "HumanLayer — Writing a Good CLAUDE.md", "alexop.dev — Progressive Disclosure for AI Coding Tools"]
 context_version: "1.0"
 token_estimate: ~1500
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, prompt_engineering]
 quality_score: 4.4
 signal_density: 5

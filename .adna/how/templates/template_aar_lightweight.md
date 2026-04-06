@@ -3,7 +3,7 @@ type: template
 title: "Lightweight AAR (After-Action Review)"
 created: 2026-04-03
 updated: 2026-04-03
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [template, aar, governance]
 ---
 

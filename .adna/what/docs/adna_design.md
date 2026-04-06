@@ -4,7 +4,7 @@ title: "aDNA Design Document — Architecture Rationale"
 created: 2026-02-13
 updated: 2026-02-19
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, design, rationale, architecture, spec]
 ---
 

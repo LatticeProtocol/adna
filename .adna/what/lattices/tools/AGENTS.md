@@ -2,7 +2,7 @@
 type: directory_index
 created: 2026-02-19
 updated: 2026-03-21
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [directory_index, lattice, tools, compliance]
 ---
 
@@ -36,10 +36,10 @@ No additional dependencies beyond `pyyaml` and the Python standard library.
 ### Score vault compliance
 
 ```bash
-python compliance_checker.py ~/lattice/lattice-labs                    # Score all objects
-python compliance_checker.py ~/lattice/lattice-labs --type module      # Filter by type
-python compliance_checker.py ~/lattice/lattice-labs --file what/modules/x.md  # Single file
-python compliance_checker.py ~/lattice/lattice-labs --output yaml -v   # YAML only, verbose
+python compliance_checker.py ~/lattice/<project_name>.aDNA                    # Score all objects
+python compliance_checker.py ~/lattice/<project_name>.aDNA --type module      # Filter by type
+python compliance_checker.py ~/lattice/<project_name>.aDNA --file what/modules/x.md  # Single file
+python compliance_checker.py ~/lattice/<project_name>.aDNA --output yaml -v   # YAML only, verbose
 ```
 
 ### Validate a lattice file

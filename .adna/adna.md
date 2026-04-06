@@ -5,7 +5,7 @@ folder_path: adna
 created: 2026-03-02
 updated: 2026-04-03
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [folder-note, adna, git-repo]
 icon: dna
 cssclasses: [folder-note]

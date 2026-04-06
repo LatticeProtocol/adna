@@ -7,7 +7,7 @@ updated: 2026-04-03
 sources: ["aDNA Standard v2.2", "Claude Code project scoping"]
 context_version: "1.1"
 token_estimate: ~1100
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 runtime: claude_code
 tags: [context, claude_code, vault_architecture, multi_vault, organization]
 quality_score: 4.2

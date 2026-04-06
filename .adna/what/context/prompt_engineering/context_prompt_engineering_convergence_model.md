@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["Original articulation — synthesized from operational experience (126+ sessions)", "Anthropic — Effective Context Engineering for AI Agents", "aDNA Standard v2.1 (§8.7 75% Rule, §10 Context Library)"]
 context_version: "1.0"
 token_estimate: ~2500
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, prompt_engineering]
 quality_score: 4.0
 signal_density: 4

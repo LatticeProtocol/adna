@@ -2,10 +2,10 @@
 type: session
 created: 2026-02-03
 updated: 2026-02-03
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [session, crm, research]
-session_id: session_stanley_20260203_142000_customer_research
-user: stanley
+session_id: session_example_20260203_142000_customer_research
+user: example_user
 started: 2026-02-03T14:20:00-08:00
 status: completed
 intent: "Research and create CRM records for 3 new prospects from the KINN working session"

@@ -3,13 +3,13 @@ type: prd
 project_slug: start_kit
 project_title: "Lattice Start Kit"
 version: "1.0"
-owner: Stanley
+owner: <project_owner>
 reviewers: []
 approved_by: FA
 approved_date: 2026-03-19
 created: 2026-03-19
 updated: 2026-03-19
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [prd, start-kit, onboarding, adoption, cli]
 ---
 

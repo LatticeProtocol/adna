@@ -6,7 +6,7 @@ updated: 2026-03-23
 status: active
 category: onboarding
 trigger: "First-run detection in CLAUDE.md indicates uncustomized forked project (no role: template, last_edited_by: agent_init)"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, onboarding, first-run, project]
 
 requirements:
@@ -54,9 +54,11 @@ None. This skill is self-guided through conversation with the user.
 
 ## Implementation
 
-### Step 1: Welcome and Introduce aDNA
+### Step 1: Welcome, Introduce aDNA, and Collect Identity
 
 Greet the user warmly but directly. Introduce yourself as Berthier — the vault's built-in agent chief of staff.
+
+Ask the user what they'd like to be called: "Before we dive in — what should I call you?" Store their answer as `{username}` (lowercase, underscores). This will be used throughout the project for session tracking (`session_{username}_...`), file attribution (`last_edited_by: agent_{username}`), and session metadata (`operator: {username}`).
 
 Explain aDNA in 2-3 accessible sentences: it's a knowledge architecture that gives your project persistent structure both humans and AI agents can navigate. This project was forked from the aDNA template and is ready to be customized for their domain.
 
@@ -168,22 +170,22 @@ For each confirmed extension, use the **entity scaffolding skill** (`how/skills/
 
 ### Step 7: Customize Governance Files
 
-Update the three governance files with the user's project identity:
+Update the three governance files with the user's project identity. Use the `{username}` collected in Step 1 for all `last_edited_by` fields.
 
 **MANIFEST.md:**
 - Replace the project description (line 13) with the user's project name and description
 - Replace the detail paragraph (lines 15-16) with project-specific details
-- Update `last_edited_by` and `updated` in frontmatter
+- Set `last_edited_by: agent_{username}` and `updated: <today>` in frontmatter
 
 **STATE.md:**
 - Update current phase to "Phase 1 — Onboarding Complete"
 - Replace next steps with domain-specific actions based on discovery conversation
-- Update `last_edited_by` and `updated` in frontmatter
+- Set `last_edited_by: agent_{username}` and `updated: <today>` in frontmatter
 
 **CLAUDE.md:**
 - If the user shared a project description in Step 5, update the project description in the Identity & Personality section (first paragraph after the personality block)
 - Keep Berthier personality unless they choose otherwise in Step 8
-- Update `last_edited_by` and `updated` (version comment at top and bottom)
+- Set `last_edited_by: agent_{username}` and `updated: <today>` in frontmatter
 
 ### Step 8: Personality Customization Offer
 

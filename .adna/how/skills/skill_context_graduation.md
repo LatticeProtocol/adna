@@ -6,7 +6,7 @@ updated: 2026-03-17
 status: active
 category: operations
 trigger: "Campaign completion, or when mission deliverables contain reusable knowledge"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, context, graduation, knowledge-capture]
 ---
 

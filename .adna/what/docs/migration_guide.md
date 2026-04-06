@@ -4,7 +4,7 @@ title: "aDNA Migration Guide — Adding aDNA to an Existing Project"
 created: 2026-03-18
 updated: 2026-03-18
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, migration, adoption, guide, getting-started]
 ---
 

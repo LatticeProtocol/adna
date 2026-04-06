@@ -6,7 +6,7 @@ updated: 2026-03-22
 status: active
 category: deployment
 trigger: "User asks about compute, L1, JupyterHub, or 'upgrade to L1'"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, deployment, l1, compute, upgrade]
 
 requirements:
@@ -275,7 +275,7 @@ ssh -p <RELAY_PORT> <l2_host> echo "Reverse tunnel working"
 
 **Goal**: Production-grade security with NGINX TLS, HMAC signing, and trust enforcement.
 
-This phase follows the Tier 2+ checklists in `skill_node_onboarding.md` (in the lattice-labs vault). The key additions:
+This phase follows the Tier 2+ checklists in `skill_node_onboarding.md` (in your operational vault). The key additions:
 
 1. **NGINX TLS** on port 8443 — self-signed cert via `generate_certs.sh`
 2. **HMAC key** distributed via `secrets.json` — shared secret for object integrity
@@ -285,7 +285,7 @@ This phase follows the Tier 2+ checklists in `skill_node_onboarding.md` (in the 
 
 **Estimated time**: ~30 minutes with admin assistance.
 
-Refer to [[how/skills/skill_node_onboarding|skill_node_onboarding]] in the lattice-labs vault for the complete Tier 2 and Tier 3 checklists.
+Refer to `skill_node_onboarding` in your operational vault for the complete Tier 2 and Tier 3 checklists.
 
 ---
 
@@ -343,6 +343,6 @@ JupyterHub's configurable-http-proxy listens on port 8100 (API) in addition to 8
 ## Related
 
 - **aDNA Standard**: `what/docs/adna_standard.md` — the knowledge architecture this node extends
-- **Machine Setup**: `skill_machine_setup.md` (lattice-labs) — base machine provisioning
-- **Node Onboarding**: `skill_node_onboarding.md` (lattice-labs) — compliance tier checklists
-- **Fleet Administration**: `skill_fleet_administration.md` (lattice-labs) — admin-side fleet ops
+- **Machine Setup**: `skill_machine_setup.md` (operational vault) — base machine provisioning
+- **Node Onboarding**: `skill_node_onboarding.md` (operational vault) — compliance tier checklists
+- **Fleet Administration**: `skill_fleet_administration.md` (operational vault) — admin-side fleet ops

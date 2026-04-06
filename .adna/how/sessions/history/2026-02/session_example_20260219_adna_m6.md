@@ -1,7 +1,7 @@
 ---
 type: session
-session_id: session_stanley_20260219_adna_m6
-user: stanley
+session_id: session_example_20260219_adna_m6
+user: example_user
 started: 2026-02-19T14:00:00-08:00
 status: completed
 intent: "M6 AGENTS.md enrichment pass — create 5 new files, enrich 20 existing with load/skip guidance"
@@ -35,7 +35,7 @@ files_created:
   - what/lattices/examples/AGENTS.md
   - what/lattices/tools/AGENTS.md
   - how/templates/AGENTS.md
-  - how/sessions/active/session_stanley_20260219_adna_m6.md
+  - how/sessions/active/session_example_20260219_adna_m6.md
 completed: 2026-02-19T15:00:00-08:00
 ---
 

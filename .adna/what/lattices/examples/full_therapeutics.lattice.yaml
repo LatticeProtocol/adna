@@ -5,7 +5,7 @@ lattice:
   description: >
     End-to-end therapeutics pipeline composing two federated sub-lattices via
     external references. Demonstrates multi-lattice composition: binder_generation
-    (generative design from lattice-labs-vault) feeds into docking_assessment
+    (generative design from example-vault) feeds into docking_assessment
     (structure validation from adna), with local target selection and
     clinical ranking stages. Both sub-lattices are opaque external references
     resolved via lattice:// URIs.
@@ -19,7 +19,7 @@ lattice:
       description: "Select therapeutic targets from disease-associated gene list"
     - id: binder_generation
       type: module
-      ref: "lattice://lattice-labs-vault/binder_generation"
+      ref: "lattice://example-vault/binder_generation"
       description: "Generate binder candidates via RFdiffusion + LigandMPNN (federated sub-lattice)"
       config:
         ref_version: "1.0.0"
@@ -66,7 +66,7 @@ lattice:
     provenance: >
       Composed pipeline demonstrating multi-lattice federation — local target
       selection and clinical ranking stages with two imported sub-lattices
-      (binder_generation from lattice-labs-vault, docking_assessment from
+      (binder_generation from example-vault, docking_assessment from
       adna) connected via external reference composition pattern.
   federation:
     shareable: true

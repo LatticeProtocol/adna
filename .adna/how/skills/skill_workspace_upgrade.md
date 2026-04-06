@@ -6,7 +6,7 @@ updated: 2026-04-04
 status: active
 category: operations
 trigger: "Workspace needs aDNA standard compliance upgrade, or existing workspace has accumulated stale files and lacks project discovery"
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [skill, workspace, upgrade, adna, migration, compliance]
 
 requirements:

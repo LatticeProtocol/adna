@@ -4,7 +4,7 @@ title: "aDNA Universal Standard v2.2"
 created: 2026-02-11
 updated: 2026-03-20
 status: approved
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adna, standard, spec, normative]
 ---
 

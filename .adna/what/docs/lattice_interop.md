@@ -5,7 +5,7 @@ version: "1.0.0"
 created: 2026-02-20
 updated: 2026-02-20
 status: active
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 token_estimate: ~5500
 tags: [specification, interop, interface, runtime, version-drift, lattice-yaml]
 banner: "who/assets/banners/banner_what.jpg"
@@ -474,5 +474,5 @@ When `composed_therapeutics` executes and reaches the `docking_assessment` node:
 ---
 
 *Protocol version: 1.0.0*
-*Author: agent_stanley (Berthier)*
+*Author: aDNA Template*
 *Campaign: campaign_adna_review, Mission M11*

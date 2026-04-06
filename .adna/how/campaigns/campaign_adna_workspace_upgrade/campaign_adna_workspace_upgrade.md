@@ -3,8 +3,8 @@ campaign_id: campaign_adna_workspace_upgrade
 type: campaign
 campaign_class: governance-tight
 title: "aDNA Workspace Upgrade — Standard Compliance + Reusable Upgrade Skill"
-owner: stanley
-co_executors: [herb]
+owner: <project_owner>
+co_executors: []
 status: completed
 phase_count: 2
 mission_count: 5
@@ -14,7 +14,7 @@ priority: high
 created: 2026-04-04
 updated: 2026-04-04
 completed: 2026-04-04
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [campaign, adna, workspace, upgrade, migration, skill]
 ---
 
@@ -53,9 +53,9 @@ campaign_adna_polish restructured the aDNA base template (324 files → `.adna/`
 - Visual polish backlog items (demo GIF, plugins, logo — separate backlog)
 - aDNA standard specification changes
 
-### Co-Execution: Herb
+### Co-Execution
 
-Herb validates:
+Co-executor validates:
 - Obsidian Git sync works after rename (auto-pull doesn't break)
 - Obsidian graph view renders correctly post-rename
 - No broken wikilinks in Obsidian after structural changes
@@ -93,7 +93,7 @@ Herb validates:
 | D2 | M00 | Workspace CLAUDE.md persona | **RESOLVED: No persona.** Functional router only. Berthier activates inside projects. |
 | D3 | M00 | Workspace CLAUDE.md version control | **RESOLVED: Track in adna repo.** Users get workspace governance via `git pull`. |
 | D4 | M00 | Root cleanup scope | **RESOLVED: Aggressive.** Archive everything not an active project or working directory. |
-| D5 | M03 | Herb sync validation — schedule Herb's Obsidian test window | pending |
+| D5 | M03 | Obsidian sync validation — schedule co-executor test window | pending |
 
 ## Risk Register
 

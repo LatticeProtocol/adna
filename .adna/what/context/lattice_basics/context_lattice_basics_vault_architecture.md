@@ -7,7 +7,7 @@ updated: 2026-03-18
 sources: ["aDNA Standard v2.1 (what/docs/adna_standard.md)", "aDNA Design Document (what/docs/adna_design.md)", "adna CLAUDE.md", "adna MANIFEST.md", "template library (how/templates/AGENTS.md)"]
 context_version: "2.0"
 token_estimate: ~1000
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [context, lattice_basics]
 quality_score: 4.0
 signal_density: 4
@@ -56,7 +56,7 @@ role: "Research Scientist"
 status: active
 created: 2026-03-01
 updated: 2026-03-18
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [team]
 ---
 
@@ -73,7 +73,7 @@ title: "Choice of Obsidian as Knowledge Platform"
 status: accepted
 created: 2026-03-18
 updated: 2026-03-18
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 tags: [adr, decision]
 ---
 

@@ -6,7 +6,7 @@ target_version: "lsu-1.0"
 object_type: skill
 created: 2026-03-20
 updated: 2026-03-20
-last_edited_by: agent_stanley
+last_edited_by: agent_init
 status: active
 tags: [migration, upgrade-system, skill]
 ---
@@ -161,5 +161,5 @@ Re-read the file. Confirm YAML parses without error. Confirm all 6 target fields
 ## Related
 
 - [Migration Registry](AGENTS.md) — All available migrations
-- [Architecture Spec](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/upgrade_system_architecture.md) §4.4 — Skill prompt specification
-- [Gap Register](../../lattice-labs/how/campaigns/campaign_lattice_standard_upgrade/artifacts/gap_register_scored.md) — G-003, G-007, G-012, G-013
+- Architecture Spec §4.4 — Skill prompt specification (see operational vault campaign artifacts)
+- Gap Register — G-003, G-007, G-012, G-013 (see operational vault campaign artifacts)

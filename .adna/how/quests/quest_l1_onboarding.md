@@ -52,54 +52,58 @@ lsof -i :8100 2>/dev/null && echo "WARN: port 8100 in use" || echo "OK: port 810
 
 All checks must pass before continuing.
 
-### Phase 2: Enable SSH Access (~5 min)
+### Phase 2: Acquire latlab (~5 min)
 
-The admin needs SSH access to your machine to push the private deployment code and run setup.
+Choose the path that matches your access:
 
-**Step 2a: Enable Remote Login**
-
-System Settings → General → Sharing → Remote Login → ON
-
-Verify:
+**Path A — Self-service GitHub clone (if you have repo access)**:
 ```bash
-ssh localhost echo "SSH works"
+mkdir -p ~/lattice && cd ~/lattice
+git clone https://github.com/LatticeProtocol/latlab.git
 ```
 
-**Step 2b: Choose an exposure method**
+> If you get a 404 or permission error, ask a Lattice admin for a collaborator invite to `LatticeProtocol/latlab`, or use Path B.
 
-Pick one — Cloudflare is the easiest:
+Skip to **Phase 3** (Run Setup).
 
-| Method | Command | Notes |
-|--------|---------|-------|
-| **Cloudflare Quick Tunnel** (recommended) | `brew install cloudflared && cloudflared tunnel --url ssh://localhost:22` | Zero config, temporary URL |
-| **ngrok** | `ngrok tcp 22` | Simple, raw TCP forwarding |
-| **Nebula** | `brew install nebula` + deploy cert bundle | Persistent mesh, requires admin cert bundle |
+**Path B — Admin push via SSH (no GitHub access needed)**:
 
-Run your chosen method and **copy the access URL** (e.g., `ssh://user@random-name.trycloudflare.com`).
+The admin pushes the code to your machine remotely. You need to:
 
-> **Important**: Nebula cert files must be `chmod 600` (owner-only). The daemon won't start with world-readable certs.
+1. **Enable Remote Login**: System Settings → General → Sharing → Remote Login → ON
+   ```bash
+   ssh localhost echo "SSH works"
+   ```
 
-### Phase 3: Handoff to Admin (~15 min wait)
+2. **Expose SSH** — pick one:
 
-Share the following with your Lattice admin:
+   | Method | Command | Notes |
+   |--------|---------|-------|
+   | **Cloudflare Quick Tunnel** (recommended) | `brew install cloudflared && cloudflared tunnel --url ssh://localhost:22` | Zero config, temporary URL |
+   | **ngrok** | `ngrok tcp 22` | Simple, raw TCP forwarding |
+   | **Nebula** | `brew install nebula` + deploy cert bundle | Persistent mesh, requires admin cert bundle |
 
-1. **SSH access URL** from Phase 2
-2. **Your macOS username** — `whoami`
-3. **Confirmation that preflight passed** (Phase 1 output)
+   > **Important**: Nebula cert files must be `chmod 600` (owner-only). The daemon won't start with world-readable certs.
 
-The admin will run:
+3. **Share with your Lattice admin**: SSH access URL, your macOS username (`whoami`), and confirmation that preflight passed.
+
+4. The admin runs:
+   ```bash
+   setup_l1_remote.sh <your_ssh_alias> --push-repos full
+   ```
+
+**Wait for admin confirmation** that the push completed.
+
+### Phase 3: Run Setup (~5 min)
+
 ```bash
-# Admin executes from their machine:
-setup_l1_remote.sh <your_ssh_alias> --push-repos full
+cd ~/lattice/latlab
+bash deploy/native/setup_l1.sh
 ```
 
-This pushes the latlab repo to your machine and runs the full L1 setup sequence. No GitHub access needed on your end.
-
-**Wait for admin confirmation** that setup completed successfully.
+This is idempotent and handles: Python venv, JupyterHub + proxy, LatLab SDK, NativeAuth config, and JupyterHub config generation.
 
 ### Phase 4: Verify Your L1 (~3 min)
-
-Once the admin confirms:
 
 ```bash
 # Run the health check
@@ -113,7 +117,38 @@ Open `http://127.0.0.1:8000` in your browser. You should see the JupyterHub logi
 
 **First login**: Use NativeAuth signup to create a local account.
 
-### Phase 5: Submit Your Result
+### Phase 5: Register with the Lattice Network (~5 min)
+
+Once your L1 is running, register it with the Lattice to join the network.
+
+1. **Get a bootstrap token** from a Lattice admin (they generate it from HQ Dashboard)
+2. **Register your node**:
+   ```bash
+   BOOTSTRAP_TOKEN="<paste token from admin>"
+   ADMIN_HQ="http://<admin_node_ip>:8000"
+
+   curl -s -X POST "$ADMIN_HQ/api/v1/nodes/register" \
+     -H "Authorization: Bearer $BOOTSTRAP_TOKEN" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "name": "'$(hostname -s)'",
+       "tier": "L1",
+       "capabilities": ["compute_cpu"]
+     }'
+   ```
+3. **Save your credentials** — the response contains your node **DID** and **API key** (shown once)
+4. **Wait for admin approval** — the admin approves your node from the HQ Dashboard
+5. **Retrieve HMAC key** (after approval):
+   ```bash
+   curl -s -X POST "$ADMIN_HQ/api/v1/nodes/credentials" \
+     -H "X-API-Key: <your_api_key>"
+   ```
+
+Your node starts at **limited trust** and can pull lattices. Trust increases as you participate.
+
+> **Alternative**: If you have HQ Dashboard access, you can also register through the web UI at `http://127.0.0.1:8000` → Cluster page.
+
+### Phase 6: Submit Your Result
 
 Create a result file and submit via PR:
 
@@ -141,6 +176,7 @@ status: complete
 - [ ] JupyterHub login page loads at http://127.0.0.1:8000
 - [ ] NativeAuth signup + login works
 - [ ] latlab_doctor.sh shows 0 FAIL
+- [ ] Node registered with Lattice network (DID received)
 
 ## Notes
 <any observations, issues encountered, or suggestions>
@@ -149,11 +185,11 @@ EOF
 
 ## What's Next
 
-After completing this quest, you can continue with advanced phases:
+After completing this quest, you can continue with advanced phases from `how/skills/skill_l1_upgrade.md`:
 
-- **Phase 2**: Mesh connectivity via Nebula (see `how/skills/skill_l1_upgrade.md` Phase 2)
-- **Phase 3**: Federation relay for remote admin access (Phase 3)
-- **Phase 4**: Full compliance with TLS + HMAC (Phase 4)
+- **Mesh connectivity**: Nebula overlay network for peer-to-peer access (Phase 2)
+- **Federation relay**: Remote admin access via L2 relay (Phase 3)
+- **Full compliance**: TLS + HMAC for production security (Phase 4)
 
 ## Related
 

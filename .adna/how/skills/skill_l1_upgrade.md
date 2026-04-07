@@ -83,23 +83,44 @@ lsof -i :8100 2>/dev/null && echo "WARN: port 8100 in use" || echo "OK: port 810
 
 ### Step 2: Acquire latlab Repository
 
-The `latlab` repo contains all deployment scripts and the LatLab SDK. It is a private repo — acquisition requires admin assistance.
+The `latlab` repo contains all deployment scripts and the LatLab SDK. It is a private repo hosted at `LatticeProtocol/latlab`.
 
-**Push-based provisioning (primary path)**:
+Pick the path that matches your access level:
+
+**Path A — Self-service GitHub clone (recommended if you have repo access)**:
+```bash
+mkdir -p ~/lattice && cd ~/lattice
+git clone https://github.com/LatticeProtocol/latlab.git
+ls latlab/deploy/native/setup_l1.sh && echo "latlab acquired" || echo "clone failed"
+```
+
+If you have a GitHub SSH key configured:
+```bash
+git clone git@github.com:LatticeProtocol/latlab.git
+```
+
+> **Note**: Requires GitHub access to the `LatticeProtocol/latlab` private repo. Ask a Lattice admin for a collaborator invite if you get a 404 or permission error.
+
+**Path B — Admin push via SSH (no GitHub access needed on your machine)**:
 An admin pushes latlab to the target machine using:
 ```bash
 # Run by admin on their machine:
 setup_l1_remote.sh <target_ssh_alias> --push-repos full
 ```
 
-This rsyncs the latlab repo to `~/lattice/latlab/` on the target. No GitHub access needed on the target machine.
+This rsyncs the latlab repo to `~/lattice/latlab/` on the target.
 
-**If latlab is already present** (admin previously pushed or user has access):
+**If latlab is already present** (admin previously pushed or already cloned):
 ```bash
 ls ~/lattice/latlab/deploy/native/setup_l1.sh && echo "latlab present" || echo "latlab not found"
 ```
 
-**If latlab not present and no admin available**: Stop here. The user needs an admin to push latlab to their machine, or the public L1 deployment package (see backlog — not yet available).
+If present, pull latest before running setup:
+```bash
+cd ~/lattice/latlab && git pull
+```
+
+**If no access via either path**: Ask a Lattice admin for a GitHub collaborator invite to `LatticeProtocol/latlab`, or arrange an admin SSH push (Path B).
 
 ### Step 3: Run Setup
 
@@ -135,7 +156,44 @@ Open `http://127.0.0.1:8000` in a browser. You should see the JupyterHub login p
 
 **First login**: Use NativeAuth signup to create a local account. `allow_all = True` is the default for L1 — any created account can log in.
 
-**Phase 1 complete.** The user now has a working L1 compute node with local-only access. Stop here if network connectivity is not needed yet.
+**Phase 1 complete.** The user now has a working L1 compute node with local-only access. Continue to Step 7 to register with the Lattice network, or stop here if standalone operation is sufficient.
+
+### Step 7: Register with the Lattice Network (API-first onboarding)
+
+Once JupyterHub is running, register this node with the Lattice admin to join the network. This uses the API-first progressive trust onboarding flow.
+
+**What you need from the admin**:
+- A **bootstrap JWT token** — the admin generates this from the HQ Dashboard (`POST /api/admin/nodes/bootstrap-tokens`)
+
+**Register your node**:
+```bash
+# The admin provides the bootstrap token
+BOOTSTRAP_TOKEN="<paste token from admin>"
+
+# Register with the admin's L1/L2 HQ endpoint
+ADMIN_HQ="http://<admin_node_ip>:8000"
+
+curl -s -X POST "$ADMIN_HQ/api/v1/nodes/register" \
+  -H "Authorization: Bearer $BOOTSTRAP_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "'$(hostname -s)'",
+    "tier": "L1",
+    "capabilities": ["compute_cpu"]
+  }'
+```
+
+This returns your node's **DID** (decentralized identifier) and **API key**. Save both — the API key is shown only once.
+
+**After registration**:
+1. The admin approves your node (`POST /api/admin/nodes/{did}/approve`)
+2. Once approved, retrieve your HMAC credential: `POST /api/v1/nodes/credentials` with your API key
+3. Your node starts at **limited trust** (trust score ~0.35) — you can pull lattices and read, but not publish
+4. Trust upgrades happen as you participate in the network (verified → full trust)
+
+> **Self-service users (Path A)**: If you cloned latlab yourself, you can also register through the HQ Dashboard web UI at `http://127.0.0.1:8000` after login — navigate to the Cluster page.
+
+**Phase 1 complete.** Continue to Phase 2 for mesh connectivity, or operate as an API-connected node over the public internet.
 
 ---
 

@@ -7,6 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Obsidian](https://img.shields.io/badge/Obsidian-Compatible-7C3AED)](https://obsidian.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Ready-F97316)](https://docs.anthropic.com/en/docs/claude-code)
+[![Codex CLI](https://img.shields.io/badge/Codex_CLI-Ready-10A37F)](https://github.com/openai/codex)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](.adna/CONTRIBUTING.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 
@@ -17,7 +18,7 @@ Most knowledge systems weren't designed with AI agents in mind. aDNA is.
 - **One structure, two audiences.** Three directories (`who/`, `what/`, `how/`) organize any project so both AI agents and humans can navigate it.
 - **Context narrows automatically.** As your knowledge grows, agents load only what the current task needs — not everything you've ever written.
 - **Plain Markdown, no lock-in.** Folders, Markdown files, and a handful of conventions. Works with any editor, any AI agent, any version control.
-- **Conversational onboarding.** Clone the repo, run `claude`, and the AI builds a project structure tailored to your domain.
+- **Conversational onboarding.** Clone the repo, run `claude` or `codex`, and the AI builds a project structure tailored to your domain.
 
 *A lattice is a graph of graphs — every project you create becomes a node in a growing graph of structured knowledge. This repo is the seed.*
 
@@ -25,18 +26,22 @@ Most knowledge systems weren't designed with AI agents in mind. aDNA is.
 
 ## Getting Started
 
-**Prerequisites:** [Git](https://git-scm.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed.
+**Prerequisites:** [Git](https://git-scm.com) and an AI agent runtime — either [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (reads `CLAUDE.md`) or [OpenAI Codex CLI](https://github.com/openai/codex) (reads `AGENTS.md`). Both are first-class.
 
 ```bash
 # Clone the template
 git clone https://github.com/LatticeProtocol/Agentic-DNA.git ~/lattice
 cd ~/lattice
 
-# Start the AI — it handles the rest
-claude
+# Start the AI — pick your runtime
+claude       # Claude Code
+# or
+codex        # OpenAI Codex CLI
 ```
 
-Claude reads the workspace config and walks you through creating your first project. Tell it about your domain — it builds the right structure for you.
+The agent reads the workspace config and walks you through creating your first project. Tell it about your domain — it builds the right structure for you.
+
+> Codex users: `AGENTS.md` at the repo root points to `CLAUDE.md` for canonical doctrine — see [`.adna/what/context/codex/`](.adna/what/context/codex/) for codex-specific notes.
 
 > For a faster clone, use `git clone --depth 1` — you'll get the latest template without full git history.
 
@@ -73,7 +78,7 @@ graph LR
 
 The hidden `.adna/` directory is the base template — it holds the toolkit: templates, skills, context library, workflow tools, and Obsidian config.
 
-When you create a project, Claude forks `.adna/` into a new `project_name.aDNA/` directory with its own git repo.
+When you create a project, the agent forks `.adna/` into a new `project_name.aDNA/` directory with its own git repo.
 
 Run `git pull` in `~/lattice/` anytime to update the template. Your projects are unaffected.
 

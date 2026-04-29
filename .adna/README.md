@@ -305,13 +305,17 @@ Optionally install [Space Grotesk](https://fonts.google.com/specimen/Space+Grote
 
 **Option A: Agent-guided setup (recommended, ~15-30 min)**
 
-Open a terminal in the vault directory and start Claude Code:
+Open a terminal in the vault directory and start your AI agent:
 
 ```bash
+# Claude Code
 claude
+
+# or OpenAI Codex CLI
+codex
 ```
 
-**Berthier** — the vault's built-in agent personality — will detect this is the base template and guide you through workspace setup:
+Both runtimes are first-class. Claude Code reads `CLAUDE.md` automatically; codex reads `AGENTS.md` and follows it to `CLAUDE.md`. **Berthier** — the vault's built-in agent personality — will detect this is the base template and guide you through workspace setup:
 
 - Creates a workspace CLAUDE.md at `~/lattice/`
 - Helps you fork into your first project (e.g., `~/lattice/my_research_lab.aDNA/`)
@@ -320,7 +324,7 @@ claude
 
 The base `adna/` template stays clean — all customization happens in your forked project. Run `git pull` inside `adna/` anytime to get framework updates. Everything Berthier does is inspectable — see `how/skills/skill_project_fork.md` and `how/skills/skill_onboarding.md`.
 
-> **No Obsidian?** This path works entirely from the terminal — no Obsidian installation required. See [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) for the full agent-first walkthrough, including feature parity details and Claude Code configuration.
+> **No Obsidian?** This path works entirely from the terminal — no Obsidian installation required. See [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) for the full agent-first walkthrough, including feature parity details and runtime configuration (Claude Code or codex).
 
 **Option B: Manual setup (~30-45 min)**
 
@@ -847,7 +851,7 @@ Read [`VISION.md`](who/governance/VISION.md) for the full picture: the decentral
 | [`what/docs/adna_design.md`](what/docs/adna_design.md) | Architecture rationale — why three legs, why these governance files, design tradeoffs |
 | [`what/docs/adna_bridge_patterns.md`](what/docs/adna_bridge_patterns.md) | Multi-instance composition — nesting, sibling, monorepo patterns |
 | [`what/docs/migration_guide.md`](what/docs/migration_guide.md) | Adding aDNA to an existing project — decision tree, walkthroughs, starter templates |
-| [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) | Terminal-first aDNA setup — using aDNA with Claude Code without Obsidian |
+| [`what/docs/agent_first_guide.md`](what/docs/agent_first_guide.md) | Terminal-first aDNA setup — using aDNA with Claude Code or codex CLI without Obsidian |
 | [`what/docs/projects_folder_pattern.md`](what/docs/projects_folder_pattern.md) | Multi-project workspace pattern — agent-guided scaffolding, shared templates, domain presets |
 | [`what/docs/start_kit_prd.md`](what/docs/start_kit_prd.md) | Lattice Start Kit PRD — 1-click onboarding design (CLI interview, scaffolding, 4 personas) |
 | [`what/docs/version_migration_guide.md`](what/docs/version_migration_guide.md) | Version migration system — upgrading vaults between CLAUDE.md versions with structured prompts |

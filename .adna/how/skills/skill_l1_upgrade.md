@@ -226,11 +226,11 @@ sudo chmod 600 /opt/homebrew/etc/nebula/config.yml
 # Start the daemon
 sudo /opt/homebrew/bin/nebula -config /opt/homebrew/etc/nebula/config.yml &
 
-# Verify lighthouse connectivity
-ping -c 2 10.42.0.1
+# Verify lighthouse connectivity — IP is in your Nebula config.yml (10.42.0.x range)
+ping -c 2 <lighthouse-ip>
 ```
 
-Report the assigned overlay IP (10.42.0.x — shown in config.yml) to the Lattice admin for state file registration.
+Report the assigned overlay IP (shown in your config.yml) to the Lattice admin for state file registration.
 
 ### Step 4: Install Persistent Daemon
 

@@ -1,4 +1,29 @@
-# Agentic-DNA
+---
+type: docs
+title: "Agentic-DNA Overview"
+status: active
+created: 2026-04-05
+updated: 2026-05-11
+last_edited_by: agent_stanley
+moved_from: README.md
+moved_at: 2026-05-11
+moved_by: M03_S2_B0
+tags: [docs, overview, aDNA, introduction]
+---
+
+# Agentic-DNA Overview
+
+> **Provenance**: This file was the inner template `README.md` (aDNA specification +
+> tutorial hybrid; ~47K of canonical aDNA documentation) pre-aDNA-v7.0. The v7.0 repo
+> flatten (campaign_adna_v2_infrastructure M03 Session 2 2026-05-11 commit `B0`)
+> retained both READMEs by moving this content to the docs directory while the
+> public-facing GitHub landing README at repo root took the entry-point slot. See
+> [the repo root README](../../README.md) for the GitHub landing page; this file is
+> the deep-dive content surface. M03 README collision resolution per Operator Decision
+> 4 (preserve both — outer at root, inner moves) recorded in the M03 mission spec
+> §Operator decisions table.
+
+---
 
 **Give your project a knowledge architecture that both humans and AI agents can navigate.**
 

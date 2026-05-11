@@ -100,23 +100,51 @@ Replace the workspace CLAUDE.md with an upgraded version that includes:
    - Inside a project, that project's CLAUDE.md is authoritative
    - Workspace CLAUDE.md governs routing and discovery only
 
-**Template accessibility (CRITICAL — always verify):**
+**Template accessibility (post-v7.0 — direct clone, NO symlink):**
 
-The `.adna/` directory must be accessible from the workspace root so that `skill_project_fork.md` is discoverable. Create a symlink:
+Post-aDNA-v7.0 (campaign_adna_v2_infrastructure M03 flatten 2026-05-11): the `.adna/`
+directory IS the git clone of the template repo (no longer a symlink to a nested
+`adna/.adna/`). Standard flow for fresh workspace bootstrap:
 
 ```bash
-cd <workspace_root>
-ln -s <adna_folder>/.adna .adna
+cd <workspace_root>           # typically ~/lattice
+git clone https://github.com/LatticeProtocol/adna.git .adna
 ```
 
-Where `<adna_folder>` is the relative path to your cloned aDNA repo (e.g., `adna`).
+If a workspace router (`<workspace_root>/CLAUDE.md`) doesn't yet exist, install it from
+the template (Step 3 alternative — template-based bootstrap per [ADR-007](../../what/decisions/adr_007_outer_adna_claude_md_disposition.md)):
 
-**Verify**: `.adna/MANIFEST.md` exists and contains `role: template`. If this check fails, the symlink is broken — fix it before proceeding.
+```bash
+cp .adna/how/templates/template_workspace_claude.md CLAUDE.md
+```
+
+Then customize the workspace router (Project Discovery + Workspace Layout sections)
+to your installed projects.
+
+**Verify**: `.adna/MANIFEST.md` exists and contains `role: template`. If this check
+fails, the clone is broken — re-clone or check git remote.
+
+**For pre-v7.0 workspaces (still have the legacy `~/lattice/.adna -> adna/.adna`
+symlink + outer `adna/CLAUDE.md` wrapper)**: see `m01_obj2_migration_runbook.md` §2
+Path A (in-place rename) or Path B (clean re-clone) for migration to the flat post-v7.0
+layout. The `upgrade_v6_to_v7.md` guide (M08a finalized; post-M08b at
+`.adna/how/docs/upgrade_v6_to_v7.md`) is the canonical operator-facing reference.
+
+**Naming convention (per [ADR-009](../../what/decisions/adr_009_aDNA_naming_convention.md)):**
+
+The canonical aDNA naming convention is `<name>.aDNA/` directory ↔ `<name>.aDNA.git` GitHub repo where `<name>` is snake_case (`[a-z][a-z0-9_]*`). New projects forked via `skill_project_fork.md` enforce this via the warn-on-non-conformant step (per ADR-009 §4 enforcement).
+
+**4 grandfathered exception classes** (per ADR-009 §3 — operator-discretionary, NOT forced):
+
+1. **Hyphen-flat GitHub repos** (4 vaults: `science-stanley-adna`, `wga-adna`, `context-commons-adna`, `LAStartupLattice`) — pre-`.aDNA/` convention vaults; renaming is operator-discretionary and tracked under v3 successor `campaign_adna_v3_ecosystem_compliance` M04-EC
+2. **No-remote vaults** (7 vaults: `Spacemacs.aDNA`, `VideoForge.aDNA`, `III.aDNA`, etc.) — adopt the convention if/when a GitHub remote is configured via `skill_git_remote_setup.md` (M05; new)
+3. **Path-style local remote** (1 vault: `LPWhitepaper.aDNA`) — permitted under ADR-009 §1's "Path-style remotes" clause for whitepaper-vault tooling pattern
+4. **Template-repo exception** (`LatticeProtocol/adna.git` — this template) — bare short name; recursive `.aDNA.aDNA` form avoided
 
 **Naming decisions for existing projects:**
-- Do NOT rename existing projects to add `.aDNA` suffix unless you've assessed the blast radius
+- Do NOT rename existing projects to add `.aDNA` suffix unless you've assessed the blast radius (per ADR-009 §5 application scope: existing vaults are operator-discretionary)
 - Absolute paths in agent configs, Obsidian settings, cross-repo references, and CI can all break
-- Future projects use `.aDNA` suffix via `.adna/how/skills/skill_project_fork.md`
+- Future projects use `.aDNA` suffix via `.adna/how/skills/skill_project_fork.md` (which enforces snake_case per ADR-009 §1)
 - Workspace CLAUDE.md lists legacy projects explicitly alongside `*.aDNA/` glob
 
 ### Step 4: Project Compliance Check
@@ -158,7 +186,8 @@ Report results.
 | No `.adna/` directory | Template not cloned | Run `git clone <adna-repo> adna/` first |
 | CLAUDE.md not writable | Permissions | Check filesystem permissions |
 | Project has no CLAUDE.md | Ungoverned project | Flag for user — may need manual CLAUDE.md creation |
-| Symlink broken | Wrong relative path | Remove and recreate: `rm .adna && ln -s <correct_path>/.adna .adna` |
+| `.adna/` missing post-clone | Clone failed or wrong path | Re-clone: `cd ~/lattice && rm -rf .adna && git clone https://github.com/LatticeProtocol/adna.git .adna` |
+| Workspace router missing | Pre-bootstrap state | Install from template: `cp .adna/how/templates/template_workspace_claude.md ~/lattice/CLAUDE.md` |
 
 ## Rollback
 

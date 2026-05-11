@@ -1,4 +1,4 @@
-# deploy_manifest.yaml — adna (Agentic-DNA quick-start template + reusable workflows)
+# deploy_manifest.yaml — adna template (display name: Agentic-DNA; URL slug: adna per ADR-006)
 #
 # Authoritative spec: M-B4.5 repo_hygiene_charter §3 (Federation-Beta Planning).
 # Schema: github.com/LatticeProtocol/lattice-protocol/protocol/schemas/deploy_manifest.schema.json.
@@ -24,10 +24,14 @@ worktree_policy:
   isolation: clean-checkout-from-main
 
 sync_includes:
-  - .adna
+  # Post-v7.0 (M03 flatten): .adna/ nested directory retired; repo root IS the template.
+  # Pre-v7.0 entry `.adna` removed; root-level files + triad directories enumerated.
   - README.md
   - CLAUDE.md
   - .github
+  - how
+  - what
+  - who
 
 sync_excludes:
   - .venv

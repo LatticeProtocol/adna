@@ -28,6 +28,66 @@ Changelog entries are organized by **governance version** (primary heading). Sta
 
 ---
 
+## [v7.0] — YYYY-MM-DD
+
+> Major **Governance** bump. **Standard track: no change** (stays at v2.2). Ratified by ADR-011 (semver discipline) at this tag.
+> **Date placeholder**: M06 (Governance v7.0 tag mission) fills in YYYY-MM-DD at tag execution; M03 Session 2 (2026-05-11) prepared this entry verbatim from M01 Obj 6 §1 pre-drafted skeleton + landed the bullets attributable to M03 (flatten + airlock stub + URL sweep + CI workflow updates + template `.gitignore` + outer-wrapper conversion). Bullets referencing M04/M05/M06/M07/M08a/M08b/M10 are forward-looking and will be verified by M06 at tag execution; some may consolidate or split per actual contributions.
+
+### Added
+- **Repo flatten**: `.adna/` IS the git repo (no more `adna/.adna/` two-level structure). New clone target: `git clone https://github.com/LatticeProtocol/adna.git .adna` (per ADR-006). Symlink `lattice/.adna -> adna/.adna` removed. (M03)
+- **`node.aDNA/` opt-in pattern**: Local-node operational inventory vault. Persona: Hestia. Forward-reference per ADR-004 from `node.aDNA/CLAUDE.md` to `aDNA.aDNA/how/campaigns/`. (M04)
+- **`skill_vault_publish.md` (NEW)**: Vault → GitHub `git push` flow. Replaces ad-hoc `.publish-clone/` rsync workaround. (M05; ratified by ADR-010)
+- **`skill_git_remote_setup.md` (NEW)**: First-time `git remote add` + `gh repo create` configuration for fresh vaults. (M05)
+- **`skill_deploy.md` (NEW)**: Idempotent installer for the pre-push sanitization hook. (M05)
+- **`skill_publish_tarball.md` (NEW)**: Optional offline-shipping tarball flow. (M05)
+- **Pre-push sanitization hook** (LAYER_CONTRACT §4 v0.1): 7 sanitization rules (path leakage / secret patterns / filename patterns / large binaries / frontmatter confidential / frontmatter draft / operator deny list). Installed via `skill_deploy`. (M05)
+- **`how/airlock/AIRLOCK.md` stub** at template level — entry-path index for cross-graph agent traffic. Adoption is opt-in per vault. (M03; ratified by ADR-008)
+- **Naming convention codification** (ADR-009): `<name>.aDNA/` directory ↔ `<name>.aDNA.git` GitHub repo isomorphism; snake_case `<name>`; grandfathered exceptions documented. Renames are operator-discretionary; per-vault application is the v3 successor's scope. (M07)
+- **Semver discipline ADR** (ADR-011): Codifies the two-track Major.Minor-only policy already practiced in this CHANGELOG. (M06; this entry IS the first release governed by it.)
+- **`template_workspace_claude.md`**: Workspace-router CLAUDE.md template extracted from the legacy outer `adna/CLAUDE.md` per ADR-007. Directly installable to `~/lattice/CLAUDE.md`. (M03)
+- **`LatticeScope.aDNA` planning campaign seed**: Campaign doc for the observability-platform vault (Prometheus persona). Seeded in this campaign's M10; vault construction is a successor campaign. (M10)
+- **CI workflow caller-usage URL update** to `LatticeProtocol/adna` (3 reusable workflows). (M03)
+- **Template-root `.gitignore`**: Created with v7.0 exclusion set (`deploy/`, `what/local/`, `how/local/`, `who/operators/`, `dist/`, `.publish-clone/`, `.publish-clone.bak/`, `private/`, `*.dryrun.log`, `*.tar.gz`). (M03; per Obj 5 audit §5 G-1)
+
+### Changed
+- **GitHub repo rename**: `LatticeProtocol/Agentic-DNA` → `LatticeProtocol/adna` (per ADR-006). GitHub URL forwarding preserves existing clones; new clones use the canonical short-name URL.
+- **`adna/CLAUDE.md` (outer wrapper) → `template_workspace_claude.md`**: Repurposed as a template for the workspace router (per ADR-007); now lives at `.adna/how/templates/`.
+- **`deploy_manifest.yaml` location**: Moved from repo root to `.github/deploy_manifest.yaml`. `sync_includes:` simplified to root-level paths post-flatten. (M03; per Obj 5 audit §3 D-1)
+- **`prepare_for_onboarding.sh` location**: Moved from template root to `how/skills/l1_upgrade/` OR renamed to `prepare_for_l1_upgrade.sh` (operator-decided). The L1-specific script no longer pollutes top-level discoverability. (M03; per Obj 5 audit §4 P-1)
+- **`skill_workspace_upgrade.md`**: Symlink-creation step (lines 105-113) removed; flatten path replaces it. New §Step-3-alternative: install workspace router from `template_workspace_claude.md`. (M03)
+- **`skill_project_fork.md`**: Exclusion list expanded for post-flatten layout (`.git/`, `.github/`, `README.md`, `LICENSE`, `setup.sh`, `prepare_for_onboarding.sh`, `deploy_manifest.yaml`). Naming-convention warning added (per ADR-009): warn on non-conformant `<name>.aDNA/` forms. (M03 + M07)
+- **`skill_lattice_publish.md`**: Light v7.0 path-drift updates only — scope unchanged (latlab CLI registry publish). (M05; per ADR-010)
+- **CLAUDE.md frontmatter `version:`**: `"6.0"` → `"7.0"` (this entry is the change). `last_edited_by: agent_init` → `agent_stanley`. (§2 below)
+- **Skills inventory table in `.adna/CLAUDE.md`**: 13 → 16 rows (added `skill_workspace_upgrade.md` per Obj 1 §2 I-2; added `skill_vault_publish.md`, `skill_git_remote_setup.md`, `skill_deploy.md`, `skill_publish_tarball.md`). (M07)
+- **Standard track v2.2** is **unchanged**. Verified by S2 S4 reading pass (title at line 3 of `adna_standard.md` is canonical). The stale `*End of aDNA Universal Standard v2.0*` footer at line 1483 is corrected to `*End of aDNA Universal Standard v2.2*` as a one-line audit fix. (M07; per Obj 6 recommendation §2-D)
+
+### Deprecated
+- **`skill_workspace_init.md`** — was already deprecated in v6.0; **formally retired** in v7.0. File preserved per Standing Order #6 (archive, never delete). (M03)
+- **Outer wrapper `adna/CLAUDE.md`** — converted to `template_workspace_claude.md` per ADR-007; the "outer wrapper" pattern is no longer canonical. (M03)
+- **`.publish-clone/` rsync workaround pattern** — superseded by `skill_vault_publish.md`. Vaults using it (currently only Spacemacs.aDNA) retire on adoption of the v7.0 publish flow. (M05; coordinated via Daedalus coord memo and v3 successor M05-EC.)
+
+### Removed
+- **Symlink `lattice/.adna -> adna/.adna`** at workspace root — replaced by direct `.adna/` git clone. (M03)
+- **Outer `adna/` directory** at workspace root — flattened. (M03)
+- **`how/standard/skills/skill_publish_lattice.md`** (Spacemacs-local rsync skill) — retired upstream-via-v7.0; per-vault retirement is v3 successor scope. (Coordinated, not removed in this campaign.)
+
+### Fixed
+- **`adna_standard.md` line 1483** — stale `*End of aDNA Universal Standard v2.0*` footer corrected to v2.2. (M07; one-line audit fix)
+- **CI workflow caller-usage URLs** — `LatticeProtocol/Agentic-DNA/.github/workflows/...@main` → `LatticeProtocol/adna/.github/workflows/...@main` in all three reusable workflows. (M03; per Obj 5 audit §2 W-1)
+- **`.adna/CLAUDE.md` skills inventory table** — added missing `skill_workspace_upgrade.md` row (Issue I-2 from Obj 1 §2). (M07)
+- **`adna/.adna/MANIFEST.md` outer-wrapper drift** — verify post-M03 that `Project Identity` section reflects `adna` (not "Agentic-DNA — A standalone knowledge architecture…"). (M07; cosmetic)
+
+### Security
+- **Pre-push sanitization hook** (R1-R7): defense-in-depth against accidentally pushing local context, secrets, large binaries, or operator-restricted files. Installed via `skill_deploy`. Bypassable with `--no-verify` (operator-discretionary; not recommended). (M05)
+
+### Migration
+- `upgrade_v6_to_v7.md` (M08a; ships pre-flatten so operators have it before structure breaks). Per-vault coordination memos drafted for ~17 vaults + external partners (Wilhelm Foundation, TAPP, Super League). Public announcement at GitHub release.
+
+### Standard track
+- **No change.** Standard stays at v2.2 (line 3 title canonical; line 1483 footer fix is editorial, not a version bump).
+
+---
+
 ## [v6.0] — 2026-04-03
 
 ### Changed

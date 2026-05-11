@@ -28,17 +28,22 @@ Most knowledge systems weren't designed with AI agents in mind. aDNA is.
 **Prerequisites:** [Git](https://git-scm.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed.
 
 ```bash
-# Clone the template
-git clone https://github.com/LatticeProtocol/adna.git ~/lattice
-cd ~/lattice
+# Create the workspace + clone the template into .adna/ (hidden by convention)
+mkdir -p ~/lattice && cd ~/lattice
+git clone https://github.com/LatticeProtocol/adna.git .adna
+
+# Bootstrap the workspace router from the template
+cp .adna/how/templates/template_workspace_claude.md CLAUDE.md
 
 # Start the AI — it handles the rest
 claude
 ```
 
-Claude reads the workspace config and walks you through creating your first project. Tell it about your domain — it builds the right structure for you.
+Claude reads the workspace router (`~/lattice/CLAUDE.md`) and walks you through creating your first project. Tell it about your domain — it builds the right structure for you.
 
 > For a faster clone, use `git clone --depth 1` — you'll get the latest template without full git history.
+>
+> **v7.0 flatten note**: post-aDNA-v7.0 (campaign_adna_v2_infrastructure 2026-05), the template clones directly into `.adna/` as a flat repo (no nested `adna/.adna/` layer). The workspace router (`~/lattice/CLAUDE.md`) is bootstrapped from the template via the `cp` step above. See the v6→v7 upgrade guide (post-M08b copy at `.adna/how/docs/upgrade_v6_to_v7.md`) for existing-operator migration.
 
 ---
 

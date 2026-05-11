@@ -106,7 +106,7 @@ aDNA is a directory convention — Markdown files with YAML frontmatter organize
 ### Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/LatticeProtocol/Agentic-DNA.git adna
+git clone https://github.com/LatticeProtocol/adna.git adna
 cd adna
 ```
 

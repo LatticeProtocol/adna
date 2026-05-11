@@ -292,14 +292,14 @@ Agentic-DNA/
 ```bash
 mkdir -p ~/lattice
 cd ~/lattice
-git clone https://github.com/LatticeProtocol/Agentic-DNA.git adna
+git clone https://github.com/LatticeProtocol/adna.git adna
 cd adna
 ```
 
 This creates the canonical workspace layout. The `adna/` directory is the base template — you'll fork it into project directories, keeping the template clean for updates.
 
 **Option B — Use as GitHub template**
-Click **[Use this template](https://github.com/LatticeProtocol/Agentic-DNA/generate)** on GitHub to create your own copy with clean history. Clone the result into `~/lattice/`.
+Click **[Use this template](https://github.com/LatticeProtocol/adna/generate)** on GitHub to create your own copy with clean history. Clone the result into `~/lattice/`.
 
 ### 2. Run setup (recommended)
 

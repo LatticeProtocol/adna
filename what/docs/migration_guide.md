@@ -494,7 +494,7 @@ As your project accumulates domain knowledge that agents need repeatedly, organi
 
 ### When collaborating: Obsidian config
 
-If your team uses Obsidian for visual browsing, add `.obsidian/` with theme and plugin configuration. See the [Agentic-DNA repo](https://github.com/LatticeProtocol/Agentic-DNA) for a pre-configured setup with 15 plugins and the Tokyo Night theme.
+If your team uses Obsidian for visual browsing, add `.obsidian/` with theme and plugin configuration. See the [Agentic-DNA repo](https://github.com/LatticeProtocol/adna) for a pre-configured setup with 15 plugins and the Tokyo Night theme.
 
 ### When connecting: Bridge patterns
 

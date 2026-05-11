@@ -137,6 +137,6 @@ SORT created DESC
 
 <div class="homepage-footer">
 
-Agentic-DNA — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/LatticeProtocol/Agentic-DNA) | foundational building block of the [Lattice Protocol](https://github.com/LatticeProtocol/lattice-protocol)
+Agentic-DNA — a standalone knowledge architecture built on the [aDNA paradigm](https://github.com/LatticeProtocol/adna) | foundational building block of the [Lattice Protocol](https://github.com/LatticeProtocol/lattice-protocol)
 
 </div>

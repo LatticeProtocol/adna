@@ -14,7 +14,7 @@ Dynamic operational snapshot for cold-start orientation. Updated each session.
 
 ## Current Phase
 
-**Production-validated.** Agentic-DNA v6.0 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), 15 example lattices, and community infrastructure (contribution system, side-quests, vision document). aDNA Standard v2.2 (maintenance pass complete). Identity rename from `adna` to `Agentic-DNA` complete (repo: `LatticeProtocol/Agentic-DNA`).
+**Production-validated.** Agentic-DNA v7.0 with hardened object standards, Canvas Standard v1.0.0, execution hierarchy v2 (OODA + AAR), 15 example lattices, community infrastructure (contribution system, side-quests, vision document), and the v7.0 repo flatten + airlock template stub (campaign_adna_v2_infrastructure M03 2026-05-11). aDNA Standard v2.2 (maintenance pass complete). Identity rename from `adna` to `Agentic-DNA` complete (display name `Agentic-DNA`; repo URL slug `LatticeProtocol/adna` per ADR-006 v7.0 GitHub repo rename).
 
 ## What's Working
 
@@ -82,7 +82,7 @@ None.
 
 ## Next Steps
 
-1. **Clone into `~/lattice/`** — `mkdir -p ~/lattice && cd ~/lattice && git clone https://github.com/LatticeProtocol/Agentic-DNA.git adna`
+1. **Clone into `~/lattice/`** — `mkdir -p ~/lattice && cd ~/lattice && git clone https://github.com/LatticeProtocol/adna.git adna`
 2. **Run Claude Code** in `~/lattice/adna/` — the agent detects this is the base template, creates your workspace, and helps fork your first project
 3. **Or customize manually** — fork `adna/` to a project directory, edit MANIFEST.md, STATE.md, and CLAUDE.md § Identity with your project identity
 4. **Extend the ontology** — add domain-specific directories under who/what/how (see README § Extending the Ontology, or load `ontology_workshop` context)

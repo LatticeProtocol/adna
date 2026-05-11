@@ -29,7 +29,7 @@ Most knowledge systems weren't designed with AI agents in mind. aDNA is.
 
 ```bash
 # Clone the template
-git clone https://github.com/LatticeProtocol/Agentic-DNA.git ~/lattice
+git clone https://github.com/LatticeProtocol/adna.git ~/lattice
 cd ~/lattice
 
 # Start the AI — it handles the rest

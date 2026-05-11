@@ -44,7 +44,7 @@ The repo root **is** `~/lattice/`. Clone it once, and the root CLAUDE.md handles
 
 ### How it works
 
-1. **Clone directly**: `git clone https://github.com/LatticeProtocol/Agentic-DNA.git ~/lattice`
+1. **Clone directly**: `git clone https://github.com/LatticeProtocol/adna.git ~/lattice`
 2. **Run Claude Code** from `~/lattice/` — the root CLAUDE.md detects `.adna/` and offers to create your first project
 3. **Create projects** — the agent copies `.adna/`, strips `.obsidian/plugins/` and `.obsidian/themes/`, removes the `role: template` marker, runs `git init`, then triggers the 5-question onboarding interview inside the new project
 4. **Work inside projects** — each project is self-contained. Open it directly in Claude Code or Obsidian.

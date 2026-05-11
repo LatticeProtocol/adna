@@ -18,15 +18,15 @@ This project will adopt the [Contributor Covenant v2.1](https://www.contributor-
 
 Found something broken — a dead link, incorrect schema, template that doesn't match the standard?
 
-1. Check [existing issues](https://github.com/LatticeProtocol/Agentic-DNA/issues) to avoid duplicates
-2. Open a [bug report](https://github.com/LatticeProtocol/Agentic-DNA/issues/new?template=bug_report.md)
+1. Check [existing issues](https://github.com/LatticeProtocol/adna/issues) to avoid duplicates
+2. Open a [bug report](https://github.com/LatticeProtocol/adna/issues/new?template=bug_report.md)
 3. Include the aDNA version (`CLAUDE.md` frontmatter `version` field) and steps to reproduce
 
 ### Suggest an Improvement
 
 Have an idea for a better template, a missing context topic, or a workflow enhancement?
 
-- Open a [GitHub issue](https://github.com/LatticeProtocol/Agentic-DNA/issues/new) describing the improvement
+- Open a [GitHub issue](https://github.com/LatticeProtocol/adna/issues/new) describing the improvement
 - For detailed proposals, submit a PR with the change — see [Suggesting Improvements](#suggesting-improvements) below
 
 ### Submit a Pull Request
@@ -46,7 +46,7 @@ aDNA is a Markdown-based knowledge architecture — no build step, no dependenci
 
 ```bash
 # Clone the repo
-git clone https://github.com/LatticeProtocol/Agentic-DNA.git ~/lattice
+git clone https://github.com/LatticeProtocol/adna.git ~/lattice
 cd ~/lattice
 
 # Run setup (downloads Obsidian plugins for the template)
@@ -75,7 +75,7 @@ The best aDNA improvements come from real usage. When you (or your AI agent) dis
 
 ### Human Contributors
 
-1. Check [existing issues](https://github.com/LatticeProtocol/Agentic-DNA/issues) for duplicates
+1. Check [existing issues](https://github.com/LatticeProtocol/adna/issues) for duplicates
 2. Open a GitHub issue describing what you observed, what task you were doing, and what improvement you'd suggest
 3. For larger changes, submit a PR with the fix — see [Submit a Pull Request](#submit-a-pull-request) above
 
@@ -154,6 +154,6 @@ tags: []
 
 ## Questions?
 
-- Open a [discussion](https://github.com/LatticeProtocol/Agentic-DNA/discussions) for questions about aDNA architecture
+- Open a [discussion](https://github.com/LatticeProtocol/adna/discussions) for questions about aDNA architecture
 - Check [`what/docs/`](what/docs/) for specification documents and design rationale
 - Read the [README](README.md) for a project overview

@@ -2,12 +2,13 @@
 type: skill
 skill_type: agent
 created: 2026-03-21
-updated: 2026-04-06
+updated: 2026-05-11
 status: active
 category: deployment
 trigger: "User asks about compute, L1, JupyterHub, or 'upgrade to L1'"
-last_edited_by: agent_init
+last_edited_by: agent_stanley
 tags: [skill, deployment, l1, compute, upgrade]
+preflight_script: how/skills/l1_upgrade/prepare_for_onboarding.sh  # added M03 Session 2 B2 per Operator Decision 1 Option A (script relocated from outer adna/ to its skill home)
 
 requirements:
   tools: [bash, file_read, file_write]
@@ -22,6 +23,8 @@ requirements:
 Phased upgrade path from an aDNA vault (L0) to an L1 compute node with JupyterHub. Each phase is self-contained — the user gets value at every stop. An agent reads this skill and executes each phase interactively, confirming before each step.
 
 **Outcome**: JupyterHub running locally → mesh connectivity → federation relay → full compliance.
+
+**Pre-flight script** (added M03 Session 2 — campaign_adna_v2_infrastructure v7.0): `how/skills/l1_upgrade/prepare_for_onboarding.sh` checks macOS version + Homebrew PATH + Python ≥ 3.12 + npm + disk space + port availability before any L1 install steps. Run as the first thing inside Phase 1 (or as a standalone pre-check by the operator). The script lives co-located with this skill per ADR-006/ADR-007 + Obj 5 P-1 directory-move resolution (operator-discretionary location chosen at M03 S2 entry).
 
 ## Workspace Awareness
 

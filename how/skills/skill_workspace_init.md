@@ -2,13 +2,18 @@
 type: skill
 skill_type: agent
 created: 2026-03-22
-updated: 2026-04-03
-status: deprecated
+updated: 2026-05-11
+status: retired  # formally retired in aDNA v7.0 (campaign_adna_v2_infrastructure M03 close 2026-05-11; was status: deprecated since v6.0 2026-04-03)
 category: onboarding
-trigger: "DEPRECATED — root CLAUDE.md now ships pre-authored"
-last_edited_by: agent_init
+trigger: "RETIRED — see Replacement section below"
+last_edited_by: agent_stanley
 deprecation_note: "Replaced by the pre-authored root CLAUDE.md (2026-04-03 restructure). The root CLAUDE.md handles project creation and discovery directly — no workspace init step needed."
-tags: [skill, workspace, bootstrap, onboarding, multi-project, lattice]
+retirement_note: "Formally retired in aDNA v7.0 (M03 close 2026-05-11) per campaign_adna_v2_infrastructure mission tree. The workspace-init flow is now covered by manual onboarding via `how/templates/template_workspace_claude.md` + `skill_workspace_upgrade.md` for workspaces with existing content. Retained for archival reference per Standing Order #6 (archive, never delete) — see file body below."
+retirement_aar: "campaign_adna_v2_infrastructure/missions/artifacts/aar_m03_repo_flatten.md (landed Session 3)"
+replacement:
+  - "how/templates/template_workspace_claude.md (fresh workspaces — bootstrap workspace router from template)"
+  - "how/skills/skill_workspace_upgrade.md (existing-content workspaces — bring up to v7.0 compliance)"
+tags: [skill, workspace, bootstrap, onboarding, multi-project, lattice, retired_v7]
 
 requirements:
   tools: []
@@ -16,9 +21,30 @@ requirements:
   permissions: ["write files in parent directory", "copy directories"]
 ---
 
-# Skill: Workspace Bootstrap
+# Skill: Workspace Bootstrap — RETIRED in aDNA v7.0
 
-## Overview
+> **⚠️ RETIRED.** This skill was deprecated in v6.0 and formally retired in v7.0
+> (campaign_adna_v2_infrastructure M03 close 2026-05-11). It is retained for archival
+> reference per Standing Order #6 (archive, never delete). DO NOT invoke this skill
+> for new work — see §Replacement below.
+>
+> The v7.0 workspace-init flow is content-only (no procedural skill needed):
+>
+> 1. **Fresh workspace bootstrap**: `cp .adna/how/templates/template_workspace_claude.md ~/lattice/CLAUDE.md` (per [ADR-007](../../what/decisions/adr_007_outer_adna_claude_md_disposition.md))
+> 2. **Existing-content workspace upgrade**: run `skill_workspace_upgrade.md` (per M03 Obj 4 Commit 4.2 update; symlink-step removed; Step 3 alternative added)
+
+## Replacement
+
+- `how/templates/template_workspace_claude.md` — fresh workspaces; directly installable as the workspace router
+- `how/skills/skill_workspace_upgrade.md` — existing-content workspaces; brings them up to v7.0 compliance with optional template-bootstrap as Step 3 alternative
+
+The pre-authored root `CLAUDE.md` no longer exists post-flatten (the outer wrapper
+was converted to `template_workspace_claude.md` per ADR-007 M03 B1). The template
+is now the canonical starting point.
+
+---
+
+## Overview (archival — original v6.0 deprecation note)
 
 Creates a workspace-level CLAUDE.md at the parent directory of this aDNA vault. The workspace CLAUDE.md teaches future agents how to discover projects, create new ones by forking the aDNA template, and upgrade the workspace to L1 compute.
 

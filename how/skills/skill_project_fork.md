@@ -59,11 +59,13 @@ If `carry_forward_answers` are provided (from the calling flow), use them. Other
 1. **Project name** — base folder name (the `.aDNA` suffix is appended automatically). Must be lowercase with underscores. Example: `my_research_lab`, `acme_crm`, `sleep_study` → creates `my_research_lab.aDNA/`
 2. **Brief description** — 1-2 sentences describing the project's purpose
 
-Validate the project name:
-- Lowercase letters, digits, and underscores only
+Validate the project name (per [ADR-009](../../what/decisions/adr_009_aDNA_naming_convention.md) §1 + §4):
+- **Snake_case pattern**: must match `[a-z][a-z0-9_]*` — lowercase letter start, then lowercase letters / digits / underscores only. (Per ADR-009 §1.)
 - Must not collide with an existing directory in the workspace
-- Must not be `.adna` (that's the base template)
+- Must not be `.adna` (that's the base template; ADR-009 §3.4 template-repo exception)
 - Must not be `latlab` or `lattice-protocol` (infrastructure repos)
+
+**Non-conformant name handling** (per ADR-009 §4 enforcement table): if the operator supplies a name that fails the snake_case pattern (e.g., `my-project`, `MyProject`, `1starts_with_digit`), warn explicitly with a citation to ADR-009 §1 and prompt for a corrected form. The operator MAY override and continue with the non-conformant name; if they do, the fork is treated as an ADR-009 §3 exception (4 grandfathered classes: hyphen-flat / no-remote / path-style / template-repo) and SHOULD be documented in `who/coordination/` of the resulting vault for audit transparency.
 
 ### Step 2: Confirm Target Location
 
@@ -81,15 +83,27 @@ Ask for confirmation before proceeding.
 ```bash
 cp -r .adna/ <project_name>.aDNA/
 cd <project_name>.aDNA/
-git init
+
+# Post-v7.0 (M03 flatten) exclusions: .adna/ IS the cloned repo, so the cp -r
+# carries through the template's repo-level files. Remove them so the new project
+# starts clean per regression-test R2-R7 (M01 Obj 2 runbook §6):
+rm -rf .git              # R1: discard template git history (skill_project_fork installs fresh below)
+rm -rf .github           # R2: no CI configs leaked into forked project
+rm -f README.md          # R3: no template README at fork root (project authors own)
+rm -f LICENSE            # R4: no template LICENSE (project picks own license)
+rm -f setup.sh           # R5: setup.sh is template-only Obsidian bootstrap; project doesn't need
+# R6 prepare_for_onboarding.sh is no-op at fork root (moved to how/skills/l1_upgrade/ in v7.0 M03 B2)
+# R7 deploy_manifest.yaml is no-op at fork root (moved to .github/ in v7.0 M03 B3 — covered by rm -rf .github above)
 
 # Preserve portable Obsidian config (settings, appearance, snippets)
 # but remove plugin binaries (15MB+) — user runs setup.sh to install them
 rm -rf .obsidian/plugins/ .obsidian/themes/
 rm -f .obsidian/workspace.json .obsidian/graph.json
+
+git init
 ```
 
-Note: `.adna/` has no `.git/` directory (it's inside the parent repo), so no git cleanup needed.
+Note: pre-v7.0 the inner `.adna/` had no `.git/` (it was inside the outer `adna/` repo). Post-v7.0 (M03 flatten), `.adna/` IS the cloned repo with its own `.git/`. The `rm -rf .git` step above is required to discard template git history before `git init` creates the fresh repo for the new project.
 
 This gives the new project:
 - The full `who/what/how/` triad structure

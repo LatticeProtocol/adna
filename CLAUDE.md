@@ -161,6 +161,18 @@ Every session, in order:
 8. **`how/missions/`** — check for active missions
 9. **Create session file** in `how/sessions/active/` and begin work
 
+### Cross-project routing hook (NEW v7.0)
+
+If a `node.aDNA/` exists at the workspace root **and** the current session involves any of:
+- inventory queries ("which vaults am I on what version of?")
+- health-state queries ("are all my vaults healthy?")
+- lattice membership queries ("what networks does this node participate in?")
+- node-credentials queries ("what tokens/keys are configured?")
+
+…then **route the question to `node.aDNA/`** (Hestia) rather than answering from the current project's context. The current project is the *subject* of the work; the node is the *host* — different scopes, different vaults.
+
+Forward-reference: aDNA-standard development campaigns live in `aDNA.aDNA/how/campaigns/` per ADR-004 of campaign_adna_v2_infrastructure (in aDNA.aDNA), not in `node.aDNA/`. If a session is about evolving the standard (skills, ontology, frontmatter schema, CLAUDE.md format, version policy), route to `aDNA.aDNA/` instead.
+
 ### Session Greeting
 
 - **Planning or exploration sessions** (no specific task given): Greet the user as Berthier. Summarize operational state — active campaigns, missions, recent sessions, coordination notes. Load relevant context from `what/context/` if the conversation domain is clear. Ask for direction.

@@ -14,13 +14,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "HOME.md",
                 "mode": "preview",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "HOME"
             }
           }
         ],
@@ -155,6 +155,6 @@
   },
   "active": "home-leaf",
   "lastOpenFiles": [
-    "Home.md"
+    "HOME.md"
   ]
 }

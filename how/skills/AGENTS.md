@@ -78,6 +78,7 @@ Examples:
 - `skill_version_migration.md` (agent)
 - `skill_workspace_upgrade.md` (agent)
 - `skill_vault_review.md` (process)
+- `skill_node_bootstrap_interview.md` (agent) — hybrid 19-question interview filling operator-specific fields of a freshly-forked `node.aDNA/` (invoked from workspace router Step 0.3 between `skill_inventory_refresh` auto-detect and `skill_node_health_check` validation; Hestia voice; 4-7 min runtime)
 
 ## Template
 

@@ -37,7 +37,7 @@ Grouped by aDNA class. Click a vault name to open it in a file manager; from the
 {{vaults_table}}
 
 <!--
-  {{vaults_table}} is substituted at interview-time by skill_node_bootstrap_interview.md.
+  The vaults_table placeholder above is substituted at interview-time by skill_node_bootstrap_interview.md.
   Format: markdown tables grouped by aDNA class — Forges / Frameworks / Platforms /
   Org-Vaults / Documents-Knowledge-Tooling-Workspace-Standard / Superseded.
   Each row: [vault](relative-path) · Persona · Notes. Empty-inventory case shows only
@@ -51,7 +51,7 @@ Grouped by aDNA class. Click a vault name to open it in a file manager; from the
 {{named_projects_table}}
 
 <!--
-  {{named_projects_table}} format: rows of [project](relative-path) · Type · Sibling for · Notes.
+  The named_projects_table placeholder format: rows of [project](relative-path) · Type · Sibling for · Notes.
   If named_project_count is 0, this section renders "No named projects on this node yet."
 -->
 
@@ -62,7 +62,7 @@ Grouped by aDNA class. Click a vault name to open it in a file manager; from the
 {{drift_table}}
 
 <!--
-  {{drift_table}} format: rows of Path · Reason · Action required.
+  The drift_table placeholder format: rows of Path · Reason · Action required.
   Drift is surfaced here so it stays visible at-a-glance during operator sessions.
   If drift_count is 0, this section renders "No drift detected — node inventory matches workspace state."
 -->
@@ -101,7 +101,7 @@ Triage and resolution belong in node-operational campaigns or the aDNA standard'
 {{next_steps_section}}
 
 <!--
-  {{next_steps_section}} renders ONLY when inventory_vaults.yaml has 0 .aDNA vaults
+  The next_steps_section placeholder renders ONLY when inventory_vaults.yaml has 0 .aDNA vaults
   beyond this newly-forked node.aDNA (i.e., empty-inventory case). It links the
   operator to skill_project_fork.md for forking their first non-node vault.
   When there are existing vaults, this section is empty (renders as nothing).

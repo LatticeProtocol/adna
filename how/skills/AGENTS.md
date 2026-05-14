@@ -1,8 +1,8 @@
 ---
 type: directory_index
 created: 2026-02-18
-updated: 2026-03-19
-last_edited_by: agent_init
+updated: 2026-05-14
+last_edited_by: agent_stanley
 tags: [directory_index, skill]
 ---
 
@@ -50,6 +50,7 @@ Skills can serve as operational runbooks — not just automated recipes, but doc
 | `onboarding` | Customer, partner, or team onboarding |
 | `review` | Model review, code review, audit |
 | `emergency` | Incident response and emergency procedures |
+| `node_operations` | Per-node operational maintenance (inventory refresh, health checks, credential audits, cross-vault git pulls) — typically invoked from `node.aDNA/` operator persona |
 
 ## Directory Structure
 
@@ -79,6 +80,10 @@ Examples:
 - `skill_workspace_upgrade.md` (agent)
 - `skill_vault_review.md` (process)
 - `skill_node_bootstrap_interview.md` (agent) — hybrid 19-question interview filling operator-specific fields of a freshly-forked `node.aDNA/` (invoked from workspace router Step 0.3 between `skill_inventory_refresh` auto-detect and `skill_node_health_check` validation; Hestia voice; 4-7 min runtime)
+- `skill_inventory_refresh.md` (agent) — rebuild `inventory_vaults.{md,yaml}` + `inventory_system.{md,yaml}` from current node state; detect new/removed vaults + version drift + tool-chain drift (graduated from node.aDNA@411660e at M-H.1.5)
+- `skill_node_credentials_audit.md` (agent) — enumerate credential SOURCES on a node (env-var NAMES, gh CLI auth status, SSH pubkeys, keychain entry NAMES). NAMES-only discipline; never persists values (graduated at M-H.1.5)
+- `skill_node_health_check.md` (agent) — D10 reproducibility gate for `node.aDNA/`; validates file presence + frontmatter + YAML companion + federation block + inventory-vs-disk consistency + identity drift (graduated at M-H.1.5)
+- `skill_update_all_vaults.md` (agent) — `git pull --ff-only` across every vault listed in `inventory_vaults.yaml`; safe-by-default + flags conflicts as `#needs-human` (graduated at M-H.1.5)
 
 ## Template
 
